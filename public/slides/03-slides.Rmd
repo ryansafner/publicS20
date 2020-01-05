@@ -1,0 +1,1775 @@
+---
+title: "Lesson 3: Can We Plan an Economy?"
+subtitle: "ECON 317 · Economics of Development · Fall 2019"
+author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/devf19"><i class="fa fa-github fa-fw"></i> ryansafner/devf19</a><br> <a href="https://devF19.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> devF19.classes.ryansafner.com</a><br>'
+#date:
+output:
+  xaringan::moon_reader:
+    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML" # rescales math with css changes https://github.com/yihui/xaringan/issues/143
+    lib_dir: libs
+    #seal: false
+    css: [custom.css, custom-fonts.css, "hygge"] #, metropolis, metropolis-fonts
+    nature:
+      beforeInit: ["macros.js", "https://platform.twitter.com/widgets.js"] # first is for rescaling images , second is for embedding tweets, https://github.com/yihui/xaringan/issues/100
+      highlightStyle: ocean #rainbow #monokai rainbow solarized-light #tomorrow-night -blue -eighties zenburn
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    includes:
+      in_header: header.html # for font awesome, used in title  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(message=F,
+                      warning=F,
+                      echo=F)
+```
+
+class: inverse, middle, center
+
+### [Political Economy & Making Fair Comparisons](#2)
+
+### [Two Trends in "Economic" Thinking](#12)
+
+### [*Marxian* -Socialism](#28)
+
+### [The Socialist Calculation Debate](#39)
+
+### [The Economics of Central Planning](#48)
+
+### [Mises' Critique of Socialism](#57)
+
+### [Neoclassical Market Socialism](#68)
+
+### [The Socialist Calculation Debate: In Retrospect](#78)
+
+---
+
+class: inverse, middle, center
+
+# Political Economy & Making Fair Comparisons
+
+---
+
+# Two Fundamental Problems of Political Economy
+
+- All societies face two fundamental problems, which institutions emerge (or are created) to address:
+
+.content-box-red[
+.red[**The Knowledge Problem**]: How to coordinate the *tacit*, *fragmented* knowledge of opportunities and conditions *dispersed* across millions of individuals (and accessible to none in total) in order to maximize the ability of individuals to achieve their goals
+]
+
+--
+
+.content-box-red[
+.red[**The Incentives Problem**]: How to structure incentives that individuals face in a way that maximizes cooperative behavior (voluntary exchange and association) and minimizes non-cooperative behavior (cheating, opportunism, exploitation, violence, rent-seeking)
+]
+
+---
+
+# Making Fair Comparisons: Robust Political Economy I
+
+.pull-left[
+
+- No system is perfect
+- We need to find arrangements that are .whisper[robust] to knowledge & incentive problems
+
+- Easy case: perfect information benevolence
+
+- Hard case: uncertainty and selfish behavior
+
+- Treat people as they are: sometimes good, bad, smart, stupid, opportunistic, altruistic *depending on the institutions*
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/8itcu5xyl11oy20/robustness.jpg?raw=1)
+]
+]
+---
+
+# Making Fair Comparisons: Robust Political Economy II
+
+.pull-left[
+
+- No society has ever had "pure" capitalism/socialism/etc
+
+- Not fair to refute the theory of an *ideal* system with a flawed system in practice
+
+- History not an experimental science
+
+- Must contest systems theoretically - which is most internally-consistent?
+
+- All "pure" systems can work in utopia with heroic assumptions (omniscience, omnipotence, benevolence)
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/ovgpa7jchye8wil/applesoranges.jpg?raw=1)
+]
+]
+---
+
+# Making Fair Comparisons: Robust Political Economy III
+
+.center[
+![:scale 90%](https://www.dropbox.com/s/2lg1xykht9vw3ys/miracle.png?raw=1)
+]
+
+---
+
+# Making Fair Comparisons: Robust Political Economy IV
+
+.pull-left[
+- Economists often recommend optimal policies that could be installed by a .whisper[benevolent despot]
+    - A dispassionate ruler with total control, perfect information, and right incentives to implement optimal policy
+    - A "1<sup>st</sup>-best solution"
+
+- In reality, 1<sup>st</sup>-best policies are distorted by the knowledge problem, the incentives problem, and politics
+    - Real world: 2<sup>nd</sup>-to-*n*<sup>th</sup>-best outcomes
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/aby3cf6ijkrjs7k/benevolentdespot.jpg?raw=1)
+]
+]
+
+---
+
+# Making Fair Comparisons: Nirvana Fallacy
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/nb9kqdul8v1qcs3/demsetz.png?raw=1)
+
+Harold Demsetz
+
+1930-2019
+]
+]
+
+.right-column[
+
+> The view that now pervades much public policy economics implicitly presents the relevant choice as between an ideal norm and an existing 'imperfect' institutional arrangement. This **nirvana approach** differs considerably from a comparative institution approach in which the relevant choice is between alternative real institutional arrangements, (p.1)
+]
+
+.source[Demsetz, Harold, 1969, "Information and Efficiency: Another Viewpoint," *Journal of Law and Economics* 12(1): 1-22]
+
+---
+
+# Comparative Analysis
+
+.pull-left[
+- Compare imperfections of feasible and relevant alternative systems
+    - Don't compare problems of an imperfect system with some ideal system!
+
+- Economics: *think on the margin!* 
+    - One system's "failure" does not imply another's "success"!
+    - the real world requires tradeoffs
+    - "economics puts parameters on people's utopias"
+    - "compared to what?"
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/puy4uhkm6mjt4ev/singingcontest.jpg?raw=1)
+]
+]
+
+---
+
+class: inverse, center, middle
+# Two Trends in "Economic" Thinking
+
+---
+
+# Two Trends in "Economic" Thinking
+
+.pull-left[
+
+.center[
+![:scale 50%](https://www.dropbox.com/s/w5ecx0628ihm9n2/smith.png?raw=1)
+
+*Understanding* the **spontaneous order** of society
+]
+]
+.pull-right[
+.center[
+![:scale 55%](https://www.dropbox.com/s/hptz0oijisiancz/marx.png?raw=1)
+
+A *tool* for **social control**
+]
+]
+
+---
+
+# Economics as Understanding Spontaneous Order I
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/mb70osuxubsi4dy/ferguson.png?raw=1)
+
+Adam Ferguson
+
+1723-1716
+]
+]
+
+.right-column[
+
+> "Every step and every movement of the multitude, even in what are termed enlightened ages, are made with equal blindness to the future; and nations stumble upon establishments, which are indeed **the result of human action, but not the execution of any human design**," (Book III, Chapter 1).
+]
+
+.source[Ferguson, Adam, 1767, [*An Essay on the History of Civil Society*](https://oll.libertyfund.org/titles/ferguson-an-essay-on-the-history-of-civil-society)]
+
+---
+
+# Economics as Understanding Spontaneous Order II
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/w5ecx0628ihm9n2/smith.png?raw=1)
+
+Adam Smith
+
+1723-1790
+]
+]
+
+.right-column[
+
+> "The man of system...is apt to be very wise in his own conceit; and is often so enamoured with the supposed beauty of his own ideal plan of government, that he cannot suffer the smallest deviation from any part of it...He seems to imagine that he can arrange the different members of a great society with as much ease as the hand arranges the different pieces upon a chess-board. He does not consider that...in the great chess-board of human society, every single piece has a principle of motion of its own, altogether different from that which the legislature might chuse to impress upon it...If they are opposite or different, the game will go on miserably, and the society must be at all times in the highest degree of disorder," (Book IV, Chapter II).
+]
+
+.source[Smith, Adam, 1759, [*The Theory of Moral Sentiments*](https://www.econlib.org/library/Smith/smMS.html)]
+
+---
+
+# Economics as Understanding Spontaneous Order III
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/nngnae748fflox5/hayekelder.png?raw=1)
+
+F. A. Hayek
+
+1899-1992
+
+Economics Nobel 1974
+]
+]
+
+.right-column[
+
+> "**The most dangerous stage in the growth of civilization may well be that in which man...refuses to accept or to submit to anything which he does not rationally understand.** The rationalist whose reason is not sufficient to teach him those limitations of the powers of conscious reason, and who despises all the institutions and customs which have not been consciously designed, would thus become the destroyer of the civilization built upon them...Common acceptance of formal rules is indeed the only alternative to direction by a single will man has yet discovered," (p.162).
+]
+
+.source[Hayek, F. A., 1980, *The Counterrevolution of Science: Studies in the Abuse of Reason*]
+
+---
+
+# Economics as Understanding Spontaneous Order IV
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/nngnae748fflox5/hayekelder.png?raw=1)
+
+F. A. Hayek
+
+1899-1992
+
+Economics Nobel 1974
+]
+]
+
+.right-column[
+.font80[
+> "There are **two ways of looking at the pattern of human activities** which lead to very different conclusions concerning both its explanation and the possibilities of deliberately altering it. The first one is based on conceptions which are demonstrably false, yet are so pleasing to human vanity that they have gained great influence and are constantly employed even by people who know that they rest on a fiction...The [second]...leads in some respects to conclusions so unwelcome that few are willing to follow through to the end."
+
+> "The **first gives us a sense of unlimited power to realize our wishes, while the second leads to the insight that there are limitations to what we can deliberately bring about, and to the recognition that some of our present hopes are delusions.** Yet the effect of allowing ourselves to be deluded by the first view has always been that man has actually limited the scope of what he can achieve. For it has always been the recognition of the limits of the possible which has enabled man to make full use of his powers..." (pp.19-20)
+
+> "**The curious task of economics is to demonstrate to men how little they really know about what they imagine they can design.**" (p.76)
+]
+]
+
+.source[Hayek, F. A., 1988, *The Fatal Conceit*]
+
+---
+
+# Economics as Understanding Spontaneous Order V
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/nngnae748fflox5/hayekelder.png?raw=1)
+
+F. A. Hayek
+
+1899-1992
+
+Economics Nobel 1974
+]
+]
+
+.right-column[
+.font80[
+> "To early thinkers the existence of an order of human activities transcending the vision of an ordering mind seemed impossible," (p. 11).
+			
+> "I call **'the fatal conceit'** the idea that the ability to acquire skills [to direct society] stems from reason. For it is the other way around: our reason is as much the result of an evolutionary selection process as is our morality...the evolution of the extended order...is ...beyond instinct and often opposed to it, and which is...incapable of being created or designed by reason," (p. 21).
+			
+> "[Too many eminent scientists] call on human reason...to seize the reins and control future [social] development. Such wishful thinking is encouraged by what I have elsewhere called **'constructivist rationalism,'**" (p.22).
+
+> "[The evolution of the extended order] is a process of continuous adaptation to unforeseeable events, to contingent circumstances which could not have been forecast. The is another reason why evolutionary theory can never put us in the position of rationally predicting and controlling future evolution," (p.25)
+]
+]
+
+.source[Hayek, F. A., 1988, *The Fatal Conceit*]
+
+---
+
+# Economics as Understanding Spontaneous Order VI
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/nngnae748fflox5/hayekelder.png?raw=1)
+
+F. A. Hayek
+
+1899-1992
+
+Economics Nobel 1974
+]
+]
+
+.right-column[
+
+> "Moreover, the structures of the extended order are made up not only of individuals but also of many, often overlapping, [groups] within which old instinctual responses, such as solidarity and altruism, continue to retain some importance by assisting voluntary collaboration...Part of our present difficulty is that **we must constantly adjust our lives, our thoughts and our emotions, in order to live simultaneously within different kinds of orders according to different rules.** If we were to apply the unmodified, uncurbed, rules of the micro-cosmos (i.e., of the small band or troop, or of, say, our families) to the macro-cosmos (our wider civilisation), as our instincts and sentimental yearnings often make us wish to do, *we would destroy it*. Yet if we were always to apply the rules of the extended order to our more intimate groupings, *we would crush them*. **So we must learn to live in two sorts of worlds at once**," (p.18)
+
+]
+
+.source[Hayek, F. A., 1988, *The Fatal Conceit*]
+
+---
+
+# Economics as a Tool for Social Control I
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/mx8l2rken7qy6fw/plato.jpg?raw=1)
+
+Plato
+
+c.428-c.348 B.C.
+
+]
+]
+
+.right-column[
+
+> "[T]he law is not concerned with making any one class in this city do outstandingly well, but is **contriving to produce this condition in the city as a whole, harmonizing the citizens together through persuasion or compulsion**, and making them share with each other the benefit they can confer on the community. It produces such men in the city, not in order to allow them to turn in whatever direction each one wants, but **to make use of them to bind the city together**," (Book VII)
+
+- Hierarchical society where all are assigned roles via the "noble lie"
+- "Guardians" and philosopher-kings plan society under common ownership of property, childrearing, etc.
+- Commerce is beneath political, philosophic, civic, and artistic life
+]
+
+.source[Plato, *The Republic*]
+
+---
+
+# Economics as a Tool for Social Control II
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/0fngiqjdhpf2p71/comte.png?raw=1)
+
+August Comte
+
+1798-1857
+]
+]
+
+.right-column[
+
+- Comte is often considered the father of sociology and main exponent of
+
+- .shout[Positivism]: knowledge is derived (only) from quantifiable empirical evidence
+    - NOT from pure reason, revelation, or intuition
+
+- Society, like the physical world, [operates under discoverable empirical and experimental laws](http://en.wikipedia.org/wiki/Positivism)
+
+> "The law is this: that each of our leading conceptions [of both mind and society] – each branch of our knowledge – passes successively through three different theoretical conditions: the Theological, or fictitious; the Metaphysical, or abstract; and the Scientific, or positive." 
+
+]
+
+.source[Comte, Auguste, 1830-1842, *Course of Positive Philosophy*]
+
+---
+
+# Economics as a Tool for Social Control III
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/0fngiqjdhpf2p71/comte.png?raw=1)
+
+August Comte
+
+1798-1857
+]
+]
+
+.right-column[
+
+- .whisper["Scientism"]: understanding and mastering these laws to rationally order a society
+
+- [**"Logical positivism"**](http://en.wikipedia.org/wiki/Logical_positivism) (1920s-1960s): only *empirically-verifiable* statements are knowledge
+    - anything *not* empirically-verifiable is unscientific and meaningless
+    
+- Positivism in economics<sup>.red[1]<sup>
+]
+
+.footnote[<sup>.red[1]</sup> Friedman, Milton, 1953, "The Methodology of Positive Economics," *Essays in Positive Economics*]
+---
+
+# Some Context: The Upheaval of the Ancien Regime
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/05be8gtazjb7foa/frenchrevolutionguilotine.jpg?raw=1)
+
+]
+]
+
+.pull-right[
+
+- French Revolution (1789-1799), revolutionaries overthrow the Ancien regime
+
+- New republican government aims to .whisper[rebuild all social institutions from scratch via positivist science]
+
+- L'Encyclopedie: compendium of all scientific knowledge
+]
+
+---
+
+# Some Context: Utopian Socialism
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/3rxb44kt8uczrxb/utopia.jpg?raw=1)
+
+From Thomas More's *Utopia* (1516)
+
+]
+]
+
+.pull-right[
+
+- **Utopian Socialists**/anarchists: Thomas More, Henri de Saint-Simon, Charles Fourier, Robert Owen, Pierre-Joseph Proudhon, Pyotr Kropotkin
+
+- Literature of utopian societies of equality and wealth for all, founded on scientific methods
+
+- Believed not in revolution, or class conflict, but peaceful moral persuasion
+]
+
+---
+
+# Some Context: Progressive Era I
+
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/4559f5e3iph2h2g/fredericktaylor.jpg?raw=1)
+
+Frederick Winslow Taylor
+
+1856-1915
+]
+]
+
+.right-column[
+
+- **Progressive Era** (1890-1920), rise of Big Business
+
+- .shout[Taylorism] and .shout[Efficiency Movement]: industrial efficiency by methods of *scientific* management
+    - Apply scientific tools to study optimal production techniques, standardization, eliminate waste
+
+- Workers as cogs in a well-oiled machine
+]
+
+
+---
+
+# Some Context: Progressive Era II
+
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/5cu2p8j4zz3kaka/theodoreroosevelt.jpg?raw=1)
+
+Theodore Roosevelt
+
+1858-1919
+
+
+]
+]
+
+.right-column[
+
+- **Progressive Era** (1890-1920), rise of Big Business
+
+- Activism aimed at rationalizing society, economy
+
+- Activist government fine-tuning markets: antitrust, minimum wage, externalities
+
+- Science of .shout[public administration]: substitution of democracy and markets with rule by technocratic *experts* insulated from politics
+
+.center[
+![:scale 30%](https://www.dropbox.com/s/jokpywlox6qvvzv/roosevelttrusts.png?raw=1)
+]
+]
+
+---
+
+# Some Context: Progressive Era II
+
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/53sixu82nq8oef6/wilson.jpg?raw=1)
+
+Woodrow Wilson
+
+1856-1924
+
+
+]
+]
+
+.right-column[
+
+> "The field of [public] administration is a field of business. **[It] lies outside the proper sphere of politics**...Although **politics sets the tasks for administration**, **it should not be suffered to manipulate its offices**"
+
+> "[P]ublic attention must be easily directed, in each case of good or bad administration, to just the man deserving of praise or blame. **There is no danger in power, if only it be not irresponsible.** If it be divided, dealt out in share to many, it is obscured."
+
+]
+
+.source[Wilson, Woodrow, 1887, "The Study of Administration," *Political Science Quarterly*]
+
+---
+
+class: inverse, center, middle
+# *Marxian* - Socialism
+
+---
+
+# *Marxian* -Socialism: Motivating Ideals I
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/35zae79q2l2eakk/marxengels.png?raw=1)
+
+Karl Marx (1818-1883)
+
+Friedrich Engels (1820-1895)
+
+]
+]
+
+.right-column[
+
+.font90[
+> "The history of all hitherto existing society is the **history of class struggles**."
+
+> "In the earlier epochs of history, we find almost everywhere a complicated arrangement of society into various orders, a manifold gradation of social rank. In ancient Rome we have patricians, knights, plebeians, slaves; in the Middle Ages, feudal lords, vassals, guild-masters, journeymen, apprentices, serfs; in almost all of these classes, again, subordinate gradations."
+
+> "Our epoch, the epoch of the bourgeoisie, possesses, however, this distinct feature: it has simplified class antagonisms. Society as a whole is more and more splitting up into two great hostile camps, into two great classes directly facing each other — **Bourgeoisie** and **Proletariat**," $(\S1$ Bourgeois and Proletarians)
+]
+]
+
+.source[Marx, Karl and Friedrich Engels, 1848, [*Manifesto of the Communist Party*](https://www.marxists.org/archive/marx/works/1848/communist-manifesto/)]
+
+---
+
+# *Marxian* -Socialism: Motivating Ideals II
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/35zae79q2l2eakk/marxengels.png?raw=1)
+
+Karl Marx (1818-1883)
+
+Friedrich Engels (1820-1895)
+
+]
+]
+
+.right-column[
+
+.font90[
+> "In the national struggles of the proletarians of the different countries, **[the Communists] point out and bring to the front the common interests of the entire proletariat, independently of all nationality.** [In] the various stages of development which the struggle of the working class against the bourgeoisie has to pass through, they always and everywhere represent the interests of the movement as a whole."
+
+> "The immediate aim of the Communists is the same as that of all other proletarian parties: formation of the proletariat into a class, overthrow of the bourgeois supremacy, conquest of political power by the proletariat."
+
+> "In this sense, the theory of the Communists may be summed up in the single sentence: **Abolition of private property,** $(\S2$ Proletarians and Communists)
+]
+]
+
+.source[Marx, Karl and Friedrich Engels, 1848, [*Manifesto of the Communist Party*](https://www.marxists.org/archive/marx/works/1848/communist-manifesto/)]
+
+---
+
+# *Marxian* -Socialism: Motivating Ideals III
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/35zae79q2l2eakk/marxengels.png?raw=1)
+
+Karl Marx (1818-1883)
+
+Friedrich Engels (1820-1895)
+
+]
+]
+
+.right-column[
+
+.font90[
+> "The Socialist and Communist systems, properly so called, those of Saint-Simon, Fourier, Owen, and others, spring into existence in the early undeveloped period, described above, of the struggle between proletariat and bourgeoisie."
+
+> "The undeveloped state of the class struggle, as well as their own surroundings, causes Socialists of this kind to consider themselves far superior to all class antagonisms. They want to improve the condition of every member of society, even that of the most favoured. Hence, they habitually appeal to society at large, without the distinction of class; nay, by preference, to the ruling class."
+
+> "Hence, they reject all political, and especially all revolutionary action; they wish to attain their ends by peaceful means, necessarily doomed to failure, and by the force of example, to pave the way for the new social Gospel."
+
+> "Such fantastic pictures of future society, painted at a time when the proletariat is still in a very undeveloped state and has but a fantastic conception of its own position...are of a purely Utopian character," $(\S3$ Socialist and Communist Literature)
+]
+]
+
+.source[Marx, Karl and Friedrich Engels, 1848, [*Manifesto of the Communist Party*](https://www.marxists.org/archive/marx/works/1848/communist-manifesto/)]
+
+---
+
+# *Marxian* -Socialism: Methodology
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/viiz21ut1z7rptd/hegel.jpg?raw=1)
+
+Georg Wilhelm Friedrich Hegel
+
+1770-1831
+
+]
+]
+
+.right-column[
+
+- Marxian analysis is done through Hegelian .whisper[dialectic]
+    - A thesis
+    - An antithesis
+    - A synthesis from contestation of thesis vs. antithesis
+    - Cycle repeats
+]
+
+---
+
+# *Marxian* -Socialism: Methodology II
+
+.pull-left[
+.center[
+![:scale 80%](https://www.dropbox.com/s/6lnmycmlurugdyh/baseandsuperstructure.jpg?raw=1)
+
+]
+]
+
+.pull-right[
+
+- Marx's .whisper[*materialist* dialectic]
+
+- History of the world is pre-determined by produce of material (economic) forces
+    - **Base**: determined by what social class controls the **modes of production (MOP)**
+    - Creates the **superstructure** of institutions (ideas, culture, religion, politics, the State) to reinforce class relations
+    - A new class overthrows the ruling class, takes over modes of production
+    - This collapses the old superstructure, creates a new base and new superstructure
+]
+
+---
+
+# *Marxian* -Socialism: Methodology III
+
+.pull-left[
+.center[
+![:scale 80%](https://www.dropbox.com/s/6lnmycmlurugdyh/baseandsuperstructure.jpg?raw=1)
+
+]
+]
+
+.pull-right[
+
+- Historical materialism:
+
+- **Primitive communism**: hunter-gatherers with no social classes
+- **Ancient MOP**: Citizens $>$ Slaves
+- **Feudal MOP**: Nobility $>$ Serfs & Bourgeoisie
+- **Capitalist MOP**: Bourgeoisie $>$ Proletariat
+- **Communist MOP**: Proletariat ushers in classless, stateless, society
+]
+
+---
+
+# Capitalism and Socialism I
+
+.center[
+![:scale 40%](https://www.dropbox.com/s/i51puge1or71hsi/capitalistpyramid.png?raw=1)
+]
+
+---
+
+# Capitalism and Socialism II
+
+.pull-left[
+
+- Capitalism (to Marxists) is unplanned "anarchy of production," *ex ante* social disharmony
+
+- Socialism will *rationalize* economy by centrally planning towards a harmonized pre-coordinated plan to achieve greater "advanced material production" than capitalism  
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/lbcdr87v4oaqeot/planning.jpg?raw=1)
+]
+]
+
+---
+
+# Capitalism and Socialism III
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/hptz0oijisiancz/marx.png?raw=1)
+
+Karl Marx 
+
+(1818-1883)
+
+]
+]
+
+.right-column[
+
+> The life-process of society, which is based on the process of material production, does not strip off its mystical veil until it is treated as production by freely associated men, and is **consciously regulated by them in accordance with a settled plan**, (p.92),<sup>.red[1]</sup> 
+
+> "The positive **transcendence of private property** as the appropriation of human life, is therefore the positive transcendence of all estrangement - that is to say, the return of man from religion, family, state, etc., to his human, i.e. social existence," (p.97).<sup>.red[2]</sup>
+
+]
+
+.source[
+<sup>.red[1]</sup> Marx, Karl, 1906, *Das Kapital: A Critique of Political Economy*
+
+<sup>.red[2]</sup> Marx, Karl, 1884, *Economic and Philosophical Manuscripts of 1884*
+]
+
+---
+
+# Capitalism and Socialism III
+
+.pull-left[
+
+- Marxist dialectic: socialism $=$ negation of capitalism and emerges from its problems:
+
+- Alienates workers from their labor by capitalists who profit from "surplus value"
+
+- Proceeds to monopoly through accumulation of capital amidst a declining rate of profit
+
+- Crisis of overproduction and a "reserve army of the unemployed" (business cycles) 
+- Drives capitalist nations to find new markets to avoid depression: imperialism, exploitation, and colonization of periphery countries<sup>.red[1]</sup>
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/lbcdr87v4oaqeot/planning.jpg?raw=1)
+]
+]
+.footnote[<sup>.red[1]</sup> Lenin, Vladmir, 1917, *Imperialism: The Highest Stage of Capitalism*]
+
+---
+
+class: inverse, center, middle
+# The Socialist Calculation Debate
+
+---
+
+# Socialism: How to Achieve? I
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/35zae79q2l2eakk/marxengels.png?raw=1)
+
+Karl Marx (1818-1883)
+
+Friedrich Engels (1820-1895)
+
+]
+]
+
+.right-column[
+
+.font80[
+> 1. Abolition of property in land and application of all rents to public purposes
+2. A heavy progressive or graduated income tax
+3. Abolition of all rights of inheritance
+4. Confiscation of the property of all emigrants and rebels
+5. Centralisation of credit in the hands of the state, by means of a national bank with State capital and an exclusive monopoly
+6. Centralisation of the means of communication and transport in the hands of the State
+7. Extension of factories and instruments of production owned by the State; the bringing into cultivation of waste-lands, and the improvement of the soil generally in accordance with a common plan
+8. Equal liability of all to work. Establishment of industrial armies, especially for agriculture
+9. Combination of agriculture with manufacturing industries; gradual abolition of the distinction between town and country by a more equable distribution of the populace over the country
+10. Free education for all children in public schools. Abolition of children's factory labour in its present form. Combination of education with industrial production, etc. etc.
+
+]
+]
+
+.source[Marx, Karl and Friedrich Engels, 1848, [*Manifesto of the Communist Party*](https://www.marxists.org/archive/marx/works/1848/communist-manifesto/)]
+
+---
+
+# Socialism: How to Achieve? II
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/hptz0oijisiancz/marx.png?raw=1)
+
+Karl Marx 
+
+(1818-1883)
+
+]
+]
+
+.right-column[
+
+> "My own contribution was (1) to show that the existence of classes is merely bound up with certain historical phases in the development of production; (2) that the class struggle necessarily leads to the **dictatorship of the proletariat**; [and] (3) that this dictatorship, itself, constitutes no more than a transition to the abolition of all classes and to a classless society," (pp.62-65).
+
+
+]
+
+.source["Letter from Marx to Joseph Weydemeyer" March 5, 1852 in Karl Marx & Frederick Engels, 1983, *Collected Works* Vol. 39, International Publishers: New York
+]
+
+---
+
+# Socialism: How to Achieve? III
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/c7bn0odgx1i87ym/lenin.png?raw=1)
+
+Vladimir Lenin 
+
+(1870-1924)
+
+]
+]
+
+.right-column[
+
+> "The dictatorship of the proletariat, i.e. the organization of the vanguard of the oppressed as the ruling class for the purpose of suppressing the oppressors, cannot result merely in an expansion of democracy. Simultaneously, with an immense expansion of democracy, which, for the first time, becomes democracy for the poor, democracy for the people, and not democracy for the money-bags, the dictatorship of the proletariat imposes a series of restrictions on the freedom of the oppressors, the exploiters, the capitalists. We must suppress them in order to free humanity from wage slavery,their resistance must be crushed by force; it is clear that there is no freedom and no democracy where there is suppression and where there is violence," (pp.62-65).
+
+
+]
+
+.source[Lenin, Vladimir, 1917, *The State and Revolution*]
+
+---
+
+# Socialism: How to Achieve? IV
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/c7bn0odgx1i87ym/lenin.png?raw=1)
+
+Vladimir Lenin 
+
+(1870-1924)
+
+]
+]
+
+.right-column[
+
+> "When a big enterprise assumes gigantic proportions, and, on the basis of an exact computation of mass data, organizes according to plan the supply of primary raw materials to the extend of two-thirds, or three-fourths, of all that is necessary for tens of millions of people; when the raw materials are transported in a systematic and organized manner to the most suitable places of production, sometimes situated hundreds or thousands of miles from each other; when a single centre directs all the consecutive stages of processing the material right up to the manufacture of numerous varieties of finished articles; when these products are distributed according to a single plan among tens and hundreds of millions of consumers...then it becomes evident that we have socialisation of production..." (pp.302-303).
+
+
+]
+
+.source[Lenin, Vladimir, 1977, *Collected Works*]
+
+---
+
+# Socialism: How to Achieve? V
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/c7bn0odgx1i87ym/lenin.png?raw=1)
+
+Vladimir Lenin 
+
+(1870-1924)
+
+]
+]
+
+.right-column[
+
+> "[We must have] the strictest and country-wide accounting and control of production and distribution of goods [under] the nodal points of public accounting under socialism [to organize] the population into a single cooperative society under proletariat management.
+ 
+> "It must be said that large-scale machine industry --- which is precisely the material source, the productive source, the foundation of socialism --- calls for absolute and strict unity of will...The technical, economic and historical necessity of this is obvious and all those who have thought about socialism have always regarded it as one of the conditions of socialism...How can such strict unity of will be guaranteed? By thousands subordinating their will to the will of one," ("The Immediate Tasks of the Soviet Government", pp.268-269)
+
+
+]
+
+.source[Lenin, Vladimir, 1977, *Collected Works*, Vol. 27]
+
+---
+
+# Socialism: How to Achieve? VI
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/2jnc7dlbt2xu5b6/trotsky.jpg?raw=1)
+
+Leon Trotksy 
+
+(1879-1940)
+
+]
+]
+
+.right-column[
+
+> "Socialist organization of production begins with the liquidation of the market...Production shall be geared to society's needs by means of a **unified economic plan.**"
+
+
+]
+
+.source[quoted in Smolinsky, Leon, 1967, "Planning without Theory 1917--1967," *Survey* 64: 113]
+
+---
+
+# Socialism: How to Achieve? VII
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/dyb8obtwqsdfhsc/bukharin.JPG?raw=1)
+
+Nikolai Bukharin 
+
+(1888-1938)
+
+]
+]
+
+.right-column[
+
+> "No longer will one enterprise compete with another, the factories, workshops, and other productive institutions will all be subdivisions, as it were, of one vast people's workshop, which will embrace the entire national economy of production. It is obvious that so comprehensive an organization presupposes **a general plan of production**...it is obvious that everything must be precisely calculated. We must **know in advance** how much labour to assign to the various branches of industry; what products are required and how much of each it is necessary to produce; how and where machines must be provided. These and similar details must be thought out beforehand, with approximate accuracy at least; and the work must be guided in conformity with our calculations. This is how the organization of communist production will be effected," (p.70).
+
+]
+
+.source[Bukharin, Nikolai and Yevgeni Preobrazhensky, 1966 [1919], [*The ABC of Communism*](https://www.marxists.org/archive/bukharin/works/1920/abc/index.htm)]
+
+---
+
+# Socialism: How to Achieve? VIII
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/c7bn0odgx1i87ym/lenin.png?raw=1)
+
+Vladimir Lenin 
+
+(1870-1924)
+
+]
+]
+
+.right-column[
+.font90[
+> "[H]ave councils of workers and servants been formed in the difference sections of the city; have the workers been armed; have the bourgeoisie been disarmed...have the capitalist factories and wealth in Munich and the capitalist farms in its environs been confiscated; have mortgage and rent payments by small peasants been canceled; have the wages of farm labourers and unskilled workers been doubled or trebeled; have all paper stocks and all printing-presses been confiscated so as to enable popular leaflets and newspapers to be printed for the masses; has the six-hour working day with two or three-hour instruction in state administration been introduced; have the bourgeoisie in Munich been made to give up surplus housing so that workers may be immediately moved into comfortable flats; have you taken over all the banks; have you taken hostages from the ranks of the bourgeoisie...have all the workers been mobilised for defence and for ideological propaganda in the neighboring villages?"
+]
+
+]
+
+.source[Lenin, Vladimir, 1977, ["Message of Greetings to the Bavarian Soviet Republic"](http://www.marxists.org/archive/lenin/works/1919/apr/27.htm), *Collected Works*, Vol. 4]
+
+---
+
+class: center, middle, inverse
+# The Economics of Central Planning
+
+---
+
+# The Economics of Central Planning I
+
+.pull-left[
+
+- **Competitive** markets in **equilibrium** are recognized by economists as being:
+
+- .shout[Allocatively efficient]: goods optimally allocated to highest-valued uses
+    - Price equals marginal (opportunity) cost
+
+- .shout[Productively efficient]: goods are produced at the minimum average cost
+
+- .shout[Pareto efficient]: no additional exchanges exist that can make at least one person better off without harming another person
+
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/j7xenkgo3p71vke/equilibriumbalance.png?raw=1)
+]
+]
+
+---
+
+# The Economics of Central Planning II
+
+.pull-left[
+
+- .whisper[General equilibrium theory]: study of simultaneous equilibrium across all markets
+
+- Mathematically: a unique vector of market prices simultaneously establishes an equilibrium in all markets
+
+$$\begin{bmatrix} p_1\\ p_2\\ \vdots \\ p_n\\ \end{bmatrix} \forall p_i \in \mathbb{R}^+: p_i \implies q^S_i=q^D_i $$
+
+- Ensure that $p=MC=AC_{min}$ for all markets and $\max CS+PS$
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/j7xenkgo3p71vke/equilibriumbalance.png?raw=1)
+]
+]
+
+---
+
+# The Economics of Central Planning: The Claim
+
+.pull-left[
+
+.content-box-red[
+.red[**The Claim**:]
+- If neoclassical economists know the mechanisms of how markets optimally allocate resources and maximize social wealth..
+
+- ...why not install central planners to achieve the *same* optimal market outcomes *without* the "anarchy of production," unemployment, & problems of capitalism<sup>.red[1]</sup>
+
+- ...and direct the economy with a single plan for socialist ends? 
+]
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/zwows56ydpqj9u6/management.jpg?raw=1)
+]
+]
+
+.footnote[<sup>.red[1]</sup> The theory would not be developed until later by mainstream economists, but these problems could include **market failures**: externalities, monopoly, public goods, etc.]
+
+---
+
+# The Economics of Central Planning: The Claim II
+
+.pull-left[
+
+- Socialists: "late-stage Capitalism has got us almost there already"
+
+- Run the *entire* economy as a large corporation to attain socialism
+    - Shareholders $\rightarrow$ "society"
+    - Managers $\rightarrow$ central planners
+    - Dividends to owners of capital $\rightarrow$ dividend to society via socialist principles
+
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/zwows56ydpqj9u6/management.jpg?raw=1)
+]
+]
+
+---
+
+# The Economics of Central Planning: The Claim III
+
+.left-column[
+.center[
+![:scale 40%](https://www.dropbox.com/s/viqkhpmebwyysre/adolfberle.jpg?raw=1)
+
+Adolf Berle 
+
+(1895-1971)
+
+![:scale 40%](https://www.dropbox.com/s/1dr94mb275hi05k/gardinermeans.jpg?raw=1)
+
+Gardiner Means 
+
+(1896-1988)
+
+]
+]
+
+.right-column[
+
+> "We now have single corporate enterprises employing hundreds of thousands of workers, having hundreds of thousands of stockholders, using billions of dollars' worth of the instruments of production, serving millions of customers, and controlled by a single management group. These are great collectives of enterprise, and a system composed of them might well be called 'collective capitalism,"
+
+
+]
+
+.source[Berle, Adolf and Gardiner Means, 1932, *The Modern Corporation and Private Propertt*]
+
+---
+
+# The Economics of Central Planning: The Claim IV
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/c7bn0odgx1i87ym/lenin.png?raw=1)
+
+Vladimir Lenin 
+
+(1870-1924)
+
+]
+]
+
+.right-column[
+
+> "For socialism, is merely the next step forward from state-capitalist monopoly. Or, in other words, socialism is merely state-capitalist monopoly **which is made to serve the interests of the whole people and has to that extent ceased** to be capitalist monopoly...The objective process of development is such that it is impossible to advance from **monopolies** (and the war has magnified their number, role and importance tenfold) without advancing toward socialism," (pp. 361-362)
+
+]
+
+.source[Lenin, Vladimir, 1977, *Collected Works*, Vol. 25]
+
+---
+
+# Central Planning Was All the Rage Among Elites I
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/udfdftpvalagsyj/einstein.png?raw=1)
+
+Albert Enstein 
+
+(1870-1924)
+
+]
+]
+
+.right-column[
+
+> "The **economic anarchy of capitalist society** as it exists today is, in my opinion, the real source of the evil...I am convinced there is only one way to eliminate these grave evils, namely through the **establishment of a socialist economy**, accompanied by an educational system which would be oriented toward social goals. In such an economy, the means of production are owned by society itself and are **utilised in a planned fashion.** A planned economy, which adjusts production to the needs of the community, would distribute the work to be done among all those able to work and would guarantee a livelihood to every man, woman, and child." (pp. 311)
+
+]
+
+.source[Einstein, Albert, 1949, "Why Socialism?", *Monthly Review*]
+
+---
+
+# Central Planning Was All the Rage Among Elites II
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/kh5lhv11r6tjvtz/samuelson.png?raw=1)
+
+Paul A. Samuelson 
+
+(1915-2009)
+
+Economics Nobel 1970
+]
+]
+
+.right-column[
+
+> "[T]he Soviet economy is proof that, contrary to what many skeptics had earlier believed, a socialist command economy can function and even thrive."
+
+.center[
+![:scale 25%](https://www.dropbox.com/s/w2xxa41w8t73kwh/samuelsonsovietgrowth.png?raw=1)
+]
+]
+
+.source[Samuelson, Paul A, 1989, *Economics*; Levy, David M and Sandra J Peart, 2009, ["Soviet Growth & American Textbooks"](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1517983), manuscript]
+
+---
+
+class: inverse, center, middle
+
+# Mises' Critique of Socialism
+
+---
+
+# Mises' Critique of Socialism I
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/zmt2ekm1ixb4p4c/mises2.png?raw=1)
+
+Ludwig von Mises 
+
+(1881-1973)
+
+]
+]
+
+.right-column[
+
+> "The impracticability of Socialism is the result of intellectual, not moral, incapacity. Even angels, if they were endowed only with human reason, could not form a socialistic community. If a socialist community were capable of economic calculation, it could be set up without any change in men's moral character," (p. 407).
+
+]
+
+.source[von Mises, Ludwig, 1922, *Socialism: An Economic an Sociological Analysis*]
+
+---
+
+# Mises' Critique of Socialism II
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/zmt2ekm1ixb4p4c/mises2.png?raw=1)
+
+Ludwig von Mises 
+
+(1881-1973)
+
+]
+]
+
+.right-column[
+
+
+- Socialism $=$ no private ownership of the means of production
+
+- $\implies$ no exchange of capital goods
+
+- $\implies$ no market prices for capital goods
+
+- $\implies$ no profit or loss signals
+
+- $\implies$ no feedback to determine if an allocation is efficient
+
+- Therefore, .whisper[it is impossible under socialism to rationally allocate productive resources]
+
+> "Where there is no free market, there is no pricing mechanism; without a pricing mechanism, there is no economic calculation," (p. 18)
+
+]
+
+.source[von Mises, Ludwig, 1922, *Socialism: An Economic an Sociological Analysis*]
+
+---
+
+# Mises' Critique of Socialism III
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/zmt2ekm1ixb4p4c/mises2.png?raw=1)
+
+Ludwig von Mises 
+
+(1881-1973)
+
+]
+]
+
+.right-column[
+
+- Sign of a free economy is the existence of a stock market
+
+> "Production goods in a socialist commonwealth are exclusively communal; they are inalienable property of the community, and thus *res extra commercium* [things outside of market]"
+
+- Socialists accept this definition: a socialist economy does not allow private ownership of the means of production
+
+
+]
+
+.source[von Mises, Ludwig, 1920, *Economic Calculation in the Socialist Commonwealth*]
+
+---
+
+# Mises' Critique of Socialism IV
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/zmt2ekm1ixb4p4c/mises2.png?raw=1)
+
+Ludwig von Mises 
+
+(1881-1973)
+
+]
+]
+
+.right-column[
+
+> "There will be hundreds and thousands of factories in operation...In the ceaseless toil and moil of this process, however, the administration will be without any means of testing their bearings. It will never be able to determine whether a given good has not been kept for a superfluous length of time in the necessary processes of production, or weather work and material have not been wasted in its completion. How will it be able to decide whether this or that method of production is the more profitable?"
+
+]
+
+.source[von Mises, Ludwig, 1920, *Economic Calculation in the Socialist Commonwealth*]
+
+---
+
+# Mises' Critique of Socialism V
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/zmt2ekm1ixb4p4c/mises2.png?raw=1)
+
+Ludwig von Mises 
+
+(1881-1973)
+
+]
+]
+
+.right-column[
+
+> "Calculation by exchange value furnishes a control over the appropriate employment of goods. Anyone who wishes to make calculations in regard to a complicated process of production will immediately notice whether he has worked more economically than others or not; if he finds...that he will not be able to produce profitably, this shows that others understand how to make a better use of the goods of higher order [capital] in question."
+
+]
+
+.source[von Mises, Ludwig, 1920, *Economic Calculation in the Socialist Commonwealth*]
+
+---
+
+# Mises' Critique of Socialism VI 
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/zmt2ekm1ixb4p4c/mises2.png?raw=1)
+
+Ludwig von Mises 
+
+(1881-1973)
+
+]
+]
+
+.right-column[
+
+- Socialists claim we can run the economy like we run a firm
+
+- This mistakes the .shout[economic problem] for a mere .whisper[technological problem]
+
+- Capital and production is not a mere problem of management and allocating resources (assuming a static, constant structure of the economy)
+
+- The real problem is *dynamic* and *entrepreneurial*! Activities in the capital market (starting firms, merging them, dissolving them, lending, borrowing, exchanging equity, credit) *change the structure* of the economy! 
+]
+
+.source[von Mises, Ludwig, 1920, *Economic Calculation in the Socialist Commonwealth*]
+
+---
+
+# Mises' Critique of Socialism VII
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/zmt2ekm1ixb4p4c/mises2.png?raw=1)
+
+Ludwig von Mises 
+
+(1881-1973)
+
+]
+]
+
+.right-column[
+
+> "The cardinal fallacy implied in this and all kindred proposals is that they...consider the structure of industrial production and the allocation of capital to the various branches and production aggregates as rigid, and do not take into account the necessity of altering this structure in order to adjust it to changes in conditions...The operations of managers, their buying and selling, are only a small segment of the totality of market operations...The entrepreneurs and capitalists establish corporations and other firms, enlarge or reduce their size, dissolve them or merge them with other enterprises; they buy and sell the shares of bonds of already existing and of new corporations; they grant, withdraw, and recover credits; in short they perform all those acts the totality of which is called the capital and money market," (p.703).
+
+]
+
+.source[von Mises, Ludwig, 1949, *Human Action: A Treatise on Economics*]
+
+---
+
+# Mises' Critique of Socialism VIII
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/zmt2ekm1ixb4p4c/mises2.png?raw=1)
+
+Ludwig von Mises 
+
+(1881-1973)
+
+]
+]
+
+.right-column[
+
+> "Our problem does not refer to the managerial activities; it concerns the allocation of capital to the various branches of industry. The question is: In which branches should production be increased or restricted, in which branches should the objective of production be altered, what new branches should be inaugurated? With regard to these issues it is vain to cite the honest corporation manager and his well-tried efficiency. Those who confused entrepreneurship and management close their eyes to the economic problem...The capitalist system is not a managerial system, it is an entrepreneurial system," (p.703).
+
+]
+
+.source[von Mises, Ludwig, 1949, *Human Action: A Treatise on Economics*]
+
+---
+
+# Mises' Critique of Socialism IX
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/zmt2ekm1ixb4p4c/mises2.png?raw=1)
+
+Ludwig von Mises 
+
+(1881-1973)
+
+]
+]
+
+.right-column[
+
+> "[A]s soon as one gives up the conception of a freely established monetary price for goods of a higher order, rational production becomes completely impossible. **Every step that takes us away from private ownership of the means of production and from the use of money also takes us away from rational economics**," (p.14).
+
+> "Thus in the socialist commonwealth every economic change becomes an undertaking whose success can be neither appraised in advance nor later retrospectively determined. There is only groping in the dark. **Socialism is the abolition of rational economy**," (p.17).
+
+]
+
+.source[von Mises, Ludwig, 1920, *Economic Calculation in the Socialist Commonwealth*]
+
+---
+
+# Mises' Critique of Socialism X
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/zmt2ekm1ixb4p4c/mises2.png?raw=1)
+
+Ludwig von Mises 
+
+(1881-1973)
+
+]
+]
+
+.right-column[
+
+- But there are socialist countries at the time! (Soviet Union)
+
+> "The extent to which socialism is in evidence among us constitutes only a socialistic oasis in a society with monetary exchange...[However using world prices would be impossible] in the case of socialist concerns operating in a purely socialistic environment, that is, if socialism covers the globe."
+
+]
+
+.source[von Mises, Ludwig, 1920, *Economic Calculation in the Socialist Commonwealth*]
+
+---
+
+class: inverse, center, middle
+# Neoclassical Market Socialism
+
+---
+
+# Socialist/Neoclassical Response I
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/p4wks7w6j8uhwgw/lange.png?raw=1)
+
+Oskar Lange 
+
+(1904-1965)
+
+]
+]
+
+.right-column[
+
+- We can achieve competitive market equilibria through central planning
+
+- Pure socialism (without prices) is indeed impossible (thanks, Mises), but with central planning, we can still achieve optimal outcomes while avoiding capitalism's problems
+
+- .shout[Market Socialism]: maintaining a price system (or importing one) but having the State direct economic activity
+]
+
+.source[Lange, Oskar, 1936, "On the Economic Theory of Socialism: Part One," *Review of Economic Studies* 4: 53-71]
+
+---
+
+# Socialist/Neoclassical Response II
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/p4wks7w6j8uhwgw/lange.png?raw=1)
+
+Oskar Lange 
+
+(1904-1965)
+
+]
+]
+
+.right-column[
+
+> "[It was Mises'] powerful challenge that forced the socialists to recognize the importance of an adequate system of economic accounting to guide the allocation of resources in a socialist economy. Even more, it was chiefly due to Professor Mises' challenge that many socialists became aware of the very existence of such a problem," (p.53).
+
+> "Professor Mises' contention that a socialist economy cannot solve the problem of rational allocation of resources is based on a confusion concerning the nature of prices...[Prices are merely trade-off ratios, the] terms on which alternatives are offered," (p.54).
+
+]
+
+.source[Lange, Oskar, 1936, "On the Economic Theory of Socialism: Part One," *Review of Economic Studies* 4: 53-71]
+
+---
+
+# Socialist/Neoclassical Response III
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/p4wks7w6j8uhwgw/lange.png?raw=1)
+
+Oskar Lange 
+
+(1904-1965)
+
+]
+]
+
+.right-column[
+
+> "The economic problem is a problem of choice between different alternatives. To solve the problem three data are needed: (1) a preference scale...(2) knowledge of 'the terms on which alternatives are offered,' and finally (3) knowledge of the amount of resources available. Those three data given, the problem of choice is soluable," (p.54).
+
+]
+
+.source[Lange, Oskar, 1936, "On the Economic Theory of Socialism: Part One," *Review of Economic Studies* 4: 53-71]
+
+---
+
+# Socialist/Neoclassical Response IV
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/p4wks7w6j8uhwgw/lange.png?raw=1)
+
+Oskar Lange 
+
+(1904-1965)
+
+]
+]
+
+.right-column[
+
+> "Professor Mises denies [that knowledge of the terms on which alternatives are offered can exist without markets] However, a careful study of price theory and of the theory of productions convinces us that, the data under (1) and under (3) being given, the "terms on which alternatives are given" are determined ultimately by the technical possibilities of transformation of one commodity into another, i.e. by the production functions. The administrators of a socialist economy will have exactly the same knowledge, or lack of knowledge, of the production functions as the capitalist entrepreneurs have.," (p.55).
+
+> "The Central Planning Board would fix [the price to avoid surpluses and shortages] so as to satisfy the objective equilibrium conditions, just as a competitive market does." 
+
+]
+
+.source[Lange, Oskar, 1936, "On the Economic Theory of Socialism: Part One," *Review of Economic Studies* 4: 53-71]
+
+---
+
+# Socialist/Neoclassical Response V
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/564425ylyl96kp3/bergson.jpg?raw=1)
+
+Abram Bergson 
+
+(1914-2003)
+
+]
+]
+
+.right-column[
+
+> "[O]nce tastes and techniques are given, the values of the means of production can be determined unambiguously by imputation without the intervention of a market process. The [Central Planning] Board...could decide readily how to allocate resources so as to assure the optimum welfare. It would simply have to solve the equations," (p.264).
+
+> "There can hardly be any room for debate: of course, socialism can work. on this, Lange certainly is convincing." 
+
+]
+
+.source[Bergson, Abram, 1948, *Socialist Economics*]
+
+---
+
+# Socialist/Neoclassical Response VI
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/p4wks7w6j8uhwgw/lange.png?raw=1)
+
+Oskar Lange 
+
+(1904-1965)
+
+]
+]
+
+.right-column[
+
+- Given set of least-cost production functions, we can solve the constrained optimization problem to calculate the appropriate tradeoff ratios between goods, which gives us the relative prices
+
+- Where to get "given" data of (1) and (2)? 
+
+]
+
+.source[Lange, Oskar, 1936, "On the Economic Theory of Socialism: Part One," *Review of Economic Studies* 4: 53-71]
+
+---
+
+# Isn't This "Socialism" Just Replicating Competitive Markets I
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/p4wks7w6j8uhwgw/lange.png?raw=1)
+
+Oskar Lange 
+
+(1904-1965)
+
+]
+]
+
+.right-column[
+
+- "Market socialism" is superior for 4 reasons:
+
+1. It can redistribute endowments, namely toward greater equality, “so as to attain the maximum social welfare."
+2. It can modify prices to correct for external effects 
+3. eliminate monopoly pricing, in both ways approaching the ideal of perfect competition more closely than a market economy
+4. Socialism is better able to foster technological progress
+
+]
+
+.source[Lange, Oskar, 1936, "On the Economic Theory of Socialism: Part One," *Review of Economic Studies* 4: 53-71]
+
+---
+
+# Isn't This "Socialism" Just Replicating Competitive Markets? II
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/2o2tcr2i3y1ljgg/lerner.jpg?raw=1)
+
+Abba Lerner 
+
+(1903-1982)
+
+]
+]
+
+.right-column[
+
+> "If socialism is to be identified with the belief that the abolition of private property would automatically establish the brotherhood of man - and many socialists did, while some apparently still do - then socialism must be counted out as false," (vii).
+
+> "**Economics of Control** [takes the stress away] from collectivism and applied to the idea of conscious recognition of the problems of social organization and the exercise of conscious control over the economic system...The economics of *control* is still contrasted with the economics of *laissez fare*, but control does not necessarily mean collectivism. **It suggests the deliberate application of whatever policy will best serve the social interest**, without prejudging the issue between collective ownership and administration or some form of private enterprise," (vii-viii).
+
+]
+
+.source[Lerner, Abba, 1944, [*The Economics of Control: Principles of Welfare Economics*](https://archive.org/details/in.ernet.dli.2015.5584/page/n7)]
+
+---
+
+# Socialism Across the World
+
+.center[
+![](https://www.dropbox.com/s/to0yiqh42ro3ayr/mapofsocialism.png?raw=1)
+]
+
+.source[Source: [Wikipedia](https://en.wikipedia.org/wiki/List_of_socialist_states#/media/File:Socialist_states_by_duration.png)]
+
+---
+
+class: inverse, center, middle
+# The Socialist Calculation Debate: In Retrospect
+
+---
+
+# The Socialist Calculation Debate In Retrospect I
+
+.pull-left[
+- I am omitting Mises' and (more famously) Hayek's responses to Lange and others
+    - We'll see them next week in the next lesson
+    - This exchange leads to new insights about the *function of market prices*
+
+- Overall, the socialist calculation "debate" largely ended with **economists talking past each other**
+    - Both sides walked away believing they had "won"
+
+- Mises & Hayek (["The Austrians"](http://en.wikipedia.org/wiki/Austrian_School)) begin to recognize that they view "prices," "equilibrium," "competition," and "efficiency" *very differently* than neoclassical economists
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/v3plsiunn8ujfcz/hayekmises.jpg?raw=1)
+]
+]
+---
+
+# The Socialist Calculation Debate In Retrospect II
+
+Stages of the debate:
+
+1. Marxists argue for moneyless, propertyless, centrally-planned economy as a superior system for achieving coordinated, "advanced material production" as compared to the ``anarchy'' of capitalist production
+2. Mises (1920) argued that socialism cannot achieve its defined goals due to its inability to solve the economic calculation problem
+3. Developments in NC-GE theory show logical/formal similarity of systems of equations between the socialist and capitalist system under static, ideal, conditions
+4. Hayek extends Mises' calculation point as a problem of dispersed tacit knowledge (impossible to achieve via equation-solving) that is not *given* to any agent or system; competition and market prices enable *discovery* of optimal resource uses 
+5. Lange & others argue "market socialism" can approximate *perfect competition*
+
+.source[Lavoie, Don, 1985, *Rivalry and Central Planning: The Socialist Calculation Debate Reconsidered*, p.25]
+
+---
+
+# The Socialist Calculation Debate In Retrospect III
+
+.pull-left[
+
+- Main disagreement is about **rivalry**
+
+- **Marxists**: .onfire[rivalry as inherent flaw] in capitalism leading to conflict; central planning removes rivalry and leads to pre-coordinated harmony
+
+- **Mises-Hayek**: .onfire[rivalry] under specific institutions (market prices, property rights) .onfire[is the only way to generate the information] necessary to rationally allocate resources
+
+- **Neoclassical economists**: .onfire[assume rivalry away] in perfect competition models, viewing prices as just parametric statistics, allowing a central planner to achieve the same optimal outcome
+
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/otgtujqdnspc3me/marketcompetition.jpg?raw=1)
+]
+]
+.source[Lavoie, Don, 1985, *Rivalry and Central Planning: The Socialist Calculation Debate Reconsidered*, p.25]
+
+---
+
+# What Are Prices, Then?
+
+.pull-left[
+
+- This will lead into our next topic on the *microeconomics* of development
+
+- What *are* the functions of market prices, competition, equilibrium, etc? 
+
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/rz4nzbs1vow1c4b/moneysignal.jpg?raw=1)
+]
+]

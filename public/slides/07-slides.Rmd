@@ -1,0 +1,1341 @@
+---
+title: "Lesson 7: Geography and Other Uncontrollable Factors"
+subtitle: "ECON 317 · Economics of Development · Fall 2019"
+author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/devf19"><i class="fa fa-github fa-fw"></i> ryansafner/devf19</a><br> <a href="https://devF19.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> devF19.classes.ryansafner.com</a><br>'
+#date:
+output:
+  xaringan::moon_reader:
+    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML" # rescales math with css changes https://github.com/yihui/xaringan/issues/143
+    lib_dir: libs
+    #seal: false
+    css: [custom.css, custom-fonts.css, "hygge"] #, metropolis, metropolis-fonts
+    nature:
+      beforeInit: ["macros.js", "https://platform.twitter.com/widgets.js"] # first is for rescaling images , second is for embedding tweets, https://github.com/yihui/xaringan/issues/100
+      highlightStyle: ocean #rainbow #monokai rainbow solarized-light #tomorrow-night -blue -eighties zenburn
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    includes:
+      in_header: header.html # for font awesome, used in title  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(message=F,
+                      warning=F,
+                      echo=F)
+library(tidyverse)
+library(mosaic)
+library(ggrepel)
+```
+
+class: inverse, center, middle
+
+### [Guns, Germs, and Steel](#3)
+### [Geography and the "Deep Roots" of Development](#30)
+### [Geography's Mechanisms: Trade and Health](#43)
+### [The Curse of Resources](#71)
+### [Is Geography Destiny? The Reversal of Fortune](#80)
+
+---
+
+class: inverse, center, middle
+
+# Guns, Germs, and Steel
+
+---
+
+
+# Guns, Germs, and Steel I
+
+.pull-left[
+
+- Why are some countries poor and others rich?
+
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/cdzjofur32kj2mr/gunsgermssteel2.jpg?raw=1)
+]
+]
+
+---
+
+# Yali's Question (to Diamond) I
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/od8p497sgix99ot/diamondyali.jpg?raw=1)
+]
+]
+
+.pull-right[
+> "The conversation remained friendly, even though the tension between the two societies that Yali and I represented was familiar to both of us. Two centuries ago, all New Guineans were still "living in the Stone Age." That is, they still used stone tools similar to those superseded in Europe by metal tools thousands of years ago, and they dwelt in villages not organized under any centralized political authority. Whites had arrived, imposed centralized government, and brought material goods whose value New Guineans instantly recognized, ranging from steel axes, matches, and medicines to clothing, soft drinks, and umbrellas. In New Guinea all these goods were referred to collectively as "cargo."
+
+> "[H]e asked me, "Why is it that you white people developed somuch cargo and brought it to New Guinea, but we black people had little cargo of our own?" (p.14)
+
+]
+
+.source[Diamond, Jared, 1999, *Guns, Germs, and Steel: The Fates of Human Societies*]
+
+---
+
+# Yali's Question (to Diamond) II
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/od8p497sgix99ot/diamondyali.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+> "[H]e asked me, "Why is it that you white people developed so much cargo and brought it to New Guinea, but we black people had little cargo of our own?" (p.14)
+
+]
+
+.source[Diamond, Jared, 1999, *Guns, Germs, and Steel: The Fates of Human Societies*]
+
+---
+
+# Cargo Cults
+
+.center[
+![:scale 100%](https://www.dropbox.com/s/rl8gn4dsyyanhbl/cargocult.jpg?raw=1)
+]
+
+
+---
+
+# Guns, Germs, and Steel II
+
+.center[
+![:scale 75%](https://www.dropbox.com/s/3dp0jd58ngb8l6r/pizarroinca.jpg?raw=1)
+
+Franscisco Pizarro's conquest of the Incan Empire
+]
+
+---
+
+# Guns, Germs, and Steel II
+
+.pull-left[
+
+- *Europeans* colonized the *rest of the world* because they had *"guns, germs, and steel"*
+
+- Why did (Western) *Eurasia* develop *first*, not Africa, North America, South America, or Oceania?
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/cdzjofur32kj2mr/gunsgermssteel2.jpg?raw=1)
+]
+]
+
+---
+
+# Domesticable Animal Species I
+
+.pull-left[
+
+- Surprisingly few species of animals are domesticable
+
+- "The major 5":
+  1. Cattle (Cow, Ox)
+  2. Horses
+  3. Sheep
+  4. Pigs
+  5. Goats
+
+- "The minor 9": Arabian camel, Bactrian camel, Llama and Alpaca, Donkey, Reindeer, Water Buffalo, Yak, Bali cattle, Mithun cattle
+]
+
+.pull-right[
+.center[
+![:scale 75%](https://www.dropbox.com/s/7bxxe1flvqc21dk/cowandsheep.jpg?raw=1)
+]
+]
+
+---
+
+# Independent Origins of Agriculture and Civilization
+
+.center[
+![](https://www.dropbox.com/s/2dzq179cexnfww0/ggsfoodsources.png?raw=1)
+
+Diamond (1999: p. 99)
+]
+
+.source[Diamond, Jared, 1999, *Guns, Germs, and Steel: The Fates of Human Societies*]
+
+---
+
+# Domesticable Animal Species II
+
+.pull-left[
+
+- The wild ancestors of these 14 animal species were **not** evenly distributed across the world
+
+- Sub-Saharan Africa: 0
+
+- North and South America: 1
+
+- Eurasia: 13
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/91fh1a1iymcq53e/cavepaintings.jpg?raw=1)
+]
+]
+
+---
+
+# Are These The Only Domesticable Animals?
+
+.pull-left[
+
+- Clear demand for domestication: these have been domesticated *independently* around the world several times
+
+- Rapid use of these animals when introduced to a non-indigenous area
+
+- Many animals cannot be domesticated (temperament, diet, inefficient food/power ratio, lack of herd, breeding problems)
+
+]
+
+.pull-right[
+
+.center[
+![:scale 100%](https://www.dropbox.com/s/wfu124w005pfisr/zebra.jpg?raw=1)
+]
+]
+
+---
+
+# What's Important About Domesticated Animals?
+
+.pull-left[
+
+- **Nutrition**: source of milk and meat
+
+- **Supplies**: leather, clothing, shelter
+
+- **Power Source**: particularly for agriculture (plowing)
+
+- **Military**: mounted cavalry
+
+]
+
+.pull-right[
+.center[
+![:scale 75%](https://www.dropbox.com/s/7bxxe1flvqc21dk/cowandsheep.jpg?raw=1)
+]
+]
+
+---
+
+# Domesticable Animal Species
+
+.center[
+![](https://www.dropbox.com/s/3rdtdjx6akvk3wr/ggsanimals.png?raw=1)
+
+Diamond (1999: p. 162)
+]
+
+.source[Diamond, Jared, 1999, *Guns, Germs, and Steel: The Fates of Human Societies*]
+
+---
+
+# Domesticable Plant Species I
+
+.pull-left[
+
+- Today, wheat and rice account for 41% of all total calories consumed in the world
+    - Wheat (originally from Fertile Crescent)
+    - Rice (originally from China)
+
+- Wheat, rice, barley, sorghum, and corn are the top 5 crops
+  - indigenous ancestors are *very* clost to the modern domesticated version
+  - *EXCEPT* for corn - wild maize in Meso-America is very different, took longer to domesticate
+
+- Other plants surprisingly hard to domesticate
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/lppp7mq2sqrjjf4/cereals.jpg?raw=1)
+]
+]
+
+---
+
+# Domesticable Plant Species II
+
+.center[
+![](https://www.dropbox.com/s/423p8dul8ds266l/ggsgrains.png?raw=1)
+
+Diamond (1999: p. 140)
+]
+
+.source[Diamond, Jared, 1999, *Guns, Germs, and Steel: The Fates of Human Societies*]
+
+---
+
+# Variation and Spread of Species I
+
+.center[
+![](https://www.dropbox.com/s/7x4pe28f9asqox7/ggsclimate.png?raw=1)
+]
+
+.source[Sachs, Jeffrey, (2000), "Tropical Underdevelopment." CID Working Paper No. 57.]
+
+---
+
+# Variation and Spread of Species II
+
+.pull-left[
+
+- Before ocean-going ships, domesticable species cannot easily traverse different climates
+
+- Easier to spread across **lattitude** than **longitude**
+
+- Societies across the same lattitude have access to more species
+
+- Ideas, best practices, and technology can spread *East-West* more than *North-South*
+  - More species, specialization, division of labor, innovation
+
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/2dzq179cexnfww0/ggsfoodsources.png?raw=1)
+]
+
+]
+
+---
+
+# Variation and Spread of Species III
+
+.center[
+![](https://www.dropbox.com/s/relgnd4w8js0z00/ggscontinents.png?raw=1)
+
+Diamond (1999: p. 177)
+
+]
+.source[Diamond, Jared, 1999, *Guns, Germs, and Steel: The Fates of Human Societies*]
+
+---
+
+# Diamond's Argument I
+
+.pull-left[
+
+- Regions of the world with access to more species (Eurasia) ...
+
+- ... develop agriculture earlier ...
+
+- ... leading to cities and civilization ...
+
+- ... which acquires and adopts technology sooner ...
+
+- ... and gets "guns, germs, and steel"
+
+]
+
+.pull-right[
+.center[
+![:scale 60%](https://www.dropbox.com/s/e6bgu5nvklgcyiu/ggsdiagram.png?raw=1)
+]
+]
+.source[Diamond, Jared, 1999, *Guns, Germs, and Steel: The Fates of Human Societies*]
+
+---
+
+# Guns and Steel
+
+.center[
+![:scale 70%](https://www.dropbox.com/s/3dp0jd58ngb8l6r/pizarroinca.jpg?raw=1)
+
+So how can 168 men with a few guns and horses conquer a 10,000,000 person empire?
+
+]
+
+---
+
+# Germs
+
+.pull-left[
+- In 1520, it took one sick person to bring smallpox to South America, where it may have killed **90% of the population**
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/gzne50yr0mlne8h/germs1.jpg?raw=1)
+]
+]
+
+---
+
+# Germs II
+
+.center[
+![](https://www.dropbox.com/s/uykif773cmxwu9e/ggsgerms.png?raw=1)
+
+Diamond (1999: 207)
+]
+
+.source[Diamond, Jared, 1999, *Guns, Germs, and Steel: The Fates of Human Societies*]
+
+---
+
+# Germs III
+
+.pull-left[
+
+- Europeans lived in extremely close proximity to their domesticated animals
+
+- Repeatedly decimated by these diseases
+
+- Evolved some immunity to them
+
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/6rhej20f78sj3fc/europeanfarm.jpg?raw=1)
+]
+]
+
+---
+
+# Germs IV
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/07d4hexb4by4ymn/johnwinthrop.jpg?raw=1)
+
+John Winthrop
+
+(1587-1649)
+
+3rd Governor of Massachussetts Bay Colony
+]
+]
+.right-column[
+
+> "But for the natives in these parts, God hath so pursued them, as for 300 miles space the greatest part of them are swept away by the smallpox which still continues among them. So as God hath thereby cleared our title to this place, those who remain in these parts, being in all not 50, have put themselves under our protection."
+
+]
+
+---
+
+# Germs V
+
+.left-column[
+![:scale 80%](https://www.dropbox.com/s/ifzb9tmr41g30tm/jamesi.jpg?raw=1)
+
+James I, King of England
+
+(1566-1625)
+
+
+]
+
+.right-column[
+
+> "Almighty God in his great goodness and bounty towards us [for sending] this wonderful plague among the savages."
+
+]
+
+---
+
+# Assessing Diamond
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/96ve6hr6jv92z93/jareddiamond.jpg?raw=1)
+
+Jared Diamond
+
+(1937-)
+]
+]
+.right-column[
+
+- One of the most influential books of the last 30 years, especially among general public
+
+- A great (*great*) big-picture story
+
+- Is it testable??
+]
+
+
+---
+
+# Diamond Gets Us To About 1500
+
+.pull-left[
+
+- Consider modern France and China
+
+- Both have favorable geography according to Diamond's hypothesis
+
+- Roughly equally developed in 1500 (China moreso)
+
+- GDP/capita today (2014):
+  - France: $41,702
+  - China: $6,498
+
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/e9jgmyfxsj912w7/francechina.png?raw=1)
+]
+
+]
+
+---
+
+class: inverse, center, middle
+
+# Geography and the "Deep Roots" of Development
+
+---
+
+# The "Deep Roots" of Development I
+
+.pull-left[
+
+- Literature on "deep roots" of development with really provocative titles (and implications)
+
+- Many aspects to this literature 
+    - "state history"
+    - culture
+    - migration (origins)
+    - technology adoption
+
+- We will focus on the role of **geography** in economic development
+
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/fnzbq4sif1wix83/deeproots.jpg?raw=1)
+]
+]
+
+---
+
+# The "Deep Roots" of Development II
+
+.pull-left[
+
+- Main question: 
+> How much of variation in GDP per capita TODAY can we explain by unchangable geographic factors?
+
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/fnzbq4sif1wix83/deeproots.jpg?raw=1)
+]
+]
+
+---
+
+# The "Deep Roots" of Development II
+
+.pull-left[
+
+- Main question: 
+> How much of variation in GDP per capita TODAY can we explain by unchangable geographic factors?
+
+- Answer: a surprising amount.
+
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/fnzbq4sif1wix83/deeproots.jpg?raw=1)
+]
+]
+
+---
+
+# Geography and Economic Development I
+
+.center[
+![:scale 60%](https://www.dropbox.com/s/v4dkarxmtrf22e6/deeproots1.png?raw=1)
+]
+
+.source[Spolaore, Enrico and Romain Wacziarg, 2013, "How Deep Are the Roots of Economic Development?" *Journal of Economic Literature* 51(2): 1-45]
+
+---
+
+# Geography and Economic Development II
+
+> "In order to reduce the effect of post-1500 population movements, the Olsson– Hibbs sample excludes the neo-European countries (Australia, Canada, New Zealand, and the United States), as well as countries whose current income is based primarily on extractive wealth. Column 2 replicates the estimates of column 1 using this restricted sample—the joint explanatory power of geographic variables rises to 55 percent, since the new sample excludes regions that are rich today as a result of the guns, germs, and steel of colonizing Europeans rather than purely geographic factors," (p.5).
+
+.source[Spolaore, Enrico and Romain Wacziarg, 2013, "How Deep Are the Roots of Economic Development?" *Journal of Economic Literature* 51(2): 1-45
+
+Olsson, Ola, and Douglas A. Hibbs Jr, 2005, "Biogeography and Long-Run Economic Development," *European Economic Review* 49(4): 909-938
+]
+
+---
+
+# Geography and Economic Development III
+
+> These empirical results provide **strong evidence in favor of Diamond’s hypotheses,** while suggesting that **the geographic component of the story is empirically more relevant than the biological component.** Column 6 goes further in the attempt to control for the effect of post-1500 population movements, by restricting the sample to the Old World (defined as all countries minus the Americas and Oceania). The effect of geography now rises to 64 percent—again highly **consistent with Diamond’s idea that biogeographic conditions matter mostly in the Old World**," (p.5).
+
+.source[Spolaore, Enrico and Romain Wacziarg, 2013, "How Deep Are the Roots of Economic Development?" *Journal of Economic Literature* 51(2): 1-45
+
+---
+
+# Geography and Economic Development IV
+
+.center[
+![:scale 50%](https://www.dropbox.com/s/rmjwby6sfyhy04t/deeproots2.png?raw=1)
+]
+
+.source[Spolaore, Enrico and Romain Wacziarg, 2013, "How Deep Are the Roots of Economic Development?" *Journal of Economic Literature* 51(2): 1-45]
+
+---
+
+# Geography and Economic Development V
+
+> While geographic factors may have continued to affect economic development after the introduction of agriculture, the availability of prehistoric domesticable wild plant and animal species did not influence population density in the past two millennia other than through the timing of the Neolithic transition...The results of column 3 (OLS) and column 4 (IV) of table 2 illustrate their findings: **years since the agricultural transition has a strong, statistically significant positive effect on population density in 1500**...The magnitude of the effect is large, as a one standard deviation change in years of agriculture is associated with 63 percent of a standard deviation change in log population density in 1500 (OLS)..All of the other regressors feature much smaller standardized effects.
+
+> They show, not only that **an earlier onset of the Neolithic transition contributed to the level of technological sophistication in the preindustrial world**, but also that **the effect of Diamond’s biogeographic factors may well operate through the legacy of an early exposure to agriculture**," (pp.7-8).
+
+.source[Spolaore, Enrico and Romain Wacziarg, 2013, "How Deep Are the Roots of Economic Development?" *Journal of Economic Literature* 51(2): 1-45]
+
+---
+
+# Population Density in 1500
+
+.center[
+![:scale 65%](https://www.dropbox.com/s/r5nmwbz9j4wpxu7/populationdensity1500.png?raw=1)
+]
+
+.source[Gallup, J. L., J. D. Sachs, and A. D. Mellinger, 1999; [Wikipedia](https://en.wikipedia.org/wiki/File:World_population_density_1994_-_with_equator.png); [A Great Interactive Version](http://luminocity3d.org/WorldPopDen/)]
+
+---
+
+# Population Density
+
+- Population density is a good proxy for economic development
+
+- Better than wages or real incomes
+
+- Malthusian dynamics of a pre-modern economy
+    - More prosperous regions have high population, which lowers real wages
+
+- Population is also easier to measure and get data for than real wages!
+
+---
+
+# Deep Roots, Technology Adoption, and Urbanization in 1500
+
+.center[
+![:scale 60%](https://www.dropbox.com/s/z6brv0txomki4wh/easterlydeeprootsurb.png?raw=1)
+]
+
+.source[Comin, Diego, William Easterly, and Erick Gong, (2010), "Was the WEalth of Nations Determined in 1000 BC?" *American Economic Journal: Macroeconomics* 2: 65-97]
+
+---
+
+# Deep Roots, Technology Adoption, and Urbanization in 1500
+
+.pull-left[
+
+.center[
+![:scale 90%](https://www.dropbox.com/s/ye4o63fxyepgmtf/easterlydeeprootsscatter.png?raw=1)
+
+p. 64
+]
+
+]
+
+.pull-right[
+> "1500 AD technology is a particularly powerful predictor of per capita income today. 78 percent of the difference in income today between sub-Saharan Africa and Western Europe is explained by technology differences that already existed in 1500 A.D. – even BEFORE the slave trade and colonialism." - Easterly, [blog post](http://www.nyudri.org/aidwatcharchive/2010/07/was-the-poverty-of-africa-determined-in-1000-bc?rq=1000%20bc) about paper
+
+]
+
+.source[Comin, Diego, William Easterly, and Erick Gong, (2010), "Was the WEalth of Nations Determined in 1000 BC?" *American Economic Journal: Macroeconomics* 2: 65-97]
+
+---
+
+class: inverse, center, middle
+
+# Geography's Mechanisms: Trade and Health
+
+---
+
+# Geography's Mechanisms
+
+.pull-left[
+- How, *specifically* does geography impact economic development?
+
+- In the language of the literature, and econometrics, what are the specific **mechanisms** or **channels** by which good/bad geography leads to good/bad levels of growth?
+
+- (At least) three major ones:
+
+1. Trade (market access/division of labor)
+
+2. Health
+
+3. Institutions
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/c8pj0pi7paw1maa/geogdag.png?raw=1)
+]
+]
+---
+
+# Trade: Comparative Advantage (Reminder)
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/2lfmrgfcrswf9s4/ricardo2.jpg?raw=1)
+
+David Ricardo
+
+1772-1823
+]
+]
+
+.right-column[
+
+- Specialization and trade
+
+- .shout[Comparative advantage]: even in the presence of .onfire[absolute advantage] (where one country is better at producing everything), *all* countries benefit from specializing in producing goods they have the lowest opportunity cost of producing, and exchanging
+
+- [See more](https://www.dropbox.com/s/0jz926cugahow9m/Lesson2.pdf?dl=0)
+
+]
+
+.source[Ricardo, David, 1815, *Principles of Political Economy and Taxation*]
+
+---
+
+# Trade: Comparative Advantage and Geography
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/oy9mypq675wbfpy/desert.jpg?raw=1)
+]
+]
+
+.pull-right[
+![](https://www.dropbox.com/s/dkv180alio2d03k/islandcoconut.jpg?raw=1)
+]
+
+---
+
+# The Division of Labor Is Limited By the Extent of the Market
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/w5ecx0628ihm9n2/smith.png?raw=1)
+
+Adam Smith
+
+1723-1790
+]
+]
+
+.right-column[
+
+> "As it is the power of exchanging that gives occasion to the division of labour, so **the extent of this division must always be limited by...the extent of the market.** When the market is very small, no person can have any encouragement to dedicate himself entirely to one employment, for want of the power to exchange all that surplus part of the produce of his own labour, which is over and above his own consumption, for such parts of the produce of other men's labour as he has occasion for," (Book I, Chapter 3).
+]
+
+.source[Smith, Adam, 1776, [*An Enquiry into the Nature and Causes of the Wealth of Nations*](https://www.econlib.org/library/Smith/smWN.html)]
+
+---
+
+# Trade: Market Access and Geography
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/w5ecx0628ihm9n2/smith.png?raw=1)
+
+Adam Smith
+
+1723-1790
+]
+]
+
+.right-column[
+
+> "As by means of water carriage a more extensive market is opened to every sort of industry than what land carriage alone can afford it, so it is upon the sea-coast, and along the banks of navigable rivers that industry of every kind begins to sub-divide and improve itself, and it is frequently not till a long time after that those improvements extend themselves to the inland part of the country," (Book I, Chapter 1)
+]
+
+.source[Smith, Adam, 1776, [*An Enquiry into the Nature and Causes of the Wealth of Nations*](https://www.econlib.org/library/Smith/smWN.html)]
+
+---
+
+# Trade: Market Access and Geography: Today
+
+.center[
+![:scale 67%](https://www.dropbox.com/s/e5clhnmdtnoecba/gdpdensity.png?raw=1)
+]
+
+.source[Gallup, J. L., J. D. Sachs, and A. D. Mellinger, 1999, "Geography and Economic Development," *International Regional Science Review* 22(2):179-224; [Land of Maps](https://landofmaps.com/2015/02/18/world-gdp-density/)]
+
+---
+
+# Access to Coastline and Navigable Rivers I
+
+.center[
+![:scale 70%](https://www.dropbox.com/s/uf8jvjxpm2i7ijx/sachscoast.png?raw=1)
+]
+
+.source[Mellinger, Andrew D., Jeffrey Sachs, and John L. Gallup, (1999), "Climate, Water Navigability, and Economic Development," *CID Working Paper* No. 24]
+
+---
+
+# Access to Coastline and Navigable Rivers II
+
+.pull-left[
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/fjfhcepbqc13k18/sachscoasteurope.png?raw=1)
+]
+]
+
+.pull-right[
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/fm0dqlwmkq9m8yw/sachscoastchina.png?raw=1)
+]
+]
+
+.source[Mellinger, Andrew D., Jeffrey Sachs, and John L. Gallup, (1999), "Climate, Water Navigability, and Economic Development," *CID Working Paper* No. 24]
+
+---
+
+# Access to Coastline and Navigable Rivers III
+
+.center[
+![:scale 70%](https://www.dropbox.com/s/bfqs5a5c819w2et/sachscoastusa.png?raw=1)
+]
+
+.source[Rappaport, Jordan, and Jeffrey Sachs, (2003), "The United States as a Coastal Nation," *Journal of Economic Growth* 8(1):5-46]
+
+---
+
+# Access to Coastline and Navigable Rivers IV
+
+.center[
+![:scale 45%](https://www.dropbox.com/s/d1s8ow3mmcg1zaq/sachscoastafrica.png?raw=1)
+]
+
+.source[Mellinger, Andrew D., Jeffrey Sachs, and John L. Gallup, (1999), "Climate, Water Navigability, and Economic Development," *CID Working Paper* No. 24]
+
+---
+
+# African Market Access and Geography
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/w5ecx0628ihm9n2/smith.png?raw=1)
+
+Adam Smith
+
+1723-1790
+]
+]
+
+.right-column[
+
+> "All the inland parts of Africa, and all that part of Asia which lies any considerable way north of the Black and Caspian Seas...seem in all ages of the world to have been in the same barbarous and uncivilized state in which we find them at present..."
+
+> "There are in Africa none of those great inlets...to carry maritime trade into the interior parts of that great continent...," (Book I, Chapter 1)
+]
+
+.source[Smith, Adam, 1776, [*An Enquiry into the Nature and Causes of the Wealth of Nations*](https://www.econlib.org/library/Smith/smWN.html)]
+
+---
+
+# Distorted Views of Africa: Mercator
+
+.center[
+![:scale 70%](https://www.dropbox.com/s/zf3sahr5io9ucjh/mercatorproj.JPG?raw=1)
+]
+
+---
+
+# Better Views of Africa: Mollweide
+
+.center[
+![:scale 90%](https://www.dropbox.com/s/9bo5fi1an3zbs47/Mollweide_projection_SW.jpg?raw=1)
+]
+
+---
+
+# Africa is Huge
+
+.center[
+![:scale 70%](https://www.dropbox.com/s/u3bz19g1gcshqrv/africasize.jpg?raw=1)
+]
+
+---
+
+# More Landlocked Countries in Africa than any Other Continent
+
+.center[
+![](https://www.dropbox.com/s/d48ojeq475r0ivy/landlocked.png?raw=1)
+]
+
+---
+
+# How Bad is This for Development? I
+
+.center[
+![:scale 25%](https://www.dropbox.com/s/8c8m22r66m5eeka/sachs1.png?raw=1)
+]
+
+.source[Gallup, John Luke, Jeffrey D. Sachs, and Andrew D. Mellinger, 1999, "Geography and Economic Development," *International Regional Science Review* 22(2): 179-232]
+
+
+---
+
+# Geography and Development I
+
+.center[
+![:scale 60%](https://www.dropbox.com/s/x0op88pt5r2nyi5/latitudegdp.png?raw=1)
+
+]
+
+.source[Rodrik, Dani, Arvind Subramanian, and Francesco Trebbi, 2002, "Institutions Rule: The Primacy of Institutions Over Geography and Integration in Economic Development," *NBER Working Paper* 9305]
+
+---
+
+# Geography and Development: Disease I
+
+.center[
+![:scale 60%](https://www.dropbox.com/s/acjunmo2e75kr2t/malariaindex.png?raw=1)
+]
+
+.source[Kiszewski, Anthony E, Andrew Mellinger, Andrew Spielman, Pia Nandini Malaney, Sonia Ehrlich Sachs, and Jeffrey Sachs, (2004), "A Global Index Representing the Stability of Malaria Transmission", *American Journal of Tropical Medicine Hygiene* 70(5): 486-498]
+
+---
+
+# Geography and Development: Compare (Population Density)
+
+.center[
+![:scale 65%](https://www.dropbox.com/s/oh3gu0l8wrpbcl7/populationdensity.png?raw=1)
+]
+
+.source[Gallup, J. L., J. D. Sachs, and A. D. Mellinger, 1999; [Wikipedia](https://en.wikipedia.org/wiki/File:World_population_density_1994_-_with_equator.png); [A Great Interactive Version](http://luminocity3d.org/WorldPopDen/)]
+
+---
+
+# Geography and Development: Compare (GDP Density)
+
+.center[
+![:scale 67%](https://www.dropbox.com/s/e5clhnmdtnoecba/gdpdensity.png?raw=1)
+]
+
+.source[Gallup, J. L., J. D. Sachs, and A. D. Mellinger, 1999, "Geography and Economic Development," *International Regional Science Review* 22(2):179-224; [Land of Maps](https://landofmaps.com/2015/02/18/world-gdp-density/)]
+
+---
+
+# Geography and Development: Disease I
+
+.pull-left[
+
+- Strong inverse relation between locations with population & GDP density and malaria transmission stability
+
+- 300-500 million people get malaria each year
+    - 1 million die (often young children)
+    - children's growth and IQ can be permanently stunted
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/a9xgfaqoktqdxrp/mosquitonets.jpg?raw=1)
+]
+]
+
+---
+
+# Geography and Development: Disease II
+
+.pull-left[
+- A *lot* of diseases are more common in the tropics:
+  - malaria
+  - yellow fever
+  - chagas disease
+  - African trypanosomiasis (sleeping sickness)
+  - River blindness
+  - Schistosomiasis (snail fever)
+  - parasitic worms (roundworm, hookworm, whipworm)
+    - 1/4 of the world's population has at least one of these worms (UN)
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/gzne50yr0mlne8h/germs1.jpg?raw=1)
+]
+]
+
+---
+
+# Geography and Development: Disease III
+
+.pull-left[
+
+- Vicious circle of disease
+
+- OR 
+
+- Virtuous circle of eradicating disease
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/6uztslpt6p78xvz/diseasedag.png?raw=1)
+]
+]
+
+---
+
+# Mitigating Disease has BIG Payoffs
+
+> "This study estimates long-run impacts of a child health investment, exploiting  community-wide experimental  variation inschool-based deworming. The program increased labor supply among men and education among women, with accompanying shifts in labor market specialization. Ten years afterde-worming treatment, men who were eligible as boys stay enrolled for more yearsof primary school, work 17% more hours each week, spend more time in non-agricultural self-employment, are more likely to hold manufacturing jobs, and miss one fewer meal per week. Women who were in treatment schools as girlsare approximately one quarter more likely to have attended secondary school, halving the gender gap. They reallocate time from traditional agriculture intocash crops and  nonagricultural self-employment. We  estimate a conservativeannualized financial internal rate of return to  deworming of 32%, and show that mass deworming may generate more in future government revenue than it costs in subsidies.
+
+.source[Baird, Sarah, Joan Hamory Hicks, Michael Kremer, and Edward Miguel, (2016), "Worms at Work: Long-Run Impacts of a Child Health Investment," *Quarterly Journal of Economics*: 1637–1680.]
+
+---
+
+# Geography and Development: Insects I
+
+.right-column[
+
+> "The TseTse is the "greatest curse” nature laid upon Africa and the "value of the country would be centupled" in its absence" - Commissioner H.H. Johnston (1894)
+
+> "The presence of Tsetse-fly preclude the animal transport by carts, which in the interior is the great incentive for road-making. In Witu, for instance, ...the bullocks employed for the waggons on it all died, and the old wretched system of human porterage has still to be resorted to for transport." - Sir A. Harding (1897)
+
+> "It seems reasonable to suppose that for hundreds of years tsetse dictated that the economy of the African should be based on the hoe and the head-load..." - Entomologist T.A.M. Nash (1969)
+]
+
+.left-column[
+.center[
+![](https://www.dropbox.com/s/n7myknwqomfvhj3/tsetse.jpg?raw=1)
+]
+]
+
+---
+
+# Geography and Development: Insects II
+
+.center[
+![:scale 67%](https://www.dropbox.com/s/uwtvhzpedxmtg22/tsetsemap.png?raw=1)
+]
+
+.source[Alsan, Marcella, (2015), "The Effect of the TseTse Fly on African Development," *American Economic Review* 105(1): 382-410]
+
+---
+
+# Geography and Development: Insects III
+
+> "The TseTse fly is unique to Africa and transmits a parasite harmful to humans and lethal to livestock. This paper tests the hypothesis that the TseTse reduced the ability of Africans to generate an agricultural surplus historically. Ethnic groups inhabiting TseTse-suitable areas were less likely to use domesticated animals and the plow, less likely to be politically centralized, and had a lower population density. These correlations are not found in the tropics outside of Africa, where the fly does not exist. The evidence suggests current economic performance is affected by the TseTse through the channel of precolonial political centralization," (p. 382).
+
+> "[A] one standard deviation increase in the TSI is associated with a 23 percentage point decrease in the likelihood an African ethnic group had large domesticated animals, a 9 percentage point decrease in intensive cultivation, and a 6 percentage point reduc- tion in plow use. A one standard deviation increase in the TSI is correlated with a significant reduction in historical population density. Motivated by the land abun- dance literature, two institutions are explored in this paper: political centralization and indigenous slavery. A one standard deviation increase in the TSI is associated with a 10 percentage point increase in the likelihood that an ethnic group used slaves and an 8 percentage point decrease in the probability it was centralized," (p.384).
+
+.source[Alsan, Marcella, (2015), "The Effect of the TseTse Fly on African Development," *American Economic Review* 105(1): 382-410]
+
+---
+
+class: inverse, center, middle
+# The Curse of Resources
+
+---
+
+# The Curse of Resources I
+
+> "The curse of natural resources [is] the observation that countries rich in natural resources tend to perform badly," (p. 826).
+
+> "Empirical support for the curse of natural resources is not bulletproof, but it is quite strong. First, casual observation suggests that there is virtually no overlap in the set of countries that have large natural resource endowments and the set of countries that have high levels of GDP," (p.828).
+
+
+.source[Sachs, Jeffrey D. and Andrew M. Warner, 2001, "The Curse of Natural Resources," *European Economic Review* 45: 827-838]
+
+---
+
+# The Curse of Resources II
+
+.center[
+![:scale 65%](https://www.dropbox.com/s/oa8ds4x5g644t0n/resourcecurse.png?raw=1)
+]
+
+.source[Sachs, Jeffrey D. and Andrew M. Warner, 2001, "The Curse of Natural Resources," *European Economic Review* 45: 827-838]
+
+---
+
+# The Curse of Resources III
+
+> "The figure shows that none of the countries with extremely abundant natural resources in 1970 grew rapidly for the next 20 years. This fact holds up using a variety of measures of resource abundance. Moreover, most of the countries that did grow rapidly during this period started as resource poor, not resource rich," (p.829).
+
+.source[Sachs, Jeffrey D. and Andrew M. Warner, 2001, "The Curse of Natural Resources," *European Economic Review* 45: 827-838]
+
+---
+
+
+# The Curse of Resources IV
+
+> "Just as we lack a universally accepted theory of economic growth in general, we lack a universally accepted theory of the curse of natural resources. Most current explanations for the curse have a crowding-out logic. Natural Resources crowd-out activity x. Activity x drives growth. Therefore Natural Resources harm growth. Since there is a diversity of views regarding the second of these statements (what exactly drives growth), we have a similar diversity of views on the natural resource question," (p.833).
+
+.source[Sachs, Jeffrey D. and Andrew M. Warner, 2001, "The Curse of Natural Resources," *European Economic Review* 45: 827-838]
+
+---
+
+# The Curse of Resources V
+
+.pull-left[
+
+- Economic issues of having a lot of natural resources (commodities):
+
+- What if commodity prices fall on the global market?
+  - 30-40 years post-WWII decline in commodity prices
+  - at mercy of international markets
+
+- Resource could be dead-end sector
+  - exporting oil may not spill over to other industries
+  - may not your own citizens (diversify, education, etc)
+  - crowd out investment in other important industries, infrastructure
+
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/e8kxj72cc9kjti6/treasurechest.jpg?raw=1)
+]
+]
+---
+
+# The Curse of Resources VI
+
+.pull-left[
+
+- Economic issues of having a lot of natural resources (commodities):
+
+- Susceptible to control by elites
+  - dictatorship can easily control extraction of resource 
+  - less so with other forms of production
+
+- Encourage armed conflict
+  - target for other countries (or rival non-State ethnic groups internally) to expropriate
+
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/k89v6u0o1yqbolz/polcorrupt.jpg?raw=1)
+]
+]
+
+---
+
+# The Curse of Resources VI
+
+.center[
+![:scale 40%](https://www.dropbox.com/s/d3lbra5gsielnys/resourcecursegraph.jpg?raw=1)
+]
+
+---
+
+# The Curse of Resources: Effect on Institutions
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/kwotu24b2h890tx/institutionsresourcecurse.jpg?raw=1)
+]
+
+---
+
+class: inverse, center, middle
+# Is Geography Destiny? The Reversal of Fortune
+
+---
+
+# St. Domingue, "The Eden of the Western World"
+
+.pull-left[
+
+- produced 30% of world's sugar and over 50% of world's coffee
+
+- foreign trade was equal to that of the U.S.
+
+- cities larger than Boston, newspapers, museums, concert halls, markets with world luxuries
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/uszcy9974zzvhnq/stdominguemap.jpg?raw=1)
+]
+]
+
+---
+
+# Today We Call it Haiti...Poorest Country in Western Hem.
+
+.center[
+![](https://www.dropbox.com/s/8a8vwcb7slfjx8d/haitipoverty.jpg?raw=1)
+]
+
+---
+
+# 1500: Tropical Countries Wealthier than Temperate Countries
+
+.center[
+![](https://www.dropbox.com/s/ldusbvwoncs2xq7/reversaloffortune1223.PNG?raw=1)
+]
+
+.source[Acemoglu, Daron, Simon Johnson, and James A. Robinson, (2002), "Reversal of Fortune: Geography and Institutions in the Making of the Modern World Income," *Quarterly Journal of Economics* 117(4): 1231-1294]
+
+---
+
+# 1500: Tropical Countries Wealthier than Temperate Countries
+
+.center[
+![](https://www.dropbox.com/s/mikifacffxt97jz/reversaloffortune1224.PNG?raw=1)
+]
+
+.source[Acemoglu, Daron, Simon Johnson, and James A. Robinson, (2002), "Reversal of Fortune: Geography and Institutions in the Making of the Modern World Income," *Quarterly Journal of Economics* 117(4): 1231-1294]
+
+---
+
+# Urbanization is Strongly Related to Development
+
+.center[
+![](https://www.dropbox.com/s/ed1hrx5vsdl0cw8/ajrurbanization.png?raw=1)
+]
+
+.source[Acemoglu, Daron, Simon Johnson, and James A. Robinson, (2002), "Reversal of Fortune: Geography and Institutions in the Making of the Modern World Income," *Quarterly Journal of Economics* 117(4): 1231-1294]
+
+---
+
+# The Reversal of Fortune I 
+
+> "This paper documents a reversal in relative incomes among the former European colonies. For example, the Mughals in India and the Aztecs and Incas in the Americas were among the richest civilizations in 1500, while the civilizations in North America, New Zealand, and Australia were less developed. Today the United States, Canada, New Zealand, and Australia are an order of magnitude richer than the countries now occupying the terri- tories of the Mughal, Aztec, and Inca Empires," (p.1231).
+
+> "Figure I shows a negative relationship between the percent of the population living in towns with more than 5000 inhabitants in 1500 and income per capita today. Figure II shows the same negative relationship between log population density (number of inhabitants per square kilometer) in 1500 and income per capita today," (p.1232).
+
+.source[Acemoglu, Daron, Simon Johnson, and James A. Robinson, (2002), "Reversal of Fortune: Geography and Institutions in the Making of the Modern World Income," *Quarterly Journal of Economics* 117(4): 1231-1294]
+
+---
+
+# Alternative Explanations I
+
+.pull-left[
+- .shout["Simple Geography hypothesis"]:
+
+- *Time invariant* effects of geography (e.g. climate and disease)
+
+- **Prediction**: nations relatively wealthy in 1500 should be relatively wealthy today
+
+]
+
+.pull-right[
+.center[
+![:scale 65%](https://www.dropbox.com/s/l5wjx678n6rt3un/tropical.jpg?raw=1)
+
+![:scale 65%](https://www.dropbox.com/s/woqh4k8h6xqgg7t/temperate.jpg?raw=1)
+]
+]
+
+.source[Acemoglu, Daron, Simon Johnson, and James A. Robinson, (2002), "Reversal of Fortune: Geography and Institutions in the Making of the Modern World Income," *Quarterly Journal of Economics* 117(4): 1231-1294]
+
+---
+
+# Alternative Explanations II
+
+.pull-left[
+- .shout[""Sophisticated Geography hypothesis"] or .shout["temperate drift hypothesis"]:
+
+- *Time-varying* effects of geography
+
+- Certain geog. characteristics that were useful for 1500 are no longer useful
+
+- Tropical areas had agricultural productivity advantage before 1500
+
+- Later agricultural technologies benefitted agriculture in temperate areas
+    - heavy plow, crop rotation, domesticated animals, high yield crops, etc
+
+]
+
+.pull-right[
+.center[
+![:scale 65%](https://www.dropbox.com/s/l5wjx678n6rt3un/tropical.jpg?raw=1)
+
+![:scale 65%](https://www.dropbox.com/s/woqh4k8h6xqgg7t/temperate.jpg?raw=1)
+]
+]
+
+.source[Acemoglu, Daron, Simon Johnson, and James A. Robinson, (2002), "Reversal of Fortune: Geography and Institutions in the Making of the Modern World Income," *Quarterly Journal of Economics* 117(4): 1231-1294]
+
+---
+
+# Alternative Explanations III
+
+.pull-left[
+- Other sophisticated geography-based hypotheses
+
+- Presence of cheap energy reserves (i.e. coal)
+
+- Location near the sea/rivers
+
+- Cause industrialization
+]
+
+.pull-right[
+.center[
+![:scale 65%](https://www.dropbox.com/s/l5wjx678n6rt3un/tropical.jpg?raw=1)
+
+![:scale 65%](https://www.dropbox.com/s/woqh4k8h6xqgg7t/temperate.jpg?raw=1)
+]
+]
+
+.source[Acemoglu, Daron, Simon Johnson, and James A. Robinson, (2002), "Reversal of Fortune: Geography and Institutions in the Making of the Modern World Income," *Quarterly Journal of Economics* 117(4): 1231-1294]
+
+---
+
+# AJR: These Hypotheses Fail to Explain the Reversal
+
+> "The reversal in relative incomes weighs against [the] simple version of the geography hypothesis," (p.1233).
+
+> "Although plausible, the temperate drift hypothesis cannot account for the reversal. First, the reversal in relative incomes seems to be related to population density and prosperity before Europeans arrived, not to any inherent geographic characteristics of the area. Furthermore, according to the temperate drift hypothesis, the reversal should have occurred when European agricultural technology spread to the colonies. Yet, while the introduction of European agricultural techniques, at least in North America, took place earlier, the reversal occurred during the late eighteenth and early nineteenth centuries, and is closely related to industrialization. Another version of the sophisticated geography hypothesis could be that certain geographic characteristics, such as the presence of coal reserves or easy access to the sea, facilitated industrialization...But we do not find any evidence that these geographic factors caused industrialization. Our reading of the evidence therefore provides little support to various sophisticated geography hypotheses either," (p.1233-1234).
+
+.source[Acemoglu, Daron, Simon Johnson, and James A. Robinson, (2002), "Reversal of Fortune: Geography and Institutions in the Making of the Modern World Income," *Quarterly Journal of Economics* 117(4): 1231-1294]
+
+---
+
+# AJR: It's Institutions!
+
+> "An alternative view, which we believe provides the best explanation for the patterns we document, is the "institutions hypothesis," relating differences in economic performance to the organization of society. Societies that provide incentives and opportunities for investment will be richer than those that fail to do so... As we discuss in more detail below, we hypothesize that a cluster of institutions ensuring secure property rights for a broad cross section of society, which we refer to as institutions of private property, are essential for investment incentives and successful economic performance. In contrast, extractive institutions, which concentrate power in the hands of a small elite and create a high risk of expropriation for the majority of the population, are likely to discourage investment and economic development. Extractive institutions, despite their adverse effects on aggregate performance, may emerge as equilibrium institutions because they increase the rents captured by the groups that hold political power." (p.1234-5).
+
+- Much more on this later!
+
+.source[Acemoglu, Daron, Simon Johnson, and James A. Robinson, (2002), "Reversal of Fortune: Geography and Institutions in the Making of the Modern World Income," *Quarterly Journal of Economics* 117(4): 1231-1294]

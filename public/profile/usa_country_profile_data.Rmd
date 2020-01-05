@@ -1,0 +1,123 @@
+---
+title: "Using World Bank Data for Country Profile"
+author: "Ryan Safner"
+date: "11/30/2019"
+output:
+  html_document:
+    df_print: paged
+    #theme: 
+    toc: true 
+    toc_depth: 3
+    toc_float: true
+    code_folding: show
+    highlight: tango
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+Let's use the `wbstats` package for `R`:
+
+```{r}
+# install.packages("wbstats") # install for first use
+library(wbstats) # load package
+```
+
+
+Search for indicators
+
+https://data.worldbank.org/indicator
+
+
+- NY.GDP.PCAP.CD GDP per capita (current USD)
+- NY.GDP.PCAP.KD.ZG (GDP per capita growth rate)
+- SL.UEM.TOTL.ZS (total unemployment rate)
+- SL.TLF.CACT.FE.ZS female labor force participation rate
+- SL.TLF.CACT.MA.ZS male labor force participation rate
+- FP.CPI.TOTL.ZG inflation (CPI)
+- GC.DOD.TOTL.GD.ZS debt-percent-of-gdp
+- SP.POP.TOTL total population
+- SP.POP.GROW pop growth
+- SI.POV.GINI Gini
+- SP.DYN.LE00.IN total life expectancy at birth
+- SP.DYN.IMRT.IN infant mortality rate total per 1000 births
+- SI.POV.DDAY poverty headcount ratio 1.90 per day % of pop
+- NE.TRD.GNFS.ZS trade % of gdp
+- DT.ODA.OATL.CD net official aid received (current USD)
+
+```{r}
+# example of searching manually in the system (vs online)
+wbsearch(pattern = "unemployment")
+```
+
+Figure out what country code is in World Bank (e.g. "US" for United States)
+
+```{r}
+usa<-wb(country = c("US"),
+   indicator = c("NY.GDP.PCAP.CD", "NY.GDP.PCAP.KD.ZG", "SL.UEM.TOTL.ZS", "FP.CPI.TOTL.ZG", "GC.DOD.TOTL.GD.ZS", "SP.POP.TOTL", "SP.POP.GROW", "SI.POV.GINI", "SP.DYN.LE00.IN", "SP.DYN.IMRT.IN", "SI.POV.DDAY", "NE.TRD.GNFS.ZS"),
+   startdate = 1970, enddate = 2019,
+   return_wide = TRUE) %>%
+  mutate(date = as.numeric(date)) %>%
+  rename("Year" = date,
+         "GDP_per_Capita"= NY.GDP.PCAP.CD,
+         "GDP_growth" = NY.GDP.PCAP.KD.ZG,
+         "Unemployment" = SL.UEM.TOTL.ZS,
+         "Inflation" = FP.CPI.TOTL.ZG,
+         "Debt_pct_GDP" = GC.DOD.TOTL.GD.ZS,
+         "Population" = SP.POP.TOTL,
+         "Pop_growth" = SP.POP.GROW,
+         "Gini" = SI.POV.GINI,
+         "Life_Exp" = SP.DYN.LE00.IN,
+         "Infant_mortality" = SP.DYN.IMRT.IN,
+         "Poverty_pct" = SI.POV.DDAY,
+         "Trade_pct_GDP" = NE.TRD.GNFS.ZS)
+```
+
+```{r}
+usa
+```
+
+```{r, fig.retina=3}
+ggplot(data = usa)+
+  aes(x = Year,
+      y = GDP_per_Capita)+
+  #geom_point()+
+  geom_path(size=2, color = "blue")+
+  scale_x_continuous(breaks=seq(1970,2020,10))+
+  scale_y_continuous(breaks=seq(10000,60000,10000),
+                                labels=scales::dollar)+
+    theme_classic(base_family = "Fira Sans Condensed", base_size=18)+
+  labs(x = "Year",
+       y = "GDP per Capita (Current USD)")
+```
+
+
+```{r}
+ggplot(data = usa)+
+  aes(x = Year,
+      y = Unemployment)+
+  #geom_point()+
+  geom_path(size=2, color = "blue")+
+  scale_x_continuous(breaks=seq(1970,2020,10))+
+  scale_y_continuous(labels=function(x){paste(x,"%")})+
+    theme_classic(base_family = "Fira Sans Condensed", base_size=18)+
+  labs(x = "Year",
+       y = "Unemployment Rate (%)")
+```
+
+```{r}
+ggplot(data = usa)+
+  aes(x = Year,
+      y = GDP_growth)+
+  #geom_point()+
+  geom_path(size=2, color = "blue")+
+  geom_hline(yintercept=0, size =1)+
+  scale_x_continuous(breaks=seq(1970,2020,10))+
+  scale_y_continuous(labels=function(x){paste(x,"%")})+
+    theme_classic(base_family = "Fira Sans Condensed", base_size=18)+
+  labs(x = "Year",
+       y = "GDP per Capita Growth")
+```
+

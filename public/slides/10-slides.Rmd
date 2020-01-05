@@ -1,0 +1,2020 @@
+---
+title: "Lesson 10: The Natural State and the Violence Trap"
+subtitle: "ECON 317 · Economics of Development · Fall 2019"
+author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/devf19"><i class="fa fa-github fa-fw"></i> ryansafner/devf19</a><br> <a href="https://devF19.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> devF19.classes.ryansafner.com</a><br>'
+#date:
+output:
+  xaringan::moon_reader:
+    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML" # rescales math with css changes https://github.com/yihui/xaringan/issues/143
+    lib_dir: libs
+    #seal: false
+    css: [custom.css, custom-fonts.css, "hygge"] #, metropolis, metropolis-fonts
+    nature:
+      beforeInit: ["macros.js", "https://platform.twitter.com/widgets.js"] # first is for rescaling images , second is for embedding tweets, https://github.com/yihui/xaringan/issues/100
+      highlightStyle: ocean #rainbow #monokai rainbow solarized-light #tomorrow-night -blue -eighties zenburn
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    includes:
+      in_header: header.html # for font awesome, used in title  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(message=F,
+                      warning=F,
+                      echo=F)
+library(tidyverse)
+library(mosaic)
+library(ggrepel)
+update_geom_defaults("label", list(family = "Fira Sans Condensed"))
+```
+
+class: inverse, center, middle
+
+### [The Story So Far](#3)
+### [North, Wallis, Weingast: Natural States/LAOs](#18)
+### [Selectorate Model](#51)
+### [The Violence Trap](#113)
+
+---
+
+class: inverse, center middle
+# The Story So Far
+
+---
+
+# The Story So Far
+
+.pull-left[
+
+.center[
+![](https://www.dropbox.com/s/n1yd4eefamxkkhe/whynationsfailreader.png?raw=1)
+]
+]
+
+.pull-right[
+
+- Countries aren't poor out of ignorance or laziness
+
+- "[I]f ignorance were the problem, well-meaning leaders would quickly learn what types of policies increased their citizens' incomes and welfare, and would gravitate toward those policies." (*Why Nations Fail*, p.65).
+
+- Institutions $\rightarrow$ outcomes, and politics (the distribution of wealth and power) $\rightarrow$ institutions
+
+- Development and political-economic reform of institutions must be .shout[incentive-compatible]
+
+- In other words, countries remain poor because .onfire[it is not in the interest of the elites to develop the country]
+
+]
+
+---
+
+# Why Do Elites Permit Reform?
+
+.left-column[
+
+.center[
+![](https://www.dropbox.com/s/onxlhlgrquh71pj/acemoglurobinson.jpg?raw=1)
+
+Daron Acemoglu and James Robinson
+
+]
+]
+
+.right-column[
+> "To starkly illustrate our framework, consider a society in which there are two groups: an elite and the citizens. Nondemocracy is rule by the elite; democracy is rule by the more numerous groups who constitute the majority–in this case, the citizens. In nondemocracy, the elite gets the policies it wants; in democracy, the citizens have more power to get what they want. Because the elite loses under democracy, it naturally has an incentive to oppose or subvert it; yet, most democracies arise when they are created by the elite," (p.10).
+
+]
+
+.source[Acemoglu, Daron and James A. Robinson, (2006). *Economic Origins of Dictatorship and Democracy*]
+
+---
+
+# Recall AJR: *Political* Losers Block Development
+
+> "We argue that the effect of economic change on political power is a key factor in determining whether technological advances and beneficial economic changes will be blocked. In other words, we propose a "political-loser hypothesis." We argue that it is groups whose political power (not economic rents) is eroded who will block technological advances. If agents are economic losers but have no political power, they cannot impede technological progress. If they have and maintain political power (i.e., are not political losers), then they have no incentive to block progress. It is therefore agents who have political power and fear losing it who will have incentives to block. Our analysis suggests that we should look more to the nature of political institutions and the determinants of the distribution of political power if we want to understand technological backwardness," (pp.126-127).
+
+.source[Acemoglu, Daron and James A. Robinson, 2000, "Political Losers as a Barrier to Economic Development," *American Economic Review* 90(2): 126-130]
+
+---
+
+# Recall: The Hobbesian View
+
+.pull-left[
+
+- .whisper[The State is our commitment device]
+
+- Citizens (in principle) sign a **social contract**, i.e. a "**constitution**" that deliberately restricts their liberties
+
+- In each of our interests to give up some liberties that restrict the liberties of others (e.g. theft, violence)
+
+- In exchange, we empower the State as our agent to punish those of us that fail to uphold the social contract
+
+- **Politics**: decisions under rules which we agree are legitimate that determine an outcome for all of us, even if we *disagree* (or are harmed by) the outcome 
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/aby3cf6ijkrjs7k/benevolentdespot.jpg?raw=1)
+]
+
+]
+
+---
+
+# Recall: The State
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/jljq5lniaow14in/weber.png?raw=1)
+
+Max Weber
+
+1864-1920
+]
+]
+
+.right-column[
+
+> "[A] State is a human community that (successfully) claims the monopoly of the legitimate use of physical force within a given territory."
+]
+
+.source[Weber, Max, 1919, [*Politics as a Vocation*](http://anthropos-lab.net/wp/wp-content/uploads/2011/12/Weber-Politics-as-a-Vocation.pdf)]
+
+
+---
+
+# Recall: Madison's Paradox II
+
+- .shout[Madison's Paradox]: a State strong enough to protect rights is strong enough to violate them at its discretion
+
+.center[
+![:scale 70%](https://www.dropbox.com/s/gdwt68gmcpi1jmx/policebrutality.jpg?raw=1)
+]
+
+---
+
+# Recall: Credible Commitment
+
+.center[
+![:scale 75%](https://www.dropbox.com/s/8rfm3lggbfvhesm/odysseusstate.jpeg?raw=1)
+
+*Odysseus and the Sirens* by John William Waterhouse, Scene from Homer's *The Odyssey*
+
+]
+
+---
+
+# Recall: Olson's Roving vs. Stationary Bandits
+
+.pull-left[
+.center[
+![scale 100%](https://www.dropbox.com/s/pe08obbfkr4lwfh/vikingraid2.jpg?raw=1)
+]
+]
+
+.pull-right[
+.center[
+![:scale 88%](https://www.dropbox.com/s/t2h3woa0cern9nn/caesarwarlord.jpg?raw=1)
+]
+
+]
+
+---
+
+# Recall: State Capacity
+
+.pull-left[
+- Might simply be defined as the State's ability to do things
+
+- In the simplest of early states, the stationary bandit just extracts taxes as ruling elite's revenues
+
+- Possibly to fund its armies
+
+- In more modern states, taxes used to provide public goods
+
+- One strong shorthand for state capacity: ability to raise tax revenue
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/0onncp64w82rvu6/goodgovernance.png?raw=1)
+]
+]
+
+---
+
+# Some More Data on State Capacity & Development I
+
+.center[
+
+<iframe src="https://ourworldindata.org/grapher/country-level-taxes-vs-income" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+]
+
+.source[Source: [Our World in Data](https://ourworldindata.org/taxation)]
+
+---
+
+# Some More Data on State Capacity & Development II
+
+.center[
+
+<iframe src="https://ourworldindata.org/grapher/total-tax-revenue-gdp-vs-govt-effectiveness" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+]
+
+.source[Source: [Our World in Data](https://ourworldindata.org/grapher/total-tax-revenue-gdp-vs-govt-effectiveness)]
+
+---
+
+# Some More Data on State Capacity & Development III
+
+.center[
+
+<iframe src="https://ourworldindata.org/grapher/tax-revenue-national-income-longrun" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+
+]
+
+.source[Source: [Our World in Data](https://ourworldindata.org/taxation)]
+
+---
+
+# A Typology of States by Capacity/Development
+
+.pull-left[
+
+## "Early" States
+
+- Hierarchical and unequal
+
+- Weak fiscal and legal capacity
+
+- Coercive authority(ies)
+
+- Personal elite patronage networks
+
+- No organization outside of state
+
+]
+
+.pull-left[
+
+## "Modern" States
+
+- Centralized monopoly within borders
+
+- Strong fiscal and legal capacity
+
+- Bureaucratic and rule-based
+
+- More organizations, open access to citizens
+]
+
+---
+
+# Two Models of State Development
+
+.pull-left[
+
+.center[
+![](https://www.dropbox.com/s/oblyc34by7f8nut/nww.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/715c85fooekpewx/logicofpoliticalsurvival.jpg?raw=1)
+]
+
+]
+
+---
+
+class: inverse, center, middle
+# North, Wallis, Weingast: Natural States/LAOs
+
+---
+
+# Three Orders of Human History
+
+.left-column[
+.center[
+![](https://www.dropbox.com/s/oblyc34by7f8nut/nww.jpg?raw=1)
+]
+
+]
+
+.right-column[
+
+**1. Hunter-gatherers ("stateless")**
+
+**2. Limited-access order ("natural state")**
+
+**3. Open-access order**
+
+]
+
+---
+
+# Order I: Hunter-Gatherers
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/5fnfzg5wipj0d7x/nomads.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- More egalitarian
+
+- Rule by consensus or council of elders
+
+- Small personal units
+
+- Often informal rules
+
+- Olson: little incentive to produce or to steal
+]
+
+---
+
+# Order II: Natural States
+
+.pull-left[
+
+- .shout[Limited Access Order (LAO)] or .shout["natural state"]
+
+- Most common form of society for millennia
+
+- *All* societies since Neolithic Revolution of settled agriculture have been natural states until some transitioned in 19<sup>th</sup>-21<sup>st</sup> Centuries
+
+- *Most* States (by numbers) today remain natural states!
+
+]
+
+.pull-right[
+
+.center[
+![:scale 100%](https://www.dropbox.com/s/9ahy3gjtho0q8nv/tudors.jpeg?raw=1)
+
+The Tudors of England
+]
+]
+
+---
+
+# Order III: Open Access Orders
+
+.pull-left[
+
+- .shout[Open Access order] or "liberal democracy"
+
+- Open competition in both economic and political spheres
+
+- Coalitions of multiplicity of groups required to enact national policy
+
+- Incumbents and rent-seeking will be opposed and checked by competitors
+
+- Rule of law, impartial, impersonal, professional bureaucracy
+
+- "The State" survives beyond any one ruler or regime
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/xy6tk0i68s331ql/voting.jpg?raw=1)
+
+]
+]
+
+---
+
+# Patronage I
+
+.pull-left[
+
+- .shout[Patronage]: elites with power provide access to political and economic resources to their allies
+
+- Entry into politics and the economy is controlled and permitted only to those with connections
+
+- People ally with powerful individuals for protection and access
+
+- Feudal Europe: lords have duty to protect serfs from invasion
+
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/okyqur0vh8g5zod/patronage1.jpg?raw=1)
+]
+]
+
+---
+
+# Patronage II
+
+.pull-left[
+
+- Little/no separation between political, economic, and social spheres
+
+- Politics very high-stakes: decisions (or wars) determine who wins and who loses, at *everything*
+
+- Institutions are *personal*: who is king, lord, bishop *matters*
+    - Impossible to have rule of law!
+		
+]
+
+.pull-right[
+.center[
+![:scale 90%](https://www.dropbox.com/s/ji0kqpu8wygjknj/patronage2.jpg?raw=1)
+]
+]
+
+---
+
+# Patronage III
+
+.pull-left[
+
+- A very clear hierarchy, often immutable
+
+- Very unequal society
+
+- A person is judged by their *status*, which is determined by their *identity* in the hierarchy
+  - Who they are *connected* to and who is their *patron*
+
+		
+]
+
+.pull-right[
+.center[
+![:scale 80%](https://www.dropbox.com/s/c2sz0kxki4sm81h/homageedward.jpg?raw=1)
+]
+]
+
+---
+
+# Rule by the Clan
+
+.pull-left[
+
+- The "State" is patrimonial - an elaborate web of personal relationship
+
+- An elite group's power to threaten social order comes from their patrimonial relationships
+  - ability to sway decisions among large group of people
+  - ability to enforce a boycott, embargo, etc.
+  - ability to raise an army for rebellion
+
+- Strongest connections lie with kin, clan, religious sect, or other ethnic group
+  - often percieved as a moral obligation
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/h4jsaud8n8lypmy/clanflags.png?raw=1)
+]
+]
+
+---
+
+# "I am the State"
+
+.pull-left[
+
+.center[
+![:scale 70%](https://www.dropbox.com/s/aqzm9m8mb0gf5ob/louisxvi.jpg?raw=1)
+
+Louis XIV of France
+
+(1638-1715)
+]
+]
+
+.pull-right[
+
+> "L'etat c'est moi!"
+
+- This is what North, Wallis, and Weingast would call a "mature" natural state
+
+- The point is, the State is *synonymous* with the ruling elite (it has no separate existence)
+
+]
+
+---
+
+# Multiple Groups Vie for Control
+
+.pull-left[
+
+- No single person or group rules society
+
+- States are weak and unable to project power
+
+- Elites may include military specialists, landlords, clergy, traders, etc.
+
+- Wealthy and powerful groups can threaten violence, social disorder, or withhold wealth or access
+  - Threat is often sufficient, fighting is costly
+
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/7lzr9k7sj1qngxm/rebellion.jpg?raw=1)
+]
+]
+
+---
+
+# Multiple Groups Vie for Control
+
+.pull-left[
+
+- .onfire[There is no territorial monopoly on violence!]
+  - *Multiple* groups can credibly use or threaten violence
+
+- "The State" $\equiv$ **dominant coalition** of powerful elite groups
+
+- Dominant coalition agrees not to fight each other, respect each other's ability to extract rents from society
+
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/7lzr9k7sj1qngxm/rebellion.jpg?raw=1)
+]
+]
+
+---
+
+# The Proportionality Principle
+
+.pull-left[
+
+- .shout[Proportionality principle]: for a stable political system, .onfire[rents must be allocated in proportion to groups' capacity for violence] 
+
+- Rational elites will revolt if they believe their relative strength is greater than the rents they are earning
+  - Other elites need to "buy off" their support or else risk revolt
+
+- Dynamics: if distribution of wealth and power changes, the allocation of rents must change! 
+
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/nvi7chxerk9md4c/baronswar.jpg?raw=1)
+]
+]
+
+---
+
+# Power and Personality
+
+.pull-left[
+
+- Elites are loyal to the king as a *person*, not as an office!
+
+- Loyalty depends on king's ability to distribute booty and rents to elites
+
+- "King" or "Warlord" does not control *territory*, controls *vassals* based on social networks and bundle of privileges
+
+- No formal administration, staff, etc; all private servants to King's household
+  - The "Office of the Exchequer" was once a trunk of booty under the King's bed
+
+]
+
+.pull-right[
+.center[
+![:scale 65%](https://www.dropbox.com/s/ol7kqiqacmmn5t1/henryviii.jpg?raw=1)
+]
+]
+
+---
+
+# Monarchs are Often Weak Relative to Other Elites I
+
+.pull-left[
+
+- Monarch is just one ruler with his/her own land
+
+- Barons, earls, dukes, etc. have their own realms and sources of power, nominally loyal to the monarch
+
+- If unhappy, barons can (and did) revolt against oppressive monarch
+
+]
+
+.pull-right[
+.center[
+![:scale 90%](https://www.dropbox.com/s/2bntwlycimdmw70/francemercantilismmap.png?raw=1)
+
+"France" in 1477
+]
+]
+
+---
+
+# Monarchs are Often Weak Relative to Other Elites II
+
+.pull-left[
+
+> "XXIX. NO Freeman shall be taken or imprisoned, or be disseised of his Freehold, or Liberties, or free Customs, or be outlawed, or exiled, or any other wise destroyed; nor will We not pass upon him, nor condemn him, but by lawful judgment of his Peers, or by the Law of the land. We will sell to no man, we will not deny or defer to any man either Justice or Right"
+
+- Magna Carta, 1215
+
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/sb38o49ib77rd4z/magnacartasign.jpg?raw=1)
+
+]
+]
+
+---
+
+# Economies in Natural States
+
+.pull-left[
+
+- Economy is entangled in monopolies, barriers to entry, rent extraction by elites
+
+- Often dominated by large landowners, merchant/craft guilds that set their own rules
+
+- Entry in markets requires patronage and protection of powerful elite
+
+- Regulated for "national security" - powerful groups not getting their cut $\implies$ risk of rebellion and violence 
+
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/o8pro6u6dlm4w80/guilds.jpg?raw=1)
+]
+]
+
+---
+
+# Life for the Non-Elite
+
+.pull-left[
+
+- Non-elites have few rights and protections
+
+- Non-property owners, often work as agricultural laborers, tenants that rent out land from landowners
+
+- Often coerced labor: bonded labor, slavery, serfdom
+
+- Sometimes free laborers, but with no political or economic "rights" or power
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/zmgfwmvpo5p5vdx/serfs.jpg?raw=1)
+]
+]
+
+---
+
+# Corruption
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/m5ahfsjppkga2u7/medievalalliances.png?raw=1)
+]
+]
+
+.pull-right[
+
+- Is this "corrupt?"
+
+- What would an anti-corruption law achieve?
+
+- Important: .onfire[a successful Natural State wages peace]
+  - Elite groups *do not disarm*! Always able to threaten violence!
+]
+
+
+---
+
+# Weak States Struggle to Project Power
+
+> They had locally appointed officials – an agent to collect taxes and a guard to police the community. But laws, especially those relating to inheritance, were widely ignored and direct contact with the central power was extremely limited.
+
+> The state was perceived as a dangerous nuisance: its emissaries were soldiers who had to be fed and housed, bailiffs who seized property and lawyers who settled property disputes and took most of the proceeds.
+
+> Being French was not a source of personal pride, let alone the basis of a common identity. Before the mid-nineteenth century, few people had seen a map of France and few had heard of Charlemagne and Joan of Arc.
+
+> France was effectively a land of foreigners.
+
+- Graham Robb (2008) “The discovery of France”
+
+---
+
+# Rule Was Over People, Not Territory
+
+.pull-left[
+
+.center[
+![:scale 50%](https://www.dropbox.com/s/614jrd4inhf5uq7/charlemagne.jpg?raw=1)
+
+Charlemagne, King of *the Franks*
+
+(742–814)
+
+]
+]
+
+.pull-right[
+
+.center[
+![:scale 40%](https://www.dropbox.com/s/aqzm9m8mb0gf5ob/louisxvi.jpg?raw=1)
+
+Louis XIV, King of *France*
+
+(1638-1715)
+
+]
+
+]
+
+---
+
+# Statebuilding Took Centuries
+
+.pull-left[
+- Even in 19<sup>th</sup> century, few "French" citizens spoke French
+- Provincial loyalties $>$ national identity
+- Second Industrial Revolution (1870-1914): technology allows State to penetrate the isolated countryside:
+  - judicial systems
+  - school systems
+  - army
+  - railroads/roads
+  - market access
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/cmf1i2f3o64nhwe/peasantsintofrenchmen.jpg?raw=1)
+]
+
+]
+
+---
+
+# Power and Professional Bureaucracy I
+
+.pull-left[
+- State capacity and projection of power often requires a formal professional bureaucracy
+
+- Max Weber's "ideal types" of bureaucracy:
+
+1. **Traditional/patrimonial**
+  - rules and power arbitrary (come from ruler)
+  - hiring/firing/promotion based on personal connection
+2. **Rational and legal**
+  - staffed by professionals
+  - meritocratic hiring, firing, and internal promotion
+  - governed by objective legal rules
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/nk40331yuaqyik1/ruralbureaucrat.png?raw=1)
+]
+
+]
+
+---
+
+# Power and Professional Bureaucracy II
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/wtvd9298r4wfppg/spoilssystem2.jpg?raw=1)
+
+*Puck* satirical cartoon of U.S. President Chester Arthur
+]
+]
+
+.pull-right[
+
+- In United States, political offices were appointed according to the "spoils system" throughout 19<sup>th</sup> century
+
+- Pendleton Civil Service Act (1883): requires positions in the federal government to be awarded based on merit, not on political patronage
+
+.center[
+![:scale 70%](https://www.dropbox.com/s/65cbdwu3i7oalrr/merit.jpg?raw=1)
+]
+]
+
+---
+
+# Natural States Today? I
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/8f4m1clmuyl3gkb/mexicancartels.png?raw=1)
+]
+]
+
+.pull-right[
+.center[
+![:scale 80%](https://www.dropbox.com/s/xfc6du89o7gd4o5/mexicocartel1.png?raw=1)
+
+Source: [WSJ (Oct 31, 2019)](https://www.wsj.com/articles/video-details-brazen-attack-by-mexican-drug-cartel-on-government-forces-11572532035?mod=hp_lead_pos9)
+]
+]
+
+---
+
+# Natural States Today? II
+
+.pull-left[
+.center[
+![:scale 80%](https://www.dropbox.com/s/w9imqooshodalmh/migrantcrisisgangs1.png?raw=1)
+
+Source: [WSJ (Nov 2, 2018)](https://www.wsj.com/articles/pay-or-die-extortion-economy-drives-latin-americas-murder-crisis-1541167619)
+]
+]
+
+.pull-left[
+.center[
+![:scale 80%](https://www.dropbox.com/s/ndmk8rxdo4fay3f/migrantcrisis2gangs.png?raw=1)
+
+Source: [WSJ (Nov 9, 2018)](https://www.wsj.com/articles/the-violence-driving-migration-isnt-just-gangs-1541777123)
+]
+]
+
+---
+
+# Natural States Today? III
+
+.left-column[
+.center[
+![](https://www.dropbox.com/s/fw9h5hl5t6e7lem/afghanistanmap.png?raw=1)
+
+]
+]
+
+.right-column[
+
+> The political center in Kabul was not (and has never been) a collection of formal, bureaucratic institutions working in concert to penetrate the unwieldy periphery of wayward warlords, defiant mullahs, and rebellious tribal chieftains.
+
+> It was, instead, a political center operating largely in the neopatrimonial image, and, much like many of its predecessors, forging links to the countryside through partnerships with power holders who could sometimes expand the scope of the state by engaging it.
+
+]
+
+.source[Mukhopadhyay, Dipali, (2014), *Warlords, Strongman Governors and the State in Afghanistan*]
+
+---
+
+# Natural States Today? IV
+
+.pull-left[
+.center[
+![:scale 80%](https://www.dropbox.com/s/q8nzb9fv9f4nx4y/afghangovernors.jpg?raw=1)
+
+]
+]
+
+.pull-right[
+
+Afghan Governors meeting:
+
+- Jamaluddin Badar, Nuristan governor (prosecuted for corruption)
+- Lutfullah Mashal, Langham governor (writer & poet)
+- Gul Agha Sherzai, Nangarhar governor (major anti-Taliban warlord and US ally, suspected of opium trafficking)
+
+]
+
+---
+
+# Natural States Today? IV
+
+.left-column[
+.center[
+![](https://www.dropbox.com/s/5zqxkgn5xnbydk2/hamidkarzai.jpg?raw=1)
+
+Hamid Karzai
+
+President of Afghanistan (2001-2014)
+]
+]
+
+.right-column[
+
+> "..the mere articulation of a democratic, centralized state would prove inadequate to shift the center of gravity in this state formation project from the provinces to Kabul."
+
+]
+
+.source[Mukhopadhyay, Dipali, (2014), *Warlords, Strongman Governors and the State in Afghanistan*]
+
+---
+
+# NWW's Typology of Natural States: Fragile
+
+.pull-left[
+.center[
+![scale 100%](https://www.dropbox.com/s/pe08obbfkr4lwfh/vikingraid2.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- .shout[*Fragile* Natural State]: State can barely sustain itself
+
+- Constant internal and/or external violence
+  - Civil war or foreign invasion(s)
+
+- Unable to support *any* organization but the State itself
+
+- Small changes upset coalition and cause infighting and repositioning
+
+- All politics is high stakes - misstep risk death
+]
+
+---
+
+# NWW's Typology of Natural States: Basic
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/m5ahfsjppkga2u7/medievalalliances.png?raw=1)
+]
+]
+
+.pull-right[
+
+- .shout[*Basic* Natural State]: can support some elite organizations, but only within the State
+
+- Has public institutions that institutionalize the State: succession, tax rates, common beliefs
+
+- Organizations can only endure if connected to State, still personal and not perpetual
+]
+
+---
+
+# NWW's Typology of Natural States: Mature
+
+.pull-left[
+.center[
+![:scale 70%](https://www.dropbox.com/s/aqzm9m8mb0gf5ob/louisxvi.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- .shout[*Mature* Natural State]: has near-monopoly on use of violence
+
+- Has public and private institutions and organizations among elite, not extensions of the State
+
+- Rule of law for elite organizations
+
+- May be able to sustain perpetually lived impersonal organizations separate from individuals and State
+]
+
+---
+
+# The Transition
+
+.pull-left[
+
+- How can we get from natural states that benefit the elite to open access orders (that might harm elite?)
+
+- **It must be in the interest of the elite to reform**
+
+- But how??? (A BIG question for later!)
+]
+
+.pull-right[
+
+.center[
+![:scale 60%](https://www.dropbox.com/s/t4i1uwiciisuej1/doorstep.png?raw=1)
+]
+]
+
+---
+
+class: inverse, center, middle
+
+# Selectorate Model
+
+---
+
+# Autocracy
+
+.pull-left[
+
+- .shout[Autocracy] is an all-encompassing term for any non-democratic/constitutional republic political system
+
+- Autocrats might be (hereditary) monarchs, dictators, emperor/ess, military junta, oligarchy
+]
+
+.pull-right[
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/yd3xh2jtod04dfk/autocrats.png?raw=1)
+]
+]
+
+---
+
+# Autocracy II
+
+.center[
+
+<iframe src="https://ourworldindata.org/grapher/numbers-of-autocracies-and-democracies" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+
+]
+
+.source[Source: [Our World in Data](https://ourworldindata.org/democracy)]
+
+---
+
+# Autocracy III
+
+.center[
+
+<iframe src="https://ourworldindata.org/grapher/world-pop-by-political-regime" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+
+]
+
+.source[Source: [Our World in Data](https://ourworldindata.org/democracy)]
+
+---
+
+# Autocracy IV
+
+.center[
+
+<iframe src="https://ourworldindata.org/grapher/political-regime-updated2016" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+
+]
+
+.source[Source: [Our World in Data](https://ourworldindata.org/democracy)]
+
+---
+
+# Autocracy V
+
+.center[
+
+<iframe src="https://ourworldindata.org/grapher/age-of-democracies" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+]
+
+.source[Source: [Our World in Data](https://ourworldindata.org/democracy)]
+
+---
+
+# Autocracy VI
+
+.center[
+
+<iframe src="https://ourworldindata.org/grapher/income-vs-type-of-political-regime" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+
+]
+
+.source[Source: [Our World in Data](https://ourworldindata.org/democracy)]
+
+
+---
+
+# Autocracy VII
+
+.center[
+
+<iframe src="https://ourworldindata.org/grapher/human-rights-score-vs-political-regime-type" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+
+]
+
+.source[Source: [Our World in Data](https://ourworldindata.org/democracy)]
+
+---
+
+# Political Incentives
+
+.pull-left[
+
+- .onfire[Every leader's goal is to attain and maintain political power (get and stay in office)]
+
+- If all leaders have the same goals, why is there so much variation in outcomes?
+  - Some societies' leaders enact policies that benefit society
+  - Some societies' leaders enact policies that benefit only themselves
+
+- The key variation around the world is in the **institutions** regarding how the leader is **selected**
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/yj536pfa503axp7/congressassembled.png?raw=1)
+]
+]
+
+---
+
+# Selectorate Model I
+
+.pull-left[
+
+.center[
+![](https://www.dropbox.com/s/715c85fooekpewx/logicofpoliticalsurvival.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- **Selectorate theory**: characterizes governments by their selection institutions
+
+- Goal for the leader is **political survival**
+
+> Political survival can be threatened in three distinct ways: These include domestic challenges to leadership, revolutionary challenges to individual leaders and the political systems they lead, and external threats in the form of military attack by foreign adversaries...the basic tools to cope with each of these challenges are, we believe, the same, but the strategic responses by leaders (and followers) differ depending on the source of the threat," (p.23).
+
+]
+
+
+---
+
+# Selectorate Model I
+
+.pull-left[
+
+.center[
+![:scale 100%](https://www.dropbox.com/s/37xrmhiggtos4ds/selectorate.png?raw=1)
+]
+]
+
+.pull-right[
+
+- All societies contain three nested groups:
+
+1. **Residents** $(N)$
+
+2. .shout[Selectorate `\\((S)\\)`]: subset of residents who can potentially select the Leader
+
+3. .onfite[Winning Coalition** `\\((W)\\)`]: subset of selectorate whose active support is *required* for the Leader to maintain political power
+
+4. **Leadership** $(L)$: person(s) constituting the administration
+
+- Each person in the selectorate has a small chance of being in the winning coalition
+
+- Residents not in Selectorate are **disenfranchised**
+
+]
+
+---
+
+# Selectorate Model II
+
+.pull-left[
+
+.center[
+![:scale 8%](https://www.dropbox.com/s/37xrmhiggtos4ds/selectorate.png?raw=1)
+
+![:scale 80%](https://www.dropbox.com/s/hq7mphg3j8i6sz5/challenger.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Each society has a **Leader** and a set of potential substitute leader(s), the .onfire[Challenger `\\((C)\\)`] 
+
+- **Winning Coalition** controls the resources necessary for Leader to stay in power
+
+- If enough members of the winning coalition **defect** and support a **Challenger**, the incumbent Leader loses power
+
+]
+
+---
+
+# Selectorate Model III
+
+.pull-left[
+.center[
+![:scale 80%](https://www.dropbox.com/s/obqxaf2tz2se3jh/rents.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Leadership chooses a tax rate $(\tau)$ on labor to generate revenue
+
+- Spends that revenue on a combination of:
+
+1. **Private Goods** (rents) given exclusively to members of the winning coalition $(W)$
+  - money, tax breaks, management of state-owned enterprises, political positions, prestige
+
+2. **Public Goods** made available for *all* Residents
+  - roads, healthcare, education, parks, defense, courts, etc.
+
+]
+
+---
+
+# Selectorate Model IV
+
+.pull-left[
+.center[
+![:scale 80%](https://www.dropbox.com/s/wfja0zzpf686pzv/putin2.jpg?raw=1)
+
+![:scale 80%](https://www.dropbox.com/s/rajdxpldljcmoi9/russianoligarchs.png?raw=1)
+
+]
+]
+
+.pull-right[
+
+- **Challenger** makes an offer (tax rate, private goods, public goods)
+
+- Whomever makes a better offer to the Selectorate is selected as Leader
+
+- **Leader** must keep enough coalition members happy to avoid them defecting
+]
+
+---
+
+# Challenger Often Comes from Winning Coalition
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/uby8m78gv0d9m9v/praetorian.jpg?raw=1)
+
+Praetorian guards offering Claudius the Roman Empire in A.D. 41 after they assassinated Caligula, his nephew
+]
+]
+
+.pull-right[
+
+- Challengers often come from within the "inner circle" or the winning coalition
+
+- In the best position to benefit from power, and most plausible to convince new members to defect and join new government
+
+- 13 known cases of Praetorian Guard assassinations of Roman Emperors
+]
+
+---
+
+# Challenger's Commitment Problem
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/60uuhqkmbt1lon3/secret.jpg?raw=1)
+
+
+]
+]
+
+.pull-right[
+
+- At first glance, $C$ just has to make a better offer than $L$
+  - Provide more private goods to $W$ than the Leader!
+
+- But challenger faces a .shout[commitment problem]
+  - Current $W$ members obtain private rents because they are in $W$
+  - If $C$ comes to power, members of $W$ continue to earn rents *only if they are still in* $W$ under $C$'s leadership!
+  - $C$ can promise a member $W_i$ that they will be in the new $W$ under $C$, but this promise is not *credible!*
+
+]
+
+---
+
+# Leader Doesn't Have this Problem
+
+.pull-left[
+.center[
+![:scale 80%](https://www.dropbox.com/s/obqxaf2tz2se3jh/rents.jpg?raw=1)
+
+]
+]
+
+.pull-right[
+
+- Why doesn't $L$ face the same commitment problem?
+
+- Current $W$ members recognize they keep getting rents only so long as they remain loyal to $L$
+
+- Winning coalitions are stable over time because $W_i$ members have greater confidence that they will be in $W$ and earn rents into the future under $L$, unlike the uncertainty with $C$
+
+]
+
+---
+
+# To Defect or Not to Defect?
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/60uuhqkmbt1lon3/secret.jpg?raw=1)
+
+
+]
+]
+
+.pull-right[
+
+- So $L$ and $C$ make competing offers to members of $W$, and $W$ chooses the candidate with the best (and most probable) offer
+
+- Choice to defect for $W_i$ depends on two key factors:
+
+1. The size of the winning coalition, $W$
+
+2. The loyalty norm, $\frac{W}{S}$
+
+]
+
+---
+
+# The Loyalty Norm I
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/60uuhqkmbt1lon3/secret.jpg?raw=1)
+
+
+]
+]
+
+.pull-right[
+
+- The probability of being in a leader's winning coalition is $\frac{W}{S}$
+
+- Intuition: if enough members of $W$ *defect* and $C$ wins, forms a new regime
+  - Draws $W$ members from available $S$ selectorate to form new coalition
+  - Since $W<S$, defectors can't be certain they'll be in $W$
+    - many inessential defectors won't be part of new regime
+]
+
+---
+
+# The Loyalty Norm II
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/60uuhqkmbt1lon3/secret.jpg?raw=1)
+
+
+]
+]
+
+.pull-right[
+- So a would-be defector faces a tradeoff:
+  - (Expected) **marginal benefit of defecting:** being in $W$ under $C$
+  - (Expected) **marginal cost of defecting**: in $W$ now under $L$, but not being in $W$ under $C$
+
+- As $W \uparrow$ or $\downarrow S$, $C$ is less likely to need any particular member $W_i$ (and less likely to include them in new regime)
+  - Defecting becomes risker<sup>1</sup>
+
+- Risk of *not* being in $W$ is $(1-\frac{W}{S})$
+]
+
+.footnote[<sup>1</sup> Not to mention, if the coup fails, or your defection is discovered beforehand, Leaders are often unkind to traitors!]
+
+---
+
+# The Loyalty Norm: Example
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/ylotyqd36l7nv59/eunuchs.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+In these circumstances [after the rebellion on An Lu-Shan from 756 to 763 AD] the emperors could look for loyal service to one source and one alone - their eunuchs. For eunuchs were absolutely and unconditionally loyal to the emperors. This indeed is true, not only for the Chinese Empire, but for all the others that used the services of eunuchs - Persia, late Rome, Byzantium. Eunuchs had neither lands nor fortunes nor families to fall back upon. To the generals they were half-men, to the mandarines guttersnipes with neither the breeding nor the education of a gentleman. The Emperor, therefore was their sole support and they lived or died, rose or fell, entirely by his favor," (pp. 66-67).
+
+]
+
+---
+
+# The Loyalty Norm: Comparisons
+
+- Generates a .shout[loyalty norm]
+
+- When $\frac{W}{S}$ is small, members of $W$ are **extremely loyal to the Leader**
+  - cult of personality
+  - one-party dictatorships
+
+- When $\frac{W}{S}$ is large, members of $W$ are *less loyal*
+  - democracy
+  - monarchy
+  - military junta
+
+---
+
+# The Loyalty Norm: Visual Comparisons
+
+.center[
+![:scale 50%](https://www.dropbox.com/s/jckz56exf82aa3r/selectorateexamples.png?raw=1)
+]
+
+---
+
+# The Loyalty Norm: Hypothetical Example I
+
+- The size of the loyalty norm affects performance of leaders
+
+--
+
+.pull-left[
+
+## Society A
+
+- Tax revenue: $1 billion
+
+- Winning Coalition: 1,000
+
+- Selectorate: 100,000
+
+- $\frac{W}{S} = 0.01$
+]
+
+--
+
+.pull-right[
+
+## Society B
+
+- Tax revenue: $1 billion
+
+- Winning Coalition: 1,000
+
+- Selectorate: 10,000
+
+- $\frac{W}{S} = 0.10$
+]
+
+--
+
+- Leaders of both socities **could** give $1 million to each member of $W$
+
+---
+
+# The Loyalty Norm: Hypothetical Example II
+
+## Society A
+
+- Probability of being in challenger's coalition is $\frac{W}{S}=0.01$
+
+--
+
+$$\text{Expected payoff (Defect)}= 0.01(\$1,000,000)+0.99($0)=\$10,000$$
+
+--
+
+- Leader *could* give $1,000,000 to each coalition member to ensure loyalty...
+
+--
+
+- ... but only *needs* to give coalition members more than $10,000 to stop them from defecting
+
+
+---
+
+# The Loyalty Norm: Hypothetical Example III
+
+## Society B
+
+- Probability of being in challenger's coalition is $\frac{W}{S}=0.10$
+
+--
+
+$$\text{Expected payoff (Defect)}= 0.10(\$1,000,000)+0.90($0)=\$100,000$$
+
+--
+
+- Leader *could* give $1,000,000 to each coalition member to ensure loyalty...
+
+--
+
+- ... but only *needs* to give coalition members more than $100,000 to stop them from defecting
+
+---
+
+# Loyalty Norm: Small W/S Societies
+
+- Leaders in *small* $\frac{W}{S}$ societies with *strong* loyalty norms (Society A) need to spend *less* on private goods to keep $W_i$ members loyal
+
+- Marginal benefit of defection is smaller
+
+- The price of loyalty is "cheap" (since $W_i$ members are very loyal)
+
+---
+
+# Loyalty Norm: Small W/S Societies: Example I
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/rxgl8xsmzqjzvey/kimjongungenerals.png?raw=1)
+]
+]
+
+.pull-right[
+
+- GDP is about $12 billion
+
+- 20,000,000 population $(R)$
+
+- GDP/capita in North Korea: $600
+
+- Estimated that Kim Jong Un needs to keep between 250-2,500 generals happy to stay in power, $W$
+
+- Estimated that Kim needs to spend $1.2 billion per year (10% of GDP) to stay in office (and keep those 2,500 people happy)
+  - About $500,000 per person, but most don't get this much (maybe $6,000)
+
+]
+
+---
+
+# Loyalty Norm: Small W/S Societies: Example II
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/rxgl8xsmzqjzvey/kimjongungenerals.png?raw=1)
+]
+]
+
+.pull-right[
+
+- Private rents are still $>10x$ greater than the per capita income! 
+
+- Winning coalition members are *fiercely loyal* to the regime and want to protect their enormous rents
+
+]
+
+---
+
+# Loyalty Norm: Small W/S Societies: Leader Discretion
+
+- In high loyalty (small $\frac{W}{S})$ societies, leaders need to spend *less* to keep $W$ happy, meaning more tax revenue leftover for .onfire[discretionary spending] by the leader
+
+- Outcomes vary entirely based on the leader's personality
+
+
+---
+
+# Leader Discretion I
+
+.left-column[
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/hpn6l2y09gr57cn/mao.png?raw=1)
+
+Mao Zedong
+
+1893-1976
+
+China
+]
+]
+
+.right-column[
+
+- Mao's "Great Leap Forward" is estimated to have killed somewhere between 20-46 million people
+
+]
+
+---
+
+# Leader Discretion II
+
+.left-column[
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/ilg6l9qkopkzpwu/leekuanyew.jpg?raw=1)
+
+Lee Kwan Yew
+
+1923-2015
+
+Singapore
+
+]
+]
+
+.right-column[
+
+> "Lee is recognised as the nation's founding father, with the country described as transitioning from the "third world country to first world country in a single generation" under his leadership."
+
+]
+
+.source[[Wikipedia](https://en.wikipedia.org/wiki/Lee_Kuan_Yew)]
+
+---
+
+# Leader Discretion III
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/x293ier4mihocrx/corruptlegislation.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Discretion also creates possibility of .onfire[kleptocracy] - not mere corruption (buying off members of coalition for support), but *outright theft of state resources*
+
+]
+
+---
+
+# The Haul of Fame I
+
+.left-column[
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/2evgf1tyr24vesk/mobutu.jpg?raw=1)
+
+Mobutu Sese Seko 
+
+1930-1997
+
+Zaire/DRC
+]
+]
+
+.right-column[
+
+> According to Mobutu's New York Times obituary: "He built his political longevity on three pillars: violence, cunning and the use of state funds to buy off enemies. **His systematic looting of the national treasury and major industries gave birth to the term 'kleptocracy'** to describe a reign of official corruption that reputedly made him one of the world’s wealthiest heads of state."
+
+> Mobutu was infamous for embezzling the equivalent of billions of US dollars from his country. **According to the most conservative estimates, he stole US$4–5 billion from his country, and some sources put the figure as high as US$15 billion.**
+
+]
+
+.source[[Wikipedia](https://en.wikipedia.org/wiki/Mobutu_Sese_Seko#Legacy)]
+
+---
+
+# The Haul of Fame II
+
+.left-column[
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/ttvfzj5viq99s9x/marcos3.jpg?raw=1)
+
+Ferdinand Marcos 
+
+1917-1989
+
+Phillipines
+]
+]
+
+.right-column[
+.font90[
+**[M]onopolies in several vital industries were created and placed under the control of Marcos cronies**, such as the coconut industries...tobacco industry...banana industry...sugar industry...and manufacturing....The Marcos and Romualdez families became owners, directly or indirectly, of the nation's largest corporations, such as the Philippine Long Distance Company (PLDC)...Philippine Airlines (PAL), Meralco (an electric company), Fortune Tobacco, numerous newspapers, radio and TV broadcasting companies (such as ABS-CBN), several banks (most notably the Philippine Commercial and Industrial Bank...
+
+According to Presidential Commission on Good Government, the Marcos family and their cronies looted so much wealth from the Philippines that, to this day, **investigators have difficulty determining precisely how many billions of dollars were stolen.** The agency claimed that **Marcos stole around $5 to $10 billion from the Philippine treasury.** Adjusted for inflation, this would be **equivalent to about US$11.16 to US$22.3 billion**...in 2017.
+]
+]
+
+.source[[Wikipedia](https://en.wikipedia.org/wiki/Ferdinand_Marcos#Historical_Legacy)]
+
+---
+
+# The Haul of Fame III
+
+.left-column[
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/odr07toho6op82n/suharto.jpg?raw=1)
+
+Suharto 
+
+1921-2008
+
+Indonesia
+]
+]
+
+.right-column[
+
+.font90[
+In the early 1980s, **Suharto's children,** particularly Siti Hardiyanti Rukmana ("Tutut"), Hutomo Mandala Putra ("Tommy"), and Bambang Trihatmodjo...**were given lucrative government contracts and protected from market competition by monopolies.** Examples include the toll-expressway market which was monopolised by Tutut, the national car project monopolised by Bambang and Tommy, and even the cinema market, monopolised by 21 Cineplex (owned by Suharto's cousin Sudwikatmono). **The family is said to control about 36,000 sq. km of real estate in Indonesia, including 100,000 sq. m of prime office space in Jakarta and nearly 40% of the land in East Timor.**
+
+In early 2004, the German anti-corruption NGO Transparency International released a list of what it believed to be the ten most self-enriching leaders in the previous two decades; in order of amount allegedly stolen in USD, the highest-ranking of these was **Suharto and his family who are alleged to have embezzled $15 billion – $35 billion.**
+]
+]
+
+.source[[Wikipedia](https://en.wikipedia.org/wiki/Suharto#Socio-economic_progress_and_growing_corruption)]
+
+---
+
+# Loyalty Norm
+
+.pull-left[
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/obqxaf2tz2se3jh/rents.jpg?raw=1)
+]
+
+]
+
+.pull-right[
+
+- Leaders prefer to buy the support of the winning coalition with private goods (rents)
+   - cheaper
+
+- Challengers cannot credibly promise defecting members of $W$ private goods
+
+]
+
+---
+
+# Size of the Winning Coalition, W I
+
+- As the size of the winning coalition $W$ increases, value of private goods (rents) to each member $W_i$ decreases
+
+--
+
+.pull-left[
+
+## Society A
+
+- Tax revenue: $1 billion
+
+- Winning Coalition: 1,000
+
+- Max value of private goods: $1,000,000
+]
+
+--
+
+.pull-left[
+
+## Society C
+
+- Tax revenue: $1 billion
+
+- Winning Coalition: 1,000,000
+
+- Max value of private goods: $1,000
+]
+
+---
+
+# Size of the Winning Coalition, W II
+
+- At some point, it becomes more efficient for the Leader to buy support of coalition $W$ with more *public goods* than private goods
+
+- Leaders in small $W$ systems provide private goods
+
+- Leaders in large $W$ systems provide public goods
+  - Would have to spend more *overall* to buy loyalty with private goods!
+
+- As the winning coalition gets larger, leaders provide more public goods
+
+---
+
+# Size of the Winning Coalition, W III
+
+.left-column[
+
+.center[
+![](https://www.dropbox.com/s/1vifiqd3izhgtgv/tocqueville.jpg?raw=1)
+
+Alexis de Tocqueville
+
+1805-1809
+]
+]
+
+.right-column[
+
+> "**In aristocracies** those who wish to get to the head of affairs have great wealth at their disposal, and as **the number of those by whose assistance they rise is comparatively small, the government is in a sense up for auction.** In democracies those who intrigue for power are hardly ever rich, and the number of those who help to give it to them is very great. **Perhaps there are just as many men for sale in democracies, but there are hardly any buyers; besides, one would have to buy too many men at the same time** to obtain one's end."
+
+]
+
+.source[de Tocqueville, Alexis, (1835-1840), *Democracy in America*]
+
+
+---
+
+# Institutions Matter, Intentions of Leaders Don't
+
+.pull-left[
+
+- Civic-minded leaders confronted with small $W$, small $\frac{W}{S}$ system will produce poor policies to stay in power
+  - more public goods and fewer private goods risk being replaced by challenger
+
+- Selfish leaders confronted with large $W$, large $\frac{W}{S}$ will produce good policies to stay in power
+  - fewer public goods and more private goods risk being replaced by challenger
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/5t3hxn8oo04z2ds/lobbying1.jpg?raw=1)
+]
+]
+---
+
+# Institutions Matter, Intentions of Leaders Don't II
+
+.center[
+![:scale 60%](https://www.dropbox.com/s/kpx9gyqwot0ob0m/selectorates.png?raw=1)
+]
+
+---
+
+# Preferences of Groups
+
+- $L$: Leaders like to set up political systems with small W and small W/S.
+
+- $W$: Members of the winning coalition like to set up political systems with small W and large W/S
+
+- $S$: Members of the selectorate and disenfranchised like to set up political systems with large W and large W/S.
+
+---
+
+# Selectorates and Performance I
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/84r7xiqz8pxelw4/selectoratedata1.png?raw=1)
+]
+
+---
+
+# Selectorates and Performance II
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/syy3vyt6658alhp/selectoratedata2.png?raw=1)
+]
+
+---
+
+# Selectorates and Performance III
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/kimxsasmsjtls69/selectoratedata3.png?raw=1)
+]
+
+---
+
+# Leadership Turnover and Succession I
+
+.pull-left[
+
+- In autocracies, new autocrats need to establish their patronage network and convince $W$ that they will deliver the private rents
+  - High risk of challengers overthrowing early in regime
+
+- If leader survives for first 1-2 years in office, very high probability leader will continue until they die in their sleep
+  - Until/unless it's learned that ruler has a terminal disease
+
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/jpb4zwnvw220gsw/castro2.jpg?raw=1)
+]
+]
+
+---
+
+# Leadership Turnover and Succession II
+
+.center[
+![:scale 70%](https://www.dropbox.com/s/g9fbz5w1m2ovg7a/deathofstalin.jpg?raw=1)
+]
+
+---
+
+# Leadership Turnover and Succession III
+
+.pull-left[
+
+- Hereditary monarchy is a popular solution to the **problem of succession**
+
+- Even then, sometimes multiple legitimate heirs to throne
+
+- Need the backing of multiple barons $(W)$ and/or kill rivals!
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/zcydf5byf61r007/henryiichildren.jpg?raw=1)
+
+The children of Henry II contesting for the throne: **Richard I the Lionheart**, **John**, Eleanor of Acquitaine, Arthur of Anjou
+]
+]
+
+---
+
+# Leadership Turnover and Succession IV
+
+.pull-left[
+.center[
+![:scale 80%](https://www.dropbox.com/s/abem3qkmsjc9ais/sith2.jpg?raw=1)
+]
+]
+
+--
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/y2zqwg88pwgjtza/darthvader2.jpg?raw=1)
+]
+]
+
+---
+
+class: inverse, center, middle
+
+# The Violence Trap
+
+---
+
+# The Frequency of National Violence
+
+```{r, eval=F, echo=F}
+library(tidyverse)
+Regimes<-read_csv("../data/Regimes.csv")
+
+Regimes <- Regimes %>%
+  mutate(years = as.numeric(years))
+
+Regimes %>%
+  summarize(n = n(),
+            Min = min(years),
+            Q1 = quantile(years, 0.25),
+            Median = median(years),
+            Mean = mean(years),
+            Q3 = quantile(years, 0.75),
+            Max = max(years),
+            "Std. Dev" = sd(years))
+```
+
+
+
+> "First, violent regime change is common. **Ten percent of all regimes last no more than one
+year, while half of all regimes last no more than eight years.** Three-quarters of the countries in the "all regimes" sample last no more than a generation (here, 24 years). Finally, **only ten percent of regimes last fifty years or more, less than an average human lifetime.**"
+
+> "Second, the richest developing countries are more like poor developing countries than they are like the developed world. Among developing countries with below-median incomes, fifty percent of regimes last only 7 years. In countries ranking between the 75th and 90th percentiles of income—the developing world elite—the corresponding figureis 12.5. Finally, for the developed world (the richest decile of countries), the figure is 60. Thus, the richest developing countries move only 10% of the total distance between the third and first worlds in median duration."
+
+---
+
+# My Attempt with the Data
+
+.pull-left[
+
+.center[
+![:scale 100%](https://www.dropbox.com/s/dsjux1lg5c0c9hu/regimeduration.png?raw=1)
+]
+
+]
+
+.pull-right[
+
+| $n$ | Min | $Q_1$ | Median | Mean | $Q_3$ | Max | Std. dev. |
+|-----|-----|-------|--------|------|-------|-----|-----------|
+| $814$ | $0.0$ | $5.1$ | $12.8$ | $28.9$ | $30.4$ | $146.9$ | $24.9$ |
+
+]
+
+.source[Data from Goemans, Henk E, Kristian Skrede Gleditsch, and Giacomo Chiozza, (2009), "Introducing Archigos: A Dataset of Political Leaders," *Journal of Peace Research* 46(2): 269-283; c.f. Cox, Gary W, Douglass C North, and Barry R Weingast, (2013), "The Violence Trap," *Working Paper*
+
+A "**regime**" is defined following Cox et al (2015, 4) as "a state that experiences an uninterrupted sequence of nonviolent leadership successions." Data covers 192 countries since 1840.]
+
+---
+
+# Again: Rent-Seeking is Pervasive in these Societies
+
+.center[
+![](https://www.dropbox.com/s/d3ryphbj3j7jtt8/rentseekingeverywhere.jpg?raw=1)
+]
+
+---
+
+# Again: Consider the Washington Consensus
+
+.center[
+![:scale 75%](https://www.dropbox.com/s/rfrylpbf5ia55q1/washingtonconsensustable.png?raw=1)
+]
+
+.source[Rodrik, Dani, 2006, "Goodbye Washington Consensus, Hello Washington Confusion?" *Journal of Economic Literature* 44(4): 973-987]
+
+---
+
+# Undoing the Glue?
+
+.pull-left[
+
+- .onfire[Rents are the glue that hold the dominant/winning coalition together]
+
+- Remove the rents, threaten violence and civil war
+
+- Remember, being exploited by a "stationary bandit" $>$ anarchy under "roving bandits"!
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/m5ahfsjppkga2u7/medievalalliances.png?raw=1)
+]
+]

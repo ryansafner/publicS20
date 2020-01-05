@@ -1,0 +1,26 @@
+---
+title: "Public Economics"
+author: "Ryan Safner"
+---
+
+^[{-} `r blogdown::shortcode("courseinfo")`] <span class="newthought">This site contains</span> the syllabus, schedule, and assignments for ECON 410: Public Economics, held during Spring 2020 at Hood College.
+
+**Last Update**: [`r format(Sys.time(), "%X %a %b %d %Y")`](https://github.com/ryansafner/publicS20/commits/master)
+
+By the end of this course, you will:
+
+- Explain how the development community measures economic development
+- Interpret regression tables in the empirical literature in development
+- Demonstrate different theories of economic development
+- Explain why various policies aimed at promoting development have failed
+- Describe essential conditions for successful development
+- Discuss the broad economic history of "the West", several key "Emerging Markets" (such as Russia, China, Korea, etc.), and several other case studies of developing countries
+
+Given these objectives, this course fulfills two of the learning outcomes for [the George B. Delaplaine, Jr. School of Business](https://www.hood.edu/academics/departments/george-b-delaplaine-jr-school-business/student-learning-outcomes) Economics B.A. program:
+
+- Apply economic reasoning and models to understand and analyze problems of public policy [...]
+- Demonstrate effective oral and written communications skills for personal and professional success[...]
+
+<figure>
+[![](/images/dev_flowchart_blankbg.png)](/images/dev_flowchart_blankbg.png)
+</figure>

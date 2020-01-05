@@ -1,0 +1,73 @@
+lessons:
+  - title: '<span class="fake-header-table">Basic Challenges of Collective Action</span>'
+    header: True
+
+  - title: "1.1 Introduction and Overview"
+    slides: "01-slides"
+    class: "01-class"
+    reading: "01-reading"
+
+  - title: "1.2 Externalities and Bargaining"
+
+  - title: "1.3 Property Rights"
+
+  - title: "1.4 Public Goods and Collective Action I"
+
+  - title: "1.5 Public Goods and Collective Action II"
+
+  - title: "1.6 Efficiency and Justice"
+
+  - title: '<span class="fake-header-table">Constitutional Political Economy</span>'
+    header: True
+
+  - title: "2.1 Constituting a Group"
+
+  - title: "2.2 The Optimal Decision Rule"
+
+  - title: '<span class="fake-header-table">Representative Democracy</span>'
+
+  - title: "3.1 Voting I: Social Choice Theory"
+
+  - title: "3.2 Voting II: Ignorance and Irrationality"
+
+  - title: "3.3 Interest Groups I"
+
+  - title: "3.4 Interest Groups II"
+
+  - title: "3.5 Bureaucracy"
+
+  - title: "3.6 Legislators I"
+  
+  - title: "3.6 Legislators II"
+  
+  - title: "3.7 Legislators III"
+
+  - title: '<span class="fake-header-table">Applications</span>'
+    header: True
+
+  - title: "4.1 Federalism I: Foot-Voting"
+
+  - title: "4.2 Federalism II: Exit, Voice, and Loyalty"
+
+  - title: "4.3 Taxation I: Economic Incidence"
+
+  - title: '4.4 Taxation II: Inequality'
+
+  - title: '4.5 Taxation III: Taxation as Regulation'
+
+  - title: '4.6 Transfer Payments: Overview'
+
+  - title: '4.7 Transfer Payments: A Basic Income Guarantee?'
+
+  - title: '4.8 Democracy Squared: Quadratic Voting?'
+
+  - title: '4.9 Inequality: Possible Causes and Cures'
+
+  - title: '<i class="fas fa-laptop-code"></i> **Short Paper 2** due Dec 6 by email'
+    assignment: "01-short-paper"
+
+  - title: '<i class="fas fa-laptop-code"></i> **Country Profile** due Dec 9'
+    assignment: "country-profile"
+
+  - title: '<i class="fas fa-laptop-code"></i> **Final Exam**'
+    assignment: "final-exam"

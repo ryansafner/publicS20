@@ -1,0 +1,76 @@
+baseurl: "https://publicS20.classes.ryansafner.com/"
+languageCode: "en-us"
+title: "Public Economics"
+theme: "ath-tufte-hugo_18-19"
+googleAnalytics: ""
+ignoreFiles:
+  - \.Rmd$
+  - \.Rmarkdown$
+  - \.yaml$
+  - _files$
+  - _cache$
+  - \.csl$
+permalinks:
+  post: "/:year/:month/:day/:slug/"
+buildFuture: true
+menu:
+  main:
+    - name: Syllabus
+      url: /syllabus/
+      weight: 1
+    - name: Assignments
+      url: /assignments/
+      weight: 3
+    - name: Schedule
+      url: /schedule/
+      weight: 2
+    - name: Reference
+      url: /reference/
+      weight: 4
+# Disable taxonomies
+taxonomies:
+  tag: ""
+  group: ""
+  category: ""
+params:
+  author: Ryan Safner
+  thumbnail: /images/public_hex.png
+  instructor: 
+    name: Dr. Ryan Safner
+    email: safner@hood.edu
+    url: "https://www.ryansafner.com"
+    twitter: ryansafner
+    github: ryansafner
+    office: 118 Rosenstock
+  course:
+    number: ECON 410
+    semester: Spring 2020
+    days: "MW"
+    time: "2:00–3:15PM"
+    location: "114 Hodson"
+    twitter: ryansafner
+    dates: >-
+      January 15–May 8, 2020
+    github: "ryansafner/publics20"
+    #slack: "https://hoodeconometrics.slack.com/"
+    copyrightYear: "2020"
+    contactDetails: >-
+      Office hours: TuTh 3:15–5:00PM
+  university: 
+    name: Hood College
+    url: "https://www.hood.edu"
+  school:
+    name: George B. Delaplane, Jr. School of Business
+    url: "https://www.hood.edu/academics/departments/george-b-delaplaine-jr-school-business"
+  description: "Public Economics"
+  primaryColor: "#5E81AC"
+  secondaryColor: "#D08770"
+  credits: >-
+    Hex icon by Ryan Safner via [hexSticker](https://github.com/GuangchuangYu/hexSticker).<br> Course website based on [Andrew Heiss](https://econw19.classes.andrewheiss.com/). <br>[Nord color scheme](https://github.com/arcticicestudio/nord) from [Arctic Ice Studio](http://arcticicestudio.com/).
+  logo:
+    url: /images/public_hex.png
+    alt: Public Economics
+  meta:
+    twitterSite: "@ryansafner"
+    twitterCreator: "@ryansafner"
+    fbAuthor: "https://www.facebook.com/ryansafner"

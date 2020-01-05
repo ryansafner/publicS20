@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rs on Economics of Development</title>
+    <link>/r/</link>
+    <description>Recent content in Rs on Economics of Development</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/r/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>R Practice 1</title>
+      <link>/r/03-r/</link>
+      <pubDate>Mon, 07 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/r/03-r/</guid>
+      <description>Contents  Getting Set Up Creating Objects Playing with a Data Set Execute your R Script     Download .Rmd  Answer Key  For this homework, you may type up or handwrite the answers to each question. When you get to the R questions at the end, please attach a copy of your .R file (with comments!) of commands for each relevant question. For future homeworks, I will demonstrate how you can complete everything using R Markdown, but you will not be obligated to do so.</description>
+    </item>
+    
+  </channel>
+</rss>

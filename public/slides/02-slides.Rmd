@@ -1,0 +1,1727 @@
+---
+title: "Lesson 2: Measuring Development"
+subtitle: "ECON 317 · Economics of Development · Fall 2019"
+author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/devf19"><i class="fa fa-github fa-fw"></i> ryansafner/devf19</a><br> <a href="https://devF19.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> devF19.classes.ryansafner.com</a><br>'
+#date:
+output:
+  xaringan::moon_reader:
+    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML" # rescales math with css changes https://github.com/yihui/xaringan/issues/143
+    lib_dir: libs
+    #seal: false
+    css: [custom.css, custom-fonts.css, "hygge"] #, metropolis, metropolis-fonts
+    nature:
+      beforeInit: ["macros.js", "https://platform.twitter.com/widgets.js"] # first is for rescaling images , second is for embedding tweets, https://github.com/yihui/xaringan/issues/100
+      highlightStyle: ocean #rainbow #monokai rainbow solarized-light #tomorrow-night -blue -eighties zenburn
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    includes:
+      in_header: header.html # for font awesome, used in title  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(message=F,
+                      warning=F,
+                      echo=F)
+```
+
+class: inverse, middle, center
+
+### [Is There Such a Thing as "Political Development"?](#3)
+
+### [Measuring *Economic* Development](#25)
+
+### [GDP](#28)
+
+### [Do You Know the World Today?](#67)
+
+### [Development as Freedom](#80)
+
+### [Poverty and Basic Human Needs](#94)
+
+### [Inequality](#103)
+
+---
+
+class: inverse, middle, center
+
+# Is There Such a Thing as "Political Development"?
+
+---
+
+# Example 1: Life in Medellin, Colombia I
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/ywlg1b87u3q8gvq/medellinlocation.png?raw=1)
+]
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/7ntrr2jr1ps81rv/medellin1.jpg?raw=1)
+]
+
+]
+
+.source[Blattman, Christopher, Gustavo Duncan, Benjamin Lessing, and Santiago Tobon, 2019, "Gangs of Medellin: How Organized Crime is Organized," Working Paper]
+
+---
+
+# Example 1: Life in Medellin, Colombia II
+
+.pull-left[
+- Historically, weak State presence into peripheries
+- Hillsides full of displaced people, immigrants, poor
+- Limited access to public goods (police, courts, services, etc)
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/lnrwjtj025ygzvl/medellinslums.jpg?raw=1)
+]
+
+]
+
+.source[Blattman, Christopher, Gustavo Duncan, Benjamin Lessing, and Santiago Tobon, 2019, "Gangs of Medellin: How Organized Crime is Organized," Working Paper]
+
+---
+
+# Example 1: Life in Medellin, Colombia III
+
+.pull-left[
+- More than 300 local youth gangs
+- Began in low income neighborhoods
+- with business in illicit trade:
+    - Protection rackets
+    - Local trafficking
+    - Moneylending, loan sharking
+    - Voter "mobilization"
+]
+
+.pull-right[
+.center[
+![:scale 90%](https://www.dropbox.com/s/tdbhhjhxlf6pl6b/medellingang.jpg?raw=1)
+]
+
+]
+
+.source[Blattman, Christopher, Gustavo Duncan, Benjamin Lessing, and Santiago Tobon, 2019, "Gangs of Medellin: How Organized Crime is Organized," Working Paper]
+
+---
+
+# Example 1: Life in Medellin, Colombia IV
+
+.pull-left[
+- Gangs take on other "stately" roles:
+    - Adjudicating disputes, enforcing property rights
+    - Police against (outside) thieves
+    - Local employment programs
+    - Collecting "taxes" regularly
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/jgv62iu395gnwox/medellin2.PNG?raw=1)
+]
+
+]
+
+.source[Blattman, Christopher, Gustavo Duncan, Benjamin Lessing, and Santiago Tobon, 2019, "Gangs of Medellin: How Organized Crime is Organized," Working Paper]
+
+---
+
+# Example 1: Life in Medellin, Colombia V
+
+- Violence has been reduced and stabilized, with periodic flare ups
+
+.center[
+![](https://www.dropbox.com/s/wzwvelnt5bi0xlo/medellin3.PNG?raw=1)
+]
+
+.source[Blattman, Christopher, Gustavo Duncan, Benjamin Lessing, and Santiago Tobon, 2019, "Gangs of Medellin: How Organized Crime is Organized," Working Paper]
+
+---
+
+# Example 1: Life in Medellin, Colombia VI
+
+.center[
+
+In what sense is Medellin "underdeveloped?"
+![:scale 90%](https://www.dropbox.com/s/zu5g54rakxezxlz/medellin2.jpg?raw=1)
+]
+
+---
+
+# Example 2: United States in the 18<sup>th</sup>-19<sup>th</sup> Century I
+
+.pull-left[
+
+- On the one hand:
+    - Nation founded on principles that "all men are created equal" and endowed with "unalienable rights [to] life, liberty, and the pursuit of happiness"
+    - Vibrant "Town Hall" culture of civic participation in democracy and civil society
+    - de Tocqueville: Americans have mastered "the art of association"
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/jmfsxh89593lwq6/oldusmap.jpeg?raw=1)
+]
+]
+
+---
+
+# Example 2: United States in the 18<sup>th</sup>-19<sup>th</sup> Century II
+
+.pull-left[
+
+- On the other hand:
+    - Revolution was led by elite land-owners, merchants, and some slave-owners
+    - Voting restricted to a small number of male property owners 
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/jmfsxh89593lwq6/oldusmap.jpeg?raw=1)
+]
+]
+
+---
+
+# Example 2: United States in the 18<sup>th</sup>-19<sup>th</sup> Century III
+
+.center[
+![](https://www.dropbox.com/s/nifywsfrn7kolwl/uspopularvote.png?raw=1)
+]
+
+.source[Source: [Wikipedia](https://en.wikipedia.org/wiki/Voter_turnout_in_the_United_States_presidential_elections#/media/File:U.S._Vote_for_President_as_Population_Share.png)]
+
+---
+
+# Example 2: United States in the 18<sup>th</sup>-19<sup>th</sup> Century IV
+
+.pull-left[
+
+- U.S. States and Federal Government was *clientelist*<sup>1</sup>, no *professional* bureaucracy until the Pendelton Civil Service Reform Act of 1883
+    - Political parties delegated public offices to political allies
+    
+- Cities governed by "political machines"
+    - Vote buying, fraud, intimidation
+]
+
+.pull-right[
+![:scale 90%](https://www.dropbox.com/s/4xd6bku8ieba51l/bosstweed.jpg?raw=1)
+]
+
+.footnote[<sup>1</sup> Also called "patronage" or "the spoils system". ]
+
+---
+
+# Example 2: United States in the 18<sup>th</sup>-19<sup>th</sup> Century IV
+
+.center[
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OQ04YdyQPAc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+
+---
+
+# Example 2: United States in the 18<sup>th</sup>-19<sup>th</sup> Century V
+
+.left-column[
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/enwy6k9epivq11f/plunkitt2.jpg?raw=1)
+
+George Washington Plunkitt
+
+1842-1924
+]
+]
+
+.right-column[
+
+> EVERYBODY is talkin' these days about Tammany men growin' rich on graft, but nobody thinks of drawin' the distinction between honest graft and dishonest graft. There's all the difference in the world between the two. Yes, many of our men have grown rich in politics. I have myself. I've made a big fortune out of the game, and I'm gettin' richer every day, but I've not gone in for dishonest graft—blackmailin' gamblers, saloonkeepers, disorderly people, etc.—and neither has any of the men who have made big fortunes in politics.
+
+> There's an honest graft, and I'm an example of how it works. I might sum up the whole thing by sayin': "I seen my opportunities and I took 'em." 
+
+]
+
+.source[[*Plunkitt of Tammany Hall*](https://www.gutenberg.org/files/2810/2810-h/2810-h.htm#link2HCH0001), Ch. 1]
+
+---
+
+# A Hypothesis to Consider
+
+.pull-left[
+
+- These are characteristics of "normal countries"
+    - Middle-income, still industrializing economies
+    - Endemic corruption, but can still be consistent with economic growth
+        - "honest graft vs. dishonest graft?"
+
+- Note: "normal" $\neq$ "good" or "just"!
+
+- Democratic, politically free countries with open access and low corruption are a *very* new thing historically!
+]
+
+.pull-right[
+
+![:scale 80%](https://www.dropbox.com/s/k89v6u0o1yqbolz/polcorrupt.jpg?raw=1)
+
+]
+
+.source[Shleifer, Andrei and Daniel Treisman, 2005, "A Normal Country: Russia after Communism," *Journal of Economic Perspectives* 19(1): 151-174]
+
+---
+
+# Political Development and Economic Development I
+
+.pull-left[
+
+- Is a "developed country" *politically* developed?
+
+- What does that mean? .shout[Democracy]?
+
+- Is democracy important for 
+    - economic development?
+    - human flourishing?
+    - (how do those two concepts overlap?)
+
+- If not (or not only) democracy, then what?
+
+- .whisper[state capacity]
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/g1hpugm68sveriq/cityhall.png?raw=1)
+]
+]
+
+---
+
+# Political Development and Economic Development II
+
+.center[
+![:scale 62%](https://www.dropbox.com/s/y3je3h2qbhh3nzl/autocracies6.png?raw=1)
+]
+
+.source[Sources: [Our World in Data: Democracy](https://ourworldindata.org/democracy); [Polity IV Data](https://www.systemicpeace.org/polity/polity4.htm)]
+
+---
+
+# Political Development and Economic Development III
+
+.center[
+![:scale 62%](https://www.dropbox.com/s/dhybexj05pozsjw/autocracies3.PNG?raw=1)
+]
+
+.source[Source: [Our World in Data: Democracy](https://ourworldindata.org/democracy)]
+
+---
+
+# Political Development and Economic Development IV
+
+.center[
+![:scale 62%](https://www.dropbox.com/s/rbvfd7gobtcm11m/autocracies4.png?raw=1)
+]
+
+.source[Source: [Our World in Data: Democracy](https://ourworldindata.org/democracy)]
+
+---
+
+# Political Development and Economic Development V
+
+.center[
+![:scale 62%](https://www.dropbox.com/s/r183bdz1n75ohxp/autocracies5.png?raw=1)
+]
+
+.source[Source: [Our World in Data: Democracy](https://ourworldindata.org/democracy)]
+
+---
+
+# Political Development and Economic Development VI
+
+.center[
+![:scale 62%](https://www.dropbox.com/s/z5q1rfubzo1uzpz/FH_FITW_Report_2018_WorldMap.jpg?raw=1)
+]
+
+.source[Freedom House, 2018, [Freedom of the World](https://freedomhouse.org/report/freedom-world/freedom-world-2018)]
+
+---
+
+# Political Development and Economic Development VII
+
+```{r, load-data, echo=F}
+library("tidyverse")
+library("here")
+library("ggrepel")
+polfreedom<-read.csv(here("./static/data/freedomhouse2018.csv"))
+econfreedom<-read.csv(here("./static/data/econfreedom.csv"))
+```
+
+```{r}
+polfreedom2<-polfreedom %>%
+  select(Country.Territory, Total)
+
+polfreedom2<-rename(polfreedom2,Country=Country.Territory)
+
+# combine datasets
+freedom<-left_join(econfreedom, polfreedom2, by="Country")
+
+interest<-filter(freedom, ISO %in% c("ARG", "SGP", "NOR", "KWT", "MEX", "TUR", "CHN", "JPN", "USA"))
+
+```
+
+.center[
+```{r, plot1, echo=F, fig.height=3, out.width="90%", fig.retina=3}
+ggplot(data=freedom, aes(x=ef,y=Total))+
+  geom_point(aes(color=continent))+
+  geom_smooth(data=freedom,method="lm")+
+  geom_label_repel(data=interest, aes(ef, Total, label=ISO,color=continent),alpha=0.6)+
+  xlab("Economic Freedom Score")+ylab("Political Freedom Score")+theme_bw()+labs(caption="Sources: Frasier Institute, Freedom House")
+
+```
+]
+
+.source[Economic Freedom Score (2016) from [Fraser Institute Data](https://www.fraserinstitute.org/economic-freedom/dataset?geozone=world&year=2016&page=dataset); Political Freedom Score from [Freedom House Data](https://freedomhouse.org/content/freedom-world-data-and-resources)
+]
+
+---
+
+# Political Development and Economic Development VIII
+
+.center[
+```{r, plot2, echo=F, fig.height=3, out.width="90%", fig.retina=3}
+ggplot(data=freedom, aes(x=Total,y=gdp))+
+  geom_point(aes(color=continent))+
+  geom_smooth()+
+  geom_label_repel(data=interest, aes(Total, gdp, label=ISO, color=continent),alpha=0.6, nudge_x=1, nudge_y=1)+
+  scale_y_continuous(name="GDP per Capita ($)", labels=scales::dollar, breaks=seq(0,100000,20000))+
+  xlab("Political Freedom Score")+ylab("GDP per Capita")+labs(caption="Sources: Gapminder, Freedom House")+theme_bw()
+```
+]
+
+.source[GDP per Capita (2018) from [Gapminder](https://gapminder.org/tools); Political Freedom Score from [Freedom House Data](https://freedomhouse.org/content/freedom-world-data-and-resources)
+]
+
+---
+
+class: inverse, center, middle
+
+# Measuring *Economic* Development
+
+---
+
+# What Do We Care About?
+
+.left-column[
+Among the major things, macroeconomists care about: 
+
+1. **Economic growth** (rising GDP)
+
+2. **A large working population** (low unemployment rate)
+
+3. **Stable purchasing power** (low inflation rate)
+
+The three most common *macroeconomic* measures of an economy's performance
+]
+
+.right-column[
+.center[
+![](https://www.dropbox.com/s/7l05ucw4hfwlsyc/economics1.jpg?raw=1)
+]
+]
+---
+
+# We Might Also Care About...
+
+.left-column[
+- Wealth (in)equality
+
+- Health outcomes
+
+- Life quality/satisfaction
+
+- Environmental quality
+
+- Political stability
+
+- Low corruption
+
+- Human and civil rights (especially for minority groups)
+]
+
+.right-column[
+.center[
+![](https://www.dropbox.com/s/3py5t0t49fegjdo/institutions1.jpg?raw=1)
+]
+]
+
+---
+
+class: inverse, center, middle
+
+# GDP
+
+---
+
+# Gross Domestic Product (GDP)
+
+.pull-left[
+- .shout[Gross Domestic Product (GDP)]: market value of all final goods and services produced within a country in a year 
+    - market value, measured in current prices (dollars, euros, yen, etc.) 
+    - final goods and services 
+        - Avoid double-counting intermediate goods
+        - Sales of used goods not included 
+    - produced within a year (new things only, nothing old)
+    - measured within an individual country (inside the borders)
+        - includes foreign nationals living here
+        - does not include our citizens living abroad (see GNP below)
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/l4bnbq0sl48kci5/gdp.jpg?raw=1)
+]
+]
+
+---
+
+# Gross Domestic Product (GDP)
+
+.pull-left[
+- .shout[Gross Domestic Product (GDP)]: the market value of all final goods and services produced within a country in a year 
+
+$$Y=C+I+G+NX$$
+
+- $Y$: national income
+- $C$: consumption
+- $I$: investment
+- $G$: government spending
+- $NX$: net exports $=$ exports $(X)-$imports $(M)$
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/l4bnbq0sl48kci5/gdp.jpg?raw=1)
+]
+]
+
+---
+
+# GDP in the U.S.
+
+.center[
+![](https://www.dropbox.com/s/sxuwsalope6k5u9/beagdp2.png?raw=1)
+
+[Bureau of Economic Analysis: GDP Interactive Table](https://apps.bea.gov/iTable/iTable.cfm?isuri=1&reqid=19&step=2&0=survey)
+]
+
+---
+
+# Gross National Income
+
+- .shout[Gross National Income (GNI)]<sup>1</sup>: market value of all final goods and services produced by resources owned by a country's citizens both at home *and* abroad
+    - i.e. take GDP and add production by Americans *living abroad*
+
+- Comparing GDP to GNP shows how much a nation's citizens' wealth comes from domestic vs. international sources
+
+.footnote[<sup>1</sup> This used to be called Gross National Product (GNP).]
+
+---
+
+# GDP per Capita
+
+.pull-left[
+- GDP/GNI is a rough measure 
+    - If a tiny country and a large country have the same GDP, who is better off? 
+    - Want to weight GDP by the size of a country 
+- .shout[GDP per capita] is a measure of **income per person**<sup>1</sup>:
+$$\text{GDP per capita}=\frac{\text{Gross Domestic Product}}{\text{Population}}$$
+
+- A better measure of how the "average" person is doing in a country
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/l4bnbq0sl48kci5/gdp.jpg?raw=1)
+]
+]
+
+.footnote[<sup>1</sup> Capita means person.]
+
+---
+
+# GDP per Capita II
+
+.center[
+![:scale 60%](https://www.dropbox.com/s/06p7ktix3a8mfq9/worldgdppercapita2.png?raw=1)
+]
+
+---
+
+# Country "Income Levels"
+
+The World Bank [defines](https://datatopics.worldbank.org/world-development-indicators/stories/the-classification-of-countries-by-income.html) as of 1 July 2018 countries as being:
+
+| Income level | GNI per capita | 
+|----|----|
+| High income | $>12,055$ | 
+| Upper-middle income | $3,896-12,055$ | 
+| Middle income | $996-3,895$ | 
+| Low income | $\leq995$ | 
+
+---
+
+# Country "Income Levels" II
+
+.center[
+![:scale 60%](https://www.dropbox.com/s/soo9cqjmsd4vz6m/wbincomelevels.png?raw=1)
+]
+
+.source[Source: [World Bank](https://datatopics.worldbank.org/world-development-indicators/stories/the-classification-of-countries-by-income.html)]
+
+---
+
+# Country "Income Levels" III
+
+.center[
+![:scale 60%](https://www.dropbox.com/s/x22ywlcppzva1f7/wbincomelevels2.png?raw=1)
+]
+
+.source[Source: [World Bank](https://datatopics.worldbank.org/world-development-indicators/stories/the-classification-of-countries-by-income.html)]
+
+---
+
+# Comparing Across Countries I
+
+.pull-left[
+
+- To compare GDP across countries that use different currencies (e.g. Pounds, Euros, Yen, Yuan), we need a **common denominator** by using an .whisper[exchange rate] between currencies
+
+- .whisper[Exchange Rates] express the amount of one currency needed to convert to 1 unit of another 
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/rr33zcbf5w39eyt/currencies.jpg?raw=1)
+]
+]
+
+---
+
+# Comparing Across Countries I
+
+.pull-left[
+
+- To compare GDP across countries that use different currencies (e.g. Pounds, Euros, Yen, Yuan), we need a **common denominator** by using an .whisper[exchange rate] between currencies
+
+- .whisper[Exchange Rates] express the amount of one currency needed to convert to 1 unit of another 
+
+.content-box-green[
+.green[**Example**:]
+$$\begin{align*}
+0.88 \text{ EUR}&: 1 \text{ USD}\\
+0.78 \text{ GBP}&: 1 \text{ USD}\\
+1.30 \text{ CAD}&: 1 \text{ USD}\\
+\end{align*}$$
+]
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/rr33zcbf5w39eyt/currencies.jpg?raw=1)
+]
+]
+
+---
+
+# Comparing Across Countries II
+
+- To calculate another country's GDP in US Dollars: 
+
+
+$$\text{Other Country's GDP in USD}=\frac{\text{Other Country's GDP in Local Currency}}{\text{Exchange Rate for 1 USD}}$$
+
+---
+
+# Comparing Across Countries: Example
+
+.content-box-green[
+.green[**Example**]: Great Britain's GDP in 2018 is £2.307 trillion GBP. One USD ($) exchanges for 0.88 pounds sterling (£). Calculate British GDP in US Dollars. 
+
+$$\begin{align*}
+\text{Britain's GDP in USD}&=\frac{£2.307\text{ trillion}}{\text{£0.88/\$1 }}\\
+&=\$2.622\text{ trillion }\\
+\end{align*}$$
+]
+
+---
+
+# Purchasing Power Parity (PPP) I
+
+.pull-left[
+
+- Economists hypothesize that once converted to a common currency, prices should be roughly identical across countries, i.e. there should be .shout[purchasing power parity]
+
+e.g. whether you buy using Dollars in US or Euros in EU, you should get the same amount of goods on average
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/rr33zcbf5w39eyt/currencies.jpg?raw=1)
+]
+]
+
+---
+
+# Purchasing Power Parity (PPP) II
+
+.pull-left[
+
+- PPP is essentially an argument about .whisper[arbitrage] and the .whisper[law of one price]
+
+.content-box-green[
+.green[**Example**]: 
+
+- Suppose a sweater in the U.S. costs 50 USD. 
+
+- Suppose the exchange rate is 100 YEN: 1 USD
+
+- Then the price of the same sweater in Japan should be 5000 YEN
+
+- Otherwise, an arbitrage opportunity!
+
+]
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/rr33zcbf5w39eyt/currencies.jpg?raw=1)
+]
+]
+
+---
+
+# Purchasing Power Parity (PPP) II
+
+.pull-left[
+
+- Ah, but transaction costs!
+    - Transportation costs
+    - Non-tradeable or transportable goods
+    - Services?
+    - Differences in institutions, culture, property rights
+    - Baumol's "cost disease"
+
+- Example: A haircut of similar quality in Norway is $65, $5 in Mexico, and $1 in India
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/r9swgigquy9m6g2/transactionscosts.JPG?raw=1)
+]
+]
+
+---
+
+# Purchasing Power Parity (PPP) III
+
+.pull-left[
+.center[
+[The Economist: Big Mac Index](https://www.economist.com/news/2019/07/10/the-big-mac-index)
+
+![:scale 95%](https://www.dropbox.com/s/fmjl5fc4a3eaf0z/bigmacindex.png?raw=1)
+
+]
+]
+
+.pull-right[
+
+.center[
+
+![:scale 95%](https://www.dropbox.com/s/4jb0glmkc23ehzg/bigmacindex3.png?raw=1)
+
+]
+]
+
+---
+
+# Purchasing Power Parity (PPP) IV
+
+- Economists often use the Geary-Khamis dollar, aka the ".whisper[international dollar]" as the standard hypothetical unit
+    - The purchasing power of a US Dollar at a specified year, such as the *2000 US Dollar*
+
+- Again, main purpose is to make accurate comparisons of measures such as GDP per capita across countries
+
+---
+
+# Quantifying Changes I
+
+- Several ways we can talk about how a measure **changes** over time, from time $t_1 \rightarrow t_2$
+
+- **Difference $(\Delta)$:** the difference between the value at time $t_1$ and time $t_2$
+$$\Delta t=t_2-t_1$$
+---
+
+# Quantifying Changes II
+
+- Several ways we can talk about how a measure **changes** over time, from time $t_1 \rightarrow t_2$
+
+- **Difference $(\Delta)$:** the difference between the value at time $t_1$ and time $t_2$
+$$\Delta t=t_2-t_1$$
+
+- **Relative Difference**: the difference expressed in terms of the original value
+$$\frac{\Delta t}{t_1} = \frac{t_2-t_1}{t_1}$$
+ this becomes a proportion $(\pm$ between 0 and 1)
+
+---
+
+# Quantifying Changes III
+
+- Several ways we can talk about how a measure **changes** over time, from time $t_1 \rightarrow t_2$
+
+- **Difference $(\Delta)$:** the difference between the value at time $t_1$ and time $t_2$
+$$\Delta t=t_2-t_1$$
+
+- **Relative Difference**: the difference expressed in terms of the original value
+$$\frac{\Delta t}{t_1} = \frac{t_2-t_1}{t_1}$$
+ this becomes a proportion $(\pm$ between 0 and 1)
+
+- **Percentage Change (Growth Rate)**: relative difference expressed as a *percentage* $(\pm$ between 0 and 100%)
+
+$$\begin{align*}
+\% \Delta &= \frac{\Delta t}{t_1} \times 100\%\\
+&=\frac{t_2-t_1}{t_1} \times 100\% \\ 
+\end{align*}$$
+
+---
+
+# A Simple Example Growth Rate 
+
+.content-box-green[
+.green[**Example**:]
+A country's GDP is $100 in 2017, and $120 in 2018. Calculate the country's GDP growth rate for 2018:
+
+$$\begin{align*}
+\text{GDP Growth Rate}_{2018} &= \frac{GDP_{2018}-GDP_{2017}}{GDP_{2017}} \times 100\% \\
+&= \frac{120-100}{100} \times 100\% \\
+&= \frac{20}{100} \times 100\% \\
+&= 0.20 \times 100\% \\
+&=20\% \\ 
+\end{align*}$$
+]
+
+---
+
+# GDP Growth Rates II
+
+.center[
+![](https://www.dropbox.com/s/460yyv7w3b5qkcm/fredgdpgrowth2018.png?raw=1)
+
+[Federal Reserve Economic Data: GDP Growth Rate](https://fred.stlouisfed.org/series/A191RP1A027NBEA)
+]
+
+---
+
+# The Rule of 72 I
+
+.pull-left[
+- A good .whisper[rule of thumb]: years for economy to *double*
+
+$=\frac{72}{\text{GDP Growth Rate}}$
+
+- This is known as the .whisper[Rule of 72]<sup>*</sup>
+]
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/3spmo75mndfl4s7/capitalacc.png?raw=1)
+]
+]
+
+.footnote[<sup>*</sup> Different people use other numbers, like 70. The point is more to make mental calculations easily rather than accurately.]
+
+---
+
+# The Rule of 72 II
+
+.content-box-green[
+.green[**Example**:]
+
+- If our economy is growing at **2% per year**, the economy doubles in $\frac{72}{2}=36$ years
+]
+
+---
+
+# The Rule of 72 II
+
+.content-box-green[
+.green[**Example**:]
+
+- If our economy is growing at **2% per year**, the economy doubles in $\frac{72}{2}=36$ years
+
+- If our economy is growing at **3% per year**, the economy doubles in $\frac{72}{3}=24$ years
+
+]
+
+---
+
+# The Rule of 72 II
+
+.content-box-green[
+.green[**Example**:]
+
+- If our economy is growing at **2% per year**, the economy doubles in $\frac{72}{2}=36$ years
+
+- If our economy is growing at **3% per year**, the economy doubles in $\frac{72}{3}=24$ years
+
+- If our economy is growing at **4% per year**, the economy doubles in $\frac{72}{4}=18$ years
+
+]
+
+---
+
+# The Rule of 72 II
+
+.content-box-green[
+.green[**Example**:]
+
+- If our economy is growing at **2% per year**, the economy doubles in $\frac{72}{2}=36$ years
+
+- If our economy is growing at **3% per year**, the economy doubles in $\frac{72}{3}=24$ years
+
+- If our economy is growing at **4% per year**, the economy doubles in $\frac{72}{4}=18$ years
+
+- If our economy is growing at **6% per year**, the economy doubles in $\frac{72}{6}=12$ years
+
+]
+
+---
+
+# The Rule of 72 III
+
+.pull-left[
+- Growth rates are **unbelievably** important!
+
+- It makes *all the difference in the world* if we grow at 2% vs. 3% per year
+    - Our economy would double in size in 36 vs. 24 years!
+    
+- More importantly, growth compounds! 
+    - A 2% increase from 100 is an increase of 2
+    - A 2% increase from 1000 is an increase of 20!
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/3spmo75mndfl4s7/capitalacc.png?raw=1)
+]
+]
+
+---
+
+# The Rule of 72 IV
+
+.pull-left[
+.content-box-green[
+.green[**Example**]: Suppose 2 countries start with the same GDP of $1 Trillion
+
+- Country A grows at 2% per year
+- Country B grows at 4% per year
+
+- After 72 years:
+    - Country A doubles twice ($4 Trillion)
+    - Country B doubles four times ($16 Trillion)
+        - Country B is 4x as wealthy as Country A!
+]
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/3spmo75mndfl4s7/capitalacc.png?raw=1)
+]
+]
+
+---
+
+# Limitations of GDP: Things Not Measured
+
+.pull-left[
+
+- GDP is a good but (like every other measure) an imperfect measure for social welfare and standard of living
+
+- Things *NOT* included in GDP:
+    - Increase in leisure time
+    - Social media, digital networks (aside from advertising)
+    - Increase in nonmarket or domestic activities (housework, unpaid child care)
+]
+
+.pull-right[
+.center[
+![:scale 70%](https://www.dropbox.com/s/5fx6r3klcb5r063/socialmedia.jpeg?raw=1)
+
+![:scale 70%](https://www.dropbox.com/s/h1804cvko2y3gyo/housework.jpg?raw=1)
+]
+]
+
+---
+
+# Limitations of GDP: Quality Improvements?
+
+- How do we measure improvements in quality, or new innovations? 
+
+.center[
+![:scale 65%](https://www.dropbox.com/s/5pswcfxgdzj3uc4/gdpchanges1970.png?raw=1)
+]
+
+---
+
+# Limitations of GDP: Shadow Economies I
+
+.pull-left[
+
+- GDP by definition cannot measure the .shout[shadow economy] or the ".shout[informal sector]" 
+
+- A major component of developing countries' economies
+
+- Staggering numbers, % of recorded GDP:  
+    - Nigeria 1989-1990: 76%
+    - Thailand 1989-1990: 71%
+    - Russia 1994-1995: 41%
+    - Norway 1989-1990: 9%
+
+]
+
+.pull-right[
+.center[
+![:scale 90%](https://www.dropbox.com/s/qu1psf0s5lyr28z/shadoweconomy.jpg?raw=1)
+]
+]
+
+.source[Schneider, Friedrich and Dominik H. Enste, 2000, "Shadow Economies: Sizes, Causes, and Consequences," *Journal of Economic Literature* 37(1): 77-114]
+
+---
+
+# Limitations of GDP: Shadow Economies II
+
+.pull-left[
+
+- Don't just think crime, drugs, and human trafficking!
+
+- For various reasons, many citizens of many countries do not have access to legal  markets for goods and services
+
+- Resort to .shout[informal economies] and .shout[black markets] to exchange goods and services
+
+]
+
+.pull-right[
+.center[
+![:scale 90%](https://www.dropbox.com/s/4mhlb2a8rsz00e6/blackmarketslum.png?raw=1)
+]
+]
+
+---
+
+# Limitations of GDP: Shadow Economies II
+
+.pull-left[
+
+.center[
+
+![](https://www.dropbox.com/s/djkftm26f76c4sc/sovietline.jpg?raw=1)
+
+A typical grocery store in Vilnius, Soviet-controlled Lithuania, 1990
+]
+
+]
+
+.pull-right[
+
+.font80[
+> The list of scarce items is practically endless. They are not permanently out of stock, but their appearance is unpredictable...Leningrad can be overstocked with cross-country skis and yet go several months without soap for washing dishes. In the Armenian capital of Yerevan, I found an ample supply of accordians but local people complained that they had gone for weeks without ordinary kitchen spoons or tea samovars. I knew a Moscow family that spent a frantic month hunting for a child’s potty while radios were a glut on the market...
+
+> In an economy of chronic shortages and carefully parceled-out privileges, blat is an essential lubricant of life. The more rank and power one has, the more blat one normally has ... each has access to things or services that are hard to get and that other people want or need. 
+
+Consumers: The Art of Queuing, in *The Russians*
+]
+
+]
+
+.source[Smith, Hedrick, 1976, *The Russians*]
+
+---
+
+# Limitations of GDP: Shadow Economies III
+
+.pull-left[
+
+.center[
+
+![:scale 70%](https://www.dropbox.com/s/csy95rz8y29hp2f/fp.png?raw=1)
+
+.font80[
+Source: [*Foreign Policy*: "The Shadow Superpower" (October 28, 2011)](http://www.foreignpolicy.com/articles/2011/10/28/black_market_global_economy)
+]
+]
+
+]
+
+.pull-right[
+
+![:scale 70%](https://www.dropbox.com/s/sp7frv05jeqsevw/europeanshadoweconomies.png?raw=1)
+
+.font80[
+Source: [*Washington Post*: "Italy’s tax evasion culture" (November 24, 2011)](https://www.washingtonpost.com/world/italyS^tax-evasion-culture/2011/11/24/gIQAvSletN_graphic.html?utm_term=.f48a96e188a6)
+]
+]
+
+.source[Smith, Hedrick, 1976, *The Russians*]
+
+---
+
+# Limitations of GDP: Shadow Economies IV
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/jmze5gex25c6dei/worldshadoweconomy.jpg?raw=1)
+
+]
+
+.source[Source: [IMF](https://www.imf.org/external/pubs/ft/fandd/2012/06/singh.htm)]
+
+---
+
+# Limitations of GDP: Compared to What?
+
+.pull-left[
+
+- Again, GDP is a flawed measure
+
+- But remember, economists always ask, "compared to what?"
+
+- You will see later on that variation in GDP between countries and over time strongly explain variation in other measures we care about
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/l4bnbq0sl48kci5/gdp.jpg?raw=1)
+]
+]
+
+---
+
+class: inverse, center, middle
+# Do You Know the World Today?
+
+---
+
+# Do You Know the World Today?
+
+In the last 20 years, the proportion of people living in *extreme poverty* has:
+
+a) Almost doubled
+
+b) Remained more or less the same
+
+c) Almost halved
+
+---
+
+# Do You Know the World Today?
+
+How many of the world’s 1-year-old children today have been vaccinated against some disease?
+
+a) 80%
+
+b) 50%
+
+c) 20%
+
+---
+
+# Do You Know the World Today?
+
+How did the number of deaths per year from natural disasters change over the last hundred years?
+
+a) More than doubled
+
+b) Remained more or less the same
+
+c) Decreased to less than half
+
+---
+
+# Do You Know the World Today?
+
+Where does the majority of the world population live?
+
+a) Low income countries
+
+b) Middle income countries
+
+c) High income countries
+
+---
+
+# Do You Know the World Today?
+
+Worldwide, 30 year old men have spent 10 years in school, on average. How many years have women of the same age spent in school?
+
+a) 9 years
+
+b) 6 years
+
+c) 3 years
+
+---
+
+# Do You Know the World Today?
+
+There are roughly seven billion people in the world today. Which map shows where people live? (Each figure represents 1 billion people.) 
+
+.center[
+![](https://www.dropbox.com/s/7x4mbsr6ewjsiqi/gapminderA.jpg?raw=1) ![](https://www.dropbox.com/s/d6wzv6oq5vnrla4/gapminderB.jpg?raw=1) ![](https://www.dropbox.com/s/vpajiwr1b61qkhk/gapminderC.jpg?raw=1)
+]
+---
+
+# Do You Know the World Today?
+
+The United Nations predicts that by 2100 the world population will have increased by another 4 billion people. What is the main reason?
+
+a) There will be more children (under age 15).
+
+b) There will be more adults (15-75).
+
+c) There will be more very old people (above age 75).
+
+---
+
+# Do You Know the World Today?
+
+In low income countries across the world, how many girls finish primary school?
+
+a) 20
+
+b) 40
+
+c) 60
+
+---
+
+# Do You Know the World Today?
+
+How many people in the world have some access to electricity?
+
+a) 20%
+
+b) 50%
+
+c) 80%
+
+---
+
+# Do You Know the World Today?
+
+What is the life expectancy of the world population?
+
+a) 50 years
+
+b) 60 years
+
+c) 70 years
+
+---
+
+# Do You Know the World Today?
+
+12. What does the global income distribution look like?
+
+.center[
+![:scale 27%](https://www.dropbox.com/s/wfxsj956bqmi7t1/gapminderD.png?raw=1) ![:scale 27%](https://www.dropbox.com/s/2nuccp99c88noi9/gapminderE.png?raw=1) ![:scale 27%](https://www.dropbox.com/s/cvfmrr4dfsle2xg/gapminderF.png?raw=1)
+]
+
+---
+
+# Gapminder
+
+.center[
+![](https://www.dropbox.com/s/7asgfm39khf6c74/gapmindertools.png?raw=1)
+
+[Gapminder.org/tools](http://gapminder.org/tools)
+]
+
+---
+
+class: inverse, center, middle
+# Development as Freedom
+
+---
+
+# GDP Ain't Everything
+
+.left-column[
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/rflzw47xspqxriy/rfk.jpg?raw=1)
+
+Robert F. Kennedy
+
+1925-1968
+]
+]
+
+.right-column[
+
+> Yet the Gross National Product does not allow for the health of our children, the quality of their education or the joy of their play. It does not include the beauty of our poetry, of the strength of our marriages, the intelligence of our public debate or the integrity of our public officials.
+
+> It measures neither our wit nor our courage, neither our wisdom nor our learning, neither our compassion nor our devotion to our country, it measures everything in short, except that which makes life worthwhile.
+
+]
+.source[Source: [March 18, 1968 Speech](https://www.jfklibrary.org/learn/about-jfk/the-kennedy-family/robert-f-kennedy/robert-f-kennedy-speeches/remarks-at-the-university-of-kansas-march-18-1968)]
+
+---
+
+# Development as Freedom I
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/4155cnpokcn0w1m/sen.jpg?raw=1)
+
+Amartya Sen
+
+1933-
+
+Economics Nobel 1998
+]
+]
+.right-column[
+
+.center[
+![](https://www.dropbox.com/s/lxbrvl4kmvgy8dl/developmentasfreedom.jpg?raw=1)
+]
+]
+
+---
+
+# Development as Freedom II
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/4155cnpokcn0w1m/sen.jpg?raw=1)
+
+Amartya Sen
+
+1933-
+
+Economics Nobel 1998
+]
+]
+.right-column[
+
+> Insofar as development is concerned with the achievement of a better life, the focus of development analysis has to include the nature of the life that people succeed in living. This incorporates, of course, the length of the life itself, and thus life expectancy data have an immediate relevance to the living standard and through that to the concept of development...People value their ability to do certain things and to achieve certain types of beings (such as being well nourished, being free from avoidable morbidity, being able to move about as desired, and so on). These "doings" and "beings" may be generically called "functionings" of a person. (p15)
+]
+
+.source[Sen, Amartya, 1998, "The Concept of Development," in H. Chenery and T. N. Srinivasan, eds., *Handbook of Development Economics*, Vol. 1, Elsevier Science Publishers.]
+
+---
+
+# Development as Freedom: Wealth is a Means, not an End
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/hjg8t1ebn1lj1ac/aristotle.jpg?raw=1)
+
+Aristotle
+
+384 BC-322 BC
+]
+]
+
+.right-column[
+
+> The life of money-making is one undertaken under compulsion, and wealth is evidently not the good we are seeking; for it is merely useful and for the sake of something else.
+
+]
+
+.source[Aristotle, *Nicomachean Ethics*]
+
+---
+
+# Development as Freedom: Wealth $\neq$ Happiness
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/w5ecx0628ihm9n2/smith.png?raw=1)
+
+Adam Smith
+
+1723-1790
+
+]
+]
+.right-column[
+
+.font80[
+> [H]e begins at last to find that wealth and greatness are mere trinkets of frivolous utility...more troublesome to the person who carries them about with him than all the advantages they can afford him are commodious...The palaces, the gardens, the equipage, the retinue of the great, are objects of which the obvious conveniency strikes every body...He does not even imagine that [the rich and famous] are really happier than other people: but he imagines that they possess more means of happiness...In his heart he curses ambition, and vainly regrets the ease and the indolence of youth, pleasures which are fled for ever, and which he has foolishly sacrificed for what, when he has got it, can afford him no real satisfaction...Power and riches appear then to be, what they are, enormous and operose machines contrived to produce a few trifling conveniencies to the body...which must be kept in order with the most anxious attention, and which in spite of all our care are ready every moment to burst into pieces, and to crush in their ruins their unfortunate possessor. - Part IV, Chapter I
+]
+]
+.source[Smith, Adam, 1759, *[The Theory of Moral Sentiments](https://www.econlib.org/library/Smith/smMS.html)*]
+
+---
+
+# Development as Freedom: Overview
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/4155cnpokcn0w1m/sen.jpg?raw=1)
+
+Amartya Sen
+
+1933-
+
+Economics Nobel 1998
+]
+]
+
+.right-column[
+
+- Think about development in terms of ".shout[capabilities]"
+
+- Central aspect of well-being is .shout[functioning]: the freedom of choice and control over one's life
+
+- *Positive* freedoms, vs. *negative* freedoms
+    - freedom from hunger
+    - freedom from disease
+    - freedom from early death
+    - freedom from violence
+    - freedom from oppression
+    - freedom to choose own path
+    - ...
+
+]
+
+---
+
+# Human Development Index
+
+.pull-left[
+
+]
+
+.pull-right[
+
+
+]
+
+.center[
+![](https://www.dropbox.com/s/vmm1xtmnljz5xa9/hdi.png?raw=1)
+]
+
+.source[Source: [U.N. Development Programme Human Development Reports](http://hdr.undp.org/en/content/human-development-index-hdi)]
+
+---
+
+# Human Development Index II
+
+.center[
+<iframe src="https://ourworldindata.org/grapher/human-development-index" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+]
+
+---
+
+# Human Development Index III
+
+.center[
+<iframe src="https://ourworldindata.org/grapher/human-development-index-escosura?time=1870..2015" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+]
+
+---
+
+# Human Development Index IV
+
+.center[
+<iframe src="https://ourworldindata.org/grapher/hdi-vs-gdp-per-capita" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+]
+
+---
+
+# Capabilities, Freedom, and GDP per Capita I
+
+> "We do not disagree with either Nussbaum or Sen on the shortcomings of the preoccupation with per capita GDP calculations. However, we believe there is a general pattern to be found between the adoption of the institutions that promote the wealth of a nation and the health and well-being of its people. In other words, life expectancy, infant mortality, educational opportunities, and health outcomes are well correlated with GDP" (p.110).
+
+.source[Boettke, Peter J and J Robert Subrick, 2003, "Rule of Law, Development, and Human Capabilities," *Supreme Court Economic Review* 10:  109-126]
+
+---
+
+# Capabilities, Freedom, and GDP per Capita II 
+
+> "Our first conjecture is that the rule of law is a significant factor in explaining economic development. This is hardly controversial...Our second conjecture is that economic development is a significant factor in determining increases in what Sen entitles human capabilities... (p.111).
+
+> "In short, we expect that the rule of law will increase the level of de- velopment, and the level of development will lead to improvements in human capabilities. That is, the rule of law is an institutional fea- ture that promotes economic development that, in turn, leads to in- creases in those capabilities that Nussbaum and Sen argue are neces- sary for living a human life. Economic development, in short, provides the material pre-requisites that enable human flourishing," (p.112).
+
+.source[Boettke, Peter J and J Robert Subrick, 2003, "Rule of Law, Development, and Human Capabilities," *Supreme Court Economic Review* 10:  109-126]
+
+---
+
+# Capabilities, Freedom, and GDP per Capita III
+
+.center[
+![](https://www.dropbox.com/s/ofwzztoc4ee1uue/boettkesubrick1.png?raw=1)
+
+p. 122
+]
+.source[Boettke, Peter J and J Robert Subrick, 2003, "Rule of Law, Development, and Human Capabilities," *Supreme Court Economic Review* 10:  109-126]
+
+---
+
+class: inverse, center, middle
+# Poverty and Basic Human Needs
+
+---
+
+# Extreme Poverty I
+
+<iframe src="https://ourworldindata.org/grapher/share-of-the-population-living-in-extreme-poverty" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+
+---
+
+# Extreme Poverty II
+
+.center[
+![:scale 60%](https://www.dropbox.com/s/srweuuy3hmjt1oj/theendofpoverty.png?raw=1)
+]
+
+.source[Source: [Our World in Data: Extreme Poverty](https://ourworldindata.org/extreme-poverty)]
+
+---
+
+# Extreme Poverty III
+
+.center[
+![:scale 60%](https://www.dropbox.com/s/buyt1reaqpsnz3t/theendofpoverty2.png?raw=1)
+]
+
+.source[Source: [Our World in Data: Extreme Poverty](https://ourworldindata.org/extreme-poverty)]
+
+---
+
+# Extreme Poverty IV
+
+.center[
+![:scale 60%](https://www.dropbox.com/s/8qbdtghh52whege/distribution-of-population-poverty-thresholds.png?raw=1)
+]
+
+.source[Source: [Our World in Data: Extreme Poverty](https://ourworldindata.org/extreme-poverty)]
+
+---
+
+# Extreme Poverty V
+
+.center[
+![:scale 60%](https://www.dropbox.com/s/81c5i46w6sbxg11/share-of-population-living-in-extreme-poverty-by-world-region.png?raw=1)
+]
+
+.source[Source: [Our World in Data: Extreme Poverty](https://ourworldindata.org/extreme-poverty)]
+
+---
+
+# Poor Countries are Unhappy
+
+.center[
+![:scale 60%](https://www.dropbox.com/s/ins2sjc0lolgt8c/dissatisfied-vs-income.png?raw=1)
+]
+
+.source[Source: [Our World in Data: Extreme Poverty](https://ourworldindata.org/extreme-poverty)]
+
+---
+
+# Ignorance
+
+.center[
+![:scale 60%](https://www.dropbox.com/s/c9fcgvvknng31ij/Igonorace-in-UK-on-Global-Poverty-University-population.png?raw=1)
+]
+
+.source[Source: [Our World in Data: Extreme Poverty](https://ourworldindata.org/extreme-poverty)]
+
+---
+
+# Basic Human Needs Approach
+
+Gordon's proposed poverty threshold is defined as **2 or more deprivations** of:
+
+- **Food deprivation**: Body mass index less than 18.5
+- **Water deprivation**:access only to unimproved source such as open wells, open springs or surface water or who have to walk for more than 15 minutes to their water source (30 minutes round-trip)
+- **Deprivation of sanitation facilities**: access only to unimproved sanitation facilities
+- **Health deprivation**: Treatment not recieved for pregnancy, serious illnesses, no knowledge of safe sex practices (esp. HIV/AIDS)
+- **Shelter deprivation**: living in dwellings with 3 or more people per room (overcrowding) or in a house with no flooring (e.g. a mud floor) or inadequate roofing (e.g. natural roofing materials)
+- **Education deprivation**: youth who did not complete primary school or who are illiterate
+- **Information deprivation**: no access to a radio or television (i.e. broadcast media) at home
+
+.source[[Source](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=2ahUKEwiOrN6_ibbkAhWI1lkKHVEcAPUQFjABegQIBBAC&url=http%3A%2F%2Fwww.poverty.ac.uk%2Fsites%2Fdefault%2Ffiles%2Findicators-of-poverty-and-hunger_UNpoverty.pdf&usg=AOvVaw0mlf5jID1rewLlS1W2L3Po)]
+
+---
+
+class: inverse, center, middle
+# Inequality
+
+---
+
+# Efficiency and Equality
+
+.pull-left[
+
+- Economists often describe a tradeoff between efficiency and equity in terms of the "economic pie"
+
+- .shout[Efficiency]: efforts to grow the pie
+- .shout[Equity]: efforts to divide the pie fairly	
+
+- Economists tend (not exclusively!) to favor efficiency over equity
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/qnb6lhagbmycpws/economicpie.jpg?raw=1)
+]
+]
+
+---
+
+# (In)equality *within* Countries: Gini Coefficient I
+
+.center[
+![:scale 62%](https://www.dropbox.com/s/vx1bz53p3oj2jy0/Gini-measure-schematic-1.png?raw=1)
+]
+
+.source[Source: [Our World in Data: Income Inequality](https://ourworldindata.org/income-inequality)]
+
+---
+
+# (In)equality *within* Countries: Gini Coefficient II
+
+.center[
+![:scale 62%](https://www.dropbox.com/s/5tmix5ht29ji3p6/lorenz2.png?raw=1)
+]
+
+.source[Source: [Wikipedia](https://en.wikipedia.org/wiki/Lorenz_curve#/media/File:Lorenz_curve_global_income_2011.svg)]
+
+---
+
+# (In)equality *within* Countries: Lower in Wealthier Countries
+
+<iframe src="https://ourworldindata.org/grapher/economic-inequality-gini-index" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+
+.source[Source: [Our World in Data: Income Inequality](https://ourworldindata.org/income-inequality)]
+
+---
+
+# (In)equality *within* Countries: But Changing Over Time
+
+.center[
+![:scale 62%](https://www.dropbox.com/s/fvkcw6esmehkniu/inequality1.png?raw=1)
+]
+
+.source[Source: [Our World in Data: Income Inequality](https://ourworldindata.org/income-inequality)]
+
+---
+
+# (In)equality *Across* Countries Over Time
+
+.center[
+![:scale 30%](https://www.dropbox.com/s/zl1m3gjfj6xcn6z/Global-inequality-in-1800-1975-and-2015.png?raw=1)
+]
+
+.source[Source: [Our World in Data: Income Inequality](https://ourworldindata.org/income-inequality)]
+
+---
+
+# Aside: Equality vs. Equity
+
+.center[
+![:scale 90%](https://www.dropbox.com/s/5utu86mxwib929k/equalityequity.jpg?raw=1)
+]
+
+---
+
+# Why Development Matters II
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/8rqega4jkxezbzm/easterly.png?raw=1)
+
+William Easterly
+
+1957-
+
+]
+]
+.right-column[
+
+> "The majority of the world’s people live in poor nations where women are oppressed, far too many babies die, and far too many people don’t have enough to eat. We care about economic growth for the poor nations because it makes the lives of poor people like those in Gulvera better. Economic growth frees the poor from hunger and disease. Economy-wide GDP growth per capita translates into rising incomes for the poorest of the poor, lifting them out of poverty," (p.8)
+
+]
+.source[Easterly, William, 2010, *The Elusive Quest for Growth: Economists Adventures and Misadventures in the Tropics* Cambridge: MIT Press]
+
+---
+
+# Why Development Matters III
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/8rqega4jkxezbzm/easterly.png?raw=1)
+
+William Easterly
+
+1957-
+
+]
+]
+.right-column[
+
+> "The typical rate of infant mortality in the richest fifth of countries is 4 out of every 1,000 births; in the poorest fifth of countries, it is 200 out of every 1,000 births. Parents in the poorest countries are fifty times more likely than in the richest countries to know grief rather than joy from the birth of a child. Researchers have found that a 10 percent decrease in income is associated with about a 6 percent higher infant mortality rate.," (p.9)
+
+> "The deaths of about half a million children in 1990 would have been averted if Africa’s growth in the 1980s had been 1.5 percentage points higher," (p.10)
+]
+.source[Easterly, William, 2010, *The Elusive Quest for Growth: Economists Adventures and Misadventures in the Tropics* Cambridge: MIT Press]
+
+---
+
+# Why Development Matters IV
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/8rqega4jkxezbzm/easterly.png?raw=1)
+
+William Easterly
+
+1957-
+
+]
+]
+.right-column[
+
+> "The improvement in hunger, mortality, and poverty as GDP per capita rises over time motivates us on our quest for growth. Poverty is not just low GDP; it is dying babies, starving children, and oppression of women and the downtrodden. The well-being of the next generation in poor countries depends on whether our quest to make poor countries rich is successful," (pp.14-15)
+
+]
+.source[Easterly, William, 2010, *The Elusive Quest for Growth: Economists Adventures and Misadventures in the Tropics* Cambridge: MIT Press]
+
+---
+
+# Good Sources for Data
+
+- [IMF](https://www.imf.org/en/Data)
+- [World Bank World Development Indicators](https://datacatalog.worldbank.org/dataset/world-development-indicators)
+- [gapminder.org/tools](http://gapminder.org/tools/)
+- [CIA World Factbook](https://www.cia.gov/library/publications/the-world-factbook/)
+- [Quality of Government](https://qog.pol.gu.se/data/datadownloads/qogstandarddata)
+- [Polity IV](https://www.systemicpeace.org/polity/polity4.htm)
+- [Fraser Institute: Economic Freedom](https://www.fraserinstitute.org/economic-freedom/map)
+- [Freedom House: Freedom in the World](https://freedomhouse.org/report/freedom-world/freedom-world-2018)

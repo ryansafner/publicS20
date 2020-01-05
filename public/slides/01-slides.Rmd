@@ -1,0 +1,640 @@
+---
+title: "Lesson 1: What is Economic Development"
+subtitle: "ECON 317 · Economics of Development · Fall 2019"
+author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/devf19"><i class="fa fa-github fa-fw"></i> ryansafner/devf19</a><br> <a href="https://devF19.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> devF19.classes.ryansafner.com</a><br>'
+#date:
+output:
+  xaringan::moon_reader:
+    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML" # rescales math with css changes https://github.com/yihui/xaringan/issues/143
+    lib_dir: libs
+    #seal: false
+    css: [custom.css, custom-fonts.css, "hygge"] #, metropolis, metropolis-fonts
+    nature:
+      beforeInit: ["macros.js", "https://platform.twitter.com/widgets.js"] # first is for rescaling images , second is for embedding tweets, https://github.com/yihui/xaringan/issues/100
+      highlightStyle: ocean #rainbow #monokai rainbow solarized-light #tomorrow-night -blue -eighties zenburn
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    includes:
+      in_header: header.html # for font awesome, used in title  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(message=F,
+                      warning=F,
+                      echo=F)
+```
+
+
+# The "Great Fact" I
+
+.center[
+![:scale 60%](https://www.dropbox.com/s/fe79osc6fi8zf5p/worldgdppercapita.png?raw=1)
+]
+.source[Source: [Our World in Data: Economic Growth](https://ourworldindata.org/economic-growth)]
+
+---
+
+# The "Great Fact" II
+
+.center[
+![:scale 60%](https://www.dropbox.com/s/709dliv4beflemb/gdppercapitaacrossregions.png?raw=1)
+]
+.source[Source: [Our World in Data: Economic Growth](https://ourworldindata.org/economic-growth)]
+
+---
+
+# Self-Sufficiency...and Poverty 
+
+.center[
+![:scale 70%](https://www.dropbox.com/s/6ex0fbu5ftawl8n/peasants1.jpg?raw=1)
+]
+
+---
+
+# Where We ALL Began
+
+.left-column[
+.center[
+![:scale 85%](https://www.dropbox.com/s/43v4v0mzg0k8fbg/mccloskey.jpg?raw=1)
+
+Dierdre N. McCloskey
+
+1942-
+]
+]
+
+.right-column[
+
+Two centuries ago the world’s economy stood at the present level of Chad or Bangladesh. In those good old days of 1800...the average human consumed in modern-day prices...roughly $3 a day, give or take a dollar or two...The only people much better off than the $3 average were lords or bishops or some few of the merchants. It had been this way for all of history, and for that matter all of pre-history. With her $3, the typical denizen of the earth could eat a few pounds of potatoes, a little milk, very occasionally a scrap of meat. A wool shawl. A year or two of elementary education, if exceptionally lucky. At birth she had a 50-50 chance of dying before she was 30 years old. Perhaps she was a cheerful sort, and was "happy" with illiteracy, disease, superstition, periodic starvation, and lack of prospects. After all, she had her family and faith and community, which interfered with every choice she made. But anyway she was desperately poor, and narrowly limited in human scope. (pp. 11-12)
+
+]
+
+.source[McCloskey, Diedre N, 2010, *The Bourgeois Dignity: Why Economics Can't Explain the Modern World*, Chicago IL: University of Chicago Press]
+
+---
+
+# Complete Interdependence...and Unparalleled Prosperity 
+
+.center[
+![:scale 90%](https://www.dropbox.com/s/89gd8rbadhxc81w/modernworld.jpg?raw=1)
+]
+
+---
+
+# We've Come SO Far
+
+
+.left-column[
+.center[
+![:scale 85%](https://www.dropbox.com/s/43v4v0mzg0k8fbg/mccloskey.jpg?raw=1)
+
+Dierdre N. McCloskey
+
+1942-
+]
+]
+
+.right-column[
+
+> [Today] the world supports more than six-and-a-half times more people...the average person today earns and consumes almost ten times more goods and services than in 1800. Real income per person in the world has recently been doubling every generation, and is accelerating. Starvation worldwide therefore is at an all-time low, and falling. Literacy and life expectancy are at all-time highs, and rising. Liberty is spreading. Slavery is retreating, as is a patriarchy enslaving of women. In the richer countries, such as Norway, the average person earns fully 45 times more than in 1800, a startling $137 a day. The environment - a concern of a well-to-do bourgeoisie - is in such rich places improving. (pp. 11-12)
+]
+
+.source[McCloskey, Diedre N, 2010, *The Bourgeois Dignity: Why Economics Can't Explain the Modern World*, Chicago IL: University of Chicago Press]
+
+---
+
+# The Greatest Reduction of Poverty in Human History I
+
+.center[
+![:scale 60%](https://www.dropbox.com/s/srweuuy3hmjt1oj/theendofpoverty.png?raw=1)
+]
+
+.source[Source: [Our World in Data: Extreme Poverty](https://ourworldindata.org/extreme-poverty)]
+
+---
+
+# The Greatest Reduction of Poverty in Human History II
+
+.center[
+![:scale 60%](https://www.dropbox.com/s/buyt1reaqpsnz3t/theendofpoverty2.png?raw=1)
+]
+
+.source[Source: [Our World in Data: Extreme Poverty](https://ourworldindata.org/extreme-poverty)]
+
+---
+
+# The Big Question I
+
+.center[
+![:scale 85%](https://www.dropbox.com/s/1th8qsfcj7kvhh0/gdppercap2015.png?raw=1)
+]
+
+.source[[Map Source](http://i.imgur.com/3GJJ8b0.png); [IMF Data & Interactive Map](https://data.worldbank.org/indicator/ny.gdp.pcap.cd?type=shaded&view=map)]
+
+---
+
+# The Big Question II
+
+.center[
+![:scale 67%](https://www.dropbox.com/s/e5clhnmdtnoecba/gdpdensity.png?raw=1)
+]
+
+.source[Gallup, J. L., J. D. Sachs, and A. D. Mellinger, 1999, "Geography and Economic Development," *International Regional Science Review* 22(2):179-224; [Land of Maps](https://landofmaps.com/2015/02/18/world-gdp-density/)]
+
+---
+
+# The Big Question III
+
+.center[
+![:scale 65%](https://www.dropbox.com/s/oh3gu0l8wrpbcl7/populationdensity.png?raw=1)
+]
+
+.source[Gallup, J. L., J. D. Sachs, and A. D. Mellinger, 1999; [Wikipedia](https://en.wikipedia.org/wiki/File:World_population_density_1994_-_with_equator.png); [A Great Interactive Version](http://luminocity3d.org/WorldPopDen/)]
+
+---
+
+# Asking the Big Questions 
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/w5ecx0628ihm9n2/smith.png?raw=1)
+
+Adam Smith
+
+1723-1790
+]
+]
+.right-column[
+
+> The greatest improvement in the productive powers of labour, and the greater part of the skill, dexterity, and judgment with which it is any where directed, or applied, seem to have been the effects of the division of labour. (Book I, Chapter I)
+
+]
+
+.source[Smith, Adam, 1776, *An Enquiry into the Nature and Causes of the Wealth of Nations*]
+
+---
+
+# Asking the Big Questions II
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/w5ecx0628ihm9n2/smith.png?raw=1)
+
+Adam Smith
+
+1723-1790
+]
+]
+.right-column[
+
+> The natural effort of every individual to better his own condition...is so powerful, that it is alone, and without any assistance, not only capable of carrying on the society to wealth and prosperity, but of surmounting a hundred impertinent obstructions with which the folly of human laws too often encumbers its operations. (Book IV, Chapter V)
+
+]
+
+.source[Smith, Adam, 1776, *An Enquiry into the Nature and Causes of the Wealth of Nations*]
+
+---
+
+# Asking the Big Questions III
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/w5ecx0628ihm9n2/smith.png?raw=1)
+
+Adam Smith
+
+1723-1790
+]
+]
+.right-column[
+
+> Little else is requisite to carry a state to the highest degree of opulence from the lowest barbarism, but peace, easy taxes, and a tolerable administration of justice: all the rest being brought about by the natural course of things.
+
+]
+
+.source[Lecture in 1755, quoted in Dugald Stewart, *Account Of The Life And Writings Of Adam Smith LLD*, Section IV, 25.]
+
+---
+
+class: inverse, center, middle
+
+# "Development Economics" as a Field of Economics
+
+---
+
+# "Development Economics" as a Field (c. 1945-Present) I
+
+.pull-left[
+
+- United Nations Monetary and Financial Conference aka "Bretton Woods" (1944)
+
+- Create the international monetary and financial order post-WWII, promote free trade and monetary stability
+
+- Created a system of fixed currency exchange rates pegged to (initially gold, later just the U.S. dollar)
+    - This collapsed by the early 1970s, and today exchange rates are freely "floating"
+
+- Created key international organizations...
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/8nogat9qb4a6tj8/brettonwoods3.jpg?raw=1)
+]
+]
+
+---
+
+# "Development Economics" as a Field (c. 1945-Present) II
+
+.pull-left[
+
+- International Bank for Reconstruction and Development (IBRD) aka ".shout[the World Bank]"
+    - Offers loans to developing countries
+
+- .shout[International Monetary Fund (IMF)]
+    - Reduce poverty around the world; assist countries with balance of payments/financial crises
+
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/nuk26e26jdfkgxd/worldbankimf.jpg?raw=1)
+]
+]
+
+---
+
+# "Development Economics" as a Field (c. 1945-Present) III
+
+.pull-left[
+
+- 1947: General Agreement on Tariffs and Trade (GATT)
+    - to promote international trade by reducing or eliminating trade barriers (e.g. tariffs, quotas, etc) between countries
+
+- Replaced by the World Trade Organization (WTO) in 1995 administered by the U.N.
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/xhxz31j41di0raw/gatt.jpg?raw=1)
+
+![](https://www.dropbox.com/s/8gcofq3f8y5x4ny/wto.jpg?raw=1)
+]
+]
+
+---
+
+# "Development Economics" as a Field (c. 1945-Present) IV
+
+.center[
+![z:scale 90%](https://www.dropbox.com/s/mp0oi9i10bcjjpt/wtomembers.png?raw=1)
+
+WTO .green[members], .blue[members dually-represented by the E.U.], .yellow[Observers], .red[Non-members] ([Wikipedia](http://en.wikipedia.org/wiki/World_Trade_Organization))
+]
+
+---
+
+# The "Development Community" I
+
+.right-column[
+
+- 1948: Organisation for European Economic Co-operation (OEEC) to administer the U.S. Marshall Plan to rebuild war-torn Europe
+    - initially only Europe-oriented and European members
+    - helped in early stages of ultimately creating European Free Trade Area, European Economic Community, European Union
+- 1961: Organization for Economic Co-operation and Development (OECD)
+
+> ...an international organisation that works to build better policies for better lives. Our goal is to shape policies that foster prosperity, equality, opportunity and well-being for all...we work on establishing international norms and finding evidence-based solutions to a range of social, economic and environmental challenges...we provide a unique forum and knowledge hub for data and analysis, exchange of experiences, best-practice sharing, and advice on public policies and global standard-setting. ([OECD website](http://www.oecd.org/about/))
+
+]
+
+.left-column[
+
+.center[
+![](https://www.dropbox.com/s/v2ixw7cuo3km4bp/oecd.png?raw=1)
+]
+]
+
+---
+
+# The "Development Community" II
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/yy8fzethzpzqgta/oecdmembers.png?raw=1)
+
+OECD members, founding States in darker blue ([Wikipedia](https://en.wikipedia.org/wiki/OECD))
+
+]
+
+---
+
+# NGOs
+
+.center[
+![:scale 75%](https://www.dropbox.com/s/0awklaqz1ph27p8/ngos.png?raw=1)
+]
+
+---
+
+class: inverse, center, middle
+
+# Residues of 20<sup>th</sup> Century Geopolitics in Development
+
+---
+
+# Development and Colonial Legacies I
+
+.center[
+![:scale 90%](https://www.dropbox.com/s/xebj23gz5imv1bn/colonies1945.png?raw=1)
+
+Western colonial empires at the end of WWII ([Wikipedia](https://en.wikipedia.org/wiki/Cold_War#/media/File:Colonization_1945.png))
+]
+
+---
+
+# Development and Colonial Legacies I
+
+.pull-left[
+
+- Breakup of British and French empires create independent States from 1950s-1980s
+
+- Some outright wars
+    - Between colony and colonizer: Algeria, French-Indochina/Vietnam, Falklands
+    - Between rival groups across colonies: Arab-Israeli War, Indo-Pakistani Wars
+    - Civil Wars in poorly-designed new States in Africa
+
+]
+
+.pull-right[
+
+.center[
+![:scale 90%](https://www.dropbox.com/s/sa5bkgumsqnpkpe/britishdecolonizationofafrica.png?raw=1)
+]
+]
+
+---
+
+# Development and Colonial Legacies II
+
+.pull-left[
+
+- Postcolonialism in literature in culture of many former colonies
+    - Search for own national identity, nationalist/populist leaders
+    - Opposition of mother country's culture, racism
+
+- New countries need to develop, but
+    - Does "development" or "modernization" mean "Westernization?"
+
+- Often combined with Marxism
+
+]
+
+.pull-right[
+
+.center[
+![:scale 70%](https://www.dropbox.com/s/4zq1ptf27tq22zy/orientalism.jpg?raw=1)
+
+]
+]
+
+---
+
+# Development and Colonial Legacies III
+
+.center[
+![:scale 50%](https://www.dropbox.com/s/9dbgrga0h49bvh7/nassersukarnonehrunkrumah.jpg?raw=1)
+
+Gamal Abdel Nasser (Egypt), Sukarno (Indonesia), Jawaharlal Nehru (India), Kwame Nkrumah (Ghana)
+]
+
+---
+
+# Development and Colonial Legacies IV
+
+.pull-left[
+
+- There is still a lot of connection between former colonies and mother countries
+
+- Research shows a very strong influence on path of economic development
+
+- Was colonization and imperialism *all good/bad*? 
+
+]
+
+.pull-right[
+
+.center[
+![:scale 100%](https://www.dropbox.com/s/yny6zb4lwvomd6u/postcolonialconnections.png?raw=1)
+]
+]
+
+---
+
+# Development and the Cold War
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/2xoihf3v46xuy1q/coldwaralliances.png?raw=1)
+
+Cold War Alliances, "X"s' indicate prominent guerrilla movements ([Wikipedia](https://commons.wikimedia.org/wiki/File:Cold_War_Map_1980.svg))
+]
+
+---
+
+# Development and the Cold War: Competing Visions
+
+.pull-left[
+- Competing ideological visions of political/economic development 
+    - "Capitalism" of the West
+    - "Socialism" of the USSR, Yugoslavia, China
+
+- Countries would pick from both options, many would switch
+    - Consequences were pretty clear, but
+    - We will need to understand both theories of development
+    - What about "Democratic Socialism" or "Social Democracy"?
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/5brms5sv7mrilwp/capitalismsocialism.png?raw=1)
+]
+]
+
+---
+
+# There Are a LOT of Theories of Development Out There I
+
+.pull-left[
+
+- Nobody honestly believes in a single causal factor
+
+- Theories have emphasized different elements at different amounts:
+    - Capital accumulation
+    - Geography
+    - Health
+    - Demographics/Fertility
+    - Education
+    - Culture
+    - Warfare
+    - Political institutions
+    - Religion
+    - Foreign Aid
+    - Imperialism/exploitation
+]
+
+.pull-right[
+
+.center[
+![:scale 100%](https://www.dropbox.com/s/i1c37p6ue7pvtl2/economicgrowth.jpeg?raw=1)
+]
+]
+
+---
+
+# There Are a LOT of Theories of Development Out There II
+
+.center[
+![:scale 82%](https://www.dropbox.com/s/o8zbe89k8s96zuj/devbooks.png?raw=1)
+]
+
+---
+
+# Our Focus (and my Specialty)
+
+.pull-left[
+- The role of political and social institutions in fostering economic growth
+
+- Health, education, demographics, geography, foreign aid, etc amount to NOTHING if you have poor institutions!
+
+- We know what works, but we can't just transplant our institutions to other countries (we've tried)
+
+- We need to understand each country's institutions before we can tell cute stories or recommend changes
+]
+
+.pull-right[
+.center[
+![:scale 90%](https://www.dropbox.com/s/qsshummo89p0lup/institution.png?raw=1)
+]
+
+]
+
+---
+
+# What am I Leaving Out
+
+.center[
+![](https://www.dropbox.com/s/7l05ucw4hfwlsyc/economics1.jpg?raw=1)
+]
+
+---
+
+class: inverse, center, middle
+# About This Class
+
+---
+
+# Format For the Course
+
+.pull-left[
+- .shout[A conversation, not a lecture]<sup>1<sup>
+
+- Many suggestions but fewer "correct" and concrete answers than you are used to
+
+- Lectures to introduce topic, give background and context
+
+- Discussions based on readings & informed by lectures
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/6g428kr267v1rxu/roundtable.jpg?raw=1)
+]
+]
+
+.footnote[<sup>1</sup> Well, okay, I will lecture quite a bit. But please come as a willing participant.]
+
+---
+
+# Assignments
+
+```{r}
+library("tidyverse")
+assignments <- tribble(
+  ~"",  ~Assignment, ~Percent,
+  "n"     , "Participation (Average)", "25%",
+  1, "Country Profile", "5%",
+  2      , "Short Paper", "15% each",
+  1     , "Final", "30%"
+)
+knitr::kable(assignments, "html")
+```
+
+.center[
+See more details at the [assignments page](http://devf19.classes.ryansafner.com/assignments)
+]
+
+---
+
+# Your "Textbooks"
+
+.pull-left[
+.center[
+![:scale 60%](https://www.dropbox.com/s/mdzgps63c9u66w9/whynationsfail.png?raw=1)
+]
+]
+.pull-right[
+.center[
+![:scale 60%](https://www.dropbox.com/s/dywkrd09sjo3i2k/elusivequest.jpg?raw=1)
+]
+]
+
+---
+
+# Course Website
+
+.center[
+![:scale 30%](https://www.dropbox.com/s/8og26rbg5j0f9ei/dev_hex.png?raw=1)
+
+[devF19.classes.ryansafner.com](http://devf19.classes.ryansafner.com)
+]
+
+---
+
+# Tips for Success, Or: How to College
+
+.pull-left[
+- Take notes. On paper. Really.
+
+- Read the readings.
+
+- Participate<sup>*</sup>
+
+- You are learning how to learn
+
+- See the [reference page](http://devf19.classes.ryansafner.com/reference) for more
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/rfdf5g27mdtq5wx/education.png?raw=1)
+]
+]
+.footnote[<sup>*</sup> To the degree you feel comfortable. But try to push that boundary with baby steps!]
+
+---
+
+# Roadmap for the Semester
+
+.center[
+![:scale 75%](https://www.dropbox.com/s/770mxpv7513jdsu/dev_flowchart_blankbg.png?raw=1)
+]

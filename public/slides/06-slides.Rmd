@@ -1,0 +1,1148 @@
+---
+title: "Lesson 6: Foreign Aid"
+subtitle: "ECON 317 · Economics of Development · Fall 2019"
+author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/devf19"><i class="fa fa-github fa-fw"></i> ryansafner/devf19</a><br> <a href="https://devF19.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> devF19.classes.ryansafner.com</a><br>'
+#date:
+output:
+  xaringan::moon_reader:
+    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML" # rescales math with css changes https://github.com/yihui/xaringan/issues/143
+    lib_dir: libs
+    #seal: false
+    css: [custom.css, custom-fonts.css, "hygge"] #, metropolis, metropolis-fonts
+    nature:
+      beforeInit: ["macros.js", "https://platform.twitter.com/widgets.js"] # first is for rescaling images , second is for embedding tweets, https://github.com/yihui/xaringan/issues/100
+      highlightStyle: ocean #rainbow #monokai rainbow solarized-light #tomorrow-night -blue -eighties zenburn
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    includes:
+      in_header: header.html # for font awesome, used in title  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(message=F,
+                      warning=F,
+                      echo=F)
+library(tidyverse)
+library(mosaic)
+library(ggrepel)
+```
+
+# Aid for Growth
+
+.pull-left[
+
+- We restrict our exploration to **foreign aid for the purpose of causing economic growth/development**
+
+- NOT aid for humanitarian crises or natural disaster recovery
+
+- NOT aid for military/peacekeeping efforts
+
+- NOT aid for specific causes (i.e. reduce malaria)
+    - Note these might be related to economic growth!
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/i1c37p6ue7pvtl2/economicgrowth.jpeg?raw=1)
+]
+
+]
+---
+
+# Foreign Aid: A Timeline I
+
+.pull-left[
+
+- 1940s-1950s: World War II ends
+
+- 1945-1951: Marshall Plan to rebuild war-torn Europe
+
+- 1946: Harrod-Domar model -> "financing gap"
+]
+
+.pull-right[
+.center[
+![:scale 70%](https://www.dropbox.com/s/negrzf3krvj22no/marshallplan.JPG?raw=1)
+]
+]
+
+---
+
+# Foreign Aid: A Timeline II
+
+.pull-left[
+- 1950s-1960s:
+
+- 1960 Rostow's stages of growth model
+
+- Cold War starts, "Red scare" in U.S.
+
+- Foreign aid to "Third World" takes off, in part to protect it from Soviets
+]
+
+.pull-right[
+.center[
+![:scale 65%](https://www.dropbox.com/s/fv3g7jyp7kesus5/redscare.jpg?raw=1)
+]
+]
+
+---
+
+# The *Invention* of "Development" and Foreign Aid
+
+.pull-left[
+.center[
+![:scale 75%](https://www.dropbox.com/s/9eoyiltn2i5b8pd/jfkusaid.jpg?raw=1)
+
+John F. Kennedy addressing USAID
+]
+]
+
+.pull-right[
+
+> "There is no escaping our obligations: our moral obligations as a wise leader and good neighbor in the interdependent community of free nations – our economic obligations as the wealthiest people in a world of largely poor people, as a nation no longer dependent upon the loans from abroad that once helped us develop our own economy – and our political obligations as the single largest counter to the adversaries of freedom." – John F. Kennedy
+
+-  Foreign Assistance Act of 1961 creates U.S. Agency for International Development (USAID)
+
+]
+
+.source[Source: [USAID](https://www.usaid.gov/who-we-are/usaid-history)]
+
+---
+
+# Foreign Aid: A Timeline III
+
+.pull-left[
+
+- Before 1980s:
+- Protectionist trade-policies
+- Import-substitution industrialization
+
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/in5lghv27mcg2a6/tradebarriers.jpg?raw=1)
+]
+]
+
+---
+
+# La Decada Perdida
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/4xx91co8mn61jgc/latinamerica.png?raw=1)
+]
+]
+
+.pull-left[
+
+- 1982: Mexico announces it can no longer finance its debts
+
+- 1980s Latin American debt crisis
+
+- Also in Africa and Middle East
+
+]
+
+---
+
+# 1980s: The Rise of Structural Adjustment Lending
+
+.pull-left[
+
+
+- IMF and World Bank begin to make general loans (instead of for specific projects) to developing countries, **conditional on "structural adjustment"**
+
+- Governments would be required to make growth-enhancing policy changes in exchange for loans
+
+- What were these? Eventually became known as...
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/msc67onhcf0ntyr/imfbuilding.jpg?raw=1)
+]
+]
+
+---
+
+# 1990s: The Washington Consensus
+
+.center[
+![:scale 75%](https://www.dropbox.com/s/rfrylpbf5ia55q1/washingtonconsensustable.png?raw=1)
+]
+
+.source[Rodrik, Dani, 2006, "Goodbye Washington Consensus, Hello Washington Confusion?" *Journal of Economic Literature* 44(4): 973-987]
+
+---
+
+# Criticism of IMF, SAL, and Washington Consensus
+
+.center[
+![](https://www.dropbox.com/s/ll6q5v907lui8ui/imfcartoon.jpg?raw=1)
+]
+
+---
+
+# Foreign Aid Today I
+
+.center[
+![:scale 65%](https://www.dropbox.com/s/shwflwnn7dsr42z/uasidmap.png?raw=1)
+
+Source: [USAID Explorer](https://explorer.usaid.gov)
+]
+
+
+---
+
+# Foreign Aid Today II
+
+.center[
+![:scale 65%](https://www.dropbox.com/s/qt309gbca1pg70t/aidovertime.png?raw=1)
+
+Source: [USAID Explorer](https://explorer.usaid.gov/aid-trends.html)
+]
+
+---
+
+# Foreign Aid Today III
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/8mwmr16785brmap/countriesrecipients.jpg?raw=1)
+]
+
+---
+
+# Foreign Aid Today IV
+
+.pull-left[
+
+- 57% of American voters believe we give too much foreign aid (2017) [Source: Rasmussen Reports](http://www.rasmussenreports.com/public_content/politics/general_politics/march_2017/most_see_u_s_foreign_aid_as_a_bad_deal_for_america)
+- 6% say it's not enough
+- 27% say it's about right
+
+- Foreign aid is less than 1% of our federal spending
+
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/b5qcs2cqjmhbqc0/feedback.png?raw=1)
+]
+]
+
+---
+
+# Foreign Aid Today V
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/a4epaaukhx5m5xy/usaidovertime.jpg?raw=1)
+]
+
+---
+
+class: inverse, center, middle
+
+# The Theoretical Foundations of Foreign Aid
+
+---
+
+# The Harrod-Domar Model I
+
+.left-column[
+
+.center[
+![:scale 49%](https://www.dropbox.com/s/r7uxmndxw4pky5i/harrod.jpg?raw=1) ![:scale 49%](https://www.dropbox.com/s/97bvdtm5akmmjup/domar.jpg?raw=1)
+
+**L**: Roy Harrod (1900-1978)
+
+**R**: Evsey Domar (1914-1997)
+
+]
+]
+
+.right-column[
+
+- **"Knife's Edge equilibrium**: a single savings rate and ICOR that permits stable growth
+    - Growth too low $\implies$ depression
+    - Growth too high $\implies$ hyperinflation
+
+- Highly simplistic, yet extremely influential
+    - Focus on unconsumed *surplus* to be used for investment
+    - GDP growth rate $\propto$ Investment share of GDP
+    - Tendency to think "Development" $=$ Growth $=$ Industrialization
+    - Ripe for Development planning from above
+
+]
+
+
+---
+
+# The Harrod-Domar Model II
+
+.left-column[
+
+.center[
+![:scale 49%](https://www.dropbox.com/s/r7uxmndxw4pky5i/harrod.jpg?raw=1) ![:scale 49%](https://www.dropbox.com/s/97bvdtm5akmmjup/domar.jpg?raw=1)
+
+**L**: Roy Harrod (1900-1978)
+
+**R**: Evsey Domar (1914-1997)
+
+]
+]
+
+.right-column[
+
+- "**Financing gap"** between "required" investment rate (from model) and a country's actual saving rate
+
+- Low income countries can't increase savings $\implies$ **foreign aid** from countries with higher savings will lead directly to rapid growth<sup>.red[1]</sup>
+
+]
+
+.footnote[<sup>.red[1]</sup> Remember this argument!]
+
+---
+
+# The Poverty Trap Argument
+
+.pull-left[
+
+- .shout[Poverty trap] argument:
+
+- In order to escape poverty, people must invest in capital goods to improve productivity
+
+- In order to invest, people must first save some of their income
+
+- Low-income people need to spend all of their income on subsistence
+
+- Thus, they are trapped in a poverty trap
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/5ofyfn5l2fl18dx/povertytrap.jpg?raw=1)
+]
+]
+
+---
+
+class: inverse, center, middle
+
+# Assessing the Effectiveness of Foreign Aid for Growth
+
+---
+
+class: inverse, center, middle
+
+# It Wasn't.
+
+---
+
+# Assessing the Effectiveness of Foreign Aid for Growth I
+
+.center[
+![:scale 40%](https://www.dropbox.com/s/4g62w5rsa0pk2m6/aid1.png?raw=1)
+]
+
+.source[Easterly, William, 2010, *The Elusive Quest for Growth: Economists Adventures and Misadventures in the Tropics* Cambridge: MIT Press]
+
+---
+
+# Assessing the Effectiveness of Foreign Aid for Growth II
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/8rqega4jkxezbzm/easterly.png?raw=1)
+
+William Easterly
+
+1957-
+
+]
+]
+.right-column[
+
+> "Between 1950 and 1995, Western countries gave $1 trillion (measured in 1985 dollars) in aid. Since virtually all of the aid advocates used the financing gap approach, this was one of the largest policy experiments ever based on a single economic theory," (p.33).
+
+]
+.source[Easterly, William, 2010, *The Elusive Quest for Growth: Economists Adventures and Misadventures in the Tropics* Cambridge: MIT Press]
+
+---
+
+# Structural Adjustment Lending
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/8rqega4jkxezbzm/easterly.png?raw=1)
+
+William Easterly
+
+1957-
+
+]
+]
+.right-column[
+
+> "The World Bank and IMF pursued the ambitious hope of achieving "adjustment with growth" through intensive involvement with typical recipients. In the 1980s, the World Bank and IMF gave an average of six adjustment loans to each country in Africa, an average of five adjustment loans to each country in Latin America, an average of four adjustment loans to each country in Asia, and an average of three adjustment loans to each country in Eastern Europe, North Africa, and the Middle East," (p.102).
+
+]
+.source[Easterly, William, 2010, *The Elusive Quest for Growth: Economists Adventures and Misadventures in the Tropics* Cambridge: MIT Press]
+
+---
+
+# Structural Adjustment Lending
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/8rqega4jkxezbzm/easterly.png?raw=1)
+
+William Easterly
+
+1957-
+
+]
+]
+.right-column[
+
+> "The operation was a success for everyone except the patient. There was much lending, little adjustment, and little growth in the 1980s and 1990s." (pp.102-3).
+
+> "A later study showed that World Bank predictions overestimated long-run growth in adjustment lending recipients by 3.5 percentage points. The per capita growth rate of the typical developing country between 1980 and 1998 was zero. The lending was there, but the growth wasn't," (p. 103).
+
+]
+.source[Easterly, William, 2010, *The Elusive Quest for Growth: Economists Adventures and Misadventures in the Tropics* Cambridge: MIT Press]
+
+---
+
+# Assessing the Effectiveness of Foreign Aid for Growth III
+
+.center[
+![:scale 50%](https://www.dropbox.com/s/hqfl5vj9v1ebcqh/aid2.png?raw=1)
+]
+
+.source[Easterly, William, 2010, *The Elusive Quest for Growth: Economists Adventures and Misadventures in the Tropics* Cambridge: MIT Press]
+
+---
+
+# Aid's Proponents I
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/psiu7eyw4o7x7iu/sachs.png?raw=1)
+
+Jeffrey D Sachs
+
+1954-
+
+]
+]
+.right-column[
+
+> "I have long believed in foreign aid as one tool of economic development...the recent evidence shows that development aid, when properly designed and delivered, works, saving the lives of the poor and helping to promote economic growth."
+
+> "As experience demonstrates, it is possible to use our reason, management know-how, technology, and learning by doing to design highly effective aid programs that save lives and promote development. This should be done in global collaboration with national and local communities, taking local circumstances into account. The evidence bears out this approach."
+
+]
+.source[Sachs, Jeffrey D, 2014, ["The Case for Aid,"](https://foreignpolicy.com/2014/01/21/the-case-for-aid/) *Foreign Affairs*]
+
+---
+
+# Aid's Proponents I
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/psiu7eyw4o7x7iu/sachs.png?raw=1)
+
+Jeffrey D Sachs
+
+1954-
+
+]
+]
+.right-column[
+
+> "Of course, I do not believe that aid is the sole or main driver of economic development. I do not believe that aid is automatically effective. Nor should we condone bad governance in Africa — or in Washington, for that matter.  Aid is one development tool among several; it works best in conjunction with sound economic policies, transparency, good governance, and the effective deployment of new technologies."
+
+]
+.source[Sachs, Jeffrey D, 2014, ["The Case for Aid,"](https://foreignpolicy.com/2014/01/21/the-case-for-aid/) *Foreign Affairs*]
+
+---
+
+# Aid's Proponents II
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/psiu7eyw4o7x7iu/sachs.png?raw=1)
+
+Jeffrey D Sachs
+
+1954-
+
+]
+]
+.right-column[
+
+> Across the board, the post-2000 improvements in public health in sub-Saharan Africa have been dramatic, strongly supported by scaled-up aid. Up to 10 million HIV-infected individuals are now receiving life-saving, anti-retroviral medicines thanks at least in part to aid programs. Tuberculosis (TB) patients are being treated and cured, with a global TB mortality rate drop of 45 percent since 1990, and an estimated 22 million people alive due to TB care and control from 1995-2012, thanks to Global Fund support, which provides the lion’s share of donor financing to fight TB. With increased donor support, antenatal health visits, institutional deliveries, and access to emergency obstetrical care are all on the increase, contributing to a decline in sub-Saharan Africa’s maternal mortality rate (the annual number of female deaths per 100,000 live births) from 850 in 1990 to 740 in 2000 to 500 in 2010. Deaths of children under five worldwide have declined from 12.6 million a year in 1990 and 10.8 million in 2000 to 6.5 million in 2012."
+
+]
+.source[Sachs, Jeffrey D, 2014, ["The Case for Aid,"](https://foreignpolicy.com/2014/01/21/the-case-for-aid/) *Foreign Affairs*]
+
+---
+
+# Aid's Proponents II
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/psiu7eyw4o7x7iu/sachs.png?raw=1)
+
+Jeffrey D Sachs
+
+1954-
+
+]
+]
+.right-column[
+
+> These successes demonstrate a key lesson: that well-designed aid programs with sound operating principles, including clear goals, metrics, milestones, deliverables, and financing streams, can make an enormous difference, and that such programs should be devised and applied on a large scale in order to benefit as many people as possible. Such quality design needs to be based on the details of best practices, such as the combination of medicines, bed nets, and diagnostics used in cutting-edge, community-based malaria control."
+
+]
+.source[Sachs, Jeffrey D, 2014, ["The Case for Aid,"](https://foreignpolicy.com/2014/01/21/the-case-for-aid/) *Foreign Affairs*]
+
+---
+
+# Aid's Proponents II
+
+.pull-left[
+.center[
+![:scale 60%](https://www.dropbox.com/s/g3dd79jkf5ic2ej/endofpoverty.jpg?raw=1)
+]
+]
+
+.pull-right[
+.center[
+![:scale 50%](https://www.dropbox.com/s/ynzvuesd7xbmuov/munkidealist.jpg?raw=1)
+]
+]
+
+---
+
+# Aid's Proponents III
+
+.center[
+![](https://www.dropbox.com/s/o1iamj1l95zrkl0/sachsbono.png?raw=1)
+]
+
+---
+
+class: inverse, center, middle
+
+# Digression: Growth Regressions
+
+---
+
+# Growth Regressions
+
+.pull-left[
+
+- Development papers are very empirical
+
+- Take data (of varying quality) from countries around the world and try to see: 
+
+> What factors explain variation in GDP per capita around the world?
+
+- **Dependent variable**: GDP per capita (or growth rate)
+
+- **Independent variables**: things that can plausibly affect GDP per capita
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/l2s6c0s55lsws6y/statsgraphs.jpg?raw=1)
+]
+]
+---
+
+# Linear Regression
+
+.pull-left[
+$$Y=a+bX$$
+
+- .shout[Linear regression] is the process of fitting a line to data
+    - $a$: intercept $(Y$ when $X=0)$
+    - $b$: slope, $\frac{\Delta Y}{\Delta X}$
+
+- This is idea of a "line through data points" is just to give you intuition
+    - Lines can be curves
+    - More than one $X$ variable...MANY $X$ variables
+    - More advanced methods and models
+
+- If you want to know more, take my [econometrics class](http://metricsf19.classes.ryansafner.com)
+
+]
+
+.pull-right[
+
+```{r, echo=F, fig.retina=3}
+library("tidyverse")
+library("here")
+library("ggrepel")
+polfreedom<-read.csv(here("./static/data/freedomhouse2018.csv"))
+econfreedom<-read.csv(here("./static/data/econfreedom.csv"))
+polfreedom2<-polfreedom %>%
+  select(Country.Territory, Total)
+
+polfreedom2<-rename(polfreedom2,Country=Country.Territory)
+
+# combine datasets
+freedom<-left_join(econfreedom, polfreedom2, by="Country")
+
+ggplot(data=freedom, aes(x=Total,y=gdp))+
+  geom_point(aes(color=continent))+
+  geom_smooth(color="black")+
+  scale_y_continuous(name="GDP per Capita ($)", labels=scales::dollar, breaks=seq(0,100000,20000))+
+  guides(color = F, fill=F)+
+  xlab("Political Freedom Score")+ylab("GDP per Capita")+labs(caption="Sources: Gapminder, Freedom House")+theme_bw()
+```
+]
+
+---
+
+# What are Good Independent Variables? I
+
+.pull-left[
+
+- Previous GDP per Capita
+
+- Investment share of GDP
+
+- Macroeconomic variables
+
+- Foreign Aid
+
+- Geography
+
+- Culture
+
+- Political institutions
+
+]
+
+.pull-right[
+
+.center[
+![:scale 100%](https://www.dropbox.com/s/i1c37p6ue7pvtl2/economicgrowth.jpeg?raw=1)
+]
+]
+
+---
+
+# What are Good Independent Variables? II
+
+.pull-left[
+
+- Recall we are limited by the data we can find and measure
+
+- A lot of variables used are .onfire[proxy] variables that are correlated with something we care about, but can't measure
+    - Inflation rate
+    - Ethnolinguistic fractionalization
+    - Region dummy variables
+    - "Black market premium on foreign exchange"
+    - Polity IV index of political institutions
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/rhsxxmoyd1m29i0/streetlampeffect.jpeg?raw=1)
+]
+]
+
+---
+
+# "Kitchen-Sink" Regressions
+
+.center[
+![:scale 55%](https://www.dropbox.com/s/qod3lyt5ayj63pw/kitchensinkgrowthreg.png?raw=1)
+
+Burnside and Dollar (2000: 852)
+]
+
+.source[Burnside, Craig and David Dollar, 2000, "Aid, Policies, and Growth," *American Economic Review* 90(4): 847-868]
+
+---
+
+# "Kitchen-Sink" Regressions
+
+
+$$\text{GDP per capita growth} = \beta_0 + \beta_1 \text{Initial GDP} + \beta_2 + \text{Ethnic fractionalization} + \beta_3 \text{Assassinations} + \cdots$$
+
+---
+
+# How to Read a Regression Table I
+
+.pull-left[
+.center[
+![:scale 70%](https://www.dropbox.com/s/9kbl4fcwyqhn5us/burnsidereg1.png?raw=1)
+]
+]
+
+.pull-right[
+- Each column is a particular model
+
+- Number next to each variable (row) is the **marginal effect** of that variable on outcome variable
+    - Holding other included variables constant
+    - *A 1 unit change in that variable $\implies$ a (that number) change in outcome variable*
+
+- Number in parentheses below it is the standard error of the estimate
+    - If it is less than half of the estimate, **statistically significant**
+
+]
+
+.source[Burnside, Craig and David Dollar, 2000, "Aid, Policies, and Growth," *American Economic Review* 90(4): 847-868]
+
+---
+
+# How to Read a Regression Table II
+
+.pull-left[
+.center[
+![:scale 70%](https://www.dropbox.com/s/znr1y4y1gazaoeb/burnsidereg2.png?raw=1)
+]
+]
+
+.pull-right[
+
+- $R^2$: goodness of fit of regression
+    - Percent of overall variation in outcome explained by the model
+    - Higher is better (and rarer in the real world)
+]
+
+.source[Burnside, Craig and David Dollar, 2000, "Aid, Policies, and Growth," *American Economic Review* 90(4): 847-868]
+
+---
+
+# Burnside and Dollar (2000): Aid, Policies, and Growth
+
+> "We find that aid has a positive impact on growth in developing countries with goodfiscal, monetary, and trade policies but has little effect in the presence of poor policies. Good policies are ones that are themselves importantfor growth. The quality of policy has only a small impact on the allocation of aid. Our results suggest that aid would be more effective if it were more systematically conditioned on good policy," (p.847)
+
+.source[Burnside, Craig and David Dollar, 2000, "Aid, Policies, and Growth," *American Economic Review* 90(4): 847-868]
+
+---
+
+# Easterly, Levine, and Roodman (2003): Comment I
+
+> "The Burnside and Dollar (2000, AER) finding that aid raises growth in a good policy environment has had an important influence on policy and academic debates. We conduct a data gathering exercise that updates their data from 1970 -93 to 1970 -97, as well as filling in missing data for the original period 1970 -93. We find that the Burnside and Dollar (2002, AER) finding is not robust to the use of this additional data," (p.1).
+
+.source[Easterly, William, Ross Levine, and David Roodman, 2003, "New Data, New Doubts: A Comment on Burnside and Dollar’s “Aid, Policies, and Growth” (2000)," *NBER Working Paper* 9846]
+
+---
+
+# Easterly, Levine, and Roodman (2003): Comment II
+
+.center[
+![:scale 40%](https://www.dropbox.com/s/2i3gwilkkzl9bhl/easterlyondollar.png?raw=1)
+]
+
+.source[Easterly, William, Ross Levine, and David Roodman, 2003, "New Data, New Doubts: A Comment on Burnside and Dollar’s “Aid, Policies, and Growth” (2000)," *NBER Working Paper* 9846]
+
+
+---
+
+# Ovaska (2003): The Failure of Development Aid I
+
+> "Contrary to some previous findings in the development aid literature, the results from the fixed effect (FE) model with group dummy variables and period effects indicated a negative relationship between development aid and economic growth. In particular, it was found that a 1 percent increase in aid as a percent of GDP decreased annual real GDP per capita growth by 3.65 percent," (p.186).
+
+.source[Ovaska, Tomi, 2003, "The Failure of Development Aid," *Cato Journal* 23(2): 175-188]
+
+---
+
+# Ovaska (2003): The Failure of Development Aid II
+
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/6q66nhcl3jz16la/ovaskaaid.png?raw=1)
+]
+
+.source[Ovaska, Tomi, 2003, "The Failure of Development Aid," *Cato Journal* 23(2): 175-188]
+
+---
+
+# Djankov et. al (2008): The Curse of Aid I
+
+> "Foreign aid provides a windfall of resources to recipient countries and may result in the same rent seeking behavior as documented in the "curse of natural resources" literature. In this paper we discuss this effect and document its magnitude. Using panel data for 108 recipient countries in the period 1960-1999, we find that foreign aid has a negative impact on institutions. In particular, if the foreign aid over GDP that a country receives over a period of 5 years reaches the 75th percentile in the sample, then a 10-point index of democracy is reduced between 0.5 and almost one point, a large effect. For comparison, we also measure the effect of oil rents on political institutions. We find that aid is a bigger curse than oil," (p.169).
+
+
+.source[Djankov, Simeon, Jose G Montalvo, and Marta Reynal-Querol, 2008, "The Curse of Aid," *Journal of Economic Growth* 13(3): 169-194]
+
+---
+
+class: inverse, center, middle
+
+# Foreign Aid and Incentives
+
+---
+
+# Foreign Aid and Incentives
+
+.center[
+![:scale 70%](https://www.dropbox.com/s/x9srssjzduzs8qp/foreignaidcartoon.png?raw=1)
+]
+
+---
+
+# The Incentives of Foreign Aid
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/gsgahe1hqkxcy9w/ptbauer2.jpg?raw=1)
+
+P. T. Bauer
+
+1915-2002
+]
+]
+
+.right-column[
+
+> "[Foreign aid is] an excellent method for transferring money from poor people in rich countries to rich people in poor countries."
+]
+
+.source[Bauer, Peter, 2000, "From Subsistence to Exchange," in Bauer, P. T., *From Subsistence to Exchange, and Other Essays*, Princeton University Press]
+
+---
+
+# Foreign Aid and Incentives I
+
+.pull-left[
+
+- Incentives for **Donors/Lenders**
+    - want to help the poor
+    - cannot credibly cut funding
+    - political optics
+    - constituents 
+
+- Incentives for **Recipient** governments:
+    - Know donors cannot cut off funding credibly
+    - Higher poverty countries get more aid
+    - little incentive to actually reduce poverty
+]
+
+.pull-right[
+.center[
+![:scale 95%](https://www.dropbox.com/s/x9srssjzduzs8qp/foreignaidcartoon.png?raw=1)
+]
+
+]
+
+---
+
+# Structural Adjustment Lending and Incentives I
+
+.pull-left[
+
+- IMF/World Bank tied lending to structural change and policy improvements
+
+- Recipient countries found clever ways to **pretend** it **looked like** they were adjusting their policies
+
+- Cut present spending (on infrastructure, healthcare, etc) to lower budget deficit
+
+- Extract more resources (esp. oil) faster *today* to get a *one time* boost in numbers (at risk of depleting future resources)
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/neahyesy2igtcmc/fakegrowth.jpg?raw=1)
+]
+
+
+]
+---
+
+# Structural Adjustment Lending and Incentives II
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/8rqega4jkxezbzm/easterly.png?raw=1)
+
+William Easterly
+
+1957-
+
+]
+]
+.right-column[
+
+> "A government that was irresponsible before the adjustment loan has unchanged incentives to be irresponsible after the adjustment loan. Only a change from a bad government to a good government will truly change policies. An unchanged irresponsible government will create the *illusion* of adjustment without doing the real thing. Even when donors enforce the reductions in the budget deficit, fore example, the irresponsible government has every incentive to do creative fiscal accounting to avoid real adjustment," (p. 111).
+
+]
+.source[Easterly, William, 2010, *The Elusive Quest for Growth: Economists Adventures and Misadventures in the Tropics* Cambridge: MIT Press]
+
+---
+
+# Structural Adjustment Lending and Incentives II
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/8rqega4jkxezbzm/easterly.png?raw=1)
+
+William Easterly
+
+1957-
+
+]
+]
+.right-column[
+
+> "Paradoxically, the poor in the recipient country will be better off if the aid disbursement decision is delegated to a hard-hearted agency that doesn't care about the poor. This Scrooge agency can credibly threaten to withhold aid if the recipient does not meet the conditions and alleviate poverty. The recipient will then meet the conditions, and the poor will benefit," (p. 116).
+
+]
+.source[Easterly, William, 2010, *The Elusive Quest for Growth: Economists Adventures and Misadventures in the Tropics* Cambridge: MIT Press]
+
+---
+# How The Politics of Foreign Aid Warps Our Thinking I
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/gsgahe1hqkxcy9w/ptbauer2.jpg?raw=1)
+
+P. T. Bauer
+
+1915-2002
+]
+]
+
+.right-column[
+
+> "Disregard of reality promotes erosion of language, which promotes further disregard of reality...If a country is officially designated as democratic or as a people’s republic, we know that it is one in which people have no say in the government. Another category of examples is the treatment of countries and other collectivities as if they were single decision-making entities, or entities within which all the people have identical interests, experiences, and conditions. The aggregation of two-thirds of mankind as the Third World is a conspicuous example." (p.25)
+]
+
+.source[Bauer, Peter, 2000, "From Subsistence to Exchange," in Bauer, P. T., *From Subsistence to Exchange, and Other Essays*, Princeton University Press]
+
+---
+
+# How The Politics of Foreign Aid Warps Our Thinking II
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/gsgahe1hqkxcy9w/ptbauer2.jpg?raw=1)
+
+P. T. Bauer
+
+1915-2002
+]
+]
+
+.right-column[
+
+> "Time and again the guilt merchants envisage the Third World as an undifferentiated, passive entity, helplessly at the mercy of its environment and of the powerful West.
+
+> The exponents of Western guilt further patronize the Third World by sug- gesting that its economic fortunes past, present, and prospective, are deter- mined by the West; that past exploitation by the West explains Third World backwardness; that manipulation of international trade by the West and other forms of Western misconduct account for persistent poverty; that the economic future of the Third World depends largely on Western donations. According to this set of ideas, whatever happens to the Third World is largely our doing." (p.72)
+]
+
+.source[Bauer, Peter, 2000, "From Subsistence to Exchange," in Bauer, P. T., *From Subsistence to Exchange, and Other Essays*, Princeton University Press]
+
+---
+
+# How The Politics of Foreign Aid Warps Our Thinking III
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/gsgahe1hqkxcy9w/ptbauer2.jpg?raw=1)
+
+P. T. Bauer
+
+1915-2002
+]
+]
+
+.right-column[
+
+> "It is foreign aid which has brought into existence the Third World (also called the [Global] South) and which thus underlies the so-called North-South dialogue or confrontation. Foreign aid is a source of the North-South conflict, not its solution. Take away foreign aid, and there is no Third World or South as aggregate. A further pervasive consequence of aid has been to promote or exacerbate the politicisation of life in aid-receiving countries. These major results have been damaging to both the West and the peoples of the less developed world." (p.42)
+]
+
+.source[Bauer, Peter, 2000, "From Subsistence to Exchange," in Bauer, P. T., *From Subsistence to Exchange, and Other Essays*, Princeton University Press]
+
+---
+
+class: inverse, center, middle
+
+# Investment and Remittances: "Private" Foreign Aid
+
+---
+
+# Foreign Direct Investment I
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/zmt2ekm1ixb4p4c/mises2.png?raw=1)
+
+Ludwig von Mises 
+
+(1881-1973)
+
+]
+]
+
+.right-column[
+
+> "The greatest event in the history of the nineteenth century...was the development of foreign investment," (p. 407).
+
+> "Without capital investment, it would have been necessary for nations less developed than Great Britain to start with the methods and the technology with which the British had started in the beginning...of the eighteenth century, and slowly, step by step–always far below the technological level of the British economy-try to imitate what the British had done," (p.79).
+
+]
+
+.source[von Mises, Ludwig, 1979, "Foreign Investment," Ch. 5 in *Economic Policy*]
+
+---
+
+# Foreign Direct Investment II
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/zmt2ekm1ixb4p4c/mises2.png?raw=1)
+
+Ludwig von Mises 
+
+(1881-1973)
+
+]
+]
+
+.right-column[
+
+> "Foreign investment meant that British capitalists invested British capital in other parts of the world. They first invested it in those European countries which, from the point of view of Great Britain, were short of capital and backward in their development. It is a well known fact that the railroads of most European countries, and also of the United States, were build with the aid of British capital...The gas companies of Europe were also British...In the same way, British capital developed...many branches of industry in the United States," (p.80-81).
+
+]
+
+.source[von Mises, Ludwig, 1979, "Foreign Investment," Ch. 5 in *Economic Policy*]
+
+---
+
+# Foreign Direct Investment II
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/zmt2ekm1ixb4p4c/mises2.png?raw=1)
+
+Ludwig von Mises 
+
+(1881-1973)
+
+]
+]
+
+.right-column[
+
+> "And of course, as long as a country imports capital its balance of trade is what the noneconomists call “unfavorable.” This means that it has an excess of imports over exports...British factories sent many types of equipment to the United States, and this equpment was not paid for by anything other than shares of American corporations," (p.80).
+
+> "You must think of all those things that would not have come into being if there had not been any foreign investment. All the railroads, all the harbors, the factories and mines in Asia, and the Suez Canal and many other things in the Western Hemisphere, would not have been constructed had there been no foreign investment," (p.81).
+
+]
+
+.source[von Mises, Ludwig, 1979, "Foreign Investment," Ch. 5 in *Economic Policy*]
+
+---
+
+# Remittances I
+
+> "The Pew Research Center keeps close tabs on remittances sent from the United States to people in other countries. In 2017, the last year for which Pew has complete data, those remittances totaled a whopping $148.5 billion. To put that number in perspective, U.S. Gross Domestic Product that year was $19.39 trillion. That means that remittances were 0.76 percent of GDP. By contrast, in 2017 the U.S. government’s spending on foreign aid, both in economic and military assistance, totaled $50.1 billion. That’s only about a third of individual remittances.
+
+> "Not surprisingly, the top 10 recipients of U.S. remittances in 2017 were all countries where the majority of people are poor by U.S. standards. Mexico led the list with receipts of $30 billion from the United States, followed by China ($16.1 billion), India ($11.7 billion), and the Philippines ($11.1 billion.)
+
+> "This demonstrates that remittances are a major form of foreign aid to people in poor countries."
+
+.source[Henderson, David, 2019, ["Immigrant Remittances Are Private Foreign Aid,"](https://www.hoover.org/research/immigrant-remittances-are-private-foreign-aid) *Hoover Institution*]
+
+---
+
+# Remittances II
+
+> "Remittances sent to all countries in 2012 (developing and high income) was $534bn, three times greater than aid budgets to the developing world.
+
+> "In 2016, the World Bank expects remittances to reach over $600bn, with over $440bn being sent to developing countries"
+
+.source[World Bank, 2016,[*Migration and Remittances Factbook 2017*](siteresources.worldbank.org/INTPROSPECTS/Resources/334934-1199807908806/4549025-1450455807487/Factbookpart1.pdf), 3rd ed.]
+
+---
+
+# Microlending
+
+.pull-left[
+.center[
+![:scale 70%](https://www.dropbox.com/s/8iil6x5jecfhlbz/kiva.png?raw=1)
+
+[kiva.org](https://www.kiva.org)
+]
+]
+
+.pull-right[
+
+> "More than 1.7 billion people around the world are unbanked and can’t access the financial services they need. Kiva is an international nonprofit, founded in 2005 in San Francisco, with a mission to expand financial access to help underserved communities thrive.
+
+> "We do this by crowdfunding loans and unlocking capital for the underserved, improving the quality and cost of financial services, and addressing the underlying barriers to financial access around the world. Through Kiva's work, students can pay for tuition, women can start businesses, farmers are able to invest in equipment and families can afford needed emergency care."
+
+
+]
+
+---
+
+# Visualizing Microlending
+
+.center[
+<iframe src="https://player.vimeo.com/video/28413747?portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/28413747">Intercontinental Ballistic Microfinance</a> from <a href="https://vimeo.com/user5173862">Kiva</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+]
+
+---
+
+# What Can Aid Do? I
+
+.pull-left[
+
+- Argument: developed countries have [X], let's supply [X] to developing countries so they can develop.
+- X = 
+    - Schools
+    - Roads, bridges, dams
+    - Sewage systems
+    - Hospitals
+    - etc.
+
+- These are *consequences* of development, not necessarily *causes*!
+
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/zi6yqvh8kejf05w/infrastructureicons.png?raw=1)
+]
+]
+---
+
+# What Can Aid Do? II
+
+> "Under normal conditions, devoting more resources to X's production produces more X...In principles of economics classes, it is common to highlight that this relationship has nothing to do with the *economic* problem. The economic problem asks how to produce X in the least-cost way, whether to produce more or less X, and indeed, whether to produce any X at all given the alternative uses of the inputs required to produce it. 
+
+> "Solving the economic problem determines whether a country's economy develops. It is strange, then, that professional economists have had trouble distinguishing the positive relationship between inputs and outputs from solving the economic problem when it comes to evaluating foreign ," (p.391)
+
+.source[Skarbek, David and Peter T Leeson, 2009, "What Can Aid Do?" *Cato Journal* 29(3): 391-397]
+
+---
+
+# What Can Aid Do? III
+
+
+> "Foreign aid's advocates claim aid has been successful. Aid's critics claim aid has failed. We explain why both camps are correct. Aid can, and in a few cases has, increased a particular output by devoting more resources to its production. In this sense, aid has occasionally had limited success. However, aid cannot, and has not, contributed to the solution of economic problems and therefore economic growth. In this much more important sense, aid has failed," (p.392).
+
+.source[Skarbek, David and Peter T Leeson, 2009, "What Can Aid Do?" *Cato Journal* 29(3): 391-397]
