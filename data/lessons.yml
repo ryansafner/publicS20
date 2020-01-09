@@ -1,5 +1,5 @@
 lessons:
-  - title: '<span class="fake-header-table">Basic Challenges of Collective Action</span>'
+  - title: '<span class="fake-header-table">Challenges Requiring Collective Action</span>'
     header: True
 
   - title: "1.1 Introduction and Overview"
@@ -30,18 +30,18 @@ lessons:
 
   - title: "3.2 Voting II: Ignorance and Irrationality"
 
-  - title: "3.3 Interest Groups I"
+  - title: "3.3 Voting III: Democracy Squared?"
 
-  - title: "3.4 Interest Groups II"
+  - title: "3.4 Interest Groups I"
 
-  - title: "3.5 Bureaucracy"
+  - title: "3.5 Interest Groups II"
 
-  - title: "3.6 Legislators I"
+  - title: "3.6 Bureaucracy"
+
+  - title: "3.7 Politicians/Legislators I"
   
-  - title: "3.6 Legislators II"
+  - title: "3.8 Politicians/Legislators II"
   
-  - title: "3.7 Legislators III"
-
   - title: '<span class="fake-header-table">Applications</span>'
     header: True
 
@@ -59,9 +59,9 @@ lessons:
 
   - title: '4.7 Transfer Payments: A Basic Income Guarantee?'
 
-  - title: '4.8 Democracy Squared: Quadratic Voting?'
+  - title: '4.8 Is Property Only Another Name for Monopoly?'
 
-  - title: '4.9 Inequality: Possible Causes and Cures'
+  - title: '4.9 Inequality: Some Causes and Cures'
 
   - title: '<i class="fas fa-laptop-code"></i> **Short Paper 2** due Dec 6 by email'
     assignment: "01-short-paper"
