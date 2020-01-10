@@ -94,14 +94,14 @@ ul.footer-links {
 }
 
 .fake-header {
-    font-family: "Oswald", sans-serif;
+    font-family: "Fira Sans Condensed", sans-serif; /* CHANGED FROM Oswald */
     font-weight: 600;
     text-transform: uppercase;
     font-size: 1.2rem;
 }
 
 .fake-header-table {
-    font-family: "Oswald", sans-serif;
+    font-family: "Fira Sans Condensed", sans-serif; /* CHANGED FROM Oswald */
     font-weight: 600;
     text-transform: uppercase;
     font-size: 1.25rem;
@@ -114,7 +114,7 @@ ul.footer-links {
 td.mid-table-header {
     text-align: center;
     vertical-align: bottom !important;
-    font-family: "Oswald", sans-serif;
+    font-family: "Fira Sans Condensed", sans-serif; /* CHANGED FROM Oswald */
     font-weight: 600;
     text-transform: uppercase;
 }
