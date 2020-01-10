@@ -21,12 +21,14 @@ lessons:
     header: True
 
   - title: "2.1 Constituting a Group"
+  
+  - title: "2.2 Credible Commitment"
 
-  - title: "2.2 The Optimal Decision Rule"
+  - title: "2.3 The Optimal Decision Rule"
 
   - title: '<span class="fake-header-table">Representative Democracy</span>'
 
-  - title: "3.1 Voting I: Social Choice Theory"
+  - title: "3.1 Voting I: Prefernce Aggregation and Cycling"
 
   - title: "3.2 Voting II: Ignorance and Irrationality"
 
