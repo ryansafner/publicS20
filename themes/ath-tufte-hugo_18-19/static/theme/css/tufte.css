@@ -51,7 +51,7 @@ body {
   margin-right: auto;
   padding: 0% 5%;
   /*font-family: et-bembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;*/
-  font-family: "Fira Sans", sans-serif; /* Archivo */
+  font-family: "Fira Sans", sans-serif; /* CHANGED FROM Archivo */
   font-weight: 400;
   background-color: #ffffff;
   color: #000000;
@@ -369,7 +369,7 @@ article .fullwidth div.sourceCode {
 article .fullwidth p {
   width: 90%; }
 article span.newthought {
-  font-family: "Oswald", sans-serif;
+  font-family: "Yanone Kaffeesatz", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 0.9em;
