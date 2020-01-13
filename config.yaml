@@ -2,7 +2,7 @@ baseurl: "https://publicS20.classes.ryansafner.com/"
 languageCode: "en-us"
 title: "Public Economics"
 theme: "ath-tufte-hugo_18-19"
-fonts: "fira"
+font: "fira"
 googleAnalytics: ""
 ignoreFiles:
   - \.Rmd$
