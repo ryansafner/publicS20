@@ -1,4 +1,7 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,700);
+@import url(https://fonts.googleapis.com/css?family=Fira+Mono:400,700);
 
 html, body {
   height: 100%;
