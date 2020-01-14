@@ -1,0 +1,12 @@
+name: public_grade_calculator
+title: public_grade_calculator
+username:
+account: ryansafner
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1652573
+bundleId: 2726132
+url: https://ryansafner.shinyapps.io/public_grade_calculator/
+when: 1578946539.83617
+asMultiple: FALSE
+asStatic: FALSE

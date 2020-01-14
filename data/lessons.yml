@@ -22,6 +22,8 @@ lessons:
 
   - title: "2.1 Constituting a Group"
   
+  - title: "2.2 Factions"
+  
   - title: "2.2 Credible Commitment"
 
   - title: "2.3 The Optimal Decision Rule"
@@ -62,9 +64,11 @@ lessons:
 
   - title: '4.7 Transfer Payments: A Basic Income Guarantee?'
 
-  - title: '4.8 Is Property Only Another Name for Monopoly?'
+  - title: '4.8 Public Debt'
 
-  - title: '4.9 Inequality: Some Causes and Cures'
+  - title: '4.9 Is Property Only Another Name for Monopoly?'
+
+  - title: '4.10 Inequality: Some Causes and Cures'
 
   - title: '<i class="fas fa-laptop-code"></i> **Short Paper 2** due Dec 6 by email'
     assignment: "01-short-paper"

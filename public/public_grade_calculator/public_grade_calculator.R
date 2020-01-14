@@ -13,7 +13,7 @@ library(shiny)
 ui <- fluidPage(
 
     # Application title
-    titlePanel("ECON 317 Course Grade Calculator"),
+    titlePanel("ECON 410 Course Grade Calculator"),
 
     # Sidebar with a slider input for number of bins 
     sidebarLayout(
@@ -21,29 +21,24 @@ ui <- fluidPage(
             
             h4("Input Actual or Hypothetical Grades For Each Assignment"),
             numericInput("disc",
-                        "Discussion Average (25%):",
+                        "Discussion Average (30%):",
                         min = 0,
                         max = 5,
                         step=0.1,
                         value = 4),
             helpText("Discussion average out of 5"),
-            numericInput("paper1",
-                         "Short Paper 1 Grade (20%):",
+            numericInput("paper",
+                         "Policy Paper Grade (30%):",
                          min = 0,
                          max = 100,
                          value = 95),
-            numericInput("paper2",
-                         "Short Paper 2 Grade (20%):",
+            numericInput("midterm",
+                         "Midterm Exam Grade (20%):",
                          min = 0,
                          max = 100,
                          value = 95),
             numericInput("final",
                          "Final Exam Grade (30%):",
-                         min = 0,
-                         max = 100,
-                         value = 95),
-            numericInput("profile",
-                         "Country Profile Grade (5%):",
                          min = 0,
                          max = 100,
                          value = 95)
@@ -64,8 +59,8 @@ ui <- fluidPage(
              a("Ryan Safner",
                href="http://ryansafner.com"),
              "'s", 
-             a("Economics of Development",
-               href="http://devf19.classes.ryansafner.com"),
+             a("Public Economics",
+               href="http://publics20.classes.ryansafner.com"),
              "course at Hood College.")
         )
     )
@@ -75,7 +70,7 @@ ui <- fluidPage(
 server <- function(input, output) {
 
     output$printgrades <- renderText({
-        coursegrade<-round(((input$disc*5)+(input$paper1*0.20)+(input$paper2*0.20)+(input$profile*0.05)+(input$final*0.3)),4)
+        coursegrade<-round(((input$disc*6)+(input$paper*0.30)+(input$midterm*0.20)+(input$final*0.2)),4)
         lettergrade<-ifelse(coursegrade>=92.5, "A",
                             ifelse(coursegrade>=89.5, "A-",
                                    ifelse(coursegrade>=86.5, "B+",
