@@ -248,7 +248,7 @@ fredr_set_key("9100cdf3c862283007d8c83ce02059e6")
 .pull-left[
 - *Why* are resources in the wrong place?
 
-- .hi[We have the same stuff and/but different preferences]
+- .hi[We have different stuff and same/different preferences]
 
 ]
 

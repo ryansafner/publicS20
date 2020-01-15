@@ -70,11 +70,6 @@ lessons:
 
   - title: '4.10 Inequality: Some Causes and Cures'
 
-  - title: '<i class="fas fa-laptop-code"></i> **Short Paper 2** due Dec 6 by email'
-    assignment: "01-short-paper"
-
-  - title: '<i class="fas fa-laptop-code"></i> **Country Profile** due Dec 9'
-    assignment: "country-profile"
+  - title: '<i class="fas fa-laptop-code"></i> **Policy Paper**'
 
   - title: '<i class="fas fa-laptop-code"></i> **Final Exam**'
-    assignment: "final-exam"
