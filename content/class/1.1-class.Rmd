@@ -19,7 +19,7 @@ This introduction will give an overview of the course and the topics that we wil
 
 # Readings for Discussion
 
-There are no readings assigned for *today*'s class, but see the [required readings](/readings/1.2-reading) (and email questions) for discussion for *next* class.
+There are no readings assigned for *today*'s class, but see the [required readings](/reading/1.2-reading) (and email questions) for discussion for *next* class.
 
 # Slides
 
