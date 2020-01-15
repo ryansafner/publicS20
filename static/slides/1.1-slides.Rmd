@@ -34,14 +34,9 @@ knitr::opts_chunk$set(echo = F,
                       fig.align = "center")
 library("tidyverse")
 
-invthm <- theme_minimal() + 
+theme_slides <- theme_light() + 
   theme(
-    panel.background = element_rect(fill = "transparent", colour = NA), 
-    plot.background = element_rect(fill = "transparent", colour = NA),
-    legend.background = element_rect(fill = "transparent", colour = NA),
-    legend.key = element_rect(fill = "transparent", colour = NA),
-    text = element_text(family = "Fira Sans", colour = "white", size = 24),
-    axis.text = element_text(colour = "white")
+    text = element_text(family = "Fira Sans", size = 24)
   )
 
 library(wbstats)
@@ -50,39 +45,215 @@ fredr_set_key("9100cdf3c862283007d8c83ce02059e6")
 
 ```
 
-layout: true
-background-image: url(https://publics20.classes.ryansafner.com/images/public_hex.png)
-background-position: 99% 99%
-background-size: 12.5%
-
----
-
 # Public Economics
 
+.right-column[
+
+- .hi[How do we choose in groups?]
+
+- Application of .hi-purple[economic tools] to the study of .hi-slate[politics]
+
+]
+
+.left-column[
+
+.center[
+![](https://www.dropbox.com/s/6g428kr267v1rxu/roundtable.jpg?raw=1)
+]
+]
 
 ---
 
-# Positive and Normative Economics
+# Economics as a *Way of Thinking*
 
+.pull-left[
 
-- If [X], all else equal, then [Y]
-  - If the price 
-  
+- Economics is a .hi[way of thinking] based on a few core ideas:
+]
+
+---
+
+# Economics as a *Way of Thinking*
+
+.pull-left[
+
+- Economics is a .hi[way of thinking] based on a few core ideas:
+
+- .hi-purple[People respond to incentives]
+    - Money, punishment, taxes and subsidies, risk of injury, reputation, profits, sex, effort, morals
+
+]
+
+.pull-right[
+
+.center[
+![:scale 70%](https://www.dropbox.com/s/wp97bsk0yni31k9/incentive2.jpg?raw=1)
+]
+]
+
+---
+
+# Economics as a *Way of Thinking*
+
+.pull-left[
+
+- Economics is a .hi-purple[way of thinking] based on a few core ideas:
+
+- .hi[People respond to incentives]
+    - Money, punishment, taxes and subsidies, risk of injury, reputation, profits, sex, effort, morals
+
+- .hi[Environments adjust until they are in equilibrium]
+    - Prices adjust until supply and demand are balanced
+    - Competing agents adjust their strategies until each is optimal given others’ actions
+]
+
+.pull-right[
+
+.center[
+![:scale 70%](https://www.dropbox.com/s/wp97bsk0yni31k9/incentive2.jpg?raw=1)
+
+![:scale 70%](https://www.dropbox.com/s/j7xenkgo3p71vke/equilibriumbalance.png?raw=1)
+]
+]
+
+---
+
+# Optimization and Equilibrium
+
+.pull-left[
+- If people can *learn* and *change* their behavior, they will always switch to a higher-valued option
+
+- If there are no alternatives that are better, people are at an *optimum*
+
+- If everyone is at an optimum, the system is in *equilibrium*
+]
+
+.pull-right[
+.center[
+![:scale 70%](https://www.dropbox.com/s/wp97bsk0yni31k9/incentive2.jpg?raw=1)
+
+![:scale 70%](https://www.dropbox.com/s/j7xenkgo3p71vke/equilibriumbalance.png?raw=1)
+]
+]
+]
+
+---
+
+# The Two Major Models of Economics as a "Science"
+
+.pull-left[
+
+## Optimization
+
+- Agents have objectives they value
+
+- Agents face constraints
+
+- Make tradeoffs to maximize objectives within constraints
+
+.center[
+![](https://www.dropbox.com/s/qvr240t5j6t3arm/optimize.jpeg?raw=1)
+]
+]
+
+--
+
+.pull-right[
+
+## Equilibrium
+
+- Agents face competition from others that affect prices
+
+- Agents adjust their behaviors based on prices
+
+- Stable outcomes result where all agents cease adjusting
+
+.center[
+![](https://www.dropbox.com/s/j7xenkgo3p71vke/equilibriumbalance.png?raw=1)
+]
+
+]
+
+---
+
+# Model 1: Optimization
+
+.pull-left[
+
+- .shout[Optimization]: which action(s) best achieve an *objective*? 
+    - How long should I keep my old car before buying a new one?
+    - Should the U.S. legalize marijuana?
+    - Which college courses should I pick?
+    - Which political campaign platform will win the most votes?
+    - Which path minimizes travel time? 
+
+- Find the *optimum* using .whisper[marginal analysis]
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/qvr240t5j6t3arm/optimize.jpeg?raw=1)
+]
+]
+
+---
+
+# Model 2: Equilibrium
+
+.pull-left[
+
+- .shout[Equilibrium]: how do stable outcomes emerge in the world (and change)? 
+    - Why is there a shortage of affordable housing in big cities?
+    - Why is the price of Apple iPhones so high?
+    - Why is there only one provider of electricity in a city?
+    - Why did the recent election turn out the way it did?
+
+- Find the outcome where *no agents change their behavior* using .whisper[supply and demand]
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/j7xenkgo3p71vke/equilibriumbalance.png?raw=1)
+]
+]
+
+---
+
+# Model 3: Game Theory
+
+.pull-left[
+
+- .shout[Game Theory]: what outcome will we *jointly* reach if our choices are **strategic**?
+    - Can big companies secretly all raise prices together?
+    - Are markets with only a few sellers actually competitive?
+    - How can we coordinate our actions to reduce climate change?
+    - Why is doping so prevalent in professional sports?
+
+- Find the outcome where *no agents change their behavior* (again, but slightly different!)
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/tymdsxbqaq2scxq/chessknights.jpg?raw=1)
+]
+]
+
 ---
 
 # Economics
 
 .pull-left[
-- Economics begins with interaction between people
-  - Recognizing mutual gains from cooperation
-    - Specialization
-    - Exchange
-    - Team production
+- **Economics** begins with .hi[interaction] between *multiple* people
+
+- Recognizing .hi-purple[mutual gains from cooperation]
+  - Specialization
+  - Exchange
+  - Team production
 ]
 
 .pull-right[
 .center[
-![](../images/exchange.png)
+![:scale 60%](https://www.dropbox.com/s/geifybigwffpzru/exchange2.png?raw=1)
 ]
 ]
 
@@ -100,7 +271,7 @@ background-size: 12.5%
 .pull-right[
 .center[
 .polaroid[
-![](../images/crusoe.jpg)
+![](https://www.dropbox.com/s/eqcs4ujx6fujm61/crusoe2.jpg?raw=1)
 ]
 ]
 ]
@@ -112,7 +283,7 @@ background-size: 12.5%
 .pull-left[
 - Why do we trade?
 
-- .onfire[Resources are in the wrong place!]
+- .hi[Resources are in the wrong place!]
 
 - People have *better* uses of resources than they are currently being used! 
 
@@ -131,7 +302,7 @@ background-size: 12.5%
 .pull-left[
 - *Why* are resources in the wrong place?
 
-- .onfire[We have the same stuff but different preferences]
+- .hi[We have the same stuff but different preferences]
 
 
 ]
@@ -152,7 +323,7 @@ background-size: 12.5%
 .pull-left[
 - *Why* are resources in the wrong place?
 
-- .onfire[We have the same stuff and/but different preferences]
+- .hi[We have the same stuff and/but different preferences]
 
 ]
 
@@ -170,10 +341,10 @@ background-size: 12.5%
 # Transaction Costs and Exchange I
 
 .pull-left[
-- But .shout[Transaction costs]!
-      - **Search costs**: cost of finding trading partners
-      - **Bargaining costs**: cost of reaching an agreement
-      - **Enforcement costs**: trust between parties, cost of upholding agreement, dealing with unforeseen contingencies, punishing defection, using police and courts 
+- But .hi[Transaction costs] make exchange costly!
+    - .hi-purple[Search costs]
+    - .hi-purple[Bargaining costs]
+    - .hi-purple[Enforcement costs]
 ]
 
 .pull-right[
@@ -202,26 +373,6 @@ background-size: 12.5%
 
 ---
 
-# Transaction Costs and Exchange III
-
-.pull-left[
-- .shout[Markets] are institutions that facilitate voluntary *impersonal* exchange and reduce transaction costs
-
-- There's a lot of institutions in the "bundle" we call "markets": 
-    - Prices, profits and losses, property rights, rule of law, contract enforcement, dispute resolution, protection, trust
-    
-- All of these things are *assumed* when we draw nice supply & demand graphs on the blackboard
-    - Much of this course: how do various *political institutions* enable these market institutions?
-]
-
-.pull-right[
-.center[
-![](https://www.dropbox.com/s/lmabz8rai4klokf/markets2.jpg?raw=1)
-]
-]
-
----
-
 # Social Problems that Markets Solve Well 
 
 .pull-left[
@@ -241,56 +392,142 @@ background-size: 12.5%
 
 ---
 
-# Social Problems that Markets Solve Well 
+# Social Problems that Markets Solve Well I
 
 .pull-left[
-- .onfire[Problem 1]: Resources have multiple uses that are rivalrous
 
-- .onfire[Problem 2]: Different people have different subjective valuations for uses of resources
+- .hi[Markets] are institutions that facilitate voluntary *impersonal* exchange and reduce transaction costs
 
-- .onfire[It is inefficient (immoral?) to use a resource in a way that prevents someone else who values it more from using it!]
-
-- Solution: Prices in a functioning market accurately measure **opportunity cost** of using resources in a particular way
-    - The price of a resource is the amount someone else is willing to pay to acquire it from its current use/owner
+- Prices in a functioning market accurately measure **opportunity cost** of using resources in a particular way
+  - The price of a resource is the amount someone else is willing to pay to acquire it from its current use/owner
 ]
 
 .pull-right[
 .center[
-![](https://www.dropbox.com/s/mh8owncbsm2lqkv/tugofwar.png?raw=1)
+![](https://www.dropbox.com/s/lmabz8rai4klokf/markets2.jpg?raw=1)
 ]
 ]
 
 ---
 
-# Markets
+# Social Problems that Markets Solve Well II
 
+.pull-left[
 - .hi[Property rights] provide a pattern of ownership
 
 - .hi[Prices] give us information about how to use scarce resources
 
 - .hi[Profits] incentivize production and .hi[Losses] discipline us
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/lmabz8rai4klokf/markets2.jpg?raw=1)
+]
+]
 
 ---
 
-# When and Why We Must Choose in Groups
+class: inverse, center, middle
 
-- Property rights & transaction costs
+# When We Must Choose in Groups
 
-- Externalities
-
-- Public goods
-
-- Collective Action problems
-
-- Justice
 
 ---
 
-# But *Groups* Don't Choose
+# When We Must Choose in Groups I
 
-- Methodological individualism
+.pull-left[
 
-- Society is not an optimization problem
+- Markets allocate resources by **individual choices** between **strangers**
+
+- Possibilities of .hi[market failure]
+  - Externalities
+  - Public Goods
+
+- Circumstances where people must make a **collective choice** or **know each other**
+  - Justice, fairness, equality
+  - Team production, public goods
+
+- Construct a framework for markets to operate within
+  - Property rights
+  - Transaction costs
+  - Regulation
+]
+
+.pull-right[
+.center[
+![:scale 80%](https://www.dropbox.com/s/hdgjre71wggdyp9/teamglobe.png?raw=1)
+]
+]
+
+---
+
+# When We Must Choose in Groups II
+
+.pull-left[
+
+- Circumstances where people must make a **collective choice** or **know each other**
+  - Justice, fairness, equality
+  - Team production, public goods
+
+- Construct a framework for markets to operate within
+  - Property rights
+  - Transaction costs
+  - Regulation
+]
+
+.pull-right[
+.center[
+![:scale 80%](https://www.dropbox.com/s/hdgjre71wggdyp9/teamglobe.png?raw=1)
+]
+]
+
+---
+
+# When We Must Choose in Groups II
+
+.pull-left[
+
+- Construct a framework for markets to operate within
+  - Property rights
+  - Transaction costs
+  - Regulation
+]
+
+.pull-right[
+.center[
+![:scale 80%](https://www.dropbox.com/s/hdgjre71wggdyp9/teamglobe.png?raw=1)
+]
+]
+
+---
+
+# Methodological Individualism
+
+.pull-left[
+
+- .hi[Only individual people act]
+
+- The individual is the base unit of all economic analysis
+
+- *"How will action/choice/policy/institution [X] affect each individual's well-being?"*
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/pjp9bpvqp54ldn4/individual1.png?raw=1)
+]
+]
+
+---
+
+# *Groups* Don't Choose
+
+.pull-left[
+
+- .hi-slate["Society"] is not a choosing-agent or an optimization problem
 
 - Individuals have different interests in their different capacities
   - Consumers
@@ -299,24 +536,11 @@ background-size: 12.5%
   - Interest groups
   - Elected officials
   - Bureaus
-
----
-
-# Politics Without Romance
-
-.pull-left[
-
-- We will both make your high school civics teacher proud
---
-and cry
-
 ]
 
 .pull-right[
 .center[
-.polaroid[
-![](../images/civics.jpg)
-]
+![](https://www.dropbox.com/s/aby3cf6ijkrjs7k/benevolentdespot.jpg?raw=1)
 ]
 ]
 
@@ -337,9 +561,28 @@ and cry
 
 ---
 
+# Politics Without Romance
+
+.right-column[
+
+- We will make your high school civics teacher proud
+
+and cry
+
+]
+
+.left-column[
+.center[
+.polaroid[
+![](https://www.dropbox.com/s/yj0i65ksntpselm/civics.jpg?raw=1)
+]
+]
+]
+
+---
 
 class: inverse, center, middle
-# About This Class
+# About This Course
 
 ---
 
@@ -388,12 +631,12 @@ See more details at the [assignments page](/assignments)
 
 .pull-left[
 .center[
-![:scale 60%](../images/publicchoiceholcombe.jpg)
+![:scale 60%](https://www.dropbox.com/s/b4slxtlrypt8b26/publicchoiceholcombe.jpg?raw=1)
 ]
 ]
 .pull-right[
 .center[
-![:scale 60%](../images/calculusofconsent.jpg)
+![:scale 60%](https://www.dropbox.com/s/lt3x1wfp24q41aq/calculusofconsent.jpg?raw=1)
 ]
 ]
 
@@ -440,28 +683,67 @@ See more details at the [assignments page](/assignments)
 
 ---
 
-# U.S. Federal 
+# U.S. Federal Revenues as % of GDP
 
+```{r, fig.width=12}
+taxrev<-fredr(
+  series_id = "FYFRGDA188S"
+)
 
+ggplot(data = taxrev)+
+  aes(x = date,
+      y = value,
+      color = series_id)+
+  geom_path(size=2)+
+  scale_x_date(date_labels = "%Y", breaks = "10 years")+
+  scale_y_continuous(breaks=seq(0,30,5),
+               labels=function(x){paste0(x,"%")})+
+  labs(x = "Year",
+       y = "Total Federal Revenues (% of GDP)",
+       caption = "Source: FRED")+
+  guides(color=F)+
+  theme_slides
+```
+ 
+---
+
+# U.S. Federal Revenues as % of GDP
+
+```{r, fig.width=12}
+spending<-fredr(
+  series_id = "FYONGDA188S"
+)
+
+ggplot(data = spending)+
+  aes(x = date,
+      y = value,
+      color = series_id)+
+  geom_path(size=2)+
+  scale_x_date(date_labels = "%Y", breaks = "10 years")+
+  scale_y_continuous(breaks=seq(0,50,5),
+               labels=function(x){paste0(x,"%")})+
+  labs(x = "Year",
+       y = "Total Federal Spending (% of GDP)",
+       caption = "Source: FRED")+
+  guides(color=F)+
+  theme_slides
+```
 
 ---
 
 # U.S. Federal Budget Surplus/Deficit as % of GDP
 
-```{r, fig.width = 10, dev.args = list(bg = "transparent")}
+```{r, fig.width=12}
 deficit<-fredr(
   series_id = "FYFSGDA188S"
 )
-
-deficit %>%
-  slice(-1)
 
 ggplot(data = deficit %>% slice(-1))+
   aes(x = date,
       y = value,
       color = series_id)+
   geom_path(size=2)+
-  geom_hline(yintercept=0, size=1, color = "white")+
+  geom_hline(yintercept=0, size=1)+
   scale_x_date(date_labels = "%Y", breaks = "10 years")+
   scale_y_continuous(breaks=seq(-30,10,5),
                labels=function(x){paste0(x,"%")})+
@@ -469,5 +751,39 @@ ggplot(data = deficit %>% slice(-1))+
        y = "Budget Surplus or Deficit (% of GDP)",
        caption = "Source: FRED")+
   guides(color=F)+
-  invthm
+  theme_slides
 ```
+
+---
+
+# U.S. Total Public Debt as % of GDP
+
+```{r, fig.width=12}
+debt<-fredr(
+  series_id = "GFDEGDQ188S"
+)
+
+ggplot(data = debt)+
+  aes(x = date,
+      y = value,
+      color = series_id)+
+  geom_path(size=2)+
+  scale_x_date(date_labels = "%Y", breaks = "10 years")+
+  scale_y_continuous(breaks=seq(30,120,10),
+               labels=function(x){paste0(x,"%")})+
+  labs(x = "Year",
+       y = "Debt (% of GDP)",
+       caption = "Source: FRED")+
+  guides(color=F)+
+  theme_slides
+```
+
+---
+
+# U.S. Federal Spending Breakdown
+
+.center[
+![:scale 60%](https://www.dropbox.com/s/aefl9cok5kohq2g/usspending2019.png?raw=1)
+]
+
+.source[Source: [USAspending.gov](https://www.usaspending.gov/#/explorer/budget_function)]

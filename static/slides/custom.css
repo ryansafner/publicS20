@@ -227,13 +227,13 @@ a:active {
 .remark-code-line-highlighted { background-color: #ffff88; }
 
 .inverse {
-  background-color: #272822;
+  background-color: #23373B; /* 272822 */ 
   color: #d6d6d6;
   text-shadow: 0 0 20px #333;
 }
 
 .inverse h1, .inverse h2, .inverse h3 {
-  color: #FFFFFF;
+  color: #56B4E9;
 }
 
 /* Two-column layout */
@@ -310,9 +310,12 @@ th, td { padding: 5px; }
 /* Custom things start below */ 
 
 .remark-slide-content {
-  background-color: #23373B; /* #314f4f; */ 
-  color: #ffffff;
-  font-size: 32px;
+  background-color: #F5F5F5 ; /* #23373B; */
+  background-image: url(https://publics20.classes.ryansafner.com/images/public_hex.png);
+  background-position: 99% 99%;
+  background-size: 8%;
+  color: #000000;
+  font-size: 28px;
   font-weight: 300;
   line-height: 1.5;
   padding: 0em 2em 1em 2em /* 1em first */
@@ -355,9 +358,8 @@ th, td { padding: 5px; }
 } */
 
 .inverse {
-  background-color: #FFFFFF; /* #236192; */
+  background-color: #236192; /* #236192; */
   text-shadow: none;
-  color: #23373B;
 }
 
 .remark-slide-content > h1 {
@@ -367,13 +369,13 @@ th, td { padding: 5px; }
   font-size: 60px;
   margin-top: 0px;
   margin-left: -00px;
-  color: #56B4E9; /* #236192; FAFAFA */
+  color: #236192; /* #56B4E9 ; FAFAFA */
 }
 
 .inverse > h1 {
   /*font-variant: small-caps;*/
   font-size: 60px;
-  color: #56B4E9;
+  color: #FFFFFF;
 }
 
 .remark-slide-content > inverse {
@@ -405,14 +407,14 @@ color: #23373B;
 }
 
 .title-slide {
-  background-color: #23373B;
+  background-color: #236192;
   background-image: url(https://publics20.classes.ryansafner.com/images/public_hex.png);
-  background-position: 99% 99%;
-  background-size: 12.5%;
+  background-position: 99% 90%;
+  background-size: 25%;
 }
 
 .title-slide > h1  {
-  color: #56B4E9;
+  color: #FFFFFF;
   font-variant: normal;
   font-size: 64px;
   font-family: 'Yanone Kaffeesatz';
@@ -425,7 +427,7 @@ color: #23373B;
 .title-slide > h2  {
   margin-top: -50px; /* changed from -25*/
   padding-bottom: -20px;
-  color: #56B4E9;
+  color: #FFFFFF;
   text-shadow: none;
   font-weight: 300;
   font-size: 38px;
@@ -434,7 +436,7 @@ color: #23373B;
 }
 .title-slide > h3  {
   margin-top: 0px;  /*added*/
-  color: #56B4E9;
+  color: #FFFFFF;
   text-shadow: none;
   font-weight: 300;
   font-size: 30px;
