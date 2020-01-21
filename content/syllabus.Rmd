@@ -13,7 +13,7 @@ library(pander)
 ```
 
 - [<i class="fas fa-file-pdf"></i> `Download as PDF`](/files/syllabus-pdf.pdf)
-- **Last Updated**: January 9, 2020
+- **Last Updated**: January 20, 2020
 
 > "What's so great about democracy other than it's democratic?" -- Gordon Tullock
 
@@ -164,7 +164,7 @@ Watch this excellent and accurate video explaining office hours:
 
 ### Enrollment
 
-Students are responsible for verifying their enrollment in this class. The last day to add or drop this class with no penalty is **Tuesday, September 4**. Be aware of [important dates](https://www.hood.edu/offices-services/registrars-office/academic-calendar).
+Students are responsible for verifying their enrollment in this class. The last day to add or drop this class with no penalty is **Thursday, January 23**. Be aware of [important dates](https://www.hood.edu/offices-services/registrars-office/academic-calendar).
 
 ### Honor Code
 
@@ -172,7 +172,7 @@ Hood College has an Academic Honor Code which requires all members of this commu
 
 ### Van Halen and M&Ms
 
-When you have completed reading the syllabus, email me a picture of the band Van Halen and a picture of a bowl of M&Ms. If you do this *before* the due date of the first paper, you will get 3 bonus points on the paper. Yes, this is real.
+When you have completed reading the syllabus, email me a picture of the band Van Halen and a picture of a bowl of M&Ms. If you do this *before* the due date of the first exam, you will get bonus points on the exam.^[If 75-100% of the class does this, you each get 2 points. If 50-75% of the class does this, you each get 4 points. If 25-50% of the class does this, you each get 6 points. If 0-25% of the class does this, you each get 8 points.] Yes, this is real.
 
 ### Accessibility, Equity, and Accommodations
 

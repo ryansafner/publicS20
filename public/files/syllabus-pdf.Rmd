@@ -11,17 +11,17 @@ output:
       in_header: 
 geometry: margin=1in
 
-course: "Industrial Organization"
+course: "Public Economics"
 coursecode: "ECON 326 - Spring 2020"
 section: ""
 author: "Dr. Ryan Safner"
-semester: "[ioS20.classes.ryansafner.com](http://IOS20.classes.ryansafner.com)"
+semester: "[publicS20.classes.ryansafner.com](http://publicS20.classes.ryansafner.com)"
 
 email: "safner@hood.edu"
 web: "ryansafner.com"
-officehours: "TuTh 3:15–5:00PM"
+officehours: "MW 3:30–5:00PM"
 office: "Rosenstock Hall 118"
-classroom: "Rosenstock Hall 101"
+classroom: "Rosenstock Hall 317"
 classhours: "TuTh 2:00–3:15PM"
 
 fontfamily: Fira Sans
@@ -40,24 +40,31 @@ library(tibble)
 library(pander)
 ```
 
-> "The consequences for human welfare involved in questions like these are simply staggering: Once one starts to think about them, it is hard to think about anything else. -- Robert Lucas, Nobel Laureate in Economics 1995"
+> "What's so great about democracy other than it's democratic?" -- Gordon Tullock
 
-**Economic Development** asks and attempts to answer the fundamental question posed by Adam Smith in 1776: *why are some countries wealthy, and others poor?*. Before "economics" emerged as its own discipline in the 20^th^ century, and adopted more rigorous mathematical trappings, the exploration of *political economy* attempted to answer this question: political, social, and cultural institutions and histories had as much to offer as the division of labor and market exchanges in answering the challenge. In the aftermath of WWII, economists in "the First World" began more consciously studying how to promote development in "the Third World", while policymakers built international institutions (the IMF, the World Bank, the Bretton-Woods financial systems) aimed at securing peace and outwardly developing what they say as the "Third World." In order to grapple with these key questions, we will examine a mixture of political economy and economic history to understand the role of political, cultural, and social institutions in directing economic activity towards prosperity or towards ruin. This course, like the professionals dealing with the big questions, will offer many suggestions but fewer "correct" or concrete answers than you may be used to. You should come to this course as a willing participant in the ongoing conversation.
+> "Democracy is the worst form of government, except for all the others that have been tried from time to time." -- Winston Churchill 
 
-The economics of development combines core themes and models of macroeconomics (growth theory, macroeconomic stability and policy) with core principles of microeconomics (price theory), and as such, the **prerequisites** for this course are **either ECON 205 or ECON 206**.
+**The Public Sector** in most modern liberal democracies accounts for about $\frac{1}{3}$ of gross national product, and various fiscal and regulatory policies strongly influence the remaining $\frac{2}{3}$. How does "the government" make decisions, enforce laws, and provide the goods and services it is expected to? How does it interact with the rest of the economy? A major part of this course is exploding the black box that we call "government" to examine and model the various political agents: voters, politicians, bureaucrats, interest groups, and how they interact with one another to yield public policy and achieve their separate goals.
 
-This course will be a hybrid of formal lecture, hands-on activities, and student presentations of scholarly articles, with exams and a writing writing assignment serving as the prime means of evaluation. 
+The major analytic framework used in this course is commonly known as "public choice:" the application of economic modeling (optimization and equilibrium) to study *non*-market decision-making. Markets use prices and voluntary exchanges to allocate scarce goods among competing uses based on individual preferences. Many other aspects of modern life do *not* rely on prices or voluntary exchanges; the primary arena we explore is *politics*---the realm of collective decision-making where a *single choice* is made for *everyone*. A simple summary of what we will be doing in this course is expanding and exploring answers to the question: **how do we choose in groups?**
+
+Our primary focus will be the government of a modern liberal democracy, particularly the United States since 1789. In many ways, this is a more rigorous complement to your classic high school or college Civics course, but you will soon discover, it will at times emphasize key civic virtues of American governance, and at other times gore sacred cows and contradict popular myths.
+
+**As a 400-level course**, I intend to treat this course as a *seminar.* **This implies a significant amount of reading, writing, and discussing, on your part, requiring you to take ownership of your own learning.** Against my strong instincts to lecture, this class will primarily be discussion-based and focused heavily on required readings for each meeting. Each class meeting, I will put our readings into context and provide some elaboration of key insights for 20-30 minutes, then the remainder will be open discussion. I have optimized the readings to give you something approachable and manageable each class. As such, I expect you to have done the readings.
+
+This course assumes you have basic knowledge of how a market economy works at the micro- and macro- levels, hence, the **prerequisites** for this course are **ECON 205 and ECON 206; ECON 306 strongly recommended**.
 
 # Course objectives
 
 **By the end of this course,** you will: 
 
-- Explain how the development community measures economic development
-- Interpret regression tables in the empirical literature in development
-- Demonstrate different theories of economic development
-- Explain why various policies aimed at promoting development have failed
-- Describe essential conditions for successful development
-- Discuss the broad economic history of "the West", several key "Emerging Markets" (such as Russia, China, Korea, etc.), and several other case studies of developing countries
+- Understand the incentives of different participants in a liberal democracy, particularly voters, politicians, bureaucrats, regulators, and special interest groups
+- Understand the processes by which *actual* public policy gets made by *actual* people
+- Understand the difference between constitutional-level rules and political rules and the importance of each
+- Explain current events and public policies in terms of individuals accomplishing separate political goals through political exchanges
+- Recognize the analytical and practical similarities and differences between individuals acting in markets and non-market institutions
+- Understand and explain real world differences in outcomes and in operations between political, cultural, economic, and social institutions in different societies
+- Overcome the nirvana fallacy
 
 Given these objectives, this course fulfills two of the learning outcomes for [the George B. Delaplaine, Jr. School of Business](https://www.hood.edu/academics/departments/george-b-delaplaine-jr-school-business/student-learning-outcomes) Economics B.A. program:
 
@@ -74,22 +81,20 @@ See my [tips for success in this course](http://devf19.classes.ryansafner.com/re
 
 # Course materials
 
-You can find all course materials at my academic website dedicated for (all sections of) this course [devF19.classes.ryansafner.com](http://devf19.classes.ryansafner.com).
+You can find all course materials at my academic website dedicated for this course [publicS20.classes.ryansafner.com](http://publics20.classes.ryansafner.com).
 
-My lecture slides will be shared with you, and serve as your primary resource, but our main "textbook" below is **recommended** as the next best resource and will be available from the campus bookstore. 
+My lecture slides (made available to you) are the primary resource for the material and the best guide to prepare for assignments. We do not have a "textbook" that we will follow chapter by chapter, rather a series of academic journal articles and other readings posted on the website, and selected chapters from the two books below.
 
-## Books
+1. Holcombe, Randall G, 2016, *Advanced Introduction to Public Choice*, Northampton, MA: Edward Elgar Publishing, ISBN: 978-1-78536-206-4
+2. Buchanan, James M and Gordon Tullock, 1999, [*The Calculus of Consent: The Logical Foundations of Constitutional Democracy*](https://oll.libertyfund.org/titles/buchanan-the-calculus-of-consent-logical-foundations-of-constitutional-democracy), Indianapolis, IN: Liberty Fund, Inc. ISBN: 978-0865972186^[Link to free PDF version. If you wish to purchase a hard copy, note this can also be found in several equivalent versions: [Volume 3 of the Collected Works of James Buchanan](https://www.amazon.com/Calculus-Consent-Collected-Works-Buchanan/dp/0865972184) and [Volume 2 of the Collected Works of Gordon Tullock](https://www.amazon.com/Calculus-Consent-Selected-Gordon-Tullock/dp/0865975329/ref=pd_sbs_14_t_0/146-3613138-3597117?_encoding=UTF8&pd_rd_i=0865975329&pd_rd_r=d4b5a96a-f9bc-4afb-8820-a2dd881d9079&pd_rd_w=sf42p&pd_rd_wg=R2xmd&pf_rd_p=5cfcfe89-300f-47d2-b1ad-a4e27203a02a&pf_rd_r=H3W75RS4ZR4KCQH6H2G1&psc=1&refRID=H3W75RS4ZR4KCQH6H2G1) ]
 
-My lecture slides (made available to you) are the primary resource for the material and the best guide to prepare for assignments. There are two books that we will roughly be following in parallel, both available at the bookstore (or you can find them on Amazon, ebay, etc). You may choose to purchase used or old versions, but be aware that content and ordering may slightly vary across versions. 
+The first book is the closest thing to a "textbook," as it provides a  good introduction to the background theory for every lesson. We will only have required reading assignments from it a few times this course (which I will make available on the website). However, I recommend that you read the (very short) chapters associated with each topic as we move through the course on your own.
 
-1. Acemoglu, Daron and James A. Robinson, 2008, *Why Nations Fail: The Origins of Power, Prosperity, and Poverty,* New York: Crown Business
-2. Easterly, William, 2000, *The Elusive Quest for Growth: Economists' Adventures and Misadventures in the Tropics,* Cambridge, Mass: MIT Press
+The second book is one of the monumental books that is largely credited with revolutionizing the study of public economics that, in part, won James Buchanan the 1986 Nobel Prize in Economics. The entire book is [free online](https://oll.libertyfund.org/titles/buchanan-the-calculus-of-consent-logical-foundations-of-constitutional-democracy), but as one of the classics in public economics, I highly recommend you purchase it and read beyond our required chapters at some point.
 
-Both books are landmarks in the study of economic development by renowned development economists and are written for a popular audience. These books should be easily readable and affordable -- you could buy and read them at the airport or the beach (should you be nerdy enough like me). Both are listed as **required** in the bookstore, but feel free to get them elsewhere.
+Both books are quite cheap, and can be found both at the Hood Bookstore or online retailers like Amazon and eBay.
 
-The first book is something like "our textbook" for the course, as it outlines many of the key topics that we cover this semester. We will have frequent readings from it, but my coverage of topics and sequencing will be different from the book. It is one of my favorite books due to the central role that different institutions play in determining the variation among countries today.
-
-The second book is older, but aptly describes the history of development economics as a field, and is a brilliant and relentless narrative of all of the policies, fads, and politics of the development community and how many of them went horribly wrong.
+I have no financial interest in requiring you to purchase either book. 
 
 ## Articles
 
@@ -102,10 +107,10 @@ Throughout the course, I will post both required and supplemental (non-required)
 ```{r assignments-grades, include=FALSE}
 assignments <- tribble(
   ~"",  ~Assignment, ~Percent,
-  "n"     , "Participation (Average)", "25%",
-  1, "Country Profile", "5%",
-  2      , "Short Paper", "20% each",
-  1     , "Final", "30%"
+  "n"     , "Participation (Average)", "30%",
+  1, "Policy Paper", "30%",
+  2      , "Midterm", "20%",
+  1     , "Final", "20%"
 )
 
 grading <- tribble(
@@ -182,7 +187,7 @@ Watch the excellent and accurate video explaining office hours (on website sylla
 
 ### Enrollment
 
-Students are responsible for verifying their enrollment in this class. The last day to add or drop this class with no penalty is **Tuesday, September 4**. Be aware of [important dates](https://www.hood.edu/offices-services/registrars-office/academic-calendar).
+Students are responsible for verifying their enrollment in this class. The last day to add or drop this class with no penalty is **Thursday, January 23**. Be aware of [important dates](https://www.hood.edu/offices-services/registrars-office/academic-calendar).
 
 ### Honor Code
 
@@ -202,4 +207,4 @@ This course is intended to be accessible for all students, including those with 
 
 # Schedule
 
-**You can find a full schedule** with resources for each class meeting on the [course website schedule page](http://devF19.classes.ryansafner.com/schedule/).
+**You can find a full schedule** with resources for each class meeting on the [course website schedule page](http://publics20.classes.ryansafner.com/schedule/).
