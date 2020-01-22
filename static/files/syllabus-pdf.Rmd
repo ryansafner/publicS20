@@ -12,7 +12,7 @@ output:
 geometry: margin=1in
 
 course: "Public Economics"
-coursecode: "ECON 326 - Spring 2020"
+coursecode: "ECON 410 - Spring 2020"
 section: ""
 author: "Dr. Ryan Safner"
 semester: "[publicS20.classes.ryansafner.com](http://publicS20.classes.ryansafner.com)"

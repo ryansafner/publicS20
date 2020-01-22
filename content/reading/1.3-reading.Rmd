@@ -1,0 +1,13 @@
+---
+title: "1.3. Property Rights - Readings"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-fullnote-bibliography-no-bib.csl
+---
+
+# Required Reading:
+
+- [<i class="fas fa-file-pdf"></i> Demsetz (1967), "Toward a Theory of Property Rights"](/readings/Demsetz-1967.pdf)
+
+# Tips and Questions to Read for:
+
