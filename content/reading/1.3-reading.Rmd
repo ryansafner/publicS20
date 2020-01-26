@@ -11,3 +11,12 @@ csl: ../../static/bib/chicago-fullnote-bibliography-no-bib.csl
 
 # Tips and Questions to Read for:
 
+
+- What are the benefits and costs of property rights?
+
+- Why don't we make everything property? Why might we leave some things un-"propertized"?
+
+- What is the relationship between property rights and externalities?
+
+- How is this article related to Coase's article? 
+
