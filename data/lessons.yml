@@ -12,8 +12,10 @@ lessons:
     
   - title: "1.3 Property Rights"
     reading: "1.3-reading"
+    slides: "1.3-slides"
     
   - title: "1.4 Public Goods and Collective Action I"
+    reading: "1.4-reading"
 
   - title: "1.5 Public Goods and Collective Action II"
 

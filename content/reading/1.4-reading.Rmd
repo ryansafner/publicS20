@@ -1,0 +1,24 @@
+---
+title: "1.4. Collective Action - Readings"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-fullnote-bibliography-no-bib.csl
+---
+
+# Required Reading:
+
+- [<i class="fas fa-file-pdf"></i> Olson (1982), *The Rise and Decline of Nations*, Chapter 2, "The Logic"](/readings/Olson-1982.pdf)
+
+Sorry about the formatting! 
+
+# Tips and Questions to Read for:
+
+- What are the similarities/differences between individual interests and group interests (for groups to which individuals belong)?
+
+- What does Olson say is Marx's shortcoming of his approach to groups (economic classes)?
+
+- What are the economic differences between large groups and small groups, in terms of individual incentives?
+
+- Why might groups fail to achieve their stated goals?
+
+- What are "selective incentives," why are they important, and what may be some examples?  
