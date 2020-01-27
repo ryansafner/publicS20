@@ -40,6 +40,14 @@ theme_slides <- theme_classic() +
   )
 ```
 
+# Last Class
+
+.center[
+![:scale 70%](https://www.dropbox.com/s/13nf8zhqzs45zii/internalizeexternalitiesmeme.jpg?raw=1)
+]
+
+---
+
 # Takeaways from Coase I
 
 .left-column[
@@ -108,6 +116,9 @@ Economics Nobel 1991]
 
 - .hi-purple[Rivalry]: one use of a resource removes it from other uses
 
+
+.source[Hardin, Garett, 1968, "The Tragedy of the Commons," *Science* 162(3859):1243-1248]
+
 ]
 
 ---
@@ -117,7 +128,7 @@ Economics Nobel 1991]
 
 .pull-left[
 .center[
-![](https://www.dropbox.com/s/qgnqwqr86wi1nlz/pollutedriver.png?raw=1)
+![:scale 100%](https://www.dropbox.com/s/qgnqwqr86wi1nlz/pollutedriver.png?raw=1)
 ]
 ]
 
@@ -127,9 +138,9 @@ Economics Nobel 1991]
 
 - No responsibility over outcome
 
-- Incentive to overexploit (before others do)
+- Incentive to **overexploit** and **deplete** resource (before others do)
 
-- Negative externality on others
+- A negative externality on others
 ]
 
 ---
@@ -146,12 +157,54 @@ Economics Nobel 1991]
 
 - .hi[Property rights]: socially agreed upon rules that determine how resources are used
 
-- Primary right is the right to exclude others from using a rivalrous resource
+- Primary right is the .hi-purple[right to exclude others] from using a rivalrous resource
 ]
 
 ---
 
 # Property Rights
+
+.left-column[
+.center[
+![](https://www.dropbox.com/s/bufqsl9ub03iru3/blackstone.png?raw=1)
+
+Sir William Blackstone
+
+(1723-1780)
+]
+]
+.right-column[
+
+> "There is nothing which so generally strikes the imagination, and engages the affections of mankind, as the right of property; or that sole and despotic dominion which one man claims and exercises over the external things of the world, in total exclusion of the right of any other individual in the universe," (Book II, Chapter 1).
+
+
+.source[Blackstone, Sir William, 1765-1769, *Commentaries on the Laws of England*]
+
+]
+
+---
+
+# Theories of Property Rights
+
+.pull-left[
+
+- A primary role of the State is to protect property rights
+
+- Are property rights **absolute**?
+
+- Do property rights exist **prior to**, or **independent of**, **the State**?
+
+]
+
+.pull-right[
+.center[
+![:scale 80%](https://www.dropbox.com/s/ib3l7tob3972sbk/propertyrights.png?raw=1)
+]
+]
+
+---
+
+# Property Rights as a Bundle
 
 .pull-left[
 .center[
@@ -202,6 +255,7 @@ Harold Demsetz
 .right-column[
 
 > *"Property rights develop to internalize externalities when the gains from internalization become larger than the costs of externalization," (p.350).*
+
 ]
 
 .source[Demsetz, Harold, 1967, "Towards a Theory of Property Rights," *American Economic Review* 57(2): 347-359]
@@ -269,6 +323,7 @@ Harold Demsetz
 # Extra: Interesting Property Cases III
 
 .center[
-![](https://www.dropbox.com/s/jaef1lslz0hfm3j/miamihotel.jpg?raw=1)
+![:scale 65%](https://www.dropbox.com/s/jaef1lslz0hfm3j/miamihotel.jpg?raw=1)
+
 *Fontainebleau Hotel Corp. v. Forty-Five Twenty-Five, Inc* (1959) 114 So. 2d 357, 1959 Fla. App.
 ]
