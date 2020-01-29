@@ -1,0 +1,312 @@
+---
+title: "1.4: Collective Action and Public Goods"
+subtitle: "ECON 410 · Public Economics · Spring 2020"
+author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/publicS20"><i class="fa fa-github fa-fw"></i> ryansafner/metricsf19</a><br> <a href="https://publicS20.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> publicS20.classes.ryansafner.com</a><br>'
+#date:
+output:
+  xaringan::moon_reader:
+    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML" # rescales math with css changes https://github.com/yihui/xaringan/issues/143
+    lib_dir: libs
+    df_print: paged
+    #seal: false
+    css: [custom.css, custom-fonts.css, "hygge"] #, metropolis, metropolis-fonts
+    nature:
+      beforeInit: ["macros.js", "https://platform.twitter.com/widgets.js"] # first is for rescaling images , second is for embedding tweets, https://github.com/yihui/xaringan/issues/100
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    includes:
+      in_header: header.html # for font awesome, used in title  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = F,
+                      warning = F,
+                      message = F,
+                      fig.retina = 3,
+                      fig.align = "center")
+library("tidyverse")
+
+theme_slides <- theme_classic() + 
+  theme(
+    text = element_text(family = "Fira Sans", size = 24)
+  )
+```
+
+# The Story So Far
+
+- Exchange is really about property rights over goods and services, (not just the goods themselves)
+
+- Property rights can internalize externalities
+
+- But it can be costly to create and enforce property rights
+
+---
+
+# Mancur Olson
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/e38p2ajh8af3a9g/mancurolson.png?raw=1)
+
+Mancur Olson
+
+1932-1998
+]
+]
+
+.right-column[
+
+- 1962, *The Logic of Collective Action*
+
+- 1982, *The Rise and Decline of Nations*
+
+]
+
+---
+
+# Another Classic Economic Problem
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/dazzqlckce0akou/openland.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- .hi[Public Good]: a good that is .hi-purple[non-rival] and .hi-purple[non-excludable]
+
+- .hi-purple[Rivalry]: one use of a resource removes it from other uses
+
+- .hi-purple[Excludability]: ability or right to prevent others from using it (ownership)
+
+]
+
+---
+
+# The Free Rider Problem
+
+.pull-left[
+- Individual bears a **private cost to contribute**, but only gets a **small fraction of the (dispersed) benefit** of a good
+
+- If individuals can gain **access** to the good (nonexcludable) **without paying**, may lead to...
+
+- .hi[Free riding]: individuals consume the good without paying for it
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/evcpgmouveig2p0/freeriding.jpg?raw=1)
+]
+]
+
+---
+
+# Examples?
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/p6jeypz18wnvsjn/park2.png?raw=1)
+]
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/i4e5a16dy4qzhdq/jetfighter.png?raw=1)
+]
+]
+
+---
+
+# Market Failure from Public Goods
+
+.pull-left[
+
+
+- No incentive for people to contribute and pay for the good
+
+- If enough people obtain the benefits without incurring the costs...
+
+- **Not profitable** for private market actors to supply it
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/5zn7f9vzuxxqx8k/cuttingline.jpg?raw=1)
+]
+]
+
+---
+
+# Adam Smith on Public Goods
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/w5ecx0628ihm9n2/smith.png?raw=1)
+
+.smallest[
+Adam Smith
+
+1723-1790
+]
+]
+]
+.right-column[
+
+"The third and last duty of the sovereign or commonwealth is that of .hi[erecting and maintaining those public institutions and those public works], which, though they may be in the highest degree advantageous to a great society, are, however, .hi[of such a nature that the profit could never repay the expence to any individual or small number of individuals], and which it therefore .hi[cannot be expected that any individual or small number of individuals should erect or maintain]. The performance of this duty requires, too, very different degrees of expence in the different periods of society," (Book VI, Ch. 9).
+
+.source[Smith, Adam, 1776, *An Enquiry into the Nature and Causes of the Wealth of Nations*]
+
+]
+
+---
+
+# Public Goods $\neq$ "Good for the Public"
+
+```{r, fig.width=12}
+red_pink <- "#e64173"
+blue <- "#2b59c3"
+
+venn_colors <- c(red_pink, blue)
+venn_lines <- rep("solid", 10)
+# Locations of circles
+venn_df <- tibble(
+  x  = c( 0.0,   2.0),
+  y  = c( 0.0,   0.0),
+  r  = c( 2.0,   2.0),
+  l  = c( "Things Governments \n Provide", "Public Goods"),
+  xl = c( -1.0,    3.0),
+  yl = c( 0.0,   0.0))
+# Venn
+ggplot(data = venn_df, aes(x0 = x, y0 = y, r = r, fill = l, color = l)) +
+ggforce::geom_circle(aes(linetype = l), alpha = 0.3, size = 0.75) +
+theme_void() +
+theme(legend.position = "none") +
+scale_fill_manual(values = venn_colors) +
+scale_color_manual(values = venn_colors) +
+scale_linetype_manual(values = venn_lines) +
+  geom_text(aes(x = xl, y = yl, label = l), size = 8, family = "Fira Sans Condensed") +
+coord_equal()
+```
+
+---
+
+# Generalizing: Collective Action Problems
+
+.pull-left[
+
+- .hi[Collective action problem]: situation where an individual's interest and a group's interest may conflict
+
+- Benefits (or costs) of outcome are **nonrival** and flow to *all members* of the group
+
+- Decisions & costs need to be incurred by individuals
+
+- **Individual preferences** need to aggregate into a **single decision/outcome**
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/4xum8hnk9tvrr0i/individualvsgroup.png?raw=1)
+]
+]
+
+---
+
+# Collective Action Problem: Examples I
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/gzl0ga0ytz2o8co/concert.jpg?raw=1)
+]
+
+---
+
+# Collective Action Problem: Examples II
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/seu25mb5gulwxqy/trafficjam.png?raw=1)
+]
+
+---
+
+# Collective Action Costs I
+
+.pull-left[
+
+- Groups may share a **common interest**
+
+- But **composed of individuals with their own preferences**
+  - Individuals bear the personal cost of contributing
+  - Individuals gain a small share of the benefits of group action
+
+- Additionally, **transaction costs/ bargaining** to get a group to agree on decision
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/4xum8hnk9tvrr0i/individualvsgroup.png?raw=1)
+]
+
+]
+
+---
+
+# Collective Action Costs II
+
+.pull-left[
+
+- Very hard for group action with .hi[concentrated costs and dispersed benefits]
+
+- Easy for group action with .hi[concentrated benefits and dispersed costs]
+  - Remember this idea once we start explaining public policy!
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/4xum8hnk9tvrr0i/individualvsgroup.png?raw=1)
+]
+
+]
+
+---
+
+# Implications: Size and Homogeneity
+
+.pull-left[
+
+- **Smaller** and more **homogenous** groups face **lower** collective action costs of organizing than **larger** and more **heterogeneous** groups
+
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/8egr2gjdtp7hop6/protest.jpg?raw=1)
+]
+
+]
+
+---
+
+# Implications: Selective Incentives
+
+.pull-left[
+
+- Groups often need .hi["selective incentives"] to **reward contribution** and to **punish free riding** in groups
+
+- Positive and negative incentives
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/8jx5curi1qtjst8/incentives.jpg?raw=1)
+]
+
+]
