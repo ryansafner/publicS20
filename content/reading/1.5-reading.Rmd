@@ -1,0 +1,37 @@
+---
+title: "1.5. Efficiency and Justice - Readings"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-fullnote-bibliography-no-bib.csl
+---
+
+# Required Reading:
+
+- [<i class="fab fa-youtube"></i> Sandel, 2009, "Justice"](http://justiceharvard.org/justicecourse/) Lectures 5 (Free to Choose) and 14 (A Deal is a Deal)
+
+These are lectures from Michael Sandel's *Justice* class at Harvard, one of the most popular courses. Due to the way these videos are cut, I encourage (but don't require) you to watch part of the lecture immediately *following* each lecture mentioned above (e.g. lectures 6 and 15) as it continues the relevant discussions.
+
+# Recommended Reading:
+
+You may wish to glance at some of the Wikipedia pages on the two major books from which themes and opposing perspectives we discuss come from: 
+
+- [<i class="fab fa-wikipedia-w"></i> Wikipedia: "Anarchy, State, and Utopia"](https://en.wikipedia.org/wiki/Anarchy,_State,_and_Utopia)
+- [<i class="fab fa-wikipedia-w"></i> Wikipedia: "A Theory of Justice"](https://en.wikipedia.org/wiki/A_Theory_of_Justice)
+
+# Tips and Questions to Read for:
+
+The videos cover a lot of ground on different political philosophies and their consequences, but our main points we want to focus on is Rawls vs. Nozick on "social/distributive justice."
+
+- What is **social/distributive justice**? How might we define it?
+
+- Do you agree more with Nozick or Rawls?
+
+- Where are there points of tension and/or agreement between the two positions?
+
+- Is/how can coercive redistribution (be) just(ified)?
+
+- Is/how can (in)equality (be) just(ified)?
+
+- How do Nozick and Rawls each answer the question: what makes a distribution just or unjust?
+
+- What is the best way to provide for those least well off?
