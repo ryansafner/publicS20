@@ -279,16 +279,14 @@ blockquote {
 
 .remark-slide table {
   margin: auto;
-  color: #000;
-  background-color: #eee;
   border-top: 1px solid #666;
   border-bottom: 1px solid #666;
   font-size: 26px;
 }
 
-.remark-slide table thead th { border-bottom: 2px solid #666; }
+.remark-slide table thead th { border-bottom: 1px solid #ddd; }
 th, td { padding: 5px; }
-.remark-slide thead, .remark-slide tfoot { background: #afafaf } /*  .remark-slide tr:nth-child(even) */
+.remark-slide thead, .remark-slide tfoot, .remark-slide tr:nth-child(even) { background: #eee }
 
 
 /* Class of tables with no stripe - for regression outputs*/
@@ -650,51 +648,3 @@ color: #23373B;
   color: gray;
   float: bottom;
 }
-
-
-/* 
-for nice numbered bullets 
-https://github.com/malcolmbarrett/kakashi/blob/master/kakashi.css 
-*/ 
-
-
-ol {
-  counter-reset: my-counter;
-  list-style: none;
-  padding-left: 40px;
-  font-size: 32px;
-  /* font-weight: bold; */
-  text-align: left;
-}
-
-ol li {
-  counter-increment: my-counter;
-  padding-left: 40px;
-  position: relative;
-  font-size: 32px;
-  margin: 20px 0;
-  display: block;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-}
-
-ol li::before {
-  content: counter(my-counter);
-  color: #fff;
-  font-size: 32px;
-  /* font-weight: bold; */
-  position: absolute;
-  left: -25px;
-  line-height: 50px;
-  width: 50px;
-  height: 50px;
-  top: 0;
-  background: #56B4E9;
-  border-radius: 50%;
-  text-align: center;
-}
-
-/* UL https://stackoverflow.com/questions/56338948/bullet-color-in-xaringan-presentation */
-

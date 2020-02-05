@@ -20,6 +20,7 @@ lessons:
 
   - title: "1.5 Efficiency and Justice"
     reading: "1.5-reading"
+    slides: "1.5-slides"
 
   - title: '<span class="fake-header-table">Constitutional Political Economy</span>'
     header: True

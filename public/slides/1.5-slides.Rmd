@@ -1,0 +1,805 @@
+---
+title: "1.5: Efficiency and Justice"
+subtitle: "ECON 410 · Public Economics · Spring 2020"
+author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/publicS20"><i class="fa fa-github fa-fw"></i> ryansafner/metricsf19</a><br> <a href="https://publicS20.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> publicS20.classes.ryansafner.com</a><br>'
+#date:
+output:
+  xaringan::moon_reader:
+    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML" # rescales math with css changes https://github.com/yihui/xaringan/issues/143
+    lib_dir: libs
+    df_print: paged
+    #seal: false
+    css: [custom.css, custom-fonts.css, "hygge"] #, metropolis, metropolis-fonts
+    nature:
+      beforeInit: ["macros.js", "https://platform.twitter.com/widgets.js"] # first is for rescaling images , second is for embedding tweets, https://github.com/yihui/xaringan/issues/100
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    includes:
+      in_header: header.html # for font awesome, used in title  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = F,
+                      warning = F,
+                      message = F,
+                      fig.retina = 3,
+                      fig.align = "center")
+library("tidyverse")
+
+theme_slides <- theme_classic() + 
+  theme(
+    text = element_text(family = "Fira Sans", size = 24)
+  )
+```
+
+class: inverse, center, middle
+
+# Efficiency
+
+---
+
+# Efficiency
+
+.pull-left[
+
+- Common .hi[tradeoff] between .hi[efficiency] and .hi[equity]
+
+- .hi[Efficiency]: efforts to grow the economic pie
+- .hi[Equity]: efforts to divide the pie fairly
+
+- What is the role of the government in either?
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/qnb6lhagbmycpws/economicpie.jpg?raw=1)
+]
+]
+
+---
+
+# Markets and Pareto Efficiency
+
+.pull-left[
+
+- Voluntary exchange is a .hi[Pareto improvement]: change in allocation that makes at least one person better off and making nobody worse off
+
+- An allocation of resources is .hi[Pareto efficient] when there are no possible Pareto improvements 
+
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/6k6eqkl6fnnlh7v/handshake.png?raw=1)
+]
+]
+
+---
+
+# Markets and Pareto Efficiency
+
+.pull-left[
+
+- Pareto efficiency is conceptual gold standard: allow all welfare-improving exchanges so long as nobody gets harmed
+
+- In practice: Pareto efficiency is a *first best* solution
+    - only takes one holdout to disapprove to violate Pareto
+
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/ukwgvwjmrl15ts0/holdout3.jpg?raw=1)
+]
+]
+
+---
+
+# Markets and Kaldor-Hicks Efficiency
+
+.pull-left[
+
+- .hi[Kaldor-Hicks Improvement]: an action improves efficiency its generates more social gains than losses
+    - those made better off could in principle compensate those made worse off
+
+- .hi[Kaldor-Hicks efficiency]: no potential Kaldor-Hicks improvements exist
+
+- Keeps intuitive appeal of Pareto but more practical
+    - Every Pareto improvement is a KH-improvement (but not the other way around!)
+    
+- Consider policies where winners' maximum WTP $>$ losers' minimum WTA
+
+- Policies should **maximize social value of resources**
+
+]
+
+.pull-right[
+
+.center[
+![](https://www.dropbox.com/s/y3eo9l6m6jr7d3g/costbenefit.jpg?raw=1)
+
+![](https://www.dropbox.com/s/krmhqn3ryhk9l03/compensate.jpg?raw=1)
+
+]
+]
+
+---
+
+# Market Efficiency in Competitive Equilibrium I
+
+.pull-left[
+
+- .hi[Allocative efficiency]: resources are allocated to highest-valued uses
+  - Goods produced up to the point where $MB=MC$ $(p=MC)$
+  - Maximize **economic surplus** $=$ .hi-blue[Consumer surplus] $+$ .hi-red[Producer surplus]
+
+- .hi[Pareto efficient]: no possible Pareto improvements exist
+
+]
+
+.pull-right[
+
+```{r, fig.retina=3}
+library(ggrepel)
+Demand=function(x){10-x}
+Supply=function(x){x}
+
+eq<-tribble(
+  ~letter, ~x, ~y,
+  "A", 5, 5
+)
+
+CS<-tibble(x=c(0,0,5),
+           y=c(5,10,5))
+
+PS<-tibble(x=c(0,0,5),
+           y=c(0,5,5))
+
+p<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun=Demand, geom="line", size=2, color = "blue")+
+  stat_function(fun=Supply, geom="line", size=2, color = "red")+
+  geom_label(aes(x=9,y=Demand(9)), color = "blue", label="Demand", size = 6)+
+  geom_label(aes(x=9,y=Supply(9)), color = "red", label="Supply", size = 6)+
+  geom_segment(aes(x=0, xend=5, y=5, yend=5),size=1, linetype="dotted")+
+  geom_segment(aes(x=5, xend=5, y=5, yend=0),size=1, linetype="dotted")+
+  geom_polygon(data=CS, aes(x=x,y=y), fill="blue", alpha=0.5)+ #CS
+  geom_polygon(data=PS, aes(x=x,y=y), fill="red", alpha=0.5)+ #PS
+  geom_label(aes(x=1.5, y= 3), label="PS", color="red", size =6)+
+  geom_label(aes(x=1.5, y= 7), label="CS", color="blue", size =6)+
+  geom_point(data = eq,
+             mapping=aes(x=x, y=y),
+             size = 4)+
+  geom_text_repel(data = eq,
+             mapping=aes(x=x, y=y,
+             label = letter),
+             size = 6)+
+    scale_x_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=seq(0,10,1),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  guides(fill=F)+
+  labs(x = "Quantity",
+       y = "Price")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+p
+```
+
+
+]
+
+---
+
+# Welfare Economics I
+
+- .hi[1st Fundamental Welfare Theorem]: markets in competitive equilibrium maximize allocative efficiency of resources and are Pareto efficient
+
+- Markets are great when they: 
+
+1. Are .hi-purple[Competitive]: many buyers and many sellers
+
+2. Reach .hi-purple[equilibrium]: absence of transactions costs or policies *preventing prices from adjusting* to meet supply and demand
+
+3. .hi-purple[No externalities] are present: costs and benefits are fully internalized by the parties to transactions 
+
+---
+
+class: inverse, center, middle
+
+# Justice
+
+---
+
+# Justice
+
+.pull-left[
+
+- What *is* .hi-purple[justice?]
+
+- Absence of .hi-purple[*injustices*]?
+
+- .hi[Utilitarian] vs. .hi[deontological] views of justice
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/hjzdnznrtkwn8aq/justiceblind.jpg?raw=1)
+]
+]
+
+---
+
+# *Distributive* Justice
+
+.pull-left[
+
+- .hi[Distributive justice] about the distribution of economic outcomes
+  - property rights, income, wealth, political power
+  - Overlap with .hi[*social* justice]?
+
+- Is the current distribution just?
+
+- Is there a case for altering the distribution?  
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/qtppr4p7gon9ej5/paretodistribution.png?raw=1)
+
+.smallest["Pareto" power-law distribution]
+]
+]
+
+---
+
+# (In)equality *within* Countries: Gini Coefficient I
+
+.center[
+![:scale 62%](https://www.dropbox.com/s/vx1bz53p3oj2jy0/Gini-measure-schematic-1.png?raw=1)
+]
+
+.source[Source: [Our World in Data: Income Inequality](https://ourworldindata.org/income-inequality)]
+
+---
+
+# (In)equality *within* Countries: Gini Coefficient II
+
+.center[
+![:scale 62%](https://www.dropbox.com/s/5tmix5ht29ji3p6/lorenz2.png?raw=1)
+]
+
+.source[Source: [Wikipedia](https://en.wikipedia.org/wiki/Lorenz_curve#/media/File:Lorenz_curve_global_income_2011.svg)]
+
+---
+
+# (In)equality *within* Countries: Lower in Wealthier Countries
+
+<iframe src="https://ourworldindata.org/grapher/economic-inequality-gini-index" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+
+.source[Source: [Our World in Data: Income Inequality](https://ourworldindata.org/income-inequality)]
+
+---
+
+# (In)equality *within* Countries: But Changing Over Time
+
+.center[
+![:scale 62%](https://www.dropbox.com/s/fvkcw6esmehkniu/inequality1.png?raw=1)
+]
+
+.source[Source: [Our World in Data: Income Inequality](https://ourworldindata.org/income-inequality)]
+
+---
+
+# (In)equality *Across* Countries Over Time
+
+.center[
+![:scale 30%](https://www.dropbox.com/s/zl1m3gjfj6xcn6z/Global-inequality-in-1800-1975-and-2015.png?raw=1)
+]
+
+.source[Source: [Our World in Data: Income Inequality](https://ourworldindata.org/income-inequality)]
+
+---
+
+# Aside: Equality vs. Equity
+
+.center[
+![:scale 90%](https://www.dropbox.com/s/5utu86mxwib929k/equalityequity.jpg?raw=1)
+]
+
+---
+
+# Distributive Justice: Rawls vs. Nozick
+
+.pull-left[
+
+.center[
+![:scale 55%](https://www.dropbox.com/s/azvcunoc7aet0ib/rawls.jpg?raw=1)
+
+John Rawls
+]
+]
+.pull-right[
+.center[
+![:scale 55%](https://www.dropbox.com/s/efn2jgg68mevt0q/nozick.jpg?raw=1)
+
+Robert Nozick
+]
+]
+
+---
+
+# Rawls: Overview
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/azvcunoc7aet0ib/rawls.jpg?raw=1)
+
+.smallest[
+John Rawls
+
+1921--2002
+]
+]
+]
+
+.right-column[
+
+- 1971, *Justice as Fairness*
+
+- One of the most influential political philosophers in the 20<sup>th</sup> century
+
+- A liberal social contract theory of the State
+
+- Aims to reconcile liberty and equality; uncover principles of justice necessary for a good society
+  - Allowing for pluralistic definition of "the good"
+]
+
+---
+
+# Rawls: The Original Position
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/azvcunoc7aet0ib/rawls.jpg?raw=1)
+
+.smallest[
+John Rawls
+
+1921--2002
+]
+]
+]
+
+.right-column[
+
+- .hi-purple["Original position"] where all participants of society determine the principles of justice for their society behind a .hi[veil of ignorance], where
+
+> "...no one knows his place in society, his class position or social status, nor does anyone know his fortune in the distribution of natural assets and abilities, his intelligence, strength, [or even] their conceptions of the good or their special psychological propensities."
+
+]
+
+---
+
+# Rawls: Reflective Equilibrium
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/azvcunoc7aet0ib/rawls.jpg?raw=1)
+
+.smallest[
+John Rawls
+
+1921--2002
+]
+]
+]
+
+.right-column[
+
+- Rational individuals form a .hi[social contract] to provide rules
+
+- If individuals do not know their relative positions in society, what would the .hi-purple[reflective equlibrium] be for the rules they establish to govern themselves?
+
+- What rules would we expect all rational individuals to agree upon and view as **fair**?
+  - Ahistorical, but we can compare real world policies and changes to this ideal outcome
+]
+
+---
+
+# Rawls' Principles of Justice
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/azvcunoc7aet0ib/rawls.jpg?raw=1)
+
+.smallest[
+John Rawls
+
+1921--2002
+]
+]
+]
+
+.right-column[
+
+1. .hi-purple[Greatest equal liberty principle]: Each person is to have an equal right to the most extensive total system of equal basic liberties compatible with a similar system of liberty for all
+
+2. .hi-purple[Difference principle]: Social and economic inequalities are to be arranged so that they are both: (a) the greatest benefit to the least advantaged...[and] (b) attached to offices open to all under conditions of fair equality of opportunity
+]
+
+---
+
+# Rawls' Principles of Justice
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/azvcunoc7aet0ib/rawls.jpg?raw=1)
+
+.smallest[
+John Rawls
+
+1921--2002
+]
+]
+]
+
+.right-column[
+
+- Liberty is first priority (first principle)
+
+- **Inequalities are permitted** to encourage division of labor and specialization, **provided they benefit the worst off**
+]
+
+---
+
+# Rawls' Justification
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/azvcunoc7aet0ib/rawls.jpg?raw=1)
+
+.smallest[
+John Rawls
+
+1921--2002
+]
+]
+]
+
+.right-column[
+
+- Justification of difference principle: 
+
+- Why not a pure .hi-purple[meritocracy] with an "equal start"?
+
+- The start is not truly equal, result of .hi-purple["morally arbitrary"] factors
+  - A genetic lottery of talent, born into family, etc.
+  - Hard to claim that people **deserve** better outcomes because of these factors
+
+- So focus on making the worst off best
+]
+
+
+---
+
+# Distributive Justice: Example
+
+.pull-left[
+
+|    | $D_1$ | $D_2$ | $D_3$ |
+|----|------:|------:|------:|
+| Person A | 10 | 3 | 6 |
+| Person B | 6 | 3 | 5 |
+| Person C | 2 | 3 | 4 |
+| **Total** | 18 | 9 | 15 |
+| **Average** | 6 | 3 | 5 |
+
+]
+
+.pull-right[
+
+- .hi-purple[Utilitarian]: maximize aggregate utility $(D_1)$
+
+- .hi-purple[Egalitarian]: equalize distribution $(D_2)$
+
+- .hi-purple[Rawlsian]: distribution that maximizes benefit to the worst off $(D_3)$
+
+]
+
+---
+
+# Distributive Justice: Example
+
+.pull-left[
+|    | $D_1$ | $D_2$ | $D_3$ |
+|----|------:|------:|------:|
+| Person A | 10 | 3 | 6 |
+| Person B | 6 | 3 | 5 |
+| Person C | 2 | 3 | 4 |
+| **Total** | 18 | 9 | 15 |
+| **Average** | 6 | 3 | 5 |
+
+]
+
+.pull-right[
+
+- .hi-purple[Utilitarian]: maximize aggregate utility $(D_1)$
+
+- .hi-purple[Egalitarian]: equalize distribution $(D_2)$
+
+- .hi-purple[Rawlsian]: distribution that maximizes benefit to the worst off $(D_3)$
+  - Focus on **absolute** position of worst off, rather than their **relative** position
+
+]
+
+---
+
+# Nozick: Overview
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/efn2jgg68mevt0q/nozick.jpg?raw=1)
+
+.smallest[
+Robert Nozick
+
+1938-2002
+]
+]
+]
+
+.right-column[
+
+- 1974, *Anarchy, State, and Utopia*
+
+- Most influential response to Rawls
+
+- Influenced by John Locke, Immanuel Kant, and F. A. Hayek
+
+- The most mainstream libertarian/classical liberal philosopher in 20<sup>th</sup> Century
+
+- Gives a libertarian account of rights, the origins of the State, and advocates for a minimalist "nightwatchman" State
+]
+
+---
+
+# Nozick: Distributive Justice?
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/efn2jgg68mevt0q/nozick.jpg?raw=1)
+
+.smallest[
+Robert Nozick
+
+1938-2002
+]
+]
+]
+
+.right-column[
+
+- "Distributive justice" is a squishy and non-neutral concept
+
+- A category mistake: there is no "stock" of things *to be distributed* and no "one" *doing* the distributing
+
+]
+
+---
+
+# Nozick: On Rawls
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/efn2jgg68mevt0q/nozick.jpg?raw=1)
+
+.smallest[
+Robert Nozick
+
+1938-2002
+]
+]
+]
+
+.right-column[
+
+- Rawls' justice is a .hi-purple[patterned] or an .hi-purple[end-state] theory of justice
+
+> *"Liberty upsets patterns"*
+
+- Enforcing the pattern requires continually **violating individual rights**
+
+- Redistribution would have to violate self-ownership and prohibit "capitalist acts between consenting adults"
+]
+
+---
+
+# Nozick's Theory of Justice
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/efn2jgg68mevt0q/nozick.jpg?raw=1)
+
+.smallest[
+Robert Nozick
+
+1938-2002
+]
+]
+]
+
+.right-column[
+
+- Nozick's is a **non-patterned** .hi-purple[entitlement theory] of justice
+
+- Based heavily on John Locke's theory of property
+]
+
+---
+
+# Locke's Theory of Property
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/6jvd6w2jfdfx35f/locke.png?raw=1)
+
+.smallest[
+John Locke
+
+1632-1704
+]
+]
+]
+
+.right-column[
+
+.smallest[
+> "Though .hi[the earth], and all inferior creatures, .hi[be common to all men], yet .hi[every man has a property in his own person]: this no body has any right to but himself. .hi[The labour of his body, and the work of his hands, we may say, are properly his]. Whatsoever then he removes out of the state that nature hath provided, and left it in, .hi[he hath mixed his labour with, and joined to it something that is his own, and thereby makes it his property]...that .hi[excludes the common right of other men]: for this labour being the unquestionable property of the labourer, no man but he can have a right to what that is once joined to, .hi[at least where there is enough, and as good, left in common for others]," (Ch. V).
+
+]
+
+.source[Locke, John, 1689, *Second Treatise on Government*]
+]
+
+---
+
+# Nozick's Theory of Justice
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/efn2jgg68mevt0q/nozick.jpg?raw=1)
+
+.smallest[
+Robert Nozick
+
+1938-2002
+]
+]
+]
+
+.right-column[
+
+
+- Nozick: individuals are .hi-purple[entitled] to their holdings if: 
+  1. Their property was acquired justly
+  2. They transfer holdings via consent
+
+- Holdings are **unjust** if they violate 1 or 2
+  - Rectification to redress these violations is just
+]
+
+---
+
+# Nozick vs Rawls
+
+.pull-left[
+
+
+|    | $D_1$ |
+|----|------:|
+| Person A | 100 |
+| Person B | 100 |
+| $\vdots$ | $\vdots$ |
+
+]
+
+.pull-right[
+
+.hi-green[Nozick's famous example:]
+
+- Imagine original distribution $D_1$ that satisfies your favorite patterned principle (e.g. Rawlsian)
+
+]
+
+---
+
+# Nozick vs Rawls
+
+.pull-left[
+
+
+|    | $D_1$ |
+|----|------:|
+| Person A | 100 |
+| Person B | 100 |
+| $\vdots$ | $\vdots$ |
+| LeBron James | 100 |
+
+![:scale 80%](https://www.dropbox.com/s/hkm5im7ggmpk0ji/lebronjames2.jpg?raw=1)
+
+]
+
+.pull-right[
+
+.hi-green[Nozick's famous example:]
+
+- Imagine original distribution $D_1$ that satisfies your favorite patterned principle (e.g. Rawlsian)
+
+- Everyone freely decides to pay $1 to watch LeBron James play basketball
+]
+
+---
+
+# Nozick vs Rawls
+
+.pull-left[
+
+
+|    | $D_1$ | $D_2$ |
+|----|------:|------:|
+| Person A | 100 | 99 |
+| Person B | 100 | 99 |
+| $\vdots$ | $\vdots$ | $\vdots$ |
+| LeBron James | 100 | 1,000,000 |
+
+![:scale 80%](https://www.dropbox.com/s/hkm5im7ggmpk0ji/lebronjames2.jpg?raw=1)
+
+]
+
+.pull-right[
+
+.hi-green[Nozick's famous example:]
+
+- James now has a million, a much larger sum than any of the other people in society
+
+- $D_2$ is no longer ordered by our patterned principle
+
+- Nozick: **how can $D_2$ be considered an "unjust distribution"?**
+]
+
+---
+
+# Nozick's Theory of Justice
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/efn2jgg68mevt0q/nozick.jpg?raw=1)
+
+.smallest[
+Robert Nozick
+
+1938-2002
+]
+]
+]
+
+.right-column[
+
+
+- How can $D_2$ be unjust if it was attained by a **just _process_**?
+
+- On what grounds can we justify redistribution to maintain a pattern?
+
+- .hi-turquoise[No patterned principle of justice is compatible with individual rights]
+]
