@@ -211,7 +211,7 @@ p
 
 2. Reach .hi-purple[equilibrium]: absence of transactions costs or policies *preventing prices from adjusting* to meet supply and demand
 
-3. .hi-purple[No externalities] are present: costs and benefits are fully internalized by the parties to transactions 
+3. .hi-purple[No externalities] are present: costs and benefits are fully internalized by the parties to transactions
 
 ---
 
@@ -507,14 +507,57 @@ John Rawls
 
 ]
 
-.pull-right[
+--
 
-- .hi-purple[Utilitarian]: maximize aggregate utility $(D_1)$
+.pull-right[
+- .hi-purple[Utilitarian]: maximize total utility $(D_1)$
+]
+
+
+---
+
+# Distributive Justice: Example
+
+.pull-left[
+
+|    | $D_1$ | $D_2$ | $D_3$ |
+|----|------:|------:|------:|
+| Person A | 10 | 3 | 6 |
+| Person B | 6 | 3 | 5 |
+| Person C | 2 | 3 | 4 |
+| **Total** | 18 | 9 | 15 |
+| **Average** | 6 | 3 | 5 |
+
+]
+
+.pull-right[
+- .hi-purple[Utilitarian]: maximize total utility $(D_1)$
+
+- .hi-purple[Egalitarian]: equalize distribution $(D_2)$
+]
+
+---
+
+# Distributive Justice: Example
+
+.pull-left[
+
+|    | $D_1$ | $D_2$ | $D_3$ |
+|----|------:|------:|------:|
+| Person A | 10 | 3 | 6 |
+| Person B | 6 | 3 | 5 |
+| Person C | 2 | 3 | 4 |
+| **Total** | 18 | 9 | 15 |
+| **Average** | 6 | 3 | 5 |
+
+]
+
+.pull-right[
+- .hi-purple[Utilitarian]: maximize total utility $(D_1)$
 
 - .hi-purple[Egalitarian]: equalize distribution $(D_2)$
 
 - .hi-purple[Rawlsian]: distribution that maximizes benefit to the worst off $(D_3)$
-
 ]
 
 ---
@@ -534,7 +577,7 @@ John Rawls
 
 .pull-right[
 
-- .hi-purple[Utilitarian]: maximize aggregate utility $(D_1)$
+- .hi-purple[Utilitarian]: maximize total utility $(D_1)$
 
 - .hi-purple[Egalitarian]: equalize distribution $(D_2)$
 
