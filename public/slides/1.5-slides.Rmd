@@ -201,7 +201,61 @@ p
 
 ---
 
-# Welfare Economics I
+# Social Problems that Markets Solve Well 
+
+.pull-left[
+- **Problem 1**: Resources have multiple uses and are rivalrous
+
+- **Problem 2**: Different people have different subjective valuations for uses of resources
+
+- **It is inefficient (immoral?) to use a resource in a way that prevents someone else who values it more from using it!**
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/mh8owncbsm2lqkv/tugofwar.png?raw=1)
+]
+]
+
+---
+
+# Social Problems that Markets Solve Well I
+
+.pull-left[
+
+- .hi[Markets] are institutions that facilitate voluntary *impersonal* exchange and reduce transaction costs
+
+- **Prices** measure **opportunity cost** of a particular use of a resource
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/lmabz8rai4klokf/markets2.jpg?raw=1)
+]
+]
+
+---
+
+# Social Problems that Markets Solve Well II
+
+.pull-left[
+- .hi[Property rights] provide a pattern of ownership
+
+- .hi[Prices] give us information about how to use scarce resources
+
+- .hi[Profits] incentivize production and .hi[Losses] discipline waste
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/lmabz8rai4klokf/markets2.jpg?raw=1)
+]
+]
+
+---
+
+# Welfare Economics
 
 - .hi[1st Fundamental Welfare Theorem]: markets in competitive equilibrium maximize allocative efficiency of resources and are Pareto efficient
 
@@ -211,7 +265,7 @@ p
 
 2. Reach .hi-purple[equilibrium]: absence of transactions costs or policies *preventing prices from adjusting* to meet supply and demand
 
-3. .hi-purple[No externalities] are present: costs and benefits are fully internalized by the parties to transactions 
+3. .hi-purple[No externalities] are present: costs and benefits are fully internalized by the parties to transactions
 
 ---
 
@@ -507,14 +561,57 @@ John Rawls
 
 ]
 
-.pull-right[
+--
 
-- .hi-purple[Utilitarian]: maximize aggregate utility $(D_1)$
+.pull-right[
+- .hi-purple[Utilitarian]: maximize total utility $(D_1)$
+]
+
+
+---
+
+# Distributive Justice: Example
+
+.pull-left[
+
+|    | $D_1$ | $D_2$ | $D_3$ |
+|----|------:|------:|------:|
+| Person A | 10 | 3 | 6 |
+| Person B | 6 | 3 | 5 |
+| Person C | 2 | 3 | 4 |
+| **Total** | 18 | 9 | 15 |
+| **Average** | 6 | 3 | 5 |
+
+]
+
+.pull-right[
+- .hi-purple[Utilitarian]: maximize total utility $(D_1)$
+
+- .hi-purple[Egalitarian]: equalize distribution $(D_2)$
+]
+
+---
+
+# Distributive Justice: Example
+
+.pull-left[
+
+|    | $D_1$ | $D_2$ | $D_3$ |
+|----|------:|------:|------:|
+| Person A | 10 | 3 | 6 |
+| Person B | 6 | 3 | 5 |
+| Person C | 2 | 3 | 4 |
+| **Total** | 18 | 9 | 15 |
+| **Average** | 6 | 3 | 5 |
+
+]
+
+.pull-right[
+- .hi-purple[Utilitarian]: maximize total utility $(D_1)$
 
 - .hi-purple[Egalitarian]: equalize distribution $(D_2)$
 
 - .hi-purple[Rawlsian]: distribution that maximizes benefit to the worst off $(D_3)$
-
 ]
 
 ---
@@ -534,7 +631,7 @@ John Rawls
 
 .pull-right[
 
-- .hi-purple[Utilitarian]: maximize aggregate utility $(D_1)$
+- .hi-purple[Utilitarian]: maximize total utility $(D_1)$
 
 - .hi-purple[Egalitarian]: equalize distribution $(D_2)$
 

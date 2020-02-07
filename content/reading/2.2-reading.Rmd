@@ -1,0 +1,37 @@
+---
+title: "2.2. Beyond the Reach of Majorities - Readings"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-fullnote-bibliography-no-bib.csl
+---
+
+# Required Reading:
+
+- [<i class="fas fa-file-pdf"></i> Locke (1689), Selections from *The Second Treatise on Government*](/readings/Locke-1689.pdf)
+- [<i class="fas fa-file-pdf"></i> Madison (1787-1788), *Federalist* 10 and 51](/readings/Madison-1787.pdf)
+
+Last class was about **government placing constraints on citizens**, and it being in everyone's interest to accept these. This class is about **citizens placing constraints on government.** We might summarize this dual dilemma by paraphrasing Madison's Federalist 51:
+
+> "In framing a government which is to be administered by men over men, the great difficulty lies in this: you must first enable the government to control the governed; and in the next place oblige it to control itself."
+
+This class contains two readings, in order to connect with the previous class. The famous counterweight or improvement to Hobbes' 1651 *Leviathan* is John Locke's 1689 *Second Treatise on Government*. Both Locke and Hobbes consider the State as a social contract rational individuals construct to escape the state of nature. In contrast to Hobbes, Locke sees humanity as far more sociable in the state of nature, able to make cooperative agreements, discover, and apply "the laws of nature." Yet, creating a civil government improves on what he sees as the three "inconveniences" of anarchy. We have already seen Locke's view of the origin of legitimate property rights, but I included the relevant passage again for reference. Most importantly, Locke famously arguers that the ultimate aim of the State is to protect individual property rights.
+
+Second, we extend classic political philosophy to the crafting of the United States Constitution in the late 1780s. James Madison - the intellectual "father of the Constitution" - along with Alexander Hamilton and John Jay psudonymously wrote what later became known as *"The Federalist Papers,"*, then a series of newspaper articles arguing in favor of ratifying the proposed Constitution that emerged out of the Philadelphia convention in 1787. These writings are among the most important pieces of Western (and especially, *American*) political philosophy still relevant today. We read the two most cited papers, Federalist 10 and 51 (both allegedly written by Madison) focusing on the danger of factions, and the tyranny of majorities (or minorities). We see that the American Founders, exemplified by Madison, were deeply suspicious of pure democracy and its vices of tyranny, demagoguery, and economic populism (namely, the redistribution of property and cancellation of debts).
+
+I would focus more on Federalist 10 and its important discussion of factions, and Madison's novel argument of how to contain factions, though I included Federalist 51 because it is both short, and full of the era's most memorable phrases. 
+
+# Recommended Reading:
+
+You may wish to glance at some of the Wikipedia pages on the two major books from which themes and opposing perspectives we discuss come from: 
+
+# Tips and Questions to Read for:
+
+- What is the role of faction (interest groups) in power?
+
+- How does Madison suggest we deal with the problem of factions?
+
+- What's wrong with "finding the right people" to rule us?
+
+- What tyranny(ies) should we watch out for? The majority? The minority? The rulers? The ruled?
+
+- What constrains those in the nexus of power to be on their best behavior (or fails to constrain them)?

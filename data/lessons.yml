@@ -25,14 +25,15 @@ lessons:
   - title: '<span class="fake-header-table">Constitutional Political Economy</span>'
     header: True
 
-  - title: "2.1 Constituting a Group"
-  
-  - title: "2.2 Factions"
-  
-  - title: "2.2 Credible Commitment"
-
+  - title: "2.1 The State as Commitment Device"
+    reading: "2.1-reading"
+    
+  - title: "2.2 Beyond the Reach of Majorities"
+    reading: "2.2-reading"
+    
   - title: "2.3 The Optimal Decision Rule"
-
+    reading: "2.3-reading"
+    
   - title: '<span class="fake-header-table">Representative Democracy</span>'
     header: True
     
