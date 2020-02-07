@@ -7,7 +7,7 @@ csl: ../../static/bib/chicago-fullnote-bibliography-no-bib.csl
 
 # Required Reading:
 
-- <i class="fas fas fa-book"></i> Buchanan and Tullock (1962), *The Calculus of Consent*, Chs. 3,5,6
+- <i class="fas fas fa-book"></i> Buchanan and Tullock (1962), *The Calculus of Consent*, Chs. 3,5,6^[Again, you can buy several versions of this book, or here is the [link to free PDF](https://oll.libertyfund.org/titles/buchanan-the-calculus-of-consent-logical-foundations-of-constitutional-democracy)]
 
 After we've digested some political philosophy (with a dose of game theory), it's time for a more "rigorous" model of choosing as a group. How should we decide how to decide?
 
