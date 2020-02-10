@@ -1,0 +1,538 @@
+---
+title: "2.1: Politics as Constraints"
+subtitle: "ECON 410 · Public Economics · Spring 2020"
+author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/publicS20"><i class="fa fa-github fa-fw"></i> ryansafner/metricsf19</a><br> <a href="https://publicS20.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> publicS20.classes.ryansafner.com</a><br>'
+#date:
+output:
+  xaringan::moon_reader:
+    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML" # rescales math with css changes https://github.com/yihui/xaringan/issues/143
+    lib_dir: libs
+    df_print: paged
+    #seal: false
+    css: [custom.css, custom-fonts.css, "hygge"] #, metropolis, metropolis-fonts
+    nature:
+      beforeInit: ["macros.js", "https://platform.twitter.com/widgets.js"] # first is for rescaling images , second is for embedding tweets, https://github.com/yihui/xaringan/issues/100
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    includes:
+      in_header: header.html # for font awesome, used in title  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = F,
+                      warning = F,
+                      message = F,
+                      fig.retina = 3,
+                      fig.align = "center")
+library("tidyverse")
+
+theme_slides <- theme_classic() + 
+  theme(
+    text = element_text(family = "Fira Sans", size = 24)
+  )
+```
+
+class: inverse, center, middle
+
+# The Ancients vs. The Moderns
+
+---
+
+# Ancient Politics and Romance
+
+.pull-left[
+
+- Ancient writers (Greeks, Romans, etc) focus on politics as the highest purpose of social life
+
+- Envisioning the good society and promoting .hi["the good of the polity"]
+
+- Guardian class or philosopher-kings charged with maintaining justice for the polity
+
+- Often religious, theological, moral element
+]
+
+.pull-right[
+.center[
+![:scale 90%](https://www.dropbox.com/s/82cai9iia72fb0y/heavens.jpg?raw=1)
+]
+]
+
+---
+
+# Ancient Politics and Romance
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/mx8l2rken7qy6fw/plato.jpg?raw=1)
+
+Plato
+
+c.428-c.348 B.C.
+
+]
+]
+
+.right-column[
+
+> "[T]he law is ... **contriving to produce this condition in the city as a whole, harmonizing the citizens together through persuasion or compulsion**, and making them share with each other the benefit they can confer on the community. It produces such men in the city, **not in order to allow them to turn in whatever direction each one wants**, but **to make use of them to bind the city together**," (Book VII)
+
+]
+
+.source[Plato, *The Republic*]
+
+---
+
+# Liberty of the Ancients
+
+.pull-left[
+
+- No private individual sphere of life
+  - The collective is entitled to everything, including regulating social mores
+
+- Citizens are privileged (& burdened) with responsibility of collective affairs
+  - Active participation in government
+
+- Politics as soulcraft, perfectability of human society
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/731fum488qxckyq/atheniandemocracy.jpg?raw=1)
+]
+]
+
+---
+
+# The Liberty of the Ancients
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/d69kclp2a67zdlp/constant.jpg?raw=1)
+.smallest[
+Benjamin Constant
+
+1767-1830
+]
+]
+]
+
+> "As a citizen, he decides on peace and war; as [an individual], he is circumscribed, observed, repressed in all his movements,"
+
+.source[Constant, Benjamin, 1819, "The Liberty of the Ancients Compared with that of the Moderns"]
+
+---
+
+# Liberty of the Moderns
+
+.pull-left[
+
+- A .hi[plurality] of goals: individual can go about her life for her own purposes unmolested
+
+- Public institutions **protect the individual sphere of private life**
+
+- Individual freedoms of speech, conscience, choice, religion, property, privacy
+
+- Protection from arbitrary arrest or harassment by the collective
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/pjp9bpvqp54ldn4/individual1.png?raw=1)
+]
+]
+
+---
+
+# Liberty of the Moderns
+
+.pull-left[
+
+- Politics as a series of .hi[rules] that allow autonomous individuals, with their own ends, to get along together
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/pjp9bpvqp54ldn4/individual1.png?raw=1)
+]
+]
+
+---
+
+# Renaissance Italy
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/xa1pfp0u68tylxf/italiancitystates.png?raw=1)
+
+]
+]
+
+.right-column[
+- Italian city-states
+
+- Largely wealthy from trade
+
+- Independent and autonomous republics free from feudal obligations of privileges
+  - In practice, self-governing oligarchies
+
+- Frequently at war with one another and external powers, constantly shifting alliances
+
+]
+
+---
+
+# Machiavelli
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/oaa6e9sx921ut9o/machiavelli.jpg?raw=1)
+
+Niccolo Machiavelli
+
+1469-1527
+]
+]
+
+.right-column[
+- Official in Renaissance Florence c.1498-1512
+
+- "Father of modern political philosophy"
+
+- .hi-purple["Machiavellian"] adjective for "deceit, deviousness, or realpolitik"
+  - "the ends justify the means"
+
+]
+
+
+---
+
+# Machiavelli
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/oaa6e9sx921ut9o/machiavelli.jpg?raw=1)
+
+Niccolo Machiavelli
+
+1469-1527
+]
+]
+
+.right-column[
+
+- Public life often thought to be about theological and lofty goals
+
+- One of the first **empirical** and **practical** students of politics
+
+- Focus on .hi-purple[politics as it actually is, not what it should be]
+
+- .hi-purple[Practical advice] for *actual* human rulers
+
+- .hi[Self-interested rulers]
+
+]
+
+
+---
+
+# Machiavelli
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/oaa6e9sx921ut9o/machiavelli.jpg?raw=1)
+
+Niccolo Machiavelli
+
+1469-1527
+]
+]
+
+.right-column[
+
+.smaller[
+> "I shall depart from the methods of other people...it being my intention to write a thing which shall be useful to him who apprehends it, it appears to me more appropriate to follow up the real truth of the matter than the imagination of it; for many have pictured republics and principalities which in fact have never been known or seen, because how one lives is so far distant from how one ought to live, that he who neglects what is done for what ought to be done, sooner effects his ruin than his preservation."  
+
+]
+
+.source[Machiavelli, Niccolo, 1532, [*The Prince*](http://www.gutenberg.org/files/1232/1232-h/1232-h.htm)]
+]
+
+---
+
+# 17<sup>th</sup> Century England
+
+.pull-left[
+.center[
+.smallest[Trial of Charles I]
+![:scale 80%](https://www.dropbox.com/s/3d51811xoniiql5/trialofcharlesi.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- .hi-purple[English Civil Wars] (1642-1651)
+
+- Parliamentarians defeat Royalists
+  - Try and execute King Charles I
+
+- Growing recognition that even .hi-purple[the king is not above the law]
+
+- Growing .hi[intolerance of arbitrary invasions of individual rights]
+
+]
+
+---
+
+# Hobbes: Modern Pluralism
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/yejb6ou2bwaqlxb/hobbes.png?raw=1)
+
+Thomas Hobbes
+
+1588-1679
+]
+]
+
+.right-column[
+
+> "[T]here is no such *finis ultimus* (utmost aim) nor *summum bonum* (greatest good) as is spoken of in the books of the old moral philosophers...And therefore voluntary actions and inclinations of all men tend not only to [attaining a contented life] differ only in the way [in] which produce the effect desired, (Ch. XVIII).
+]
+
+.source[Hobbes, Thomas, 1651, [*Leviathan: Or the Matter, Forme and Power of a Commonwealth, Ecclesiasticall and Civil*](https://www.gutenberg.org/files/3207/3207-h/3207-h.htm)]
+
+---
+
+# Thomas Hobbes: State of Nature
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/yejb6ou2bwaqlxb/hobbes.png?raw=1)
+
+Thomas Hobbes
+
+1588-1679
+]
+]
+
+.right-column[
+
+> "In [the state of nature], there is no place for Industry; because the fruit thereof is uncertain; and consequently no Culture of the Earth...no Knowledge of the face of the Earth; no account of Time; no Arts; no Letters; no Society; and which is worst of all, continuall feare, and danger of violent death; .ji[And the life of man, solitary, poore, nasty, brutish, and short], (Ch. XVIII).
+]
+
+.source[Hobbes, Thomas, 1651, [*Leviathan: Or the Matter, Forme and Power of a Commonwealth, Ecclesiasticall and Civil*](https://www.gutenberg.org/files/3207/3207-h/3207-h.htm)]
+
+---
+
+# Thomas Hobbes: War of All Against All
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/fvea4j3u49dq53b/warofallagainstall.png?raw=1)
+]
+
+---
+
+# Hobbes
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/yejb6ou2bwaqlxb/hobbes.png?raw=1)
+
+Thomas Hobbes
+
+1588-1679
+]
+]
+
+.right-column[
+
+> "Nature hath made men so equal in the faculties of body and mind...From this equality of ability ariseth equality of hope in the attaining of our ends...And from this diffidence of one another, there is no way for any man to secure himself so reasonable as anticipation..to master the persons of all men he can so long till he see no other power great enough to endanger him...[M]en have no pleasure...in keeping company where there is no power able to overawe them all. (Ch. XVIII).
+]
+
+.source[Hobbes, Thomas, 1651, [*Leviathan: Or the Matter, Forme and Power of a Commonwealth, Ecclesiasticall and Civil*](https://www.gutenberg.org/files/3207/3207-h/3207-h.htm)]
+
+
+---
+
+# Hobbes
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/yejb6ou2bwaqlxb/hobbes.png?raw=1)
+
+Thomas Hobbes
+
+1588-1679
+]
+]
+
+.right-column[
+
+> "And because the condition of man...is a condition of .hi[war of every one against every] one...it followeth that in such a condition .hi[every man has a right to every thing, even to one another's body]. And therefore, as long as this natural right of every man to every thing endureth, .hi[there can be no security to any man]...The .hi[first fundamental law of nature] is: .hi[to seek peace and follow it] (Ch. XVIV).
+]
+
+.source[Hobbes, Thomas, 1651, [*Leviathan: Or the Matter, Forme and Power of a Commonwealth, Ecclesiasticall and Civil*](https://www.gutenberg.org/files/3207/3207-h/3207-h.htm)]
+
+---
+
+# The Hobbesian Dilemma
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/yejb6ou2bwaqlxb/hobbes.png?raw=1)
+
+Thomas Hobbes
+
+1588-1679
+]
+]
+
+.right-column[
+
+> "For the Lawes of Nature (as Justice, Equity, Modesty, Mercy, and (in summe) Doing To Others, As Wee Would Be Done To,) if themselves, without the terrour of some Power, to cause them to be observed, are contrary to our naturall Passions, that carry us to Partiality, Pride, Revenge, and the like. And .hi[Covenants, without the Sword, are but Words, and of no strength to secure a man at all], (Ch. XVIII).
+]
+
+.source[Hobbes, Thomas, 1651, [*Leviathan: Or the Matter, Forme and Power of a Commonwealth, Ecclesiasticall and Civil*](https://www.gutenberg.org/files/3207/3207-h/3207-h.htm)]
+
+---
+
+# The Hobbesian Dilemma 
+
+.pull-left[
+
+- Consider society a .hi[prisoner's dilemma] for social cooperation or conflict:
+  - $a$: everyone else obeys the law, but I don't
+  - $b$: everyone obeys the law
+  - $c$: no one obeys the law
+  - $d$: I obey the law, but no one else does
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/y0fmxal9yy0mgri/HobbesPD2.png?raw=1)
+]
+]
+
+---
+
+# The Hobbesian Dilemma 
+
+.pull-left[
+
+- **Nash equilibrium**: everyone *defects*! 
+
+- **Socially optimal equilibrium**: everyone *cooperates*
+
+- Hobbes' insight: .hi-purple[no _individual_ has an incentive to cooperate when everyone defects!]
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/y0fmxal9yy0mgri/HobbesPD2.png?raw=1)
+]
+]
+
+---
+
+# The Hobbesian Solution I
+
+.center[
+![:scale 70%](https://www.dropbox.com/s/aby3cf6ijkrjs7k/benevolentdespot.jpg?raw=1)
+]
+
+---
+
+# The Hobbesian Solution
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/yejb6ou2bwaqlxb/hobbes.png?raw=1)
+
+Thomas Hobbes
+
+1588-1679
+]
+]
+
+.right-column[
+.smaller[
+> "The only way to erect such a common power, as may be able to defend them from the invasion of foreigners, and the injuries of one another, and thereby to secure them in such sort as that by their own industry and by the fruits of the earth they may nourish themselves and live contendely, is .hi[to confer all their power and strength upon one man, or upon one assembly of men, that may reduce all their wills, by plurality of voices, unto one will]:...and therein to submit their wills, everyone one to his will, and their judgments to his judgment," (Ch. XVII).
+]
+]
+
+.source[Hobbes, Thomas, 1651, [*Leviathan: Or the Matter, Forme and Power of a Commonwealth, Ecclesiasticall and Civil*](https://www.gutenberg.org/files/3207/3207-h/3207-h.htm)]
+
+---
+
+# The Hobbesian Solution
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/yejb6ou2bwaqlxb/hobbes.png?raw=1)
+
+Thomas Hobbes
+
+1588-1679
+]
+]
+
+.right-column[
+
+> "It is a real unity of them all in one and the same person, made by covenant of every man with every man, in such manner as ife every man should say to every man: .hi[I authorise and give up my right of governing myself to this man, or to this assembly of men, on this condition; that thou give up, thy right to him, and authorise all his actions in like manner]. This done, the multitude so united in one person is called a .hi[COMMONWEALTH]," (Ch. XVII).
+
+]
+
+.source[Hobbes, Thomas, 1651, [*Leviathan: Or the Matter, Forme and Power of a Commonwealth, Ecclesiasticall and Civil*](https://www.gutenberg.org/files/3207/3207-h/3207-h.htm)]
+
+---
+
+# The Hobbesian Solution
+
+.pull-left[
+
+- .hi-purple[The State is our commitment device]
+
+- Citizens (in principle) sign a .hi[social contract], i.e. a ".hi[constitution]" that deliberately restricts their liberties
+
+- In each of our interests to give up some liberties that restrict the liberties of others (e.g. theft, violence)
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/aby3cf6ijkrjs7k/benevolentdespot.jpg?raw=1)
+]
+
+]
+
+---
+
+# The Hobbesian Solution
+
+.pull-left[
+
+- In exchange, we empower .hi[the State as our agent] to punish those of us that fail to uphold the social contract
+
+- .hi-purple[Politics]: decisions under rules which we agree are legitimate that determine an outcome for all of us, even if we *disagree* (or are harmed by) the outcome 
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/aby3cf6ijkrjs7k/benevolentdespot.jpg?raw=1)
+]
+
+]
