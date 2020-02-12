@@ -477,7 +477,7 @@ James Madison
 # Democracy
 
 .center[
-![](https://www.dropbox.com/s/f0eavr673q5x11b/democracywolves.jpg?raw=1)
+![:scale 70%](https://www.dropbox.com/s/f0eavr673q5x11b/democracywolves.jpg?raw=1)
 ]
 
 ---
@@ -487,7 +487,7 @@ James Madison
 .pull-left[
 - .hi[Democracy] or .hi[majoritarianism]: rule by majority vote
 
-- Pure democracy is unable to handle disagreement, or protect individual rights
+- **Pure democracy** is **unable to handle disagreement**, or protect individual rights
 
 - Democratic elements may be necessary, but is not sufficient for good governance
 
