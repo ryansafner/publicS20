@@ -124,10 +124,13 @@ Benjamin Constant
 ]
 ]
 ]
+.right-column[
 
 > "As a citizen, he decides on peace and war; as [an individual], he is circumscribed, observed, repressed in all his movements,"
 
 .source[Constant, Benjamin, 1819, "The Liberty of the Ancients Compared with that of the Moderns"]
+
+]
 
 ---
 
@@ -432,9 +435,9 @@ Thomas Hobbes
 
 .pull-left[
 
-- **Nash equilibrium**: everyone *defects*! 
+- .hi[Nash equilibrium]: everyone *defects*! 
 
-- **Socially optimal equilibrium**: everyone *cooperates*
+- .hi-purple[Socially optimal equilibrium]: everyone *cooperates*
 
 - Hobbes' insight: .hi-purple[no _individual_ has an incentive to cooperate when everyone defects!]
 
