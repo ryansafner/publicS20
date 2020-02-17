@@ -35,11 +35,13 @@ lessons:
     
   - title: "2.3 The Optimal Decision Rule"
     reading: "2.3-reading"
+    slides: "2.3-slides"
     
   - title: '<span class="fake-header-table">Representative Democracy</span>'
     header: True
     
-  - title: "3.1 Voting I: Prefernce Aggregation and Cycling"
+  - title: "3.1 Voting I: Preference Aggregation and Cycling"
+    reading: "3.1-reading"
 
   - title: "3.2 Voting II: Ignorance and Irrationality"
 

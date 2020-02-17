@@ -1,0 +1,26 @@
+---
+title: "3.1. Voting I:  - Readings"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-fullnote-bibliography-no-bib.csl
+---
+
+*Wednesday, February 19, 2020*
+
+# Required Reading:
+
+- <i class="fas fas fa-book"></i> Holcombe (2016), *Advanced Introduction to Public Choice*, Chs. 2,3,5
+
+We will **not have a discussion today**, you **do not need to email questions**. This material will be a bit more dense and technical, and I will lecture for the full period. However, doing the reading will also be very helpful, even though you will not be graded on it in any way.
+
+# Tips and Questions to Read for:
+
+- How can we measure voters' preferences?
+
+- What are the assumptions of the Median Voter Theorem?
+
+- Why do political rivals often propose very similar policies? Why can't extreme candidates or Third Parties win?
+
+- What are the major differences in electoral systems (e.g. proportional vs. plurality, parliamentary vs. presidential)?
+
+- How might votes "cycle?" 

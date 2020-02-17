@@ -541,7 +541,7 @@ We must .hi[agree at a constitutional level] so that .hi-purple[we can disagree 
 
 - Often either a .hi[dictatorship] or a .hi[constitutional republic] (.hi["liberal democracy"])
 
-- Constitutions must balance the will of the majority (.hi-purple[democracy]) with the rights and autonomy of the individual (.h-purple[liberalism]), hence: .hi[liberal democracy]
+- Constitutions must balance the will of the majority (.hi-purple[democracy]) with the rights and autonomy of the individual (.hi-purple[liberalism]), hence: .hi[liberal democracy]
 ]
 
 .pull-right[

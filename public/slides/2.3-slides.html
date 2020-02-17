@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>2.3: The Optimal Decision Rule</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ryan Safner  Assistant Professor of Economics    safner@hood.edu    ryansafner/metricsf19    publicS20.classes.ryansafner.com" />
+    <link href="libs/remark-css/hygge.css" rel="stylesheet" />
+    <link href="libs/pagedtable/css/pagedtable.css" rel="stylesheet" />
+    <script src="libs/pagedtable/js/pagedtable.js"></script>
+    <script src="https://use.fontawesome.com/5235085b15.js"></script>
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+    <link rel="stylesheet" href="custom-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# 2.3: The Optimal Decision Rule
+## ECON 410 · Public Economics · Spring 2020
+### Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/publicS20"><i class="fa fa-github fa-fw"></i> ryansafner/metricsf19</a><br> <a href="https://publicS20.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> publicS20.classes.ryansafner.com</a><br>
+
+---
+
+
+
+
+
+
+
+# The Story So Far
+
+.pull-left[
+
+We need to .hi[create a State to constrain individuals] from interfering against one another...but .hi[we also need to constrain the State]
+
+- .hi[Constitutional rules] define the .hi-purple[domain of allowed collective decisions] and the .hi-purple[rules or procedures] for doing so
+
+- Their practical function is .hi-purple[to protect minorities from the majority]
+
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/0onncp64w82rvu6/goodgovernance.png?raw=1)
+]
+]
+
+---
+
+# The Story So Far
+
+.pull-left[
+
+.hi-purple[Political rules] allow us to make one collective choice for all, even though many will disagree with the outcome
+
+We must .hi[agree at a constitutional level] so that .hi-purple[we can disagree on political outcomes]
+
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/0onncp64w82rvu6/goodgovernance.png?raw=1)
+]
+]
+
+---
+
+# James Buchanan and Gordon Tullock
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/1fmcq3xqi3le7to/buchanantullocksmall.jpeg?raw=1)
+
+.smallest[
+James Buchanan and Gordon Tullock
+]
+]
+]
+
+.right-column[
+.smaller[
+- 1962, *The Calculus of Consent*
+
+- Buchanan:
+  - 1986 Nobel Prize in Economics
+  - Collective choice as exchange, constitutional political economy, political philosophy
+
+- Tullock:
+  - Rent-seeking, transitional gains trap, autocracy, law &amp; economics
+
+- Brings economic tools to political science: **politics as exchange**
+]
+]
+
+---
+
+class: inverse, center, middle
+
+# Public Choice and Behavioral Symmetry
+
+---
+
+# Behavioral Symmetry
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/1fmcq3xqi3le7to/buchanantullocksmall.jpeg?raw=1)
+
+.smallest[
+James Buchanan and Gordon Tullock
+]
+]
+]
+
+.right-column[
+
+&gt; "Political theorists seem rarely to have used this essentially economic approach to collective activity. Their analyses of collective-choice processes have more often been grounded on the implicit assumption that the representative individual seeks not to maximize his own utility, but to find the "public interest" or "common good," (p. 19)
+
+.source[Buchanan, James M and Gordon Tullock, 1962, *The Calculus of Consent: Logical Foundations of Constitutional Democracy*]
+]
+
+---
+
+# What is the "Public Interest" or the "Common Good"?
+
+.center[
+![:scale 90%](https://www.dropbox.com/s/bz294k0q96kosqd/thegreatergood2.gif?raw=1)
+]
+
+---
+
+# Naive Political Economy
+
+.center[
+![:scale 90%](https://www.dropbox.com/s/2lg1xykht9vw3ys/miracle.png?raw=1)
+]
+
+---
+
+# Naive Political Economy
+
+.pull-left[
+People often recommend optimal policies that could effectively be installed by a .hi[benevolent despot] who can
+  - Correctly identify "the public good"
+  - Has the desire and incentives to achieve it
+  - Has no constraints
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/aby3cf6ijkrjs7k/benevolentdespot.jpg?raw=1)
+]
+]
+
+---
+
+# Robust Political Economy
+
+.pull-left[
+
+- In reality, 1&lt;sup&gt;st&lt;/sup&gt;-best policies are distorted by the knowledge problem, the incentives problem, and politics
+  - Real world: 2&lt;sup&gt;nd&lt;/sup&gt;-to-*n*&lt;sup&gt;th&lt;/sup&gt;-best outcomes
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/aby3cf6ijkrjs7k/benevolentdespot.jpg?raw=1)
+]
+]
+
+---
+
+# Behavioral Symmetry
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/1fmcq3xqi3le7to/buchanantullocksmall.jpeg?raw=1)
+
+.smallest[
+James Buchanan and Gordon Tullock
+]
+]
+]
+
+.right-column[
+
+&gt; "Throughout the ages the profit-seeker, the utility-maximizer, has found few friends among the moral and the political philosophers...In the political sphere the pursuit of private gain by the individual participant has been almost universally condemned as 'evil' by moral philosophers of many shades. .hi[No one seems to have explored carefully the implicit assumption that the individual must somehow shift his psychological and moral gears when he moves between the private and the social aspects of life]," (p. 19)
+
+.source[Buchanan, James M and Gordon Tullock, 1962, *The Calculus of Consent: Logical Foundations of Constitutional Democracy*]
+]
+
+---
+
+# Behavioral Symmetry
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/1fmcq3xqi3le7to/buchanantullocksmall.jpeg?raw=1)
+
+.smallest[
+James Buchanan and Gordon Tullock
+]
+]
+]
+
+.right-column[
+
+&gt; "We are, therefore, placed in the somewhat singular position of having to defend the simple assumption that .hi[the *same* individual participatesin both processes [the market and politics]] against the almost certain onslaught of the moralists," (p. 19)
+
+.source[Buchanan, James M and Gordon Tullock, 1962, *The Calculus of Consent: Logical Foundations of Constitutional Democracy*]
+]
+
+---
+
+# Politics as Exchange
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/1fmcq3xqi3le7to/buchanantullocksmall.jpeg?raw=1)
+
+.smallest[
+James Buchanan and Gordon Tullock
+]
+]
+]
+
+.right-column[
+
+&gt; "The economic approach, which assumes man to be a utility-maximizer in both his market and his political activity, does not require that one individual increase his own utility at the expense of other individuals. This approach incorporates .hi[political activity as a particular form of *exchange*]; and, as in the market relation, .hi[mutual gains to all parties are ideally expected to result from collective action]," (p. 23)
+
+.source[Buchanan, James M and Gordon Tullock, 1962, *The Calculus of Consent: Logical Foundations of Constitutional Democracy*]
+]
+
+---
+
+# Politics as Exchange
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/1fmcq3xqi3le7to/buchanantullocksmall.jpeg?raw=1)
+
+.smallest[
+James Buchanan and Gordon Tullock
+]
+]
+]
+
+.right-column[
+
+&gt; "The power-maximizing approach, by contrast, must interpret collective choice-making as a zero-sum game...When one man gains, the other must lose; mutual gains from "trade" are not possible in this conceptual framework," (p. 23-24)
+
+.source[Buchanan, James M and Gordon Tullock, 1962, *The Calculus of Consent: Logical Foundations of Constitutional Democracy*]
+]
+
+---
+
+class: inverse, center, middle
+
+# Levels of Rules
+
+---
+
+# The Political and the Constitutional
+
+.pull-left[
+
+- We must be able to examine both levels simultaneously:
+
+1. .hi[Constitutional level] choice among **alternative sets** of rules
+
+2. .hi[Political level] choice **within a specific set** of rules
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/p437d4yyqx5bbz2/constraints.jpg?raw=1)
+]
+]
+
+---
+
+# The Political and the Constitutional
+
+.pull-left[
+
+- Each level affects the other
+
+- Constitutional rules constrain political decisions
+
+- Current political situation (preferences, interests, wealth, power) tints how we view particular constitutional rules
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/p437d4yyqx5bbz2/constraints.jpg?raw=1)
+]
+]
+
+---
+
+class: inverse, center, middle
+
+# How to Decide How to Decide
+
+---
+
+# Veil of Uncertainty
+
+.pull-left[
+
+- Behind .hi[veil of uncertainty] at the .hi[constitutional moment]
+  - Rawlsian veil of ignorance
+
+- Individuals do not know if they will be in majority or minority
+
+- Need to know costs of State action, but can't know this before we know how State is organized
+
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/hjzdnznrtkwn8aq/justiceblind.jpg?raw=1)
+]
+]
+
+---
+
+# Collective Action on the Margin
+
+.pull-left[
+
+- B&amp;T assume some pre-existing property rights at some minimal level
+
+- **What _further_ collective action will individuals agree to?**
+
+&gt; "When will a society composed of free and rational utility-maximizing individuals choose to undertake action collectively rather than privately?
+
+- Pre-existing **externalities** that individuals cannot mitigate alone
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/hjzdnznrtkwn8aq/justiceblind.jpg?raw=1)
+]
+]
+
+---
+
+# Collective Action on the Margin
+
+.pull-left[
+
+- Pre-existing **externalities** that individuals cannot mitigate alone
+
+- Failing to act collectively would leave these externalities
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/hjzdnznrtkwn8aq/justiceblind.jpg?raw=1)
+]
+]
+
+---
+
+# Constitutional Political Economy
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/1fmcq3xqi3le7to/buchanantullocksmall.jpeg?raw=1)
+
+.smallest[
+James Buchanan and Gordon Tullock
+]
+]
+]
+
+.right-column[
+
+&gt; "There should be little reason to expect that constitutional rules developed in application to the passage of general legislation would provide an appropriate framework for the enactment of legislation that has differential or discriminatory impact on separate groups of citizens," (p. 22)
+
+.source[Buchanan, James M and Gordon Tullock, 1962, *The Calculus of Consent: Logical Foundations of Constitutional Democracy*]
+]
+
+---
+
+# The Unanimity Rule
+
+.pull-left[
+
+**What is the moral status of a decision rule?**
+  - Like "majority rule"
+
+- .hi[Unanimity] is .hi[ideal]: Pareto efficient by definition
+
+- Choice of .hi[constitutional rules] should be .hi[unanimous], so we can .hi-purple[disagree] about .hi-purple[political outcomes]
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/302icm2b2mciqz0/unanimous.jpg?raw=1)
+]
+]
+---
+
+# The Unanimity Rule
+
+.pull-left[
+
+- But there are .hi[costs] of trying to secure unanimity!
+  - Need **everyone** to agree
+
+- A .hi-purple[less-than-unanimous rule] will **create other costs** on minorities that are not in the majority
+
+- Consider two types of costs to determine **optimal departure from unanimity**
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/302icm2b2mciqz0/unanimous.jpg?raw=1)
+]
+]
+
+---
+
+# External Costs
+
+.pull-left[
+&lt;img src="2.3-slides_files/figure-html/unnamed-chunk-2-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+- .hi-red[External costs, `\\(C(n)\\)`]: cost of collectively-chosen outcome on individual
+
+- Fall with `\(n\)`
+
+- Expected cost of being in minority and coerced to comply with unfavorable decision
+
+- Some expected cost at 0, personal cost of unresolved externality
+
+- With .hi[unanimity] `\((N)\)`, external costs `\(\rightarrow 0\)`!
+]
+
+---
+
+# Decision-making Costs
+
+.pull-left[
+&lt;img src="2.3-slides_files/figure-html/unnamed-chunk-3-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+- .hi-blue[Decision-making costs, `\\(D(n)\\)`]: cost of reaching an agreement
+
+- Increase exponentially with `\(n\)`
+
+- With more people, any one person can veto!
+
+- Holdouts, strategic bargaining, high transaction costs
+]
+
+---
+
+# Optimal-Decision Rule
+
+.pull-left[
+&lt;img src="2.3-slides_files/figure-html/unnamed-chunk-4-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+- With greater `\(n\)`, a tradeoff between lower .hi-red[External costs `\\(C(n)\\)`] and higher .hi-blue[Decision-making costs `\\(D(n)\\)`]
+]
+
+---
+
+# Optimal-Decision Rule
+
+.pull-left[
+&lt;img src="2.3-slides_files/figure-html/unnamed-chunk-5-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+- With greater `\(n\)`, a tradeoff between lower .hi-red[External costs `\\(C(n)\\)`] and higher .hi-blue[Decision-making costs `\\(D(n)\\)`]
+
+- .hi-purple[Total costs `\\(C(n)+D(n)\\)`]: the (vertical) sum of external and decision-making costs
+
+]
+
+---
+
+# Optimal-Decision Rule
+
+.pull-left[
+&lt;img src="2.3-slides_files/figure-html/unnamed-chunk-6-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+- With greater `\(n\)`, a tradeoff between lower .hi-red[External costs `\\(C(n)\\)`] and higher .hi-blue[Decision-making costs `\\(D(n)\\)`]
+
+- .hi-purple[Total costs `\\(C(n)+D(n)\\)`]: the (vertical) sum of external and decision-making costs
+
+- .hi[Optimal decision rule]: **minimize total costs at `\(\frac{K}{N}\)`** 
+]
+
+---
+
+# Optimal-Decision Rule
+
+.pull-left[
+&lt;img src="2.3-slides_files/figure-html/unnamed-chunk-7-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+- **_ANY_ group of `\(\frac{K}{N}\)` people that agree will determine the outcome**
+  - "the decisive set"
+
+- Note: again, the **minimum of** .hi-purple[Total Costs]
+  - not necessarily the *intersection* of .hi-red[External costs] and .hi-blue[Decision-making costs]
+  - not necessarily a **simple majority `\(\frac{n}{2}+1\)`**!
+]
+
+---
+
+# The Benefits of Majority Rule
+
+.pull-left[
+
+- .hi[Majority rule `\\(\left(\frac{n}{2}+1\right)\\)`] *is* a very common decision rule
+
+- Despite moral arguments for/against, practical reasons:
+  1. It's the smallest possible group which can ensure there will not be two contradictory measures passed
+  2. Can break a "voting cycle" (**next class**!)
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/akf47e0j2syb5po/majority1.jpg?raw=1)
+]
+]
+
+---
+
+# Optimal Decision Rules Vary
+
+.pull-left[
+
+- Costs are different issue by issue
+  - **No single voting rule optimal for all issues**
+
+- High .hi-red[`\\(C(n)\\)`]-issues
+  - Exercise of State power vs. individual
+  - Constitutional amendment
+  - Criminal convictions
+  - Much more than a majority
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/55t8nlvavc0h5u0/dissent.jpg?raw=1)
+]
+]
+
+---
+
+# Optimal Decision Rules Vary
+
+.pull-left[
+
+- Costs are different issue by issue
+  - **No single voting rule optimal for all issues**
+
+- High .hi-red[`\\(C(n)\\)`]-issues
+  - Exercise of State power vs. individual
+  - Constitutional amendment
+  - Criminal convictions
+  - Much more than a majority
+
+]
+
+.pull-right[
+&lt;img src="2.3-slides_files/figure-html/unnamed-chunk-8-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Optimal Decision Rules Vary
+
+.pull-left[
+
+- Low .hi-red[`\\(C(n)\\)`]-issues, common access rules:
+  - Nomination (1 person)
+  - Introducing a motion/bill (moved and seconded)
+  - *Writ of certorari*
+  - Much less than a majority
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/pglejsnr1hzk7b6/minority.jpg?raw=1)
+]
+]
+
+---
+
+# Common Decision Rules
+
+.pull-left[
+
+- **Access rules**: less than majority
+  - Bringing issues to the group
+
+- **Decision rules**: majority
+  - Actual business of passing resolutions
+
+- **Changing the rules**: more than majority (closer to unanimity)
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/akf47e0j2syb5po/majority1.jpg?raw=1)
+]
+]
+---
+
+# What Affects Total Costs
+
+.pull-left[
+.smaller[
+- Size of `\(N\)`: larger groups create larger `\(C+D\)` costs
+  - We want the **smallest group consistent with the size of the externality**
+
+- Heterogeneity (of preferences, wealth, power, etc)
+  - `\(C\)`-costs rise: greater fear of being in minority
+  - `\(D\)`-costs rise: harder to get very different people to agree
+]
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/55t8nlvavc0h5u0/dissent.jpg?raw=1)
+]
+]
+
+---
+
+# Heterogeneity
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/1fmcq3xqi3le7to/buchanantullocksmall.jpeg?raw=1)
+
+.smallest[
+James Buchanan and Gordon Tullock
+]
+]
+]
+
+.right-column[
+
+&gt; "Many activities that may be quite rationally collectivized in Sweden, a country with a relatively homogenous population, should be privately organized in India, Switzerland, or the United States."
+
+]
+
+---
+
+# Comparing the Cure and the Disease
+
+.pull-left[
+
+- Different alternative decisions regarding an externality have different costs:
+
+- `\(A\)`: do nothing, live with externality
+
+- `\(B\)`: voluntary collective action
+  - cost of collective action might yield underprovision
+
+- `\(C\)`: government action
+  - cost of collective action might create *new* political externalities
+
+- Which option yields the lowest cost outcome?
+
+]
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/8837bt04y2pivmo/uglyshirt.png?raw=1)
+]
+]
+
+---
+
+# When Optimal Collective Action is Second-Best
+
+.pull-left[
+&lt;img src="2.3-slides_files/figure-html/unnamed-chunk-9-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+
+- Even with optimal collective decision rule, it might be better off left to private hands if total costs are lower (at A)
+
+- In general, the higher `\(C+D\)` costs are (for whatever reason), the greater likelihood that an activity should be left private
+]
+
+---
+
+# The Importance of the Starting Point
+
+.pull-left[
+
+- Constitutional choice does not take place in a vacuum
+
+- Veil of ignorance assumes we have no specific stake in changing rules in a particular way, but 
+
+- Our current political situation (preferences, wealth, power, etc.) naturally will affect how we view different rules
+
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/3w5wyap5qs6amko/fix.jpg?raw=1)
+]
+]
+
+---
+
+# The Importance of the Starting Point
+
+.pull-left[
+
+- Incorrect to start from Hobbes (no rules); irrelevant to our actual decisions
+
+- Constitutional economics is practically about *reform* of rules, rather than designing from scratch 
+
+- We must always start from where we are
+
+- We would build a different house from scratch than if we change our existing one
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/3w5wyap5qs6amko/fix.jpg?raw=1)
+]
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"slideNumberFormat": "<div class=\"progress-bar-container\">   <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">   </div> </div> "
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -1,0 +1,945 @@
+---
+title: "2.3: The Optimal Decision Rule"
+subtitle: "ECON 410 · Public Economics · Spring 2020"
+author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/publicS20"><i class="fa fa-github fa-fw"></i> ryansafner/metricsf19</a><br> <a href="https://publicS20.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> publicS20.classes.ryansafner.com</a><br>'
+#date:
+output:
+  xaringan::moon_reader:
+    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML" # rescales math with css changes https://github.com/yihui/xaringan/issues/143
+    lib_dir: libs
+    df_print: paged
+    #seal: false
+    css: [custom.css, custom-fonts.css, "hygge"] #, metropolis, metropolis-fonts
+    nature:
+      beforeInit: ["macros.js", "https://platform.twitter.com/widgets.js"] # first is for rescaling images , second is for embedding tweets, https://github.com/yihui/xaringan/issues/100
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    includes:
+      in_header: header.html # for font awesome, used in title  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = F,
+                      warning = F,
+                      message = F,
+                      fig.retina = 3,
+                      fig.align = "center")
+library("tidyverse")
+
+theme_slides <- theme_classic() + 
+  theme(
+    text = element_text(family = "Fira Sans", size = 24)
+  )
+```
+
+
+```{r}
+# setup model
+a<-70
+b<-10
+c<-40
+d<-50
+
+library("mosaic")
+C=function(x){a*exp(-x/c)}
+D=function(x){b*exp(x/d)}
+#total costs function is sum of C and D functions
+Total=function(x){C(x)+D(x)}
+
+```
+
+# The Story So Far
+
+.pull-left[
+
+We need to .hi[create a State to constrain individuals] from interfering against one another...but .hi[we also need to constrain the State]
+
+- .hi[Constitutional rules] define the .hi-purple[domain of allowed collective decisions] and the .hi-purple[rules or procedures] for doing so
+
+- Their practical function is .hi-purple[to protect minorities from the majority]
+
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/0onncp64w82rvu6/goodgovernance.png?raw=1)
+]
+]
+
+---
+
+# The Story So Far
+
+.pull-left[
+
+.hi-purple[Political rules] allow us to make one collective choice for all, even though many will disagree with the outcome
+
+We must .hi[agree at a constitutional level] so that .hi-purple[we can disagree on political outcomes]
+
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/0onncp64w82rvu6/goodgovernance.png?raw=1)
+]
+]
+
+---
+
+# James Buchanan and Gordon Tullock
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/1fmcq3xqi3le7to/buchanantullocksmall.jpeg?raw=1)
+
+.smallest[
+James Buchanan and Gordon Tullock
+]
+]
+]
+
+.right-column[
+.smaller[
+- 1962, *The Calculus of Consent*
+
+- Buchanan:
+  - 1986 Nobel Prize in Economics
+  - Collective choice as exchange, constitutional political economy, political philosophy
+
+- Tullock:
+  - Rent-seeking, transitional gains trap, autocracy, law & economics
+
+- Brings economic tools to political science: **politics as exchange**
+]
+]
+
+---
+
+class: inverse, center, middle
+
+# Public Choice and Behavioral Symmetry
+
+---
+
+# Behavioral Symmetry
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/1fmcq3xqi3le7to/buchanantullocksmall.jpeg?raw=1)
+
+.smallest[
+James Buchanan and Gordon Tullock
+]
+]
+]
+
+.right-column[
+
+> "Political theorists seem rarely to have used this essentially economic approach to collective activity. Their analyses of collective-choice processes have more often been grounded on the implicit assumption that the representative individual seeks not to maximize his own utility, but to find the "public interest" or "common good," (p. 19)
+
+.source[Buchanan, James M and Gordon Tullock, 1962, *The Calculus of Consent: Logical Foundations of Constitutional Democracy*]
+]
+
+---
+
+# What is the "Public Interest" or the "Common Good"?
+
+.center[
+![:scale 90%](https://www.dropbox.com/s/bz294k0q96kosqd/thegreatergood2.gif?raw=1)
+]
+
+---
+
+# Naive Political Economy
+
+.center[
+![:scale 90%](https://www.dropbox.com/s/2lg1xykht9vw3ys/miracle.png?raw=1)
+]
+
+---
+
+# Naive Political Economy
+
+.pull-left[
+People often recommend optimal policies that could effectively be installed by a .hi[benevolent despot] who can
+  - Correctly identify "the public good"
+  - Has the desire and incentives to achieve it
+  - Has no constraints
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/aby3cf6ijkrjs7k/benevolentdespot.jpg?raw=1)
+]
+]
+
+---
+
+# Robust Political Economy
+
+.pull-left[
+
+- In reality, 1<sup>st</sup>-best policies are distorted by the knowledge problem, the incentives problem, and politics
+  - Real world: 2<sup>nd</sup>-to-*n*<sup>th</sup>-best outcomes
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/aby3cf6ijkrjs7k/benevolentdespot.jpg?raw=1)
+]
+]
+
+---
+
+# Behavioral Symmetry
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/1fmcq3xqi3le7to/buchanantullocksmall.jpeg?raw=1)
+
+.smallest[
+James Buchanan and Gordon Tullock
+]
+]
+]
+
+.right-column[
+
+> "Throughout the ages the profit-seeker, the utility-maximizer, has found few friends among the moral and the political philosophers...In the political sphere the pursuit of private gain by the individual participant has been almost universally condemned as 'evil' by moral philosophers of many shades. .hi[No one seems to have explored carefully the implicit assumption that the individual must somehow shift his psychological and moral gears when he moves between the private and the social aspects of life]," (p. 19)
+
+.source[Buchanan, James M and Gordon Tullock, 1962, *The Calculus of Consent: Logical Foundations of Constitutional Democracy*]
+]
+
+---
+
+# Behavioral Symmetry
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/1fmcq3xqi3le7to/buchanantullocksmall.jpeg?raw=1)
+
+.smallest[
+James Buchanan and Gordon Tullock
+]
+]
+]
+
+.right-column[
+
+> "We are, therefore, placed in the somewhat singular position of having to defend the simple assumption that .hi[the *same* individual participatesin both processes [the market and politics]] against the almost certain onslaught of the moralists," (p. 19)
+
+.source[Buchanan, James M and Gordon Tullock, 1962, *The Calculus of Consent: Logical Foundations of Constitutional Democracy*]
+]
+
+---
+
+# Politics as Exchange
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/1fmcq3xqi3le7to/buchanantullocksmall.jpeg?raw=1)
+
+.smallest[
+James Buchanan and Gordon Tullock
+]
+]
+]
+
+.right-column[
+
+> "The economic approach, which assumes man to be a utility-maximizer in both his market and his political activity, does not require that one individual increase his own utility at the expense of other individuals. This approach incorporates .hi[political activity as a particular form of *exchange*]; and, as in the market relation, .hi[mutual gains to all parties are ideally expected to result from collective action]," (p. 23)
+
+.source[Buchanan, James M and Gordon Tullock, 1962, *The Calculus of Consent: Logical Foundations of Constitutional Democracy*]
+]
+
+---
+
+# Politics as Exchange
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/1fmcq3xqi3le7to/buchanantullocksmall.jpeg?raw=1)
+
+.smallest[
+James Buchanan and Gordon Tullock
+]
+]
+]
+
+.right-column[
+
+> "The power-maximizing approach, by contrast, must interpret collective choice-making as a zero-sum game...When one man gains, the other must lose; mutual gains from "trade" are not possible in this conceptual framework," (p. 23-24)
+
+.source[Buchanan, James M and Gordon Tullock, 1962, *The Calculus of Consent: Logical Foundations of Constitutional Democracy*]
+]
+
+---
+
+class: inverse, center, middle
+
+# Levels of Rules
+
+---
+
+# The Political and the Constitutional
+
+.pull-left[
+
+- We must be able to examine both levels simultaneously:
+
+1. .hi[Constitutional level] choice among **alternative sets** of rules
+
+2. .hi[Political level] choice **within a specific set** of rules
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/p437d4yyqx5bbz2/constraints.jpg?raw=1)
+]
+]
+
+---
+
+# The Political and the Constitutional
+
+.pull-left[
+
+- Each level affects the other
+
+- Constitutional rules constrain political decisions
+
+- Current political situation (preferences, interests, wealth, power) tints how we view particular constitutional rules
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/p437d4yyqx5bbz2/constraints.jpg?raw=1)
+]
+]
+
+---
+
+class: inverse, center, middle
+
+# How to Decide How to Decide
+
+---
+
+# Veil of Uncertainty
+
+.pull-left[
+
+- Behind .hi[veil of uncertainty] at the .hi[constitutional moment]
+  - Rawlsian veil of ignorance
+
+- Individuals do not know if they will be in majority or minority
+
+- Need to know costs of State action, but can't know this before we know how State is organized
+
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/hjzdnznrtkwn8aq/justiceblind.jpg?raw=1)
+]
+]
+
+---
+
+# Collective Action on the Margin
+
+.pull-left[
+
+- B&T assume some pre-existing property rights at some minimal level
+
+- **What _further_ collective action will individuals agree to?**
+
+> "When will a society composed of free and rational utility-maximizing individuals choose to undertake action collectively rather than privately?
+
+- Pre-existing **externalities** that individuals cannot mitigate alone
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/hjzdnznrtkwn8aq/justiceblind.jpg?raw=1)
+]
+]
+
+---
+
+# Collective Action on the Margin
+
+.pull-left[
+
+- Pre-existing **externalities** that individuals cannot mitigate alone
+
+- Failing to act collectively would leave these externalities
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/hjzdnznrtkwn8aq/justiceblind.jpg?raw=1)
+]
+]
+
+---
+
+# Constitutional Political Economy
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/1fmcq3xqi3le7to/buchanantullocksmall.jpeg?raw=1)
+
+.smallest[
+James Buchanan and Gordon Tullock
+]
+]
+]
+
+.right-column[
+
+> "There should be little reason to expect that constitutional rules developed in application to the passage of general legislation would provide an appropriate framework for the enactment of legislation that has differential or discriminatory impact on separate groups of citizens," (p. 22)
+
+.source[Buchanan, James M and Gordon Tullock, 1962, *The Calculus of Consent: Logical Foundations of Constitutional Democracy*]
+]
+
+---
+
+# The Unanimity Rule
+
+.pull-left[
+
+**What is the moral status of a decision rule?**
+  - Like "majority rule"
+
+- .hi[Unanimity] is .hi[ideal]: Pareto efficient by definition
+
+- Choice of .hi[constitutional rules] should be .hi[unanimous], so we can .hi-purple[disagree] about .hi-purple[political outcomes]
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/302icm2b2mciqz0/unanimous.jpg?raw=1)
+]
+]
+---
+
+# The Unanimity Rule
+
+.pull-left[
+
+- But there are .hi[costs] of trying to secure unanimity!
+  - Need **everyone** to agree
+
+- A .hi-purple[less-than-unanimous rule] will **create other costs** on minorities that are not in the majority
+
+- Consider two types of costs to determine **optimal departure from unanimity**
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/302icm2b2mciqz0/unanimous.jpg?raw=1)
+]
+]
+
+---
+
+# External Costs
+
+.pull-left[
+```{r, fig.retina=3}
+ggplot(data.frame(x=c(1,100)), aes(x=x))+
+  stat_function(fun=C, geom="line",color="red", size =2)+
+  geom_label(x=90, y=C(90), label="C(n)", color = "red")+
+  labs(x = "Fraction of N Individuals Needed",
+       y = "Costs")+
+  scale_x_continuous(breaks = c(0,100),
+                     labels = c(0, "N"),
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  scale_y_continuous(breaks = NULL,
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  theme_slides
+```
+]
+
+.pull-right[
+- .hi-red[External costs, `\\(C(n)\\)`]: cost of collectively-chosen outcome on individual
+
+- Fall with $n$
+
+- Expected cost of being in minority and coerced to comply with unfavorable decision
+
+- Some expected cost at 0, personal cost of unresolved externality
+
+- With .hi[unanimity] $(N)$, external costs $\rightarrow 0$!
+]
+
+---
+
+# Decision-making Costs
+
+.pull-left[
+```{r, fig.retina=3}
+ggplot(data.frame(x=c(1,100)), aes(x=x))+
+  stat_function(fun=D, geom="line",color="blue", size =2)+
+  geom_label(x=90, y=D(90), label="D(n)", color = "blue")+
+  labs(x = "Fraction of N Individuals Needed",
+       y = "Costs")+
+  scale_x_continuous(breaks = c(0,100),
+                     labels = c(0, "N"),
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  scale_y_continuous(breaks = NULL,
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  theme_slides
+```
+]
+
+.pull-right[
+- .hi-blue[Decision-making costs, `\\(D(n)\\)`]: cost of reaching an agreement
+
+- Increase exponentially with $n$
+
+- With more people, any one person can veto!
+
+- Holdouts, strategic bargaining, high transaction costs
+]
+
+---
+
+# Optimal-Decision Rule
+
+.pull-left[
+```{r, fig.retina=3}
+ggplot(data.frame(x=c(1,100)), aes(x=x))+
+  stat_function(fun=C, geom="line",color="red", size =2)+
+  geom_label(x=90, y=C(90), label="C(n)", color = "red")+
+  stat_function(fun=D, geom="line",color="blue", size =2)+
+  geom_label(x=90, y=D(90), label="D(n)", color = "blue")+
+  labs(x = "Fraction of N Individuals Needed",
+       y = "Costs")+
+  scale_x_continuous(breaks = c(0,100),
+                     labels = c(0, "N"),
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  scale_y_continuous(breaks = NULL,
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  theme_slides
+```
+]
+
+.pull-right[
+- With greater $n$, a tradeoff between lower .hi-red[External costs `\\(C(n)\\)`] and higher .hi-blue[Decision-making costs `\\(D(n)\\)`]
+]
+
+---
+
+# Optimal-Decision Rule
+
+.pull-left[
+```{r, fig.retina=3}
+ggplot(data.frame(x=c(1,100)), aes(x=x))+
+  stat_function(fun=C, geom="line",color="red", size =2)+
+  geom_label(x=90, y=C(90), label="C(n)", color = "red")+
+  stat_function(fun=D, geom="line",color="blue", size =2)+
+  geom_label(x=90, y=D(90), label="D(n)", color = "blue")+
+  stat_function(fun=Total, geom="line",color="purple", size =2)+
+  geom_label(x=90, y=Total(90), label="C(n)+D(n)", color = "purple")+
+  labs(x = "Fraction of N Individuals Needed",
+       y = "Costs")+
+  scale_x_continuous(breaks = c(0,100),
+                     labels = c(0, "N"),
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  scale_y_continuous(breaks = NULL,
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  theme_slides
+```
+]
+
+.pull-right[
+- With greater $n$, a tradeoff between lower .hi-red[External costs `\\(C(n)\\)`] and higher .hi-blue[Decision-making costs `\\(D(n)\\)`]
+
+- .hi-purple[Total costs `\\(C(n)+D(n)\\)`]: the (vertical) sum of external and decision-making costs
+
+]
+
+---
+
+# Optimal-Decision Rule
+
+.pull-left[
+```{r, fig.retina=3}
+
+minimum<-optimize(Total, interval=c(0, 100), maximum=FALSE)
+
+min<-round(minimum$minimum,0)
+
+opt<-ggplot(data.frame(x=c(1,100)), aes(x=x))+
+  stat_function(fun=C, geom="line",color="red", size =2)+
+  geom_label(x=90, y=C(90), label="C(n)", color = "red")+
+  stat_function(fun=D, geom="line",color="blue", size =2)+
+  geom_label(x=90, y=D(90), label="D(n)", color = "blue")+
+  stat_function(fun=Total, geom="line",color="purple", size =2)+
+  geom_label(x=90, y=Total(90), label="C(n)+D(n)", color = "purple")+
+  geom_vline(xintercept=min, color="green",linetype="dashed", size=1.5)+
+  labs(x = "Fraction of N Individuals Needed",
+       y = "Costs")+
+  scale_x_continuous(breaks = c(0,min,100),
+                     labels = c(0,"K/N","N"),
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  scale_y_continuous(breaks = NULL,
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  theme_slides
+opt
+```
+]
+
+.pull-right[
+- With greater $n$, a tradeoff between lower .hi-red[External costs `\\(C(n)\\)`] and higher .hi-blue[Decision-making costs `\\(D(n)\\)`]
+
+- .hi-purple[Total costs `\\(C(n)+D(n)\\)`]: the (vertical) sum of external and decision-making costs
+
+- .hi[Optimal decision rule]: **minimize total costs at $\frac{K}{N}$** 
+]
+
+---
+
+# Optimal-Decision Rule
+
+.pull-left[
+```{r, fig.retina=3}
+
+minimum<-optimize(Total, interval=c(0, 100), maximum=FALSE)
+
+min<-round(minimum$minimum,0)
+
+opt<-ggplot(data.frame(x=c(1,100)), aes(x=x))+
+  stat_function(fun=C, geom="line",color="red", size =2)+
+  geom_label(x=90, y=C(90), label="C(n)", color = "red")+
+  stat_function(fun=D, geom="line",color="blue", size =2)+
+  geom_label(x=90, y=D(90), label="D(n)", color = "blue")+
+  stat_function(fun=Total, geom="line",color="purple", size =2)+
+  geom_label(x=90, y=Total(90), label="C(n)+D(n)", color = "purple")+
+  geom_vline(xintercept=min, color="green",linetype="dashed", size=1.5)+
+  labs(x = "Fraction of N Individuals Needed",
+       y = "Costs")+
+  scale_x_continuous(breaks = c(0,min,100),
+                     labels = c(0,"K/N","N"),
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  scale_y_continuous(breaks = NULL,
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  theme_slides
+opt
+```
+]
+
+.pull-right[
+- **_ANY_ group of $\frac{K}{N}$ people that agree will determine the outcome**
+  - "the decisive set"
+
+- Note: again, the **minimum of** .hi-purple[Total Costs]
+  - not necessarily the *intersection* of .hi-red[External costs] and .hi-blue[Decision-making costs]
+  - not necessarily a **simple majority $\frac{n}{2}+1$**!
+]
+
+---
+
+# The Benefits of Majority Rule
+
+.pull-left[
+
+- .hi[Majority rule `\\(\left(\frac{n}{2}+1\right)\\)`] *is* a very common decision rule
+
+- Despite moral arguments for/against, practical reasons:
+  1. It's the smallest possible group which can ensure there will not be two contradictory measures passed
+  2. Can break a "voting cycle" (**next class**!)
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/akf47e0j2syb5po/majority1.jpg?raw=1)
+]
+]
+
+---
+
+# Optimal Decision Rules Vary
+
+.pull-left[
+
+- Costs are different issue by issue
+  - **No single voting rule optimal for all issues**
+
+- High .hi-red[`\\(C(n)\\)`]-issues
+  - Exercise of State power vs. individual
+  - Constitutional amendment
+  - Criminal convictions
+  - Much more than a majority
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/55t8nlvavc0h5u0/dissent.jpg?raw=1)
+]
+]
+
+---
+
+# Optimal Decision Rules Vary
+
+.pull-left[
+
+- Costs are different issue by issue
+  - **No single voting rule optimal for all issues**
+
+- High .hi-red[`\\(C(n)\\)`]-issues
+  - Exercise of State power vs. individual
+  - Constitutional amendment
+  - Criminal convictions
+  - Much more than a majority
+
+]
+
+.pull-right[
+```{r, fig.retina=3}
+# setup model
+a_2<-200
+b<-10
+c<-40
+d<-50
+
+library("mosaic")
+C_2=function(x){a_2*exp(-x/c)}
+D=function(x){b*exp(x/d)}
+#total costs function is sum of C and D functions
+Total_2=function(x){C_2(x)+D(x)}
+
+minimum2<-optimize(Total_2, interval=c(0, 100), maximum=FALSE)
+
+min_2<-round(minimum2$minimum,0)
+
+ggplot(data.frame(x=c(1,100)), aes(x=x))+
+  stat_function(fun=C_2, geom="line",color="darkred", size =2)+
+  geom_label(x=90, y=C_2(90), label="C(n)", color = "darkred")+
+  stat_function(fun=D, geom="line",color="blue", size =2)+
+  geom_label(x=90, y=D(90), label="D(n)", color = "blue")+
+  stat_function(fun=Total_2, geom="line",color="purple", size =2)+
+  geom_label(x=90, y=Total_2(90), label="C(n)+D(n)", color = "purple")+
+  geom_vline(xintercept=min_2, color="green",linetype="dashed", size=1.5)+
+  labs(x = "Fraction of N Individuals Needed",
+       y = "Costs")+
+  scale_x_continuous(breaks = c(0,min_2,100),
+                     labels = c(0,"K/N","N"),
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  scale_y_continuous(breaks = NULL,
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  theme_slides
+```
+]
+
+---
+
+# Optimal Decision Rules Vary
+
+.pull-left[
+
+- Low .hi-red[`\\(C(n)\\)`]-issues, common access rules:
+  - Nomination (1 person)
+  - Introducing a motion/bill (moved and seconded)
+  - *Writ of certorari*
+  - Much less than a majority
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/pglejsnr1hzk7b6/minority.jpg?raw=1)
+]
+]
+
+---
+
+# Common Decision Rules
+
+.pull-left[
+
+- **Access rules**: less than majority
+  - Bringing issues to the group
+
+- **Decision rules**: majority
+  - Actual business of passing resolutions
+
+- **Changing the rules**: more than majority (closer to unanimity)
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/akf47e0j2syb5po/majority1.jpg?raw=1)
+]
+]
+---
+
+# What Affects Total Costs
+
+.pull-left[
+.smaller[
+- Size of $N$: larger groups create larger $C+D$ costs
+  - We want the **smallest group consistent with the size of the externality**
+
+- Heterogeneity (of preferences, wealth, power, etc)
+  - $C$-costs rise: greater fear of being in minority
+  - $D$-costs rise: harder to get very different people to agree
+]
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/55t8nlvavc0h5u0/dissent.jpg?raw=1)
+]
+]
+
+---
+
+# Heterogeneity
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/1fmcq3xqi3le7to/buchanantullocksmall.jpeg?raw=1)
+
+.smallest[
+James Buchanan and Gordon Tullock
+]
+]
+]
+
+.right-column[
+
+> "Many activities that may be quite rationally collectivized in Sweden, a country with a relatively homogenous population, should be privately organized in India, Switzerland, or the United States."
+
+]
+
+---
+
+# Comparing the Cure and the Disease
+
+.pull-left[
+
+- Different alternative decisions regarding an externality have different costs:
+
+- $A$: do nothing, live with externality
+
+- $B$: voluntary collective action
+  - cost of collective action might yield underprovision
+
+- $C$: government action
+  - cost of collective action might create *new* political externalities
+
+- Which option yields the lowest cost outcome?
+
+]
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/8837bt04y2pivmo/uglyshirt.png?raw=1)
+]
+]
+
+---
+
+# When Optimal Collective Action is Second-Best
+
+.pull-left[
+```{r, fig.retina=3}
+min_level<-round(minimum$objective,0)
+
+ggplot(data.frame(x=c(1,100)), aes(x=x))+
+  stat_function(fun=Total, geom="line",color="purple", size =2)+
+  geom_label(x=90, y=Total(90), label="C(n)+D(n)", color = "purple")+
+  geom_vline(xintercept=min, color="green",linetype="dashed", size=1.5)+
+  geom_hline(yintercept=min_level, color="green",linetype="dashed", size=1.5)+
+  geom_hline(yintercept=30, size=1.5, linetype="dotted")+
+  labs(x = "Fraction of N Individuals Needed",
+       y = "Costs")+
+  scale_x_continuous(breaks = c(0,min,100),
+                     labels = c(0,"K/N","N"),
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  scale_y_continuous(breaks = c(30),
+                     limits = c(0,100),
+                     labels = c("A"),
+                     expand = c(0,0))+
+  theme_slides
+```
+]
+
+.pull-right[
+
+- Even with optimal collective decision rule, it might be better off left to private hands if total costs are lower (at A)
+
+- In general, the higher $C+D$ costs are (for whatever reason), the greater likelihood that an activity should be left private
+]
+
+---
+
+# The Importance of the Starting Point
+
+.pull-left[
+
+- Constitutional choice does not take place in a vacuum
+
+- Veil of ignorance assumes we have no specific stake in changing rules in a particular way, but 
+
+- Our current political situation (preferences, wealth, power, etc.) naturally will affect how we view different rules
+
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/3w5wyap5qs6amko/fix.jpg?raw=1)
+]
+]
+
+---
+
+# The Importance of the Starting Point
+
+.pull-left[
+
+- Incorrect to start from Hobbes (no rules); irrelevant to our actual decisions
+
+- Constitutional economics is practically about *reform* of rules, rather than designing from scratch 
+
+- We must always start from where we are
+
+- We would build a different house from scratch than if we change our existing one
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/3w5wyap5qs6amko/fix.jpg?raw=1)
+]
+]
