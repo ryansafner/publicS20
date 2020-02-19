@@ -18,11 +18,14 @@ In class, we looked at spatial competition along a single dimension, and saw tha
 Suppose we have three voters again voting on a platform of **two** issues: (1) Education Spending and (2) Defense Spending.
 
 
-```{r, echo=F, warning=F, message=F}
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F,
+                      message = F,
+                      warning = F,
+                      fig.retina = 3)
 library("tidyverse")
 library("ggrepel")
 library("ggforce")
-
 ```
 
 ```{r, fig.retina=3, echo=F}

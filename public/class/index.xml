@@ -27,7 +27,9 @@ Readings for Discussion There are no readings assigned for today’s class, but 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://publicS20.classes.ryansafner.com/class/3.1-class/</guid>
-      <description>code.sourceCode  span { display: inline-block; line-height: 1.25; } code.sourceCode  span { color: inherit; text-decoration: inherit; } code.sourceCode  span:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.sourceCode { white-space: pre-wrap; } code.sourceCode  span { text-indent: -5em; padding-left: 5em; } } pre.</description>
+      <description>Contents  Appendix: Spatial Competition in Multiple-Dimensions   Appendix: Spatial Competition in Multiple-Dimensions In class, we looked at spatial competition along a single dimension, and saw that if preferences are single-peaked, the median platform will win a majority, and escape the problem of cycling.
+Suppose we have three voters again voting on a platform of two issues: (1) Education Spending and (2) Defense Spending.
+We represent their ideal points in 2-dimensional issue space in the figure above.</description>
     </item>
     
   </channel>
