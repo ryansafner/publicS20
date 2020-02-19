@@ -42,7 +42,8 @@ lessons:
     
   - title: "3.1 Voting I: Preference Aggregation and Cycling"
     reading: "3.1-reading"
-
+    slides: "3.1-slides"
+    
   - title: "3.2 Voting II: Ignorance and Irrationality"
 
   - title: "3.3 Voting III: Democracy Squared?"

@@ -1,0 +1,1794 @@
+---
+title: "3.1: Voting I: Preference Aggregation and Cycling"
+subtitle: "ECON 410 · Public Economics · Spring 2020"
+author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/publicS20"><i class="fa fa-github fa-fw"></i> ryansafner/metricsf19</a><br> <a href="https://publicS20.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> publicS20.classes.ryansafner.com</a><br>'
+#date:
+output:
+  xaringan::moon_reader:
+    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML" # rescales math with css changes https://github.com/yihui/xaringan/issues/143
+    lib_dir: libs
+    df_print: paged
+    #seal: false
+    css: [custom.css, custom-fonts.css, "hygge"] #, metropolis, metropolis-fonts
+    nature:
+      beforeInit: ["macros.js", "https://platform.twitter.com/widgets.js"] # first is for rescaling images , second is for embedding tweets, https://github.com/yihui/xaringan/issues/100
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    includes:
+      in_header: header.html # for font awesome, used in title  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = F,
+                      warning = F,
+                      message = F,
+                      fig.retina = 3,
+                      fig.align = "center")
+library("tidyverse")
+
+theme_slides <- theme_classic() + 
+  theme(
+    text = element_text(family = "Fira Sans", size = 24)
+  )
+```
+
+# Information Aggregation Mechanisms
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/mqq0ggdfvqfptor/finance.png?raw=1)
+]
+]
+
+.pull-right[
+
+- **Markets** are a **discovery process** that use .hi[prices] to aggregate dispersed knowledge about scarcity, preferences, and opportunities regarding resources
+
+- Individual decisions maximize individual preferences within constraints
+]
+
+---
+
+# Information Aggregation Mechanisms
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/zxfhs2l32zjfy5a/vote.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- **Politics** might be considered a **discovery process** that uses .hi[votes] to aggregate dispersed knowledge about individual preferences into a single group choice
+
+]
+
+---
+
+# Information Aggregation Mechanisms
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/zxfhs2l32zjfy5a/vote.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- .hi["Social choice theory"] studies how to aggregate individual preferences into a consistent group preference to reach a collective decision for a group
+
+- Collective choice aims to maximize "group preferences" within constraints
+
+- In practice: analysis of alternative voting rules
+]
+
+---
+
+# Information Aggregation Mechanisms
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/zxfhs2l32zjfy5a/vote.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+$$\begin{bmatrix}
+	A\\ 
+	B \\
+	C \\
+	\end{bmatrix},
+	\begin{bmatrix}
+	B\\ 
+	A \\
+	C \\
+	\end{bmatrix},
+	\cdots , 
+	\begin{bmatrix}
+	C\\ 
+	B \\
+	A \\
+	\end{bmatrix}
+		\implies  
+	\begin{pmatrix}
+			\mathbf{A}\\
+			\mathbf{C}\\
+			\mathbf{B}\\
+		\end{pmatrix}$$
+
+]
+
+---
+
+# Voting as an Information Aggregation Mechanism
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/zxfhs2l32zjfy5a/vote.jpg?raw=1)
+]
+]
+
+.pull-right[
+- Voting of some form is common:
+  - Citizens electing official
+  - Legislators introducing, amending, and passing bills in committees or in full sessions
+  - Regulators making a new rule
+  - Jurors in criminal litigation
+  - Justices on appeals courts
+
+- Different procedures (pairwise votes, sequencing, etc), & require different levels of agreement (majority, supermajority, etc)
+]
+
+---
+
+# An Activity
+
+.center[
+![:scale 100%](https://www.dropbox.com/s/rpuayzim6kq3ipc/abc.png?raw=1)
+]
+
+---
+
+class: inverse, center, middle
+
+# Condorcet's Paradox
+
+---
+
+# Vote Cycling
+
+.pull-left[
+A vote with:
+
+1. 3+ choosers
+2. 3+ choices
+3. Disagreement
+
+leads to a .hi[voting cycle]: .hi-purple[a majority is opposed to every outcome]
+  - Each option will lose to another alternative
+
+- Note: it's NOT a three-way tie!
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/xumg1f8qaqyhan1/rockpaperscissors.png?raw=1)
+]
+]
+
+---
+
+# Condorcet's Paradox
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/rc2qcv2jc3uw5t9/condorcet.jpg?raw=1)
+
+.smallest[
+Marquis of Condorcet
+
+1743--1794
+]
+]
+]
+.right-column[
+
+- .hi[Condorcet Method]: pairwise voting between two alternatives that will elect a: 
+
+- .hi-purple[Condorcet winner]: can win a majority in any pairwise vote against all other candidates
+  - "pairwise champion" or "beats-all winner"
+
+- But with 3+ candidates, 3+ choosers, and disagreement, we get .hi[Condorcet's paradox]: vote cycling
+
+.source[M. Le Marquis de Condorcet, *Essai Sur L'Application de L'Analyse a la Probabilite des Decisions Rendues a la pluralite des voix*]
+]
+
+
+---
+
+# Condorcet's Paradox
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/rc2qcv2jc3uw5t9/condorcet.jpg?raw=1)
+
+.smallest[
+Marquis of Condorcet
+
+1743--1794
+]
+]
+]
+.right-column[
+
+- .hi-purple[Group preferences are often not transitive, even though individual preferences are transitive!]
+  - i.e. $A \succ B$ and $B \succ C$ but $C \succ A$
+  
+]
+
+---
+
+# Cycling as an Ontological Problem
+
+.pull-left[
+
+- This is *not* an .hi[epistomological problem] (problem of knowing the right information), this is an .hi[ontological problem]:
+
+- .hi-purple[A "best alternative" does not exist]!
+
+- **Groups do not have preferences** when individual members disagree!
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/fdogwh27om80h9c/confused.jpg?raw=1)
+]
+]
+
+---
+
+# Cycling as an Ontological Problem
+
+.pull-left[
+- So if there is a cycle, what is "the will of the majority"?
+  - Democracy is .hi[radically indeterminate]: it cannot produce a "best outcome"
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/fdogwh27om80h9c/confused.jpg?raw=1)
+]
+]
+
+---
+
+# Cycling as an Ontological Problem
+
+.pull-left[
+- More accurate question: the will of **which** majority shall we enact?
+  - A majority is opposed to each alternative
+  - It's not a three-way tie!
+
+- .hi-purple[The outcome that gets determined depends on the rules of how we vote]
+  - Is it A vs. B; or B vs. C; or A vs. C?
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/3n7r5wawrnkfmob/manipulate.jpg?raw=1)
+]
+]
+
+---
+
+# Cycling as an Ontological Problem
+
+.center[
+![](https://www.dropbox.com/s/1yslsppu81jc0r2/smbc2013-11-29pt1.png?raw=1)
+
+Source: [SMBC](https://www.smbc-comics.com/comic/2013-11-29)
+]
+
+---
+
+# Cycling as an Ontological Problem
+
+.center[
+![:scale 40%](https://www.dropbox.com/s/zjerwgchk6ia893/smbc2013-11-2pt2.png?raw=1)
+
+Source: [SMBC](https://www.smbc-comics.com/comic/2013-11-29)
+]
+
+---
+
+# Cycling as an Ontological Problem
+
+.center[
+![](https://www.dropbox.com/s/34iv88wwnoww0x0/smbc2013-11-2pt3.png?raw=1)
+
+Source: [SMBC](https://www.smbc-comics.com/comic/2013-11-29)
+]
+
+---
+
+# Condorcet's Brexit
+
+.center[
+![:scale 85%](https://www.dropbox.com/s/1ucxcil7dzaj551/condorcetbrexit.png?raw=1)
+]
+
+---
+
+class: inverse, center, middle
+
+# Agenda Control and Strategic Voting
+
+---
+
+# Agenda Control
+
+.pull-left[
+
+- .hi[Agenda control]: **whomever sets the agenda** (or sequence or rules of voting) **can determine the outcome**
+
+- This is tantamount to .hi-purple[dictatorship]! 
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/5d0vypxxv7a9w99/nancypelosirip.gif?raw=1)
+]
+]
+
+---
+
+# Agenda Control
+
+.pull-left[
+
+- If there are many majorities, and one can set the rules, which majority will win?
+
+- The one that is already wealthy and powerful
+
+- People worry markets benefit the wealthy...what about politics?
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/86u64ahx1b66hjz/corporateelite.jpg?raw=1)
+]
+]
+
+---
+
+# Strategic Voting
+
+.pull-left[
+
+|    | Amy | Ben | Carla |
+|----|-----|-----|-------|
+| 1. | Apples | Broccoli | Carrots |
+| 2. | Broccoli | Carrots | Apples |
+| 3. | Carrots | Apples | Broccoli |
+
+]
+
+--
+
+.pull-right[
+
+- Voting rule: Broccoli vs. Carrots; then Winner vs. Apples
+]
+
+---
+
+# Strategic Voting
+
+.pull-left[
+
+|    | Amy | Ben | Carla |
+|----|-----|-----|-------|
+| 1. | Apples | Broccoli | Carrots |
+| 2. | Broccoli | Carrots | Apples |
+| 3. | Carrots | Apples | Broccoli |
+
+]
+
+.pull-right[
+
+- Voting rule: Broccoli vs. Carrots; then Winner vs. Apples
+  1. **Broccoli: 2** vs. Carrots: 1
+]
+
+---
+
+# Strategic Voting
+
+.pull-left[
+
+|    | Amy | Ben | Carla |
+|----|-----|-----|-------|
+| 1. | Apples | Broccoli | Carrots |
+| 2. | Broccoli | Carrots | Apples |
+| 3. | Carrots | Apples | Broccoli |
+
+]
+
+.pull-right[
+
+- Voting rule: Broccoli vs. Carrots; then Winner vs. Apples
+  1. **Broccoli: 2** vs. Carrots: 1
+  2. Broccoli: 1 vs. **Apples: 2**
+
+- Result: Apples win
+]
+
+---
+
+# Strategic Voting
+
+.pull-left[
+
+|    | Amy | Ben | Carla |
+|----|-----|-----|-------|
+| 1. | Apples | Broccoli | Carrots |
+| 2. | Broccoli | Carrots | Apples |
+| 3. | Carrots | Apples | Broccoli |
+
+]
+
+.pull-right[
+
+- Voting rule: Broccoli vs. Carrots; then Winner vs. Apples
+
+- Ben likes Apples the least
+
+- He recognizes that under this voting rule, Apples will win
+]
+
+---
+
+# Strategic Voting
+
+.pull-left[
+
+|    | Amy | Ben | Carla |
+|----|-----|-----|-------|
+| 1. | Apples | Broccoli | Carrots |
+| 2. | Broccoli | Carrots | Apples |
+| 3. | Carrots | Apples | Broccoli |
+
+]
+
+.pull-right[
+
+- Voting rule: Broccoli vs. Carrots; then Winner vs. Apples
+
+- Ben likes Apples the least
+
+- He recognizes that under this voting rule, Apples will win
+
+- Suppose instead, in the first round, he votes for Carrots instead of Broccoli (even though he prefers Broccoli)
+]
+
+---
+
+# Strategic Voting
+
+.pull-left[
+
+|    | Amy | Ben | Carla |
+|----|-----|-----|-------|
+| 1. | Apples | Broccoli | Carrots |
+| 2. | Broccoli | Carrots | Apples |
+| 3. | Carrots | Apples | Broccoli |
+
+]
+
+.pull-right[
+
+- Voting rule: Broccoli vs. Carrots; then Winner vs. Apples
+  - 1: Broccoli: 1 vs. **Carrots 2**
+  - 2: **Carrots: 2** vs. Apples 1
+
+- In effect, a vote for Carrots *against his preferences* in the first round ensures Carrots win the second round
+
+- This is .hi[strategic voting]: voting against one's true preferences to change the (often a later-round) outcome 
+]
+
+---
+
+# Strategic Voting
+
+.pull-left[
+
+- By .hi[strategic voting], can overcome .hi[agenda control] problem
+
+- So not truly dictatorship then: if elites & incumbents use agenda control, voters can vote strategically
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/tymdsxbqaq2scxq/chessknights.jpg?raw=1)
+]
+]
+
+---
+
+# Strategic Voting
+
+.pull-left[
+
+- But what then of the information aggregation mechanisms of voting?
+  - People no longer reveal their true preferences by voting!
+
+- **Why is voting legitimate or sacred if people don't truly reveal their preferences?**
+
+- Further problem: strategic voting is easy with 3 voters, how about *300 million*?
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/tymdsxbqaq2scxq/chessknights.jpg?raw=1)
+]
+]
+
+---
+
+# Two Problems with Democracy
+
+.pull-left[
+
+- Democracy is inherently unstable because of it **cannot handle disagreement**, which causes:
+
+1. .hi[Agenda control]
+  - dictatorship with trappings of democracy
+
+2. .hi[Strategic voting]/dissident action
+  - process loses legitimacy, people are *lying* with their votes
+
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/xknpxpm133gzwpb/democracybridge2.gif?raw=1)
+]
+]
+---
+
+# Two Problems with Democracy
+
+.pull-left[
+
+- People will look for "extraconstitutional" solutions to solve the instability
+  - Coups, revolutions, trust in a "strong man" (dictator)
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/xknpxpm133gzwpb/democracybridge2.gif?raw=1)
+]
+]
+
+---
+# Pure Democracy Leads To...
+
+.center[
+![](https://www.dropbox.com/s/05be8gtazjb7foa/frenchrevolutionguilotine.jpg?raw=1)
+]
+
+---
+
+# Pure Democracy Leads To...
+
+.center[
+![](https://www.dropbox.com/s/r5ixmvgkiphf7zn/napoleoncoronation.jpg?raw=1)
+]
+
+---
+
+# Again, No Countries are Pure Democracies
+
+.pull-left[
+
+- No country in the world is a *pure* democracy, cannot handle disagreement
+
+Either:
+
+1. a well-constructed .hi[constitutional republic] (.hi["liberal democracy"]) with .hi-purple[constitutional rules that restrict majority rule]
+
+2. a .hi[dictatorship]
+
+Both solve democracy's problems!
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/xknpxpm133gzwpb/democracybridge2.gif?raw=1)
+]
+]
+
+---
+
+# German Democracy in 1930s
+
+.center[
+![:scale 100%](https://www.dropbox.com/s/yachdkjkp2js9or/hitlervoting.jpg?raw=1)
+]
+
+---
+
+# Russian Democracy
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/447zpeveljjcpx5/putinhorseback.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+> Mr. Putin [is surprisingly popular] with ordinary Russians, most of whom preferred the stability that he brought to the more democratic chaos of Boris Yeltsin." - [The Economist (June 9, 2012) Review](https://www.economist.com/books-and-arts/2012/06/09/not-such-a-strongman) of Masha Gessen, 2012, *The Man Without a Face: The Unlikely Rise of Vladimir Putin*
+
+]
+
+---
+
+# Egyptian Democracy...?
+
+.pull-left[
+![](https://www.dropbox.com/s/8j29hzmp1cne0ae/arabspring1.png?raw=1)
+]
+
+--
+
+.pull-right[
+![](https://www.dropbox.com/s/525t62a8gpkpfdt/elsisi.jpg?raw=1)
+]
+
+---
+
+# Democracy in Hungary
+
+.pull-left[
+![:scale 95%](https://www.dropbox.com/s/uqln00kyc10ic2r/orbanilliberaldemocracy.png?raw=1)
+
+Source: [DW (May 5, 2018)](https://www.dw.com/en/viktor-orban-era-of-liberal-democracy-is-over/a-43732540)
+]
+
+.pull-right[
+
+> "[T]he most popular topic in thinking today is trying to understand how systems that are not Western, not liberal, not liberal democracies, and perhaps not even democracies, can nevertheless make their nations successful." [Source](https://freedomhouse.org/report/modern-authoritarianism-illiberal-democracies)
+
+]
+
+---
+
+class: inverse, center, middle
+
+# Spatial Voting Theory
+
+---
+
+# Spatial Voting Theory
+
+- We can get a bit more advanced about preferences beyond mere orderings (e.g. $A \succ B \succ C)$
+
+- Also, ways to avoid cycling
+
+- Consider competition between candidates or proposals in .hi-purple[issue space] (i.e. a range of alternative choices along a single dimension)
+
+
+---
+
+# We Often Think Spatially About Politics
+
+.center[
+![:scale 50%](https://www.dropbox.com/s/fkh17oxdseez5nd/nolanchart.jpg?raw=1)
+]
+
+---
+
+# Spatial Voting Theory
+
+Features of Spatial Competition models:
+
+--
+1. **Voter preferences are represented by distance**
+  - Preferences are "single-peaked" with unique ideal preference
+  - Voters prefer candidates or proposals closer to their ideal preference
+  - Less distance $\implies$ greater utility
+
+--
+2. **Platforms are formed endogenously**
+  - Candidates (or proposals) compete *spatially*
+  - Want to maximize the number of voters "close" to your platform 
+
+--
+
+- Under these assumptions, a testable prediction about the outcome: .hi[The center (median) of the distribution of preferences is a Condorcet winner]
+
+---
+
+# Spatial Voting Example
+
+.pull-left[
+```{r, fig.retina=3}
+points<-tribble(
+  ~x, ~y, ~label,
+  50, 0.04, "A",
+  100, 0.02, "B",
+  300, 0.0265, "C"
+)
+
+committee<-ggplot(data = tibble(x=0:1000))+
+  aes(x = x)+
+  stat_function(fun = dnorm, args=list(mean = 50, sd = 10), size=2, color="blue")+
+  stat_function(fun = dnorm, args=list(mean = 100, sd = 20), size=2, color="green")+
+  stat_function(fun = dnorm, args=list(mean = 300, sd = 15), size=2, color="red")+
+  geom_segment(x=50, xend=50, y=0, yend=0.04, linetype="dotted")+
+  geom_segment(x=100, xend=100, y=0, yend=0.02, linetype="dotted")+
+  geom_segment(x=300, xend=300, y=0, yend=0.0265, linetype="dotted")+
+
+  geom_point(data = points, aes(x = x, y = y), size =2)+
+  geom_label(data = points, aes(x = x, y = y, label=label), size = 5)+
+  
+  
+  labs(x = "Budget",
+       y = "Utility")+
+  scale_x_continuous(breaks = seq(0,500,50),
+                     limits = c(0,500),
+                     expand = c(0,0),
+                     labels = scales::dollar
+                     )+
+  scale_y_continuous(breaks=NULL,
+                     limits=c(0,0.05),
+                     expand=c(0,0))+
+  theme_classic(base_family = "Fira Sans Condensed",
+           base_size=20)
+committee
+```
+]
+
+.pull-right[
+- .hi-green[Example]: Consider a committee of three members (.hi-blue[A], .hi-green[B], .hi-ed[C])
+
+- Vote is on how much to spend on budget to host a party
+
+- Height is level of utility for each voter
+]
+
+---
+
+# Spatial Voting Example
+
+.pull-left[
+```{r, fig.retina=3}
+committee
+```
+]
+
+.pull-right[
+- Each voter has **single-peaked preferences**
+  - .hi[Ideal point] of how much to spend (peak)
+  - Utility decreases with distance (in each direction) away from ideal point
+]
+
+---
+
+# Spatial Voting Example
+
+.pull-left[
+```{r, fig.retina=3}
+committee
+```
+]
+
+.pull-right[
+- Suppose any voter is allowed to make a proposal, e.g.
+  - .hi-blue[A] will propose a budget of $50
+  - .hi-green[B] will propose a budget of $100
+  - .hi-red[C] will propose a budget of $300
+
+- The question is, what will happen?
+
+- Consider pairwise voting between alternatives...
+]
+
+---
+
+# Spatial Voting Example
+
+.pull-left[
+```{r, fig.retina=3}
+committee
+```
+]
+
+.pull-right[
+- Suppose two proposals are put forth: **$50** and **$300**
+
+- Voters vote for proposal that is closer to their ideal point:
+  - $50: .hi-blue[A] and .hi-green[B]
+  - $300: .hi-red[C]
+  - $50 wins
+]
+
+---
+
+# Spatial Voting Example
+
+.pull-left[
+```{r, fig.retina=3}
+committee
+```
+]
+
+.pull-right[
+- Suppose two proposals are put forth: **$50** and **$100**
+
+- Voters vote for proposal that is closer to their ideal point:
+  - $50: .hi-blue[A] 
+  - $100: .hi-green[B] and .hi-red[C]
+  - $100 wins
+]
+
+---
+
+# Spatial Voting Example
+
+.pull-left[
+```{r, fig.retina=3}
+committee
+```
+]
+
+.pull-right[
+- Suppose two proposals are put forth: **$100** and **$300**
+
+- Voters vote for proposal that is closer to their ideal point:
+  - $100: .hi-blue[A] and .hi-green[B]
+  - $300: .hi-red[C]
+  - $100 wins
+]
+
+---
+
+# Spatial Voting Example
+
+.pull-left[
+```{r, fig.retina=3}
+committee
+```
+]
+
+.pull-right[
+- $100 is a .hi[Condorcet winner], it will defeat any alternative
+
+- This is because it is the .hi[median], it has an equal number of supporters of alternatives on either side of it
+]
+
+---
+
+# Median Voter Theorem
+
+.pull-left[
+```{r, fig.retina=3}
+committee
+```
+]
+
+.pull-right[
+- B is the .hi["median voter"] who has the .hi[median preference]
+
+- .hi-purple[Median Voter Theorem (MVT)]: if preferences are single-peaked along a single issue dimension, the median preference will always beat any alternative in a pairwise vote
+  - It is a Condorcet winner
+]
+
+---
+
+# The Median is Resistent to Outliers
+
+.pull-left[
+```{r, fig.retina=3}
+points_2<-tribble(
+  ~x, ~y, ~label,
+  50, 0.04, "A",
+  100, 0.02, "B",
+  1000, 0.0265, "C"
+)
+
+committee_2<-ggplot(data = tibble(x=0:1000))+
+  aes(x = x)+
+  stat_function(fun = dnorm, args=list(mean = 50, sd = 10), size=2, color="blue")+
+  stat_function(fun = dnorm, args=list(mean = 100, sd = 20), size=2, color="green")+
+  stat_function(fun = dnorm, args=list(mean = 1000, sd = 15), size=2, color="red")+
+  geom_segment(x=50, xend=50, y=0, yend=0.04, linetype="dotted")+
+  geom_segment(x=100, xend=100, y=0, yend=0.02, linetype="dotted")+
+  geom_segment(x=1000, xend=1000, y=0, yend=0.0265, linetype="dotted")+
+
+  geom_point(data = points_2, aes(x = x, y = y), size =2)+
+  geom_label(data = points_2, aes(x = x, y = y, label=label), size = 5)+
+  
+  labs(x = "Budget",
+       y = "Utility")+
+  scale_x_continuous(breaks = seq(0,1000,100),
+                     limits = c(0,1200),
+                     expand = c(0,0),
+                     labels = scales::dollar
+                     )+
+  scale_y_continuous(breaks=NULL,
+                     limits=c(0,0.05),
+                     expand=c(0,0))+
+  theme_classic(base_family = "Fira Sans Condensed",
+           base_size=20)
+committee_2
+```
+]
+
+.pull-right[
+- Suppose .hi-red[C] goes off the deep end and proposes to spend $1,000 on the party
+
+- What happens to the outcome? 
+]
+
+---
+
+# The Median is Resistent to Outliers
+
+.pull-left[
+```{r, fig.retina=3}
+points_2<-tribble(
+  ~x, ~y, ~label,
+  50, 0.04, "A",
+  100, 0.02, "B",
+  1000, 0.0265, "C"
+)
+
+committee_2<-ggplot(data = tibble(x=0:1000))+
+  aes(x = x)+
+  stat_function(fun = dnorm, args=list(mean = 50, sd = 10), size=2, color="blue")+
+  stat_function(fun = dnorm, args=list(mean = 100, sd = 20), size=2, color="green")+
+  stat_function(fun = dnorm, args=list(mean = 1000, sd = 15), size=2, color="red")+
+  geom_segment(x=50, xend=50, y=0, yend=0.04, linetype="dotted")+
+  geom_segment(x=100, xend=100, y=0, yend=0.02, linetype="dotted")+
+  geom_segment(x=1000, xend=1000, y=0, yend=0.0265, linetype="dotted")+
+
+  geom_point(data = points_2, aes(x = x, y = y), size =2)+
+  geom_label(data = points_2, aes(x = x, y = y, label=label), size = 5)+
+  
+  labs(x = "Budget",
+       y = "Utility")+
+  scale_x_continuous(breaks = seq(0,1000,100),
+                     limits = c(0,1200),
+                     expand = c(0,0),
+                     labels = scales::dollar
+                     )+
+  scale_y_continuous(breaks=NULL,
+                     limits=c(0,0.05),
+                     expand=c(0,0))+
+  theme_classic(base_family = "Fira Sans Condensed",
+           base_size=20)
+committee_2
+```
+]
+
+.pull-right[
+- Suppose .hi-red[C] goes off the deep end and proposes to spend $1,000 on the party
+
+- What happens to the outcome? **Nothing**!
+
+- Politics is resistant to changes at the margin, or at the fringes!
+  - Only if the *median* moves will the outcome change
+]
+
+---
+
+# Mass Elections Example
+
+.pull-left[
+```{r, fig.retina=3}
+election<-ggplot(data = tibble(x=-4:4))+
+  aes(x = x)+
+  stat_function(fun = dnorm, size=2, color="green")+
+  labs(x = "Issue",
+       y = "Number of Voters")+
+  scale_x_continuous(breaks = c(-4,4),
+                     limits = c(-4.5,4.5),
+                     expand = c(0,0),
+                     labels = c("Left", "Right")
+                     )+
+  scale_y_continuous(breaks=NULL,
+                     limits=c(0,0.5),
+                     expand=c(0,0))+
+  theme_classic(base_family = "Fira Sans Condensed",
+           base_size=20)
+election
+```
+]
+
+.pull-right[
+- Now consider a Presidential election
+  - many voters, each with own ideal preference
+
+- Aggregated together along a single dimension
+  - e.g. "left" vs. "right"; "low tax rates" to "high tax rates", etc.
+]
+
+---
+
+# Mass Elections Example
+
+.pull-left[
+```{r, fig.retina=3}
+election+geom_segment(x=0, xend=0, y=0, yend=0.4, linetype="dotted")+
+  geom_label(x=0,y=0.4,label="M",size=5)
+
+```
+]
+
+.pull-right[
+- .hi-purple[Median Voter Theorem] implies the median preference (M) will determine the outcome
+
+]
+
+---
+
+# Mass Elections Example
+
+.pull-left[
+```{r, fig.retina=3}
+election+geom_segment(x=0, xend=0, y=0, yend=0.4, linetype="dotted")+
+  geom_label(x=0,y=0.4,label="M",size=5)+
+  
+  stat_function(fun = dnorm, args=list(mean=-1, sd=1), size=2, color="purple")+
+  geom_segment(x=-1, xend=-1, y=0, yend=0.4, linetype="dotted")+
+  geom_label(x=-1,y=0.4,label="M'",size=5)+
+  
+      stat_function(fun = dnorm, args=list(mean=2, sd=1), size=2, color="orange")+
+  geom_segment(x=2, xend=2, y=0, yend=0.4, linetype="dotted")+
+  geom_label(x=2,y=0.4,label="M''",size=5)
+
+```
+]
+
+.pull-right[
+- .hi-purple[Median Voter Theorem] implies the median preference (M) will determine the outcome
+
+- Note the median need not be exactly in the middle, or median can shift
+
+]
+
+
+---
+
+# Mass Elections Example
+
+.pull-left[
+```{r, fig.retina=3}
+election_2<-election+geom_segment(x=0, xend=0, y=0, yend=0.4, linetype="dotted")+
+  geom_label(x=0,y=0.4,label="M",size=5)+
+  
+  geom_segment(x=-1.5, xend=-1.5, y=0, yend=0.4, linetype="dotted")+
+  geom_label(x=-1.5,y=0.4,label="A",size=5, color = "blue")+
+  
+  geom_segment(x=0.75, xend=0.75, y=0, yend=0.4, linetype="dotted")+
+  geom_label(x=0.75,y=0.4,label="B",size=5, color = "red")
+election_2
+```
+]
+
+.pull-right[
+- Imagine two candidates, .hi-blue[A] and .hi-red[B] in an election, who randomly start somewhere on the spectrum
+
+]
+
+---
+
+# Mass Elections Example
+
+.pull-left[
+```{r, fig.retina=3}
+election_2<-election+
+  
+    stat_function(fun = dnorm, geom = "area", xlim=c(-4,-0.375), size=2, fill="blue", alpha=0.4)+
+  
+  stat_function(fun = dnorm, geom = "area", xlim=c(-0.375,4), size=2, fill="red", alpha=0.4)+
+
+  geom_segment(x=0, xend=0, y=0, yend=0.4, linetype="dotted")+
+  geom_label(x=0,y=0.4,label="M",size=5)+
+  
+  geom_segment(x=-1.5, xend=-1.5, y=0, yend=0.4, linetype="dotted")+
+  geom_label(x=-1.5,y=0.4,label="A",size=5, color = "blue")+
+  
+  geom_segment(x=0.75, xend=0.75, y=0, yend=0.4, linetype="dotted")+
+  geom_label(x=0.75,y=0.4,label="B",size=5, color = "red")
+election_2
+```
+]
+
+.pull-right[
+- Imagine two candidates, .hi-blue[A] and .hi-red[B] in an election, who randomly start somewhere on the spectrum
+
+- Voters vote for the candidates closest to them on spectrum
+  - .hi-red[B] is closer to median, gets more votes
+  - .hi-blue[A] is more extreme, gets fewer votes
+
+]
+
+---
+
+# Mass Elections Example
+
+.pull-left[
+```{r, fig.retina=3}
+election_2<-election+
+  
+  stat_function(fun = dnorm, geom = "area", xlim=c(-4,0), size=2, fill="blue", alpha=0.4)+
+  
+  stat_function(fun = dnorm, geom = "area", xlim=c(0,4), size=2, fill="red", alpha=0.4)+
+
+  geom_segment(x=0, xend=0, y=0, yend=0.4, linetype="dotted")+
+  geom_label(x=0,y=0.4,label="M",size=5)+
+  
+  geom_segment(x=-1.5, xend=-1.5, y=0, yend=0.4, linetype="dotted")+
+  geom_label(x=-1.5,y=0.4,label="A",size=5, color = "blue")+
+  
+    geom_segment(x=-0.75, xend=-0.75, y=0, yend=0.4, linetype="dotted")+
+  geom_label(x=-0.75,y=0.4,label="A'",size=5, color = "blue")+
+
+  geom_segment(x=0.75, xend=0.75, y=0, yend=0.4, linetype="dotted")+
+  geom_label(x=0.75,y=0.4,label="B",size=5, color = "red")
+election_2
+```
+]
+
+.pull-right[
+
+- If .hi-blue[A] moves closer to the median (.hi-blue[A']), gains more votes (at .hi-red[B]'s) expense
+
+- The closer to the median (M) a candidate gets, the more likely they are to win
+]
+
+---
+
+# Third Parties?
+
+.pull-left[
+```{r, fig.retina=3}
+election_3<-election+
+  
+  geom_segment(x=0, xend=0, y=0, yend=0.4, linetype="dotted")+
+  geom_label(x=0,y=0.4,label="M",size=5)+
+  
+  geom_segment(x=-1.5, xend=-1.5, y=0, yend=0.4, linetype="dotted")+
+  geom_label(x=-1.5,y=0.4,label="C",size=5, color = "green")+
+
+    geom_segment(x=-0.75, xend=-0.75, y=0, yend=0.4, linetype="dotted")+
+  geom_label(x=-0.75,y=0.4,label="A",size=5, color = "blue")+
+
+  geom_segment(x=0.75, xend=0.75, y=0, yend=0.4, linetype="dotted")+
+  geom_label(x=0.75,y=0.4,label="B",size=5, color = "red")
+election_3
+```
+]
+
+.pull-right[
+
+- Imagine a third candidate, .hi-green[C] on the spectrum
+]
+
+---
+
+# Third Parties?
+
+.pull-left[
+```{r, fig.retina=3}
+election_3<-election+
+  
+  stat_function(fun = dnorm, geom = "area", xlim=c(-4,-1.125), size=2, fill="green", alpha=0.4)+
+
+  stat_function(fun = dnorm, geom = "area", xlim=c(-1.125,0), size=2, fill="blue", alpha=0.4)+
+  
+  stat_function(fun = dnorm, geom = "area", xlim=c(0,4), size=2, fill="red", alpha=0.4)+
+
+  geom_segment(x=0, xend=0, y=0, yend=0.4, linetype="dotted")+
+  geom_label(x=0,y=0.4,label="M",size=5)+
+  
+  geom_segment(x=-1.5, xend=-1.5, y=0, yend=0.4, linetype="dotted")+
+  geom_label(x=-1.5,y=0.4,label="C",size=5, color = "green")+
+
+    geom_segment(x=-0.75, xend=-0.75, y=0, yend=0.4, linetype="dotted")+
+  geom_label(x=-0.75,y=0.4,label="A",size=5, color = "blue")+
+
+  geom_segment(x=0.75, xend=0.75, y=0, yend=0.4, linetype="dotted")+
+  geom_label(x=0.75,y=0.4,label="B",size=5, color = "red")
+election_3
+```
+]
+
+.pull-right[
+
+- Imagine a third candidate, .hi-green[C] on the spectrum
+
+- Again, voters vote for who is closest to them
+  - Splits the vote of candidate that is closest to .hi-green[C] (i.e. .hi-blue[B])
+
+- Implication: .hi-purple[Third parties cannot win, and may harm party that they are closest to on issues]
+]
+
+---
+
+# Implications of Median Voter Theorem
+
+.pull-left[
+
+- Can break voting cycles if preferences on an issue are single-peaked
+
+- .hi-purple[Politics happens at the median], if the median changes, then outcomes changes
+
+- Changes on the fringes have no effect on outcomes
+
+- Candidates that are closer to (further from) the median perform better (worse)
+
+- Third parties split votes and rarely win
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/hult27v5uzhxvv6/medianvoter2.jpg?raw=1)
+]
+]
+
+---
+
+# More than One Issue Dimension?
+
+.pull-left[
+
+- We've assumed only a single issue is voted on at a time, with single-peaked preferences
+
+- What if vote is on a bundle of multiple issues?
+
+- Check out class notes later for spatial competition in multiple dimensions
+
+- Long story short: even with single-peaked preferences in multi-issue space, .hi-purple[democracy is indeterminate]
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/xknpxpm133gzwpb/democracybridge2.gif?raw=1)
+]
+]
+
+---
+
+class: inverse, center, middle
+
+# Arrow's Impossibility Theorem
+
+---
+
+# Arrow's Impossibility Theorem
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/vhuzdfu17gnympc/kenarrow2.jpg?raw=1)
+.smallest[
+Kenneth Arrow
+
+1921-2017
+
+Economics Nobel 1972
+]
+]
+]
+
+.right-column[
+- Arrow generalized the problem of Condorcet's Paradox (which relies on Condorcet's method of pairwise votes to pick a Condorcet winner)
+
+- Looks at all possible decision/voting rules
+
+- Which voting rules meet some minimal standard of desirable properties?
+
+- Very famous result
+]
+
+---
+
+# Arrow's Impossibility Theorem
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/vhuzdfu17gnympc/kenarrow2.jpg?raw=1)
+.smallest[
+Kenneth Arrow
+
+1921-2017
+
+Economics Nobel 1972
+]
+]
+]
+
+.right-column[
+.smallest[
+- Want a voting systen that meets the following criteria:
+
+1. .hi-purple[Unanimity/Pareto Criterion]: if all individuals prefer $X \succ Y$, then $X$ must be chosen over $Y$
+
+2. .hi-purple[Transitivity]: the social choice mechanism is transitive such that if $X$ is chosen over $Y$, and $Y$ over $Z$, then $X$ must be chosen over $Z$
+
+3. .hi-purple[Unrestricted Domain]: all individuals are able to rank all alternatives
+
+4. .hi-purple[Independence of Irrelevant Alternatives]: pairwise comparisons between two alternatives are not affected by the rank of *other* alternatives
+
+5. .hi-purple[Non-dictatorship]: there is no individual that always gets their way regardless of other voters
+]
+]
+
+---
+
+# Arrow's Impossibility Theorem
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/vhuzdfu17gnympc/kenarrow2.jpg?raw=1)
+.smallest[
+Kenneth Arrow
+
+1921-2017
+
+Economics Nobel 1972
+]
+]
+]
+
+.right-column[
+- .hi[Arrow's Impossibility Theorem]: no social choice mechanism exists that can fulfill all 5 criteria simultaneously
+
+- Alternative specification: the only social choice mechanism that can fulfill conditions 1-4 is .hi[dictatorship]
+
+]
+
+---
+
+# Arrow's Impossibility Theorem
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/vhuzdfu17gnympc/kenarrow2.jpg?raw=1)
+.smallest[
+Kenneth Arrow
+
+1921-2017
+
+Economics Nobel 1972
+]
+]
+]
+
+.right-column[
+- Depressing, but an upside: if you don't want a dictatorship, you **must** violate 1 of the 4 desirable properties
+
+- Pick your poison: which property is most worth violating?
+  1. Unanimity
+  2. Transitivity
+  3. Unrestricted domain
+  4. Independence of irrelevant alternatives
+
+]
+
+---
+
+# Independence of Irrelevant Alternatives
+
+.pull-left[
+
+- IIA is hardest to understand
+
+- It says, pairwise comparisons are not affected by rank of *other* alternatives
+
+- i.e. How I rank $X$ vs. $Y$ $(X \succ Y$ or $Y \succ X)$ is .hi-purple[unaffected by how I rank `\\(Z\\)`]
+]
+
+.pull-right[
+
+
+]
+
+---
+
+# IIA Violation Example
+
+|    | ![:scale 60%](https://www.dropbox.com/s/jo3pr2anarowdl3/georgewbush.png?raw=1) | ![:scale 90%](https://www.dropbox.com/s/sodb8a31ixwf6bj/gore.jpg?raw=1) | ![:scale 60%](https://www.dropbox.com/s/cdprfzb052t762f/nader.jpg?raw=1) |
+|----|----|----|
+| Bush vs. Gore<sup>.red[1]</sup> | 47.866% | **49.817%** |    |
+| Bush vs. Gore vs. Nader<sup>.red[2]</sup> | **48.847%** | 48.836% | 1.635% |
+
+.footnote[
+<sup>.red[1]</sup> [Study](http://www.sscnet.ucla.edu/polisci/faculty/lewis/pdf/greenreform9.pdf) estimates that if Nader had not run, 40% of Nader voters would vote for Bush, 60% for Gore
+
+<sup>.red[2]</sup> [Source](http://en.wikipedia.org/wiki/United_States_presidential_election_in_Florida,_2000)
+
+]
+
+---
+
+# IIA Violation Example
+
+|    | ![:scale 60%](https://www.dropbox.com/s/jo3pr2anarowdl3/georgewbush.png?raw=1) | ![:scale 90%](https://www.dropbox.com/s/sodb8a31ixwf6bj/gore.jpg?raw=1) | ![:scale 60%](https://www.dropbox.com/s/cdprfzb052t762f/nader.jpg?raw=1) |
+|----|----|----|
+| Bush vs. Gore<sup>.red[1]</sup> | 47.866% | **49.817%** |    |
+| Bush vs. Gore vs. Nader<sup>.red[2]</sup> | **48.847%** | 48.836% | 1.635% |
+
+- Note: if Gore $\succ$ Bush and Gore $\succ$ Nader, Gore was a Condorcet winner (that the system failed to select)
+
+---
+
+# Constitutional Rules, Again
+
+.pull-left[
+
+- *Pure* democracies are unable to withstand disagreement
+  - Vote cycling, agenda control, strategic voting
+
+- We do not see them in practice because pure democracies have gone one of two ways:
+  1. Revert into a dictatorship
+  2. Constitutional republics
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/xknpxpm133gzwpb/democracybridge2.gif?raw=1)
+]
+]
+
+---
+
+# Constitutional Rules, Again
+
+.pull-left[
+
+- Mature, institutionalized "democracies", manage these problems by creating institutions:
+
+- restrict domain of what can be voted upon (constitutional rules & rule of law)
+
+- restrict choice to two alternatives
+  - a simple majority is a popular rule because you can't get a cycle!
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/xknpxpm133gzwpb/democracybridge2.gif?raw=1)
+]
+]
+
+---
+
+# Limiting Choice: Two-Party Systems
+
+.pull-left[
+
+- Cycles and their attendant problems (revolutions, dictatorships, etc) are avoided with just 2 choices
+  - One of which can capture a simple majority
+
+- Despite wide variety of electoral systems, most accomplish exactly this
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/hult27v5uzhxvv6/medianvoter2.jpg?raw=1)
+]
+]
+
+---
+
+# Elections and Districts
+
+.pull-left[
+- Election often involves (1) aggregating individual votes in geographic units (.hi-purple[districts]) and then (2) taking the majority vote of those districts
+
+- Party winning most seats not necessarily the party that wins the most votes
+
+- .hi-green[Example]: in 2012, Democrats in the U.S. House of Representatives earned 50.59% of the vote but only attained 46.21% of the seats
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/4ekeotq2avb175w/districtvoting.png?raw=1)
+]
+]
+
+---
+
+# Elections and Districts
+
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/lzhe9u3hkr8mwuy/congress.png?raw=1)
+
+Presidential/Congressional
+]
+]
+
+.pull-right[
+.center[
+![:scale 60%](https://www.dropbox.com/s/4lsl1ln5g0ha7gd/westminster.jpg?raw=1)
+
+Parliamentary
+]
+]
+
+---
+
+# Presidential System
+
+.pull-left[
+
+- .hi-purple[Single-member districts]: each district elects a single member
+
+- .hi["First-Past-The-Post" (FPTP)] aka .hi[plurality] voting: candidate that receives the most votes wins
+  - even if not a majority! (51%)
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/lzhe9u3hkr8mwuy/congress.png?raw=1)
+
+Presidential/Congressional
+]
+]
+
+---
+
+# 116th U.S. Congress
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/c3vo293o8yrdn59/2018house.png?raw=1)
+]
+
+---
+
+# Example of Plurality Voting
+
+.pull-left[
+
+.center[
+![](https://www.dropbox.com/s/s6c0wbba6ez1ny9/tennesseevote.png?raw=1)
+]
+
+| Rank  | 42% of voters | 26% of voters | 15% of voters | 17% of voters |
+|----|---------------|---------------|---------------|---------------|
+| 1  | .hi-red[Mephis] | .hi-green[Nashville] | .hi-purple[Chattanooga] | .hi-orange[Knoxville] |
+| 2  | Nashville | Chattanooga | Knoxville | Chattanooga |
+| 3  | Chattanooga | Knoxville | Nashville | Nashville |
+| 4  | Knoxville | Memphis | Memphis | Memphis |
+
+
+]
+
+
+.pull-right[
+
+- Imagine an election of where to move Tennessee's capital
+
+- Voter preferences in table
+
+]
+
+---
+
+# Example of Plurality Voting
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/s6c0wbba6ez1ny9/tennesseevote.png?raw=1)
+]
+
+| Rank  | .hi-red[42% of voters] | 26% of voters | 15% of voters | 17% of voters |
+|----|---------------|---------------|---------------|---------------|
+| 1  | .hi-red[Memphis] | .hi-green[Nashville] | .hi-purple[Chattanooga] | .hi-orange[Knoxville] |
+| 2  | Nashville | Chattanooga | Knoxville | Chattanooga |
+| 3  | Chattanooga | Knoxville | Nashville | Nashville |
+| 4  | Knoxville | .hi-red[Memphis] | .hi-red[Memphis] | .hi-red[Memphis] |
+
+]
+
+.pull-right[
+- .hi-red[Memphis] wins, with 42% of the vote
+  - Even though **58% of voters preferred Memphis the least!**
+
+]
+
+---
+
+# Limiting Choice: Run-off Voting
+
+- Some Presidential systems have .hi[run-off voting]: top 2 candidates in first round compete as the only choices in the second round
+
+---
+
+# Run Off Voting Example
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/s6c0wbba6ez1ny9/tennesseevote.png?raw=1)
+]
+
+| Rank  | .hi-red[42% of voters] | 26% of voters | 15% of voters | 17% of voters |
+|----|---------------|---------------|---------------|---------------|
+| 1  | .hi-red[Memphis] | .hi-green[Nashville] | .hi-purple[Chattanooga] | .hi-orange[Knoxville] |
+| 2  | Nashville | Chattanooga | Knoxville | Chattanooga |
+| 3  | Chattanooga | Knoxville | Nashville | Nashville |
+| 4  | Knoxville | .hi-red[Memphis] | .hi-red[Memphis] | .hi-red[Memphis] |
+
+]
+
+.pull-right[
+- .hi-red[Memphis] (42%)  and .hi-green[Nashville] (26%) win first round
+
+- Second round: 
+  - .hi-red[Memphis]: 42%
+  - .hi-green[Nashville]: 58%
+
+- .hi-green[Nashville wins]
+
+]
+
+---
+
+# Run Off Voting Example
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/s6c0wbba6ez1ny9/tennesseevote.png?raw=1)
+]
+
+| Rank  | .hi-red[42% of voters] | 26% of voters | 15% of voters | 17% of voters |
+|----|---------------|---------------|---------------|---------------|
+| 1  | .hi-red[Memphis] | .hi-green[Nashville] | .hi-purple[Chattanooga] | .hi-orange[Knoxville] |
+| 2  | Nashville | Chattanooga | Knoxville | Chattanooga |
+| 3  | Chattanooga | Knoxville | Nashville | Nashville |
+| 4  | Knoxville | .hi-red[Memphis] | .hi-red[Memphis] | .hi-red[Memphis] |
+
+]
+
+.pull-right[
+- .hi-red[Memphis] (42%)  and .hi-green[Nashville] (26%) win first round
+
+- Second round: 
+  - .hi-red[Memphis]: 42%
+  - .hi-green[Nashville]: 58%
+
+- .hi-green[Nashville wins]
+
+]
+
+---
+
+# Run Off Voting Example II
+
+.center[
+![:scale 90%](https://www.dropbox.com/s/876a708wx6fld62/frenchrunoff.png?raw=1)
+
+.source[Source: [Wikipedia](https://en.wikipedia.org/wiki/2017_French_presidential_election)]
+]
+
+---
+
+# Limiting Choice in Presidential Systems: Duverger's Law
+
+.pull-left[
+- French political scientist observed empirical regularity in Presidential system elections:
+
+- .hi[Duverger's Law]: in a first-past-the-post voting system, there will tend to be 2 effective candidates (parties)
+  - FPTP marginalizes smaller parties
+  - Median Voter Theorem $\implies$ third parties split votes
+  - Strategic voting: people don't want to waste their vote
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/lzhe9u3hkr8mwuy/congress.png?raw=1)
+
+]
+]
+
+---
+
+# Duverger's Law Example
+
+.pull-left[
+
+- 2003 California Gubernatorial Election [(Wikipedia)](https://en.wikipedia.org/wiki/California_gubernatorial_recall_election)
+
+
+- Governor Gray Davis recalled from office, a non-partisan special election with...**135 candidates**
+
+- Newspapers: What a catastrophe! No mandate! 
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/uvjfeq047bsuasw/graydavisrecall.png?raw=1)
+]
+]
+---
+
+# Duverger's Law Example
+
+.center[
+![:scale 60%](https://www.dropbox.com/s/qng6pnnf8w4l98b/CAgubernatorial2003result.png?raw=1)
+]
+
+---
+
+# Limiting Choice: Parliamentary System
+
+.pull-left[
+
+- .hi-purple[Multiple-member districts]: each district elects multiple members
+
+- .hi["Proportional Voting"] if a political party gets *x* percent of the national vote, they get *x* percent of the seats in the legislature
+
+]
+
+.pull-right[
+.center[
+![:scale 60%](https://www.dropbox.com/s/4lsl1ln5g0ha7gd/westminster.jpg?raw=1)
+
+Parliamentary
+]
+]
+
+---
+
+# Limiting Choice: Parliamentary System
+
+.pull-left[
+
+- Voters in each district often vote for a .hi-purple[party list] - if party is able to earn *x* seats, the top *x* members in the party get seated
+
+- Party with majority, OR a coalition of parties that have a majority forms .hi["the government"]
+
+- Remainder forms a coalition as .hi["the opposition"]
+]
+
+.pull-right[
+.center[
+![:scale 60%](https://www.dropbox.com/s/4lsl1ln5g0ha7gd/westminster.jpg?raw=1)
+
+Parliamentary
+]
+]
+
+---
+
+# Limiting Choice: Parliamentary System
+
+.center[
+![](https://www.dropbox.com/s/z1n4z0dx0d3r8j9/houseofcommonsboris.jpg?raw=1)
+]
+
+---
+
+# Limiting Choice: Parliamentary System
+
+.center[
+![:scale 70%](https://www.dropbox.com/s/ic96h8gbyl1k6w8/germanbundestag.jpg?raw=1)
+]
