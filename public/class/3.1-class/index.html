@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en-us"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Ryan Safner">
+    <meta name="description" content="Public">
+
+    <meta name="twitter:card" value="summary_large_image">
+    <meta name="twitter:site" content="@ryansafner">
+    <meta name="twitter:title" content="3.1: Voting I: Preference Aggregation &amp; Cycling | ECON 410: Public Economics">
+    <meta name="twitter:creator" content="@ryansafner">
+    <meta name="twitter:image" content="https://publicS20.classes.ryansafner.com/images/public_hex.png">
+    <meta name="twitter:description" content="Public" />
+
+    <meta property="og:site_name" content="ECON 410: Public Economics"/>
+    <meta property="og:title" content="3.1: Voting I: Preference Aggregation &amp; Cycling | ECON 410: Public Economics">
+    <meta property="og:type" content="article" />
+    <meta property="article:author" content="https://www.facebook.com/ryansafner" />
+    <meta property="og:url" content="https://publicS20.classes.ryansafner.com/" />
+    <meta property="og:image" content="https://publicS20.classes.ryansafner.com/images/public_hex.png">
+    <meta property="og:description" content="Public" />
+
+    <meta name="generator" content="Hugo 0.56.3" />    
+
+    <title>3.1: Voting I: Preference Aggregation &amp; Cycling | ECON 410: Public Economics</title>
+    <link rel="canonical" href="https://publicS20.classes.ryansafner.com/class/3.1-class/">
+    <link href="/theme/css/tufte.css" rel="stylesheet">
+    <link href="/theme/css/latex.css" rel="stylesheet">
+    <link href="/theme/css/custom.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style type="text/css">
+        .wrap a, .wrap a:visited {
+            color: #5E81AC;
+        }
+
+        .wrap a:hover {
+            color: #D08770;
+        }
+
+        .wrap p > a {
+            color: #5E81AC;
+        }
+
+        article .sidenote-number:after, article .sidenote:before {
+            color: #5E81AC;
+        }
+
+        article .sidenote:before {
+            color: #5E81AC;
+        }
+
+        @media (max-width: 760px) {
+            label.margin-toggle:not(.sidenote-number) {
+                color: #5E81AC;
+            }
+        }
+
+        .contrast a, .contrast a:visited {
+            color: #5E81AC; 
+        }
+
+        header > nav a {
+            color: #5E81AC;
+        }
+
+        .credits a {
+            color: #5E81AC;
+        }
+
+        .wrap .tag {
+            background: #5E81AC;
+        }
+    </style>
+
+    <link rel="shortcut icon" href="https://publicS20.classes.ryansafner.com/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://publicS20.classes.ryansafner.com/images/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://publicS20.classes.ryansafner.com/images/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://publicS20.classes.ryansafner.com/images/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://publicS20.classes.ryansafner.com/images/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://publicS20.classes.ryansafner.com/images/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://publicS20.classes.ryansafner.com/images/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="https://publicS20.classes.ryansafner.com/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="https://publicS20.classes.ryansafner.com/images/favicon-16x16.png" sizes="16x16" />
+    <meta name="application-name" content="ECON 410: Public Economics"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="https://publicS20.classes.ryansafner.com/images/mstile-144x144.png" />
+
+    
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600|Archivo:400" rel="stylesheet"> 
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+<div class="wrap">
+    <header>
+        <nav class="group logo-wrap">
+            <a href="/" class="logo"><img src="https://publicS20.classes.ryansafner.com/images/public_hex.png" alt="Public Economics"></a>
+            <h1 class="websitetitle"><a href="https://publicS20.classes.ryansafner.com/">ECON 410: Public Economics</a></h1>
+        </nav>
+        <nav class="bottom-group">
+            
+            <a href="/syllabus/">Syllabus</a>
+            
+            <a href="/schedule/">Schedule</a>
+            
+            <a href="/assignments/">Assignments</a>
+            
+            <a href="/reference/">Reference</a>
+            
+        </nav>
+    </header>
+
+
+    <article class="group">
+    <h1>3.1: Voting I: Preference Aggregation &amp; Cycling</h1>
+    
+    
+<!-- BLOGDOWN-HEAD -->
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #ffffff;
+    color: #a0a0a0;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #a0a0a0;  padding-left: 4px; }
+div.sourceCode
+  { color: #1f1c1b; background-color: #ffffff; }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span. { color: #1f1c1b; } /* Normal */
+code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
+code span.an { color: #ca60ca; } /* Annotation */
+code span.at { color: #0057ae; } /* Attribute */
+code span.bn { color: #b08000; } /* BaseN */
+code span.bu { color: #644a9b; font-weight: bold; } /* BuiltIn */
+code span.cf { color: #1f1c1b; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #924c9d; } /* Char */
+code span.cn { color: #aa5500; } /* Constant */
+code span.co { color: #898887; } /* Comment */
+code span.cv { color: #0095ff; } /* CommentVar */
+code span.do { color: #607880; } /* Documentation */
+code span.dt { color: #0057ae; } /* DataType */
+code span.dv { color: #b08000; } /* DecVal */
+code span.er { color: #bf0303; text-decoration: underline; } /* Error */
+code span.ex { color: #0095ff; font-weight: bold; } /* Extension */
+code span.fl { color: #b08000; } /* Float */
+code span.fu { color: #644a9b; } /* Function */
+code span.im { color: #ff5500; } /* Import */
+code span.in { color: #b08000; } /* Information */
+code span.kw { color: #1f1c1b; font-weight: bold; } /* Keyword */
+code span.op { color: #1f1c1b; } /* Operator */
+code span.ot { color: #006e28; } /* Other */
+code span.pp { color: #006e28; } /* Preprocessor */
+code span.re { color: #0057ae; background-color: #e0e9f8; } /* RegionMarker */
+code span.sc { color: #3daee9; } /* SpecialChar */
+code span.ss { color: #ff5500; } /* SpecialString */
+code span.st { color: #bf0303; } /* String */
+code span.va { color: #0057ae; } /* Variable */
+code span.vs { color: #bf0303; } /* VerbatimString */
+code span.wa { color: #bf0303; } /* Warning */
+</style>
+<!-- /BLOGDOWN-HEAD -->
+
+<h2>Contents</h2>
+<div id="TOC">
+<ul>
+<li><a href="#appendix-spatial-competition-in-multiple-dimensions">Appendix: Spatial Competition in Multiple-Dimensions</a></li>
+</ul>
+</div>
+
+<h2 id="appendix-spatial-competition-in-multiple-dimensions">Appendix: Spatial Competition in Multiple-Dimensions</h2>
+<p>In class, we looked at spatial competition along a single dimension, and saw that <strong>if preferences are single-peaked</strong>, the <strong>median</strong> platform will win a majority, and escape the problem of cycling.</p>
+<p>Suppose we have three voters again voting on a platform of <strong>two</strong> issues: (1) Education Spending and (2) Defense Spending.</p>
+<p><img src="/class/3.1-class_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>We represent their <strong>ideal points</strong> in 2-dimensional issue space in the figure above. Imagine this is looking down on the peaks of three mountains, as moving in <em>any direction</em> away from a voter’s ideal point (peak) decreases their utility (if you like, decreases in elevation from the peak).</p>
+<p>Now, we can still apply the median voter theorem here, by determining the median of each issue. For Education Spending, C is the median (A to the left and C to the right), and for Defense Spending, B is the median (A above, and C below).</p>
+<p><img src="/class/3.1-class_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>We have found the median platform by combining the median of each issue. Now, find the distance, for each voter, from their ideal point to the median platform. Consider this a distance the radius of a circle. This circle, for each voter, represents an <strong>indifference curve</strong> for that voter: the set of alternative platforms of education and defense that is <em>equally preferable</em> (gives same utility) for that voter as the median platform.</p>
+<p><em>Inside</em> each circle is the set of platforms that are <strong>preferred over</strong> the median (and equivalent platforms, the circumference of the circle). As an obvious demonstration, each voter prefers their own ideal point (A prefers A, B prefers B, and C prefers C) over the median platform.</p>
+<p><img src="/class/3.1-class_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>Note the “preferred-to sets” (the shaded circles) <strong>do not overlap</strong> at the median! The borders of the circles do, i.e. the indifference curve, but not the preferred-to sets!</p>
+<p>Now, allow the voters to propose any platform they wish, to vote on in a pairwise vote. We begin with the median as a starting point: ($50B Education Spending, $50B Defense Spending).</p>
+<p>Consider voter <span class="math inline">\(A\)</span>. She could propose something she prefers over the median, say point <span class="math inline">\(1\)</span> at ($30, $70), but that is outside the other voters’ preferred-to sets (outside of their circles), so this would be <strong>worse</strong> for them, and they would vote against it.</p>
+<p><img src="/class/3.1-class_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>If <span class="math inline">\(A\)</span> proposes something inside her and any other voter’s preferred-to set (inside the circle), she can get a majority to approve it over the median. Suppose she proposes platform <span class="math inline">\(D\)</span>: $35B education and $42.5 B defense. Then her and voter <span class="math inline">\(C\)</span> will vote for this over the median, since it is inside both of their circles (and thus, preferred over the median), whereas <span class="math inline">\(B\)</span> will vote against it, it being worse than the median.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>votes<span class="op">+</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;segment&quot;</span>, <span class="dt">x =</span> <span class="dv">50</span>, <span class="dt">xend =</span> <span class="dv">35</span>, <span class="dt">y =</span> <span class="dv">50</span>, <span class="dt">yend =</span> <span class="fl">42.5</span>, <span class="dt">color =</span> <span class="st">&quot;purple&quot;</span>, <span class="dt">size=</span><span class="fl">1.5</span>, <span class="dt">alpha=</span><span class="dv">1</span>, <span class="dt">arrow=</span><span class="kw">arrow</span>(<span class="dt">length=</span><span class="kw">unit</span>(<span class="fl">0.5</span>,<span class="st">&quot;cm&quot;</span>), <span class="dt">ends=</span><span class="st">&quot;last&quot;</span>, <span class="dt">type=</span><span class="st">&quot;closed&quot;</span>))<span class="op">+</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">x =</span> <span class="dv">35</span>, <span class="dt">y =</span> <span class="fl">42.5</span>, <span class="dt">size =</span> <span class="dv">2</span>)<span class="op">+</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="st">  </span><span class="kw">geom_label_repel</span>(<span class="dt">data =</span> <span class="kw">tibble</span>(<span class="dt">x=</span><span class="dv">35</span>,</span>
+<span id="cb1-5"><a href="#cb1-5"></a>                                 <span class="dt">y=</span><span class="fl">42.5</span>),</span>
+<span id="cb1-6"><a href="#cb1-6"></a>                   <span class="kw">aes</span>(<span class="dt">x=</span>x,</span>
+<span id="cb1-7"><a href="#cb1-7"></a>                       <span class="dt">y=</span>y),</span>
+<span id="cb1-8"><a href="#cb1-8"></a>                   <span class="dt">label =</span> <span class="st">&quot;D&quot;</span>,</span>
+<span id="cb1-9"><a href="#cb1-9"></a>                   <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>,</span>
+<span id="cb1-10"><a href="#cb1-10"></a>                   <span class="dt">seed=</span><span class="dv">256</span>)</span></code></pre></div>
+<p><img src="/class/3.1-class_files/figure-html/unnamed-chunk-6-1.png" width="672" />
+Platform <span class="math inline">\(D\)</span> wins, 2-1. Suppose voter <span class="math inline">\(B\)</span> suggests an alternative to <span class="math inline">\(D\)</span>, platform <span class="math inline">\(E\)</span>, with $58B in Education and $33B in Defense. Compared to platform <span class="math inline">\(D\)</span>, voters <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span> prefer this, as it is closer to their ideal points, but it is well outside voter <span class="math inline">\(A\)</span>’s circle, so she votes against. But the vote of <span class="math inline">\(E\)</span> vs <span class="math inline">\(D\)</span> results in <span class="math inline">\(E\)</span> winning, 2-1.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>votes<span class="op">+</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;segment&quot;</span>, <span class="dt">x =</span> <span class="dv">50</span>, <span class="dt">xend =</span> <span class="dv">35</span>, <span class="dt">y =</span> <span class="dv">50</span>, <span class="dt">yend =</span> <span class="fl">42.5</span>, <span class="dt">color =</span> <span class="st">&quot;purple&quot;</span>, <span class="dt">size=</span><span class="fl">1.5</span>, <span class="dt">alpha=</span><span class="dv">1</span>, <span class="dt">arrow=</span><span class="kw">arrow</span>(<span class="dt">length=</span><span class="kw">unit</span>(<span class="fl">0.5</span>,<span class="st">&quot;cm&quot;</span>), <span class="dt">ends=</span><span class="st">&quot;last&quot;</span>, <span class="dt">type=</span><span class="st">&quot;closed&quot;</span>))<span class="op">+</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="st">  </span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;segment&quot;</span>, <span class="dt">x =</span> <span class="dv">35</span>, <span class="dt">xend =</span> <span class="dv">58</span>, <span class="dt">y =</span> <span class="fl">42.5</span>, <span class="dt">yend =</span> <span class="dv">33</span>, <span class="dt">color =</span> <span class="st">&quot;purple&quot;</span>, <span class="dt">size=</span><span class="fl">1.5</span>, <span class="dt">alpha=</span><span class="dv">1</span>, <span class="dt">arrow=</span><span class="kw">arrow</span>(<span class="dt">length=</span><span class="kw">unit</span>(<span class="fl">0.5</span>,<span class="st">&quot;cm&quot;</span>), <span class="dt">ends=</span><span class="st">&quot;last&quot;</span>, <span class="dt">type=</span><span class="st">&quot;closed&quot;</span>))<span class="op">+</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="co"># point D</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="st">    </span><span class="kw">geom_point</span>(<span class="dt">x =</span> <span class="dv">35</span>, <span class="dt">y =</span> <span class="fl">42.5</span>, <span class="dt">size =</span> <span class="dv">2</span>)<span class="op">+</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="st">  </span><span class="kw">geom_label_repel</span>(<span class="dt">data =</span> <span class="kw">tibble</span>(<span class="dt">x=</span><span class="dv">35</span>,</span>
+<span id="cb2-8"><a href="#cb2-8"></a>                                 <span class="dt">y=</span><span class="fl">42.5</span>),</span>
+<span id="cb2-9"><a href="#cb2-9"></a>                   <span class="kw">aes</span>(<span class="dt">x=</span>x,</span>
+<span id="cb2-10"><a href="#cb2-10"></a>                       <span class="dt">y=</span>y),</span>
+<span id="cb2-11"><a href="#cb2-11"></a>                   <span class="dt">label =</span> <span class="st">&quot;D&quot;</span>,</span>
+<span id="cb2-12"><a href="#cb2-12"></a>                   <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>,</span>
+<span id="cb2-13"><a href="#cb2-13"></a>                   <span class="dt">seed=</span><span class="dv">256</span>)<span class="op">+</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="co"># point E</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a><span class="st">      </span><span class="kw">geom_point</span>(<span class="dt">x =</span> <span class="dv">58</span>, <span class="dt">y =</span> <span class="dv">33</span>, <span class="dt">size =</span> <span class="dv">2</span>)<span class="op">+</span></span>
+<span id="cb2-16"><a href="#cb2-16"></a><span class="st">  </span><span class="kw">geom_label_repel</span>(<span class="dt">data =</span> <span class="kw">tibble</span>(<span class="dt">x=</span><span class="dv">58</span>,</span>
+<span id="cb2-17"><a href="#cb2-17"></a>                                 <span class="dt">y=</span><span class="dv">33</span>),</span>
+<span id="cb2-18"><a href="#cb2-18"></a>                   <span class="kw">aes</span>(<span class="dt">x=</span>x,</span>
+<span id="cb2-19"><a href="#cb2-19"></a>                       <span class="dt">y=</span>y),</span>
+<span id="cb2-20"><a href="#cb2-20"></a>                   <span class="dt">label =</span> <span class="st">&quot;E&quot;</span>,</span>
+<span id="cb2-21"><a href="#cb2-21"></a>                   <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>,</span>
+<span id="cb2-22"><a href="#cb2-22"></a>                   <span class="dt">seed=</span><span class="dv">256</span>)</span></code></pre></div>
+<p><img src="/class/3.1-class_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>Suppose <span class="math inline">\(A\)</span> counters proposal <span class="math inline">\(E\)</span> with a new proposal, <span class="math inline">\(F\)</span>: $55B in Education, $58B in Defense. Now <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> prefer this to proposal <span class="math inline">\(D\)</span>, while <span class="math inline">\(B\)</span> votes against it. Measure <span class="math inline">\(F\)</span> passes, 2-1:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>votes<span class="op">+</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;segment&quot;</span>, <span class="dt">x =</span> <span class="dv">50</span>, <span class="dt">xend =</span> <span class="dv">35</span>, <span class="dt">y =</span> <span class="dv">50</span>, <span class="dt">yend =</span> <span class="fl">42.5</span>, <span class="dt">color =</span> <span class="st">&quot;purple&quot;</span>, <span class="dt">size=</span><span class="fl">1.5</span>, <span class="dt">alpha=</span><span class="dv">1</span>, <span class="dt">arrow=</span><span class="kw">arrow</span>(<span class="dt">length=</span><span class="kw">unit</span>(<span class="fl">0.5</span>,<span class="st">&quot;cm&quot;</span>), <span class="dt">ends=</span><span class="st">&quot;last&quot;</span>, <span class="dt">type=</span><span class="st">&quot;closed&quot;</span>))<span class="op">+</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="st">  </span></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;segment&quot;</span>, <span class="dt">x =</span> <span class="dv">35</span>, <span class="dt">xend =</span> <span class="dv">58</span>, <span class="dt">y =</span> <span class="fl">42.5</span>, <span class="dt">yend =</span> <span class="dv">33</span>, <span class="dt">color =</span> <span class="st">&quot;purple&quot;</span>, <span class="dt">size=</span><span class="fl">1.5</span>, <span class="dt">alpha=</span><span class="dv">1</span>, <span class="dt">arrow=</span><span class="kw">arrow</span>(<span class="dt">length=</span><span class="kw">unit</span>(<span class="fl">0.5</span>,<span class="st">&quot;cm&quot;</span>), <span class="dt">ends=</span><span class="st">&quot;last&quot;</span>, <span class="dt">type=</span><span class="st">&quot;closed&quot;</span>))<span class="op">+</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="st">  </span></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="st">  </span><span class="kw">annotate</span>(<span class="st">&quot;segment&quot;</span>, <span class="dt">x =</span> <span class="dv">58</span>, <span class="dt">xend =</span> <span class="dv">55</span>, <span class="dt">y =</span> <span class="dv">33</span>, <span class="dt">yend =</span> <span class="dv">58</span>, <span class="dt">color =</span> <span class="st">&quot;purple&quot;</span>, <span class="dt">size=</span><span class="fl">1.5</span>, <span class="dt">alpha=</span><span class="dv">1</span>, <span class="dt">arrow=</span><span class="kw">arrow</span>(<span class="dt">length=</span><span class="kw">unit</span>(<span class="fl">0.5</span>,<span class="st">&quot;cm&quot;</span>), <span class="dt">ends=</span><span class="st">&quot;last&quot;</span>, <span class="dt">type=</span><span class="st">&quot;closed&quot;</span>))<span class="op">+</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a></span>
+<span id="cb3-8"><a href="#cb3-8"></a><span class="co"># point D</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="st">    </span><span class="kw">geom_point</span>(<span class="dt">x =</span> <span class="dv">35</span>, <span class="dt">y =</span> <span class="fl">42.5</span>, <span class="dt">size =</span> <span class="dv">2</span>)<span class="op">+</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a><span class="st">  </span><span class="kw">geom_label_repel</span>(<span class="dt">data =</span> <span class="kw">tibble</span>(<span class="dt">x=</span><span class="dv">35</span>,</span>
+<span id="cb3-11"><a href="#cb3-11"></a>                                 <span class="dt">y=</span><span class="fl">42.5</span>),</span>
+<span id="cb3-12"><a href="#cb3-12"></a>                   <span class="kw">aes</span>(<span class="dt">x=</span>x,</span>
+<span id="cb3-13"><a href="#cb3-13"></a>                       <span class="dt">y=</span>y),</span>
+<span id="cb3-14"><a href="#cb3-14"></a>                   <span class="dt">label =</span> <span class="st">&quot;D&quot;</span>,</span>
+<span id="cb3-15"><a href="#cb3-15"></a>                   <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>,</span>
+<span id="cb3-16"><a href="#cb3-16"></a>                   <span class="dt">seed=</span><span class="dv">256</span>)<span class="op">+</span></span>
+<span id="cb3-17"><a href="#cb3-17"></a><span class="co"># point E</span></span>
+<span id="cb3-18"><a href="#cb3-18"></a><span class="st">      </span><span class="kw">geom_point</span>(<span class="dt">x =</span> <span class="dv">58</span>, <span class="dt">y =</span> <span class="dv">33</span>, <span class="dt">size =</span> <span class="dv">2</span>)<span class="op">+</span></span>
+<span id="cb3-19"><a href="#cb3-19"></a><span class="st">  </span><span class="kw">geom_label_repel</span>(<span class="dt">data =</span> <span class="kw">tibble</span>(<span class="dt">x=</span><span class="dv">58</span>,</span>
+<span id="cb3-20"><a href="#cb3-20"></a>                                 <span class="dt">y=</span><span class="dv">33</span>),</span>
+<span id="cb3-21"><a href="#cb3-21"></a>                   <span class="kw">aes</span>(<span class="dt">x=</span>x,</span>
+<span id="cb3-22"><a href="#cb3-22"></a>                       <span class="dt">y=</span>y),</span>
+<span id="cb3-23"><a href="#cb3-23"></a>                   <span class="dt">label =</span> <span class="st">&quot;E&quot;</span>,</span>
+<span id="cb3-24"><a href="#cb3-24"></a>                   <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>,</span>
+<span id="cb3-25"><a href="#cb3-25"></a>                   <span class="dt">seed=</span><span class="dv">256</span>)<span class="op">+</span></span>
+<span id="cb3-26"><a href="#cb3-26"></a><span class="co"># point F</span></span>
+<span id="cb3-27"><a href="#cb3-27"></a><span class="st">      </span><span class="kw">geom_point</span>(<span class="dt">x =</span> <span class="dv">55</span>, <span class="dt">y =</span> <span class="dv">58</span>, <span class="dt">size =</span> <span class="dv">2</span>)<span class="op">+</span></span>
+<span id="cb3-28"><a href="#cb3-28"></a><span class="st">  </span><span class="kw">geom_label_repel</span>(<span class="dt">data =</span> <span class="kw">tibble</span>(<span class="dt">x=</span><span class="dv">55</span>,</span>
+<span id="cb3-29"><a href="#cb3-29"></a>                                 <span class="dt">y=</span><span class="dv">58</span>),</span>
+<span id="cb3-30"><a href="#cb3-30"></a>                   <span class="kw">aes</span>(<span class="dt">x=</span>x,</span>
+<span id="cb3-31"><a href="#cb3-31"></a>                       <span class="dt">y=</span>y),</span>
+<span id="cb3-32"><a href="#cb3-32"></a>                   <span class="dt">label =</span> <span class="st">&quot;F&quot;</span>,</span>
+<span id="cb3-33"><a href="#cb3-33"></a>                   <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>,</span>
+<span id="cb3-34"><a href="#cb3-34"></a>                   <span class="dt">seed=</span><span class="dv">256</span>)</span></code></pre></div>
+<p><img src="/class/3.1-class_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>Now we see that, in multi-issue space, <strong>we get cycling</strong>! Any voter can propose a platform that can capture a majority<span><label for="sn-1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-1" class="margin-toggle"/><span class="sidenote">On the graph, place the platform inside an intersection between two voters’ circles. Those two voters vote for, the other voter votes against.<br />
+<br />
+</span></span>, and any voter can then propose an alternative platform that can also capture a majority for the alternative platform and against the first platform!</p>
+<p>This is sometimes called the <strong>Chaos Theorem</strong> in social choice theory: in multi-dimensional policy space, even with single-peaked preferences<span><label for="sn-2" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-2" class="margin-toggle"/><span class="sidenote">Remember, the peak is the ideal point for each voter, utility decreases with distance from that point in all directions.<br />
+<br />
+</span></span>, there are no Condorcet winners, and thus a majority opposes each alternative. We can reach <strong>any</strong> point in this space with a carefully-constructed sequence of votes. Thus, again, there is no “will of the majority” and an agenda-setter can achieve any outcome they want.</p>
+<p>The Median Voter Theorem worked in a single dimension with single-peaked preferences. The result we see here, in multiple issue space (and generalized by Arrow’s impossibility theorem), is that cycling is not easily solved: the median voter theorem fails when there are multiple issues.<span><label for="sn-3" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-3" class="margin-toggle"/><span class="sidenote">Or conversely, the median voter theorem only works for single-peaked preferences for a <em>single</em> issue.<br />
+<br />
+</span></span></p>
+
+
+    </article>
+
+    <footer>
+        <hr class="slender">
+
+        <div class="course-info">
+        <span class="course-name">
+            ECON 410: Public Economics (Spring 2020)
+        </span><br>
+        <span>
+            <a href="https://www.hood.edu">Hood College</a> | 
+            <a href="https://www.hood.edu/academics/departments/george-b-delaplaine-jr-school-business">George B. Delaplane, Jr. School of Business</a>
+        </span>
+        </div>
+
+        <ul class="footer-links">
+            <li>
+            <a href="https://www.ryansafner.com"><i class="fas fa-user"></i> Dr. Ryan Safner</a>
+            </li>
+
+            <li>
+            <a href="mailto:safner@hood.edu"><i class="fas fa-envelope"></i> safner@hood.edu</a>
+            </li>
+
+            <li>
+            <i class="far fa-calendar-alt"></i> MW
+            </li>
+
+            <li>
+            <i class="far fa-clock"></i> 2:00–3:15PM
+            </li>
+
+            <li>
+            <i class="fas fa-university"></i> 317 Rosenstock
+            </li>
+
+            <li>
+            <a href="https://twitter.com/ryansafner"><i class="fab fa-twitter"></i></a>
+            </li>
+
+            <li>
+            <a href="https://github.com/ryansafner/publics20"><i class="fab fa-github"></i></a>
+            </li>
+        </ul>
+
+        <div class="credits">
+        <span class="credit">All content licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</span><br>
+
+        <span class="credit">Content <i class="fab fa-creative-commons"></i> 2020 <a href="https://www.ryansafner.com">Ryan Safner</a></span><br>
+        <span class="credit">Hex icon by Ryan Safner via <a href="https://github.com/GuangchuangYu/hexSticker">hexSticker</a>.<br> Course website based on <a href="https://econw19.classes.andrewheiss.com/">Andrew Heiss</a>. <br><a href="https://github.com/arcticicestudio/nord">Nord color scheme</a> from <a href="http://arcticicestudio.com/">Arctic Ice Studio</a>.</span><br>
+
+        <span class="credit">This site created with the <a href="https://github.com/andrewheiss/ath-tufte-hugo_18-19">ath-tufte-hugo theme</a> in <a href="https://bookdown.org/yihui/blogdown/">blogdown</a> and <a href="https://gohugo.io/">Hugo</a>.</span>
+        </div>
+    </footer>
+
+    
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      },
+      "HTML-CSS": {
+        fonts: ["Asana-Math"]
+      }
+    });
+    </script>
+    <script async type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_HTMLorMML">
+    </script>
+
+
+</div>
+</body>
+</html>
+

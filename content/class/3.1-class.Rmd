@@ -1,0 +1,294 @@
+---
+title: "3.1: Voting I: Preference Aggregation & Cycling"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-syllabus-no-bib.csl
+output:
+  blogdown::html_page:
+    template: ../../pandoc/toc-title_html.template
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+# Appendix: Spatial Competition in Multiple-Dimensions
+
+In class, we looked at spatial competition along a single dimension, and saw that **if preferences are single-peaked**, the **median** platform will win a majority, and escape the problem of cycling.
+
+Suppose we have three voters again voting on a platform of **two** issues: (1) Education Spending and (2) Defense Spending.
+
+
+```{r, echo=F, warning=F, message=F}
+library("tidyverse")
+library("ggrepel")
+library("ggforce")
+
+```
+
+```{r, fig.retina=3, echo=F}
+points<-tribble(
+  ~x, ~y, ~label,
+  25, 75, "A",
+  75, 50, "B",
+  50, 25, "C"
+)
+
+base<-ggplot(data = points)+
+  aes(x = x,
+      y = y)+
+  geom_point(size=3, aes(color = label))+
+  geom_label_repel(aes(color = label,
+                       label = label), seed=256, size = 6)+
+    labs(x = "Education Spending (Billions)",
+       y = "Defense Spending (Billions)")+
+  scale_x_continuous(breaks = seq(0,100,10),
+                     limits = c(0,100),
+                     expand = c(0,0),
+                     labels = scales::dollar
+                     )+
+  scale_y_continuous(breaks = seq(0,100,10),
+                     limits = c(0,100),
+                     expand = c(0,0),
+                     labels = scales::dollar
+                     )+
+  guides(color=F)+
+  theme_classic(base_family = "Fira Sans Condensed",
+           base_size=20)
+base
+```
+
+We represent their **ideal points** in 2-dimensional issue space in the figure above. Imagine this is looking down on the peaks of three mountains, as moving in *any direction* away from a voter's ideal point (peak) decreases their utility (if you like, decreases in elevation from the peak).
+
+Now, we can still apply the median voter theorem here, by determining the median of each issue. For Education Spending, C is the median (A to the left and C to the right), and for Defense Spending, B is the median (A above, and C below). 
+
+```{r, fig.retina=3, echo=F}
+base+
+  geom_vline(xintercept = 50, size = 1, linetype="dashed")+
+  geom_hline(yintercept = 50, size = 1, linetype="dashed")+
+  geom_point(x = 50, y = 50, size =3, color = "purple")+
+  geom_label_repel(data = tibble(x=50,
+                                 y=50),
+                   aes(x=x,
+                       y=y),
+                   label = "Median",
+                   color = "purple",
+                   seed=256)
+```
+
+We have found the median platform by combining the median of each issue. Now, find the distance, for each voter, from their ideal point to the median platform. Consider this a distance the radius of a circle. This circle, for each voter, represents an **indifference curve** for that voter: the set of alternative platforms of education and defense that is *equally preferable* (gives same utility) for that voter as the median platform.
+
+*Inside* each circle is the set of platforms that are **preferred over** the median (and equivalent platforms, the circumference of the circle). As an obvious demonstration, each voter prefers their own ideal point (A prefers A, B prefers B, and C prefers C) over the median platform.
+
+```{r, fig.retina=3, echo=F}
+lines<-tribble(
+  ~x, ~xend, ~y, ~yend, ~label,
+  25, 50, 75, 50, "A",
+  75, 50, 50, 50, "B",
+  50, 50, 25, 50, "C"
+)
+
+circles<-tribble(
+  ~x, ~y, ~radius, ~label,
+  25, 75, 35, "A",
+  75, 50, 25, "B",
+  50, 25, 25, "C"
+)
+
+
+ggplot(data = points)+
+  aes(x = x,
+      y = y)+
+  geom_point(size=3, aes(color = label))+
+  geom_label_repel(aes(color = label,
+                       label = label), seed=256, size = 6)+
+    labs(x = "Education Spending (Billions)",
+       y = "Defense Spending (Billions)")+
+  geom_point(x = 50, y = 50, size =3, color = "purple")+
+  geom_circle(data = circles,
+              aes(x0 = x,
+                  y0 = y,
+                  r = radius,
+                  color = label,
+                  fill = label),
+              inherit.aes = F,
+              alpha = 0.4,
+              size = 1)+
+  geom_segment(data = lines, aes(x=x,
+                                 xend=xend,
+                                 y=y,
+                                 yend=yend,
+                                 color=label),
+               size = 1.5,
+               linetype="dashed")+
+  geom_label_repel(data = tibble(x=50,
+                                 y=50),
+                   aes(x=x,
+                       y=y),
+                   label = "Median",
+                   color = "purple",
+                   seed=256)+
+  guides(fill = F, color = F)+
+    theme_classic(base_family = "Fira Sans Condensed",
+           base_size=20)+
+    scale_x_continuous(breaks = seq(0,100,10),
+                     #limits = c(0,100),
+                     expand = c(0,0),
+                     labels = scales::dollar
+                     )+
+  scale_y_continuous(breaks = seq(0,100,10),
+                     #limits = c(0,100),
+                     expand = c(0,0),
+                     labels = scales::dollar
+                     )+
+  coord_fixed(clip="off")
+
+```
+
+Note the "preferred-to sets" (the shaded circles) **do not overlap** at the median! The borders of the circles do, i.e. the indifference curve, but not the preferred-to sets! 
+
+Now, allow the voters to propose any platform they wish, to vote on in a pairwise vote. We begin with the median as a starting point: ($50B Education Spending, $50B Defense Spending).
+
+Consider voter $A$. She could propose something she prefers over the median, say point $1$ at ($30, $70), but that is outside the other voters' preferred-to sets (outside of their circles), so this would be **worse** for them, and they would vote against it. 
+
+```{r, fig.retina=3, echo=F}
+
+votes<-ggplot(data = points)+
+  aes(x = x,
+      y = y)+
+  geom_point(size=3, aes(color = label))+
+  geom_label_repel(aes(color = label,
+                       label = label), seed=256, size = 6)+
+    labs(x = "Education Spending (Billions)",
+       y = "Defense Spending (Billions)")+
+  geom_point(x = 50, y = 50, size =3, color = "purple")+
+  geom_circle(data = circles,
+              aes(x0 = x,
+                  y0 = y,
+                  r = radius,
+                  color = label,
+                  fill = label),
+              inherit.aes = F,
+              alpha = 0.4,
+              size = 1)+
+  geom_label_repel(data = tibble(x=50,
+                                 y=50),
+                   aes(x=x,
+                       y=y),
+                   label = "Median",
+                   color = "purple",
+                   seed=256)+
+  guides(fill = F, color = F)+
+    theme_classic(base_family = "Fira Sans Condensed",
+           base_size=20)+
+    scale_x_continuous(breaks = seq(0,100,10),
+                     #limits = c(0,100),
+                     expand = c(0,0),
+                     labels = scales::dollar
+                     )+
+  scale_y_continuous(breaks = seq(0,100,10),
+                     #limits = c(0,100),
+                     expand = c(0,0),
+                     labels = scales::dollar
+                     )+
+  coord_fixed(clip="off")
+
+votes+
+  geom_point(x = 30, y = 70, size = 2)+
+  geom_label_repel(data = tibble(x=30,
+                                 y=70),
+                   aes(x=x,
+                       y=y),
+                   label = "1",
+                   color = "black",
+                   seed=256)
+```
+
+If $A$ proposes something inside her and any other voter's preferred-to set (inside the circle), she can get a majority to approve it over the median. Suppose she proposes platform $D$: $35B education and $42.5 B defense. Then her and voter $C$ will vote for this over the median, since it is inside both of their circles (and thus, preferred over the median), whereas $B$ will vote against it, it being worse than the median. 
+
+```{r, fig.retina=3}
+votes+
+  annotate("segment", x = 50, xend = 35, y = 50, yend = 42.5, color = "purple", size=1.5, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+  geom_point(x = 35, y = 42.5, size = 2)+
+  geom_label_repel(data = tibble(x=35,
+                                 y=42.5),
+                   aes(x=x,
+                       y=y),
+                   label = "D",
+                   color = "black",
+                   seed=256)
+
+```
+Platform $D$ wins, 2-1. Suppose voter $B$ suggests an alternative to $D$, platform $E$, with $58B in Education and $33B in Defense. Compared to platform $D$, voters $B$ and $C$ prefer this, as it is closer to their ideal points, but it is well outside voter $A$'s circle, so she votes against. But the vote of $E$ vs $D$ results in $E$ winning, 2-1. 
+
+```{r, fig.retina=3}
+votes+
+  annotate("segment", x = 50, xend = 35, y = 50, yend = 42.5, color = "purple", size=1.5, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+  
+  annotate("segment", x = 35, xend = 58, y = 42.5, yend = 33, color = "purple", size=1.5, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+# point D
+    geom_point(x = 35, y = 42.5, size = 2)+
+  geom_label_repel(data = tibble(x=35,
+                                 y=42.5),
+                   aes(x=x,
+                       y=y),
+                   label = "D",
+                   color = "black",
+                   seed=256)+
+# point E
+      geom_point(x = 58, y = 33, size = 2)+
+  geom_label_repel(data = tibble(x=58,
+                                 y=33),
+                   aes(x=x,
+                       y=y),
+                   label = "E",
+                   color = "black",
+                   seed=256)
+
+
+```
+
+Suppose $A$ counters proposal $E$ with a new proposal, $F$: $55B in Education, $58B in Defense. Now $A$ and $B$ prefer this to proposal $D$, while $B$ votes against it. Measure $F$ passes, 2-1: 
+
+```{r, fig.retina=3}
+votes+
+  annotate("segment", x = 50, xend = 35, y = 50, yend = 42.5, color = "purple", size=1.5, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+  
+  annotate("segment", x = 35, xend = 58, y = 42.5, yend = 33, color = "purple", size=1.5, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+  
+  annotate("segment", x = 58, xend = 55, y = 33, yend = 58, color = "purple", size=1.5, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+
+# point D
+    geom_point(x = 35, y = 42.5, size = 2)+
+  geom_label_repel(data = tibble(x=35,
+                                 y=42.5),
+                   aes(x=x,
+                       y=y),
+                   label = "D",
+                   color = "black",
+                   seed=256)+
+# point E
+      geom_point(x = 58, y = 33, size = 2)+
+  geom_label_repel(data = tibble(x=58,
+                                 y=33),
+                   aes(x=x,
+                       y=y),
+                   label = "E",
+                   color = "black",
+                   seed=256)+
+# point F
+      geom_point(x = 55, y = 58, size = 2)+
+  geom_label_repel(data = tibble(x=55,
+                                 y=58),
+                   aes(x=x,
+                       y=y),
+                   label = "F",
+                   color = "black",
+                   seed=256)
+
+```
+
+Now we see that, in multi-issue space, **we get cycling**! Any voter can propose a platform that can capture a majority^[On the graph, place the platform inside an intersection between two voters' circles. Those two voters vote for, the other voter votes against.], and any voter can then propose an alternative platform that can also capture a majority for the alternative platform and against the first platform!
+
+This is sometimes called the **Chaos Theorem** in social choice theory: in multi-dimensional policy space, even with single-peaked preferences^[Remember, the peak is the ideal point for each voter, utility decreases with distance from that point in all directions.], there are no Condorcet winners, and thus a majority opposes each alternative. We can reach **any** point in this space with a carefully-constructed sequence of votes. Thus, again, there is no "will of the majority" and an agenda-setter can achieve any outcome they want.
+
+The Median Voter Theorem worked in a single dimension with single-peaked preferences. The result we see here, in multiple issue space (and generalized by Arrow's impossibility theorem), is that cycling is not easily solved: the median voter theorem fails when there are multiple issues.^[Or conversely, the median voter theorem only works for single-peaked preferences for a *single* issue.]
