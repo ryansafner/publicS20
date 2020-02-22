@@ -46,9 +46,11 @@ lessons:
     class: "3.1-class"
     
   - title: "3.2 Voting II: Ignorance and Irrationality"
-
+    reading: "3.2-reading"
+    
   - title: "3.3 Voting III: Democracy Squared?"
-
+    reading: "3.3-reading"
+    
   - title: "3.4 Interest Groups I"
 
   - title: "3.5 Interest Groups II"

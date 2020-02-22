@@ -1,0 +1,36 @@
+---
+title: "3.2. Voting II: Ignorance & Irrationality - Readings"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-fullnote-bibliography-no-bib.csl
+---
+
+*Monday, February 24, 2020*
+
+# Required Reading:
+
+- [<i class="fas fa-file-pdf"></i> Caplan (2007), "The Myth of the Rational Voter"](/readings/Caplan-2007.pdf)
+
+For today, after I finish up what's left of my lecture from last Wednesday on Voting I, we will discuss the (in)famous concept of **rational ignorance**, as well as **rational irrationality**. Your reading for today is on the latter, since it is more debatable, and since I can explain the former to you very quickly in class (and give a demonstration). 
+
+This is a good summary of the argument made by Caplan's similarly-titled full-length book: *The Myth of the Rational Voter, Why Democracies Choose Bad Policies*. Feel free to skim the last few sections, once you get the idea about what the biases Caplan argues are.
+
+# Recommended Reading
+
+- <i class="fas fas fa-book"></i> Holcombe (2016), *Advanced Introduction to Public Choice*, Chs. 6
+
+Your "textbook" does discuss both rational ignorance, voter turnout, and rational irrationality in this brief chapter.
+
+# Tips and Questions to Read for:
+
+- According to Caplan, what are the four systematic biases?
+
+- What is "rational ignorance"?
+
+- What is Caplan's idea of "rational irrationality" and how is it different from "rational ignorance?"
+
+- How does the Median Voter Theorem fit into Caplan's framework? 
+
+- What is "the miracle of aggregation," how does it work, and why does Caplan argue it is not relevant for voting?
+
+- Why do people vote or not vote? How do people that do vote choose how they vote?
