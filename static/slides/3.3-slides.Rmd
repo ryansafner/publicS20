@@ -65,7 +65,7 @@ theme_slides <- theme_classic() +
 - Democracy devolves into .hi[dictatorship] or institutions are created to .hi-purple[restrict choice]
   - .hi[Constitutional republics]: limit domain of what may be voted on
   - Real world electoral systems reduce effective choices to 2
-    - First-Past-The-Post: .hi-purple[Duverger's Law] $\implies$ two political parties
+    - First-Past-The-Post: **Duverger's Law** $\implies$ two political parties
     - Parliamentary: "government" vs. "opposition"
 
 ]
@@ -609,7 +609,7 @@ changes+
 
 - More of an incentive to inform oneself - have one's votes count proportionate to degree of interest
 
-- .hi-purple[A passionate minority can now outvote an indifferent minority]
+- .hi-purple[A passionate minority can now outvote an indifferent majority]
   - Is that what we want??
 ]
 
@@ -625,7 +625,7 @@ changes+
 
 .pull-left[
 
-- Imagine each person is given a budget of "voice credits" $Q$ per year (e.g. 100$Q)$
+- Imagine each person is given a budget of "voice credits" $Q$ per year (e.g. 100 $Q)$
 
 - For each issue, individual can expend $x$ $Q$-credits to cast $\sqrt{x}$ votes
 
@@ -649,9 +649,9 @@ Screenshot from ["Collective Decision Engines"](https://collectivedecisionengine
 
 .pull-left[
 
-- Each person can cast as many votes as desired **FOR** and **AAGAINST** any proposal
+- Each person can cast as many votes as desired **FOR** and **AGAINST** any proposal
 
-- If total votes For $>$ total votes Against, resolution passed (and vice versa)
+- If total votes For $>$ total votes Against, resolution passes (and vice versa)
 
 ]
 
