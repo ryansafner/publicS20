@@ -51,10 +51,13 @@ lessons:
     
   - title: "3.3 Voting III: Democracy Squared?"
     reading: "3.3-reading"
+    slides: "3.3-slides"
     
   - title: "3.4 Interest Groups I"
 
   - title: "3.5 Interest Groups II"
+
+  - title: '<i class="fas fa-laptop-code"></i> **Midterm Exam**'
 
   - title: "3.6 Bureaucracy"
 
