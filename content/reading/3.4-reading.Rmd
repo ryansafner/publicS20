@@ -1,0 +1,42 @@
+---
+title: "3.4. Special Interest Groups - Readings"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-fullnote-bibliography-no-bib.csl
+---
+
+*Monday, March 2, 2020*
+
+# Required Reading:
+
+- [<i class="fas fa-file-pdf"></i> Stigler, George J, 1971, "The Theory of Economic Regulation," *The Bell Journal of Economics and Management Science* 2(1): 3-21](/readings/Stigler-1971.pdf)
+- [<i class="fas fa-file-pdf"></i> Yandle, Bruce, 1983, "Bootleggers and Baptists: The Education of a Regulatory Economist," *Regulation* 7(3): 12-16](/readings/Yandle-1983.pdf)
+
+Today we briefly discuss the logic of interest groups, and moreso about the effects they have on public policy and regulation. Your readings focus on both the economic outcomes of regulation and a theory of how and why regulation favors particular groups.
+
+Stigler's paper is one of the [most cited works](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C21&q=the+theory+of+economic+regulation&btnG=) in the economics of regulation, but of course it is 50 years old. His numbers are out of date, and his regressions are extremely simple (remember, this is before computers did this!), so you don't need to pay close attention to the numerical examples of his. You *should* however, pay attention to the general trends, and his theoretical explanation of *why* these trends in regulation occur. 
+
+Yandle's paper is short and easy to read, but is one of the more useful explanations of regulation and public policy out there. 
+
+I will cover some background on the idea of **rent-seeking**, and how Olson's logic of collective action affects public policy. For more on this, and a list of examples, see the recommended papers below.
+
+
+# Recommended Reading
+
+- [<i class="fas fa-file-pdf"></i> Tullock, Gordon (1967), "The Welfare Cost of Tariffs, Monopolies, and Theft"](/readings/Tullock-1967.pdf)
+
+- [<i class="fas fa-file-pdf"></i> Mitchell, Matthew (2013), "The Pathology of Privilege"](/readings/Mitchell-2013.pdf)
+
+I will reference these, and I have had most of you read these papers in other courses of mine. You might consider looking at these if you want some examples, or some extra explanation, but they are not required reading.
+
+Tullock's paper is the first to systematically describe the phenomenon of rent-seeking as a general issue.
+
+Mitchell's paper collects lots of examples and key strategies that interest groups or firms employ to obtain political privileges at others' expense.
+
+# Tips and Questions to Read for:
+
+- How is much of the theory of regulation, of the importance of interest groups, and the types of policies that get enacted predicted by Mancur Olson's *Logic of Collective Action*?
+
+- According to Stigler, why does economic regulation look the way it does? Who is it designed for? What types of regulation are we more (or less) likely to see?
+
+- According to Yandle, multiple interests favor similar regulation for different reasons. Which kinds of arguments are those calling for certain regulations more likely to use in public than in private?

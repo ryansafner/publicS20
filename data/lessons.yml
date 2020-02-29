@@ -53,9 +53,10 @@ lessons:
     reading: "3.3-reading"
     slides: "3.3-slides"
     
-  - title: "3.4 Interest Groups I"
-
-  - title: "3.5 Interest Groups II"
+  - title: "3.4 Interest Groups"
+    reading: "3.4-reading"
+    
+  - title: "3.5 Politicians"
 
   - title: '<i class="fas fa-laptop-code"></i> **Midterm Exam**'
 
