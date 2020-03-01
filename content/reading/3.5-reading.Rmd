@@ -1,0 +1,40 @@
+---
+title: "3.5. Legislators - Readings"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-fullnote-bibliography-no-bib.csl
+---
+
+*Wednesday, March 4, 2020*
+
+# Required Reading:
+
+- [<i class="fas fa-file-pdf"></i> Weingast, Barry R and William J Marshall, 1988, ["The Industrial Organization of Congress; or, Why Legislatures, Like Firms, Are Not Organized as Markets" ](/readings/Weingast-Marshall-1988.pdf) *Journal of Political Economy* 96(1): 132-163
+
+We now look at politicians as legislators in a representative democracy: agents elected by voters and interest groups within a district to serve their interests by enacting laws in a larger legislature. Weingast and Marshall (1988) do a great job of explaining the "market" for political support to get laws passed, the unique challenges it faces compared to normal markets, and how institutions were created to deal with these challenges.
+
+If you find Weingast and Marshall (1988) difficult to understand,^[Though it is one of the clearest papers I've read on the subject, their "model" is quite simple and in prose, rather than math.] you can look to the chapters recommended in the Holcombe textbook below:
+
+# Recommended Reading:
+
+- <i class="fas fas fa-book"></i> Holcombe (2016), *Advanced Introduction to Public Choice*, skim Chs. 4, 7, 8 (review from last class), 10, 11
+
+Holcombe's chapters cover a wide variety of items, the majority of which are nicely discussed in Weingast and Marshall (1988).
+
+# Tips and Questions to Read For:
+
+- How does rational ignorance of voters and the incentives of special interest groups affect what politicians pay attention to?
+
+- How is the "political marketplace" within a legislature similar to, or different from, an actual marketplace?
+
+- As economic agents, what are legislators' objectives? What are they maximizing?
+
+- If laws require (at least) majority rule to pass, and legislators have separate or conflicting interests, how do laws get passed? What do these laws tend to look like?
+
+- In one sense, passing laws in a (representative) democracy is just one giant bargain between different interest groups. But what are the shortcomings of this view?
+
+- Does the Coase Theorem apply to politics?
+
+- What are the unique problems of trading votes as opposed to trading in markets?
+
+- What are the function of Congressional committees, how do they work, and what problems do they solve?
