@@ -2,13 +2,211 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Public Economics</title>
-    <link>https://publicS20.classes.ryansafner.com/index.html</link>
+    <link>https://publicS20.classes.ryansafner.com/</link>
     <description>Recent content on Public Economics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
 	<atom:link href="https://publicS20.classes.ryansafner.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>1.1: Introduction to Public Economics</title>
+      <link>https://publicS20.classes.ryansafner.com/class/1.1-class/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://publicS20.classes.ryansafner.com/class/1.1-class/</guid>
+      <description>Contents  Overview Readings for Discussion Slides   Wednesday, January 15, 2020
+Overview This introduction will give an overview of the course and the topics that we will cover. A primary question we will address this semester is how do we choose in groups?
+Readings for Discussion There are no readings assigned for today’s class, but see the required readings (and email questions) for discussion for next class.</description>
+    </item>
+    
+    <item>
+      <title>1.2. Externalities and Bargaining - Readings</title>
+      <link>https://publicS20.classes.ryansafner.com/reading/1.2-reading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://publicS20.classes.ryansafner.com/reading/1.2-reading/</guid>
+      <description>Required Reading:   Coase (1960), “The Problem of Social Cost”  Tips and Questions to Read for: This is an extremely famous paperIt is one of the most cited papers in Economics of the 20th Century.
+, which almost single-handedly launched the discipline of Law and EconomicsI plan to finally teach a course in this in Spring 2021!
+, one of the two papers that won Coase the 1991 Economics Nobel Prize.</description>
+    </item>
+    
+    <item>
+      <title>1.3. Property Rights - Readings</title>
+      <link>https://publicS20.classes.ryansafner.com/reading/1.3-reading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://publicS20.classes.ryansafner.com/reading/1.3-reading/</guid>
+      <description> Required Reading:   Demsetz (1967), “Toward a Theory of Property Rights”  Tips and Questions to Read for:  What are the benefits and costs of property rights?
+ Why don’t we make everything property? Why might we leave some things un-“propertized”?
+ What is the relationship between property rights and externalities?
+ How is this article related to Coase’s article?
+  </description>
+    </item>
+    
+    <item>
+      <title>1.4. Collective Action - Readings</title>
+      <link>https://publicS20.classes.ryansafner.com/reading/1.4-reading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://publicS20.classes.ryansafner.com/reading/1.4-reading/</guid>
+      <description>Required Reading:   Olson (1982), The Rise and Decline of Nations, Chapter 2, “The Logic”  Sorry about the formatting!
+Tips and Questions to Read for:  What are the similarities/differences between individual interests and group interests (for groups to which individuals belong)?
+ What does Olson say is Marx’s shortcoming of his approach to groups (economic classes)?
+ What are the economic differences between large groups and small groups, in terms of individual incentives?</description>
+    </item>
+    
+    <item>
+      <title>1.5. Efficiency and Justice - Readings</title>
+      <link>https://publicS20.classes.ryansafner.com/reading/1.5-reading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://publicS20.classes.ryansafner.com/reading/1.5-reading/</guid>
+      <description>Required Reading:   Sandel, 2009, “Justice” Lectures 5 (Free to Choose) and 14 (A Deal is a Deal)  These are lectures from Michael Sandel’s Justice class at Harvard, one of the most popular courses. Due to the way these videos are cut, I encourage (but don’t require) you to watch part of the lecture immediately following each lecture mentioned above (e.g. lectures 6 and 15) as it continues the relevant discussions.</description>
+    </item>
+    
+    <item>
+      <title>2.1. Politics as Constraints - Readings</title>
+      <link>https://publicS20.classes.ryansafner.com/reading/2.1-reading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://publicS20.classes.ryansafner.com/reading/2.1-reading/</guid>
+      <description>Required Reading:   Hobbes (1651), Selections from The Leviathan  Machiavelli (1532), Selections from The Price  This class kicks off our look at Constitutional Political Economy, and we will examine this topic at several levels:
+First, if we are to chose as a group at any level (whether a national government, a neighborhood association, or a book club), how do we constitute and decide how to decide as a group?</description>
+    </item>
+    
+    <item>
+      <title>2.2. Beyond the Reach of Majorities - Readings</title>
+      <link>https://publicS20.classes.ryansafner.com/reading/2.2-reading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://publicS20.classes.ryansafner.com/reading/2.2-reading/</guid>
+      <description>Required Reading:   Locke (1689), Selections from The Second Treatise on Government  Madison (1787-1788), Federalist 10 and 51  Last class was about government placing constraints on citizens, and it being in everyone’s interest to accept these. This class is about citizens placing constraints on government. We might summarize this dual dilemma by paraphrasing Madison’s Federalist 51:
+ “In framing a government which is to be administered by men over men, the great difficulty lies in this: you must first enable the government to control the governed; and in the next place oblige it to control itself.</description>
+    </item>
+    
+    <item>
+      <title>2.3. The Optimal Decision Rule - Readings</title>
+      <link>https://publicS20.classes.ryansafner.com/reading/2.3-reading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://publicS20.classes.ryansafner.com/reading/2.3-reading/</guid>
+      <description>Required Reading:   Buchanan and Tullock (1962), The Calculus of Consent, Chs. 3,5,6Again, you can buy several versions of this book, or here is the link to free PDF
+  After we’ve digested some political philosophy (with a dose of game theory), it’s time for a more “rigorous” model of choosing as a group. How should we decide how to decide?
+We read the key chapters of Buchanan and Tullock’s classic 1962 Calculus of Consent, which (mostly) launched the field of public choice as the economic analysis of politics.</description>
+    </item>
+    
+    <item>
+      <title>3.1. Voting I: Preference Aggregation &amp; Cycling - Readings</title>
+      <link>https://publicS20.classes.ryansafner.com/reading/3.1-reading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://publicS20.classes.ryansafner.com/reading/3.1-reading/</guid>
+      <description>Wednesday, February 19, 2020
+Required Reading:   Holcombe (2016), Advanced Introduction to Public Choice, Chs. 2,3,5  We will not have a discussion today, you do not need to email questions. This material will be a bit more dense and technical, and I will lecture for the full period. However, doing the reading will also be very helpful, even though you will not be graded on it in any way.</description>
+    </item>
+    
+    <item>
+      <title>3.1: Voting I: Preference Aggregation &amp; Cycling</title>
+      <link>https://publicS20.classes.ryansafner.com/class/3.1-class/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://publicS20.classes.ryansafner.com/class/3.1-class/</guid>
+      <description>Contents  Appendix: Spatial Competition in Multiple-Dimensions   Appendix: Spatial Competition in Multiple-Dimensions In class, we looked at spatial competition along a single dimension, and saw that if preferences are single-peaked, the median platform will win a majority, and escape the problem of cycling.
+Suppose we have three voters again voting on a platform of two issues: (1) Education Spending and (2) Defense Spending.
+We represent their ideal points in 2-dimensional issue space in the figure above.</description>
+    </item>
+    
+    <item>
+      <title>3.2. Voting II: Ignorance &amp; Irrationality - Readings</title>
+      <link>https://publicS20.classes.ryansafner.com/reading/3.2-reading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://publicS20.classes.ryansafner.com/reading/3.2-reading/</guid>
+      <description>Monday, February 24, 2020
+Required Reading:   Caplan (2007), “The Myth of the Rational Voter”  For today, after I finish up what’s left of my lecture from last Wednesday on Voting I, we will discuss the (in)famous concept of rational ignorance, as well as rational irrationality. Your reading for today is on the latter, since it is more debatable, and since I can explain the former to you very quickly in class (and give a demonstration).</description>
+    </item>
+    
+    <item>
+      <title>3.3. Voting III: Democracy Squared? - Readings</title>
+      <link>https://publicS20.classes.ryansafner.com/reading/3.3-reading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://publicS20.classes.ryansafner.com/reading/3.3-reading/</guid>
+      <description>Wednesday, February 26, 2020
+Required Reading:   Posner, Eric A, and E Glen Weyl (2017), Radical Markets, Ch. 2: “Radical Democracy”  Today we discuss one of the more interesting (and radical) proposals put forth to reform politics in a fundamental (and economic) way: to dispense with “one person one vote,” allowing people to express the intensity of their preferences with (essentially) “multiple votes” that they can “buy” at an increasing cost (allowing them to make tradeoffs).</description>
+    </item>
+    
+    <item>
+      <title>3.4. Special Interest Groups - Readings</title>
+      <link>https://publicS20.classes.ryansafner.com/reading/3.4-reading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://publicS20.classes.ryansafner.com/reading/3.4-reading/</guid>
+      <description>Monday, March 2, 2020
+Required Reading:   Stigler, George J, 1971, “The Theory of Economic Regulation,” The Bell Journal of Economics and Management Science 2(1): 3-21  Yandle, Bruce, 1983, “Bootleggers and Baptists: The Education of a Regulatory Economist,” Regulation 7(3): 12-16  Today we briefly discuss the logic of interest groups, and moreso about the effects they have on public policy and regulation. Your readings focus on both the economic outcomes of regulation and a theory of how and why regulation favors particular groups.</description>
+    </item>
+    
+    <item>
+      <title>3.5. Legislators - Readings</title>
+      <link>https://publicS20.classes.ryansafner.com/reading/3.5-reading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://publicS20.classes.ryansafner.com/reading/3.5-reading/</guid>
+      <description>Wednesday, March 4, 2020
+Required Reading:  [ Weingast, Barry R and William J Marshall, 1988, “The Industrial Organization of Congress; or, Why Legislatures, Like Firms, Are Not Organized as Markets” Journal of Political Economy 96(1): 132-163  We now look at politicians as legislators in a representative democracy: agents elected by voters and interest groups within a district to serve their interests by enacting laws in a larger legislature.</description>
+    </item>
+    
+    <item>
+      <title>Assignments</title>
+      <link>https://publicS20.classes.ryansafner.com/assignments/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://publicS20.classes.ryansafner.com/assignments/</guid>
+      <description>Grade Calculator  Use this tool to calculate your final course grade and predict what grades you would need on remaining assignments to obtain a desired course grade.
+Policy Paper Each of you will write a term paper on a public policy, non-market decision-making institution, or other approved topic using the toolkit in this course.
+Participation and Discussion Almost every class meeting will have a readings-based discussion. During our discussions, we will follow the rules pioneered and perfected by the Liberty Fund seminars.</description>
+    </item>
+    
+    <item>
+      <title>Reference</title>
+      <link>https://publicS20.classes.ryansafner.com/reference/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://publicS20.classes.ryansafner.com/reference/</guid>
+      <description>Contents  Tips for Success   Look here over the course of the semester for resources, links, and tips on how to succeed in the course, how to write well, and other things of interest related to economic development.
+Tips for Success Take notes. On paper. Really. Studies show that using pen and paper trump taking notes on a device. The main reason is because you cannot possibly write down everything I am saying by hand.</description>
+    </item>
+    
+    <item>
+      <title>Schedule</title>
+      <link>https://publicS20.classes.ryansafner.com/schedule/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://publicS20.classes.ryansafner.com/schedule/</guid>
+      <description>This page contains all of the following resources for each class meeting:
+  Readings include textbook chapters and occasional journal articles  Assignments are due by the beginning of class unless otherwise stated  Class pages contain extra explanations, math &amp;amp; other helpful resourcesThese “online appendices” keep the slides nice and de-cluttered!
+  Slides are “Xaringan” presentations in html that can be opened in any browserFile &amp;gt; Print &amp;gt; Save as PDF if you wish to download them</description>
+    </item>
+    
+    <item>
+      <title>Syllabus</title>
+      <link>https://publicS20.classes.ryansafner.com/syllabus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://publicS20.classes.ryansafner.com/syllabus/</guid>
+      <description>Download as PDF Last Updated: January 20, 2020   “What’s so great about democracy other than it’s democratic?” – Gordon Tullock
+  “Democracy is the worst form of government, except for all the others that have been tried from time to time.” – Winston Churchill
+ The Public Sector&amp;#8853;Instructor
+Dr. Ryan Safner
+ 118 Rosenstock
+safner@hood.edu
+@ryansafner
+ Office hours: MW 3:15–5:00PM
+Course
+ MW</description>
+    </item>
     
   </channel>
 </rss>
