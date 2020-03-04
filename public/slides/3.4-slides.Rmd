@@ -734,7 +734,7 @@ Source: [Wall Street Journal](https://www.wsj.com/articles/print-is-dead-not-in-
 # If You Look at the World Long Enough...
 
 .center[
-![:scale 100%](https://www.dropbox.com/s/d3ryphbj3j7jtt8/rentseekingeverywhere.jpg?raw=1)
+![:scale 60%](https://www.dropbox.com/s/d3ryphbj3j7jtt8/rentseekingeverywhere.jpg?raw=1)
 ]
 
 ---

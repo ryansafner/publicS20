@@ -1,0 +1,747 @@
+---
+title: "3.5: Legislators"
+subtitle: "ECON 410 · Public Economics · Spring 2020"
+author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/publicS20"><i class="fa fa-github fa-fw"></i> ryansafner/publics20</a><br> <a href="https://publicS20.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> publicS20.classes.ryansafner.com</a><br>'
+#date:
+output:
+  xaringan::moon_reader:
+    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML" # rescales math with css changes https://github.com/yihui/xaringan/issues/143
+    lib_dir: libs
+    df_print: paged
+    #seal: false
+    css: [custom.css, custom-fonts.css, "hygge"] #, metropolis, metropolis-fonts
+    nature:
+      beforeInit: ["macros.js", "https://platform.twitter.com/widgets.js"] # first is for rescaling images , second is for embedding tweets, https://github.com/yihui/xaringan/issues/100
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    includes:
+      in_header: header.html # for font awesome, used in title  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = F,
+                      warning = F,
+                      message = F,
+                      fig.retina = 3,
+                      fig.align = "center")
+library("tidyverse")
+
+theme_slides <- theme_classic() + 
+  theme(
+    text = element_text(family = "Fira Sans", size = 24)
+  )
+```
+
+# Major Actors in a Liberal Democracy
+
+.pull-left[
+
+- .hi[Voters] express preferences through elections
+
+- .hi[Special interest groups] provide additional information and advocacy for lawmaking
+
+- .hi[Politicians] create laws reflecting voter and interest gorup preferences
+
+- .hi[Bureaucrats] implement laws according to goals set by politicians
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/731fum488qxckyq/atheniandemocracy.jpg?raw=1)
+]
+]
+
+---
+
+# *Politicians* in a Liberal Democracy
+
+.pull-left[
+
+- .hi[Politicians] create laws reflecting voter and interest gorup preferences
+
+- The politician's problem:
+
+1. **Choose:** .hi-purple[ < a platform >]
+
+2. **In order to maximize:** .hi-green[< votes >]
+
+3. **Subject to:** .hi-red[< being re/elected >]
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/va6gt4wp3trsnel/veep.jpeg?raw=1)
+]
+]
+
+---
+
+# How to Model Legislators and Legislation
+
+.pull-left[
+
+- How do legislators choose which policies (or bills) to support?
+  - What voters want
+  - What special interests want
+  - What the politican honestly believes
+
+- How do legislators interact with each other to produce policy?
+
+- How do institutions affect legislative outcomes?
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/va6gt4wp3trsnel/veep.jpeg?raw=1)
+]
+]
+
+---
+
+# Politician's Incentives: Who's Interests To Represent?
+
+.pull-left[
+```{r, fig.retina=3}
+ggplot(data = tibble(x=-4:4))+
+  aes(x = x)+
+  stat_function(fun = dnorm, geom = "area", xlim=c(-4,-0.375), size=2, fill="blue", alpha=0.4)+
+  
+  stat_function(fun = dnorm, geom = "area", xlim=c(-0.375,4), size=2, fill="red", alpha=0.4)+
+  stat_function(fun = dnorm, size=2, color="black")+
+  labs(x = "Issue",
+       y = "Number of Voters")+
+  scale_x_continuous(breaks = c(-4,4),
+                     limits = c(-4.5,4.5),
+                     expand = c(0,0),
+                     labels = c("Left", "Right")
+                     )+
+  scale_y_continuous(breaks=NULL,
+                     limits=c(0,0.5),
+                     expand=c(0,0))+
+  theme_classic(base_family = "Fira Sans Condensed",
+           base_size=20)+
+  geom_segment(x=0, xend=0, y=0, yend=0.4, linetype="dotted")+
+  geom_label(x=0,y=0.4,label="M",size=5)+
+  
+  geom_segment(x=-1.5, xend=-1.5, y=0, yend=0.4, linetype="dotted")+
+  geom_label(x=-1.5,y=0.4,label="A",size=5, color = "blue")+
+  
+  geom_segment(x=0.75, xend=0.75, y=0, yend=0.4, linetype="dotted")+
+  geom_label(x=0.75,y=0.4,label="B",size=5, color = "red")
+```
+]
+
+.pull-right[
+Recall the .hi[Median Voter Theorem]: politicians are trying to get close to what they believe the median voter wants
+
+- Politicians may have their own honest convictions about issues
+
+- Tradeoff: honest convictions vs. winning (adopting median voter's preferences)
+  - Only winners get to enact their policies!
+]
+]
+
+---
+
+# Politician's Incentives: Who's Interests To Represent?
+
+.center[
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ll3iyvbsRDM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+
+---
+
+# Politician's Incentives: Who's Interests To Represent?
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/mcnk1n4dc527uin/ribboncutting.jpg?raw=1)
+]
+]
+
+.pull-right[
+- Rationally ignorant voters pay little attention to actual substance or policy-making; more to TV-friendly spectacles
+
+- Big speeches, ribbon cutting ceremonies, attack ads on rivals, etc
+
+- Platforms more about broad platitudes than substance "family values," "tough on crime," "change," "drain the swamp" etc. 
+]
+
+---
+
+# Politician's Incentives: Who's Interests To Represent?
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/k89v6u0o1yqbolz/polcorrupt.jpg?raw=1)
+]
+]
+
+.pull-right[
+- Special interests pay very close attention and are actively involved in policy-making and contribute to political campaigns
+
+- Politicians allocate funds towards special interests 
+]
+
+---
+
+# Politician's Incentives
+
+.center[
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NAtunJv6NtE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+
+---
+
+class: inverse, center, middle
+
+# The Industrial Organization of Congress
+
+---
+
+# The Constitutional Framework
+
+.pull-left[
+.center[
+![:scale 80%](https://www.dropbox.com/s/zjqe0c1xcbhf7s6/constitution.png?raw=1)
+]
+]
+
+.pull-right[
+
+.hi[U.S. House of Representatives]:
+
+- Direct election of *all* representatives every 2 years
+
+- All revenue (tax) bills must start in the House
+
+- House votes for President in event of an electoral college tie, has power to impeach
+
+.source[See [U.S. Constitution, Article I](https://www.law.cornell.edu/constitution/articlei)]
+]
+
+---
+
+# The Constitutional Framework
+
+.pull-left[
+.center[
+![:scale 80%](https://www.dropbox.com/s/zjqe0c1xcbhf7s6/constitution.png?raw=1)
+]
+]
+
+.pull-right[
+
+.hi[U.S. House of Representatives]:
+
+.smaller[
+- One rep. for each district (of 435), allocated to the 50 States according to population (decennial U.S. Census)
+
+- The House at the time has the power to redraw districts
+
+- Benefit of cleverly drawing districts: keep incumbent politicians from competing with one another!
+
+- Like a market cartel: more profitable for firms to not compete with one another and agree to have exclusive territories
+
+]
+
+.source[See [U.S. Constitution, Article I](https://www.law.cornell.edu/constitution/articlei)]
+]
+
+---
+
+# Gerrymandering: When Politicians Choose Voters
+
+.pull-left[
+.center[
+![:scale 80%](https://www.dropbox.com/s/wpc8nhc4f30ogcq/gerrymander.png?raw=1)
+
+.smallest[
+MA Governor Elbridge Gerry redrew districts in 1812 to benefit his party
+]
+]
+]
+
+.pull-right[
+
+- .hi["Gerrymandering"]: drawing districts for political benefits
+
+- Has been used to both dilute and strengthen the power of political minorities
+
+- Also used to create "safe seats" for incumbents
+
+.source[See [U.S. Constitution, Article I](https://www.law.cornell.edu/constitution/articlei)]
+]
+
+---
+
+# Gerrymandering: When Politicians Choose Voters
+
+.center[
+![](https://www.dropbox.com/s/8gdojqa9f1aczj3/gerrymandering2.jpg?raw=1)
+]
+
+---
+
+# The Constitutional Framework
+
+.pull-left[
+.center[
+![:scale 80%](https://www.dropbox.com/s/zjqe0c1xcbhf7s6/constitution.png?raw=1)
+]
+]
+
+.pull-right[
+
+.hi[U.S. Senate]:
+
+.smaller[
+- Each U.S. State gets 2 senators
+
+- Originally appointed by State legislatures, 17<sup>th</sup> amendment (1913) changed to direct at-large election
+
+- Each term is 6 years, and staggered elections so $\frac{1}{3}$ of the Senate is elected every 2 years
+
+- President's federal appointments must obtain "advice and consent" of the Senate
+
+- Votes to convict in impeachment trials
+]
+
+.source[See [U.S. Constitution, Article I](https://www.law.cornell.edu/constitution/articlei)]
+]
+
+---
+
+# Recall: District Voting
+
+.pull-left[
+- Election to Congress involves (1) aggregating individual votes in State (.hi-purple[districts]) and then (2) taking the majority vote of those districts
+
+- Party winning most seats not necessarily the party that wins the most votes
+
+- .hi-green[Example]: in 2012, Democrats in the U.S. House of Representatives earned 50.59% of the popular vote but only attained 46.21% of the seats
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/4ekeotq2avb175w/districtvoting.png?raw=1)
+]
+]
+
+---
+
+# More on District Voting
+
+.pull-left[
+- For House races, each State is split into $n$ districts, each electing their own rep.
+  - Senate: State is one "at-large" district
+
+- Suppose within a State $\frac{3}{4}$ of voters like Yellow party and $\frac{1}{4}$ like Green party
+
+- Suppose the State has 4 districts, and each district elects a Member
+  - State sends 3 Yellows, 1 Green to Congress
+
+]
+
+.pull-right[
+.center[
+![:scale 80%](https://www.dropbox.com/s/brfy36xqy25q78k/districtvoting2.png?raw=1)
+]
+]
+---
+
+# More on District Voting
+
+.pull-left[
+- Compare .hi-purple["At-Large" voting]: 
+  - Yellow party candidate would win, goes to Senate
+  - Minority parties do better under district voting than at-large voting
+
+]
+
+.pull-right[
+.center[
+![:scale 80%](https://www.dropbox.com/s/brfy36xqy25q78k/districtvoting2.png?raw=1)
+]
+]
+
+---
+
+# The Geographic Distribution of Interests
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/jzgjogfxnqm7svn/largestcompaniesbystate.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Each Member of Congress represents a geographic district (or State, for Senate)
+
+- Special interests are often distributed geographically
+  - Farming in rural areas
+  - Flooding in coastal areas
+  - Urban areas
+  - Military bases
+]
+
+---
+
+# The Geographic Distribution of Interests
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/jzgjogfxnqm7svn/largestcompaniesbystate.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- The function of each Member is to benefit their district
+
+- Voters & special interests with strong geographic concentration tend to flock to those legislators
+
+- But how can a legislator get their constituents' agenda passed if they are just 1/435 (or 1/100)?
+]
+
+---
+
+# Politics and the Coase Theorem
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/yj536pfa503axp7/congressassembled.png?raw=1)
+]
+]
+
+.pull-right[
+- Recall the (simple) .hi[Coase Theorem] with low transaction costs and clearly defined property rights, parties can bargain to reach the socially efficient outcome
+
+- Does a legislature bargain to reach the efficient outcome?
+]
+
+---
+
+# Politics and the Coase Theorem
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/yj536pfa503axp7/congressassembled.png?raw=1)
+]
+]
+
+.pull-right[
+- Consider politics as a market for votes
+
+- Imagine two groups: 
+  - Group 1 prefers policy $A \succ B$
+  - Group 2 prefers policy $B \succ A$
+
+- In theory, $1$ can persuade $2$ to support $A$ in exchange for some .hi-purple[side payment], i.e. **1 buys 2's vote**
+
+]
+
+---
+
+# Politics and the Coase Theorem
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/yj536pfa503axp7/congressassembled.png?raw=1)
+]
+]
+
+.pull-right[
+- That transaction would be a **Pareto improvement**! (Or at least, a **Kaldor-Hicks improvement**)
+
+- Both groups are better off: 1 gets policy $A$, 2 is **compensated** by 1
+
+- This is the .hi[Coase theorem] in politics: parties can bargain to a socially efficient outcome
+  - Like the doctor (or baker) paying off the baker (or doctor) 
+]
+
+---
+
+# Politics and the Coase Theorem
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/x1voms5mqjtqw7p/businesslie.png?raw=1)
+]
+]
+
+.pull-right[
+- However, in many cases in politics, this less likely to happen because of **high transaction costs**
+
+- How would such a vote contract be enforceable?
+  - No property rights in politics!
+  - Public opinion could change between the votes
+  - No way to credibly commit to upholding promise
+
+]
+
+
+---
+
+# Politics and the Coase Theorem
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/yj536pfa503axp7/congressassembled.png?raw=1)
+]
+]
+
+.pull-right[
+- Easier for smaller groups with **low transaction costs**, like egislatures
+]
+
+---
+
+# Secret vs. Public Voting
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/twc3e6q25yhmd68/secretballot.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Votes in Congress are often publicly recorded
+
+- This actually enhances the market for vote trading in Congress
+  - provides verification that each side held up their end of the bargain
+  
+- **Secret ballots** raise transaction costs and prevent agreements or vote trades
+  - no way to verify, easier to renege
+]
+
+---
+
+# Pork Barrel Legislation
+
+.pull-left[
+.center[
+![:scale 80%](https://www.dropbox.com/s/ty0tt65kmjs7kgi/porkbarrel.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- .hi["Pork barrel" legislation]: law that only benefits a narrow regional interest at taxpayer expense, solely for representative to bring money to their district
+  - e.g. subsidies for "bridges to nowhere"
+  - sometimes called .hi["earmarks"]
+
+- This legislation would never pass as a bill on its own!
+
+]
+---
+
+# Park Barrel Legislation
+
+.pull-left[
+.center[
+![:scale 70%](https://www.dropbox.com/s/ngd1saqfjbiunxb/2019PigBookCover.png?raw=1)
+]
+]
+
+.pull-right[
+.smallest[
+> "Citizens Against Government Waste’s (CAGW) 2019 Congressional Pig Book exposes 282 earmarks, an increase of 21.6 percent from the 232 in fiscal year (FY) 2018.  The cost of earmarks in FY 2019 is $15.3 billion, an increase of 4.1 percent from the $14.7 billion in FY 2018.  Since FY 1991, CAGW has identified 111,144 earmarks costing $359.8 billion...Over the past two years, legislators added an average of 257 earmarks costing $15 billion."
+
+
+From [Citizens Against Public Waste](https://www.cagw.org/reporting/pig-book)
+]
+]
+
+---
+
+# Park Barrel Legislation
+
+.pull-left[
+.center[
+![:scale 70%](https://www.dropbox.com/s/ngd1saqfjbiunxb/2019PigBookCover.png?raw=1)
+]
+]
+
+.pull-right[
+.smallest[
+
+> As in previous years, all items in the Congressional Pig Book meet at least one of CAGW’s seven criteria, but most satisfy at least two:
+    Requested by only one chamber of Congress;
+    Not specifically authorized;
+    Not competitively awarded;
+    Not requested by the President;
+    Greatly exceeds the President’s budget request or the previous year’s funding;
+    Not the subject of congressional hearings; or
+    Serves only a local or special interest.
+
+From [Citizens Against Public Waste](https://www.cagw.org/reporting/pig-book)
+]
+]
+
+---
+
+# Logrolling
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/6k6eqkl6fnnlh7v/handshake.png?raw=1)
+]
+]
+
+.pull-right[
+
+- One way these bills get enacted is .hi[logrolling] or a .hi[quid-pro-quo]: exchange of votes between legislators
+
+> "You scratch my back, I'll scratch yours"
+
+]
+
+---
+
+# Logrolling
+
+.pull-left[
+- .hi-green[Example]: suppose you have a national Senate with 5 districts: A, B, C, D, E, each with 1 Senator
+  - Voters in district A want a military base
+  - Voters in district B want a dam
+  - Voters in district C want a monument
+  - Each must be paid for by country's taxpayers
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/fvggno2r065z6b5/governmentspending.png?raw=1)
+]
+]
+---
+
+# Logrolling
+
+| Senator | A-Base | B-Dam | C-Monument |
+|---------|--------------|-------------|------------------|
+| A | +10 | -3 | -3 |
+| B | -3 | +10 | -3 |
+| C | -3 | -3 | +10 |
+| D | -3 | -3 | -3 |
+| E | -3 | -3 | -3 |
+| TOTAL | -2 | -2 | -2 |
+
+--
+
+- If each bill (A, B, C) was voted on separately For/Against, each would fail
+  - A 4:1 majority against
+
+---
+
+# Logrolling
+
+| Senator | A-Base | B-Dam | C-Monument | COMBINED |
+|---------|--------------|-------------|------------------|----------|
+| A | +10 | -3 | -3 | +4 |
+| B | -3 | +10 | -3 | +4 |
+| C | -3 | -3 | +10 | +4 |
+| D | -3 | -3 | -3 | -9 |
+| E | -3 | -3 | -3 | -9 |
+| TOTAL | -2 | -2 | -2 | -6 |
+
+
+- If the three were combined in a single .hi[omnibus bill]:
+  - A, B, C form coalition to vote FOR
+  - D, E vote AGAINST
+- Bill would pass, giving each Senator their pork project
+
+---
+
+# Congressional Committees
+
+.pull-left[
+.center[
+![:scale 90%](https://www.dropbox.com/s/0y1kfjct7cd2g8c/congressionalcommittees.png?raw=1)
+]
+]
+
+.pull-right[
+
+- Congress organizes via .hi[Congressional Committees]
+
+- Note: this is *not* discussed in the U.S. Constitution! 
+  - Congress self-assembled these in the 19<sup>th</sup> century
+
+]
+
+---
+
+# Congressional Committees
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/cw6hwj5gz0ywv2t/committeehearing.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Legislative agenda is a **commons**, easily congested!
+
+- Committees create "property rights" to enclose portions of the agenda to exclusive committees
+
+
+]
+
+---
+
+# Congressional Committees
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/cw6hwj5gz0ywv2t/committeehearing.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+
+- Relevant committee must approve a bill to bring it to the full Congress to debate and vote
+  - Most Committee members have similar interests
+  - Easier for Committee to make amendments, attach "riders", that satisfy most members of Committee
+    - i.e. easier logrolling to earmark money for each Member's district
+]
+
+---
+
+# Most Bills Die in Committee
+
+.center[
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Otbml6WIQPo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+
+---
+
+# Most Bills Die in Committee
+
+.center[
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QH0Hl31vdF4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
+
+---
+
+# Most Bills Die in Committee
+
+.center[
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9jGmtnjReiw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+]
