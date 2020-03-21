@@ -12,15 +12,9 @@ source(file.path(here::here(), "lib", "graphics.R"))
 
 *Due by the last day of class*
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/W0zli4P6IPM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-- [<i class="fas fa-chalkboard-teacher"></i> How to Write a Good Paper](/slides/paper-slides.html)
-- See examples of good student Op-eds on Blackboard (Course Documents)
-
 > "How can I know what I think until I see what I say?" --- E. M. Forster on Writing
 
-
-# Overview 
+# Overview
 
 Your task is to write a paper on a public policy or a non-market decision-making process or institution of your choosing, and to apply some economic insights to it. The purpose of this paper is threefold: 
 
