@@ -5,6 +5,10 @@ author: "Ryan Safner"
 
 ^[{-} `r blogdown::shortcode("courseinfo")`] <span class="newthought">This site contains</span> the syllabus, schedule, and assignments for ECON 410: Public Economics, held during Spring 2020 at Hood College.
 
+# <i class="fas fa-exclamation-circle"></i> **Transition to Online**
+
+**This course is now online for the remainder of the Spring 2020 semester.** [**Please read this update**](/class/online-transition) **for more information on course changes and accessibility.** 
+
 **Last Update**: [`r format(Sys.time(), "%X %a %b %d %Y")`](https://github.com/ryansafner/publicS20/commits/master)
 
 By the end of this course, you will:

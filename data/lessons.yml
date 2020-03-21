@@ -60,8 +60,12 @@ lessons:
   - title: "3.5 Legislators"
     reading: "3.5-reading"
     slides: "3.5-slides"
-    
-  - title: '<i class="fas fa-laptop-code"></i> **Midterm Exam**'
+
+  - title: '<i class="fas fa-laptop-code"></i> **Midterm Exam** due 8 PM Friday March 27'
+    assignment: "midterm"
+
+  - title: '<i class="fas fa-exclamation-circle"></i> **Transition to Online Courses** (Please read)'
+    class: "online-transition"
 
   - title: "3.6 Bureaucracy"
 
@@ -93,5 +97,6 @@ lessons:
   - title: '4.10 Inequality: Some Causes and Cures'
 
   - title: '<i class="fas fa-laptop-code"></i> **Policy Paper**'
+    assignment: "policy-paper"
 
   - title: '<i class="fas fa-laptop-code"></i> **Final Exam**'

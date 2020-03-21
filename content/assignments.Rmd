@@ -7,11 +7,15 @@ slug: assignments
 
 Use this tool to calculate your final course grade and predict what grades you would need on remaining assignments to obtain a desired course grade.
 
-# Policy Paper {-}
+# Policy Paper (30%) {-}
 
-Each of you will write a term paper on a public policy, non-market decision-making institution, or other approved topic using the toolkit in this course.
+Each of you will write a term paper on a public policy, non-market decision-making institution, or other approved topic using the toolkit in this course. For more details, view the [assignment's page](/assignment/policy-paper).
 
-# Participation and Discussion {-}
+# Midterm and Final Exams (20% each) {-}
+
+Both the midterm and final exams will be take-home essay questions.
+
+# Participation and Discussion (30%) {-}
 
 <span class="newthought">Almost every class meeting will have a readings-based discussion.</span> During our discussions, we will follow the rules pioneered and perfected by the Liberty Fund seminars.^[These rules are shamelessly adapted and modified from the highly-successful *Liberty Fund* seminars and from my colleagues Emily Chamlee-Wright, Joshua Hall, and Steve Horwitz.] I will provide you with a handout detailing the rules on the first discussion day. These discussions help shift the focus of the course away from me lecturing material at you more towards your learning and building upon material. This requires you to take ownership of your own learning. It is critical that you come to class having done the readings and are prepared for discussion. **You are required to email to me a list of 2-3 questions or points you want to discuss before class begins on each discussion day.** Everyone will receive a grade from 0-5 on each discussion day based on their participation. If I feel that students are not diligently doing the readings, *I reserve the right to implement readings-based quizzes and allocate some of the participation grade towards them.*
 
@@ -53,7 +57,3 @@ Your "questions" need not be in the form of a question -- some suggestions are p
 The main purpose of the questions is to provide evidence that students are doing the readings and are prepared to talk about them, so bear this in mind. 
 
 At the end of the semester, I will take an average by adding up your total accumulated score and divide it by the number of discussion days we had. This average score will constitute your participation grade for the course. 
-
-# Midterm and Final Exams {-}
-
-Both the midterm and final exams will be take-home essay questions.

@@ -27,6 +27,9 @@ menu:
     - name: Reference
       url: /reference/
       weight: 4
+    - name: Slack
+      url: "https://hood-public-economics.slack.com"
+      weight: 6
 # Disable taxonomies
 taxonomies:
   tag: ""
@@ -52,7 +55,7 @@ params:
     dates: >-
       January 15–May 8, 2020
     github: "ryansafner/publics20"
-    #slack: "https://hoodeconometrics.slack.com/"
+    slack: "https://hood-public-economics.slack.com/"
     copyrightYear: "2020"
     contactDetails: >-
       Office hours: MW 3:15–5:00PM
