@@ -11,4 +11,22 @@ editor_options:
   chunk_output_type: console
 ---
 
-Check back here shortly, as I am still triaging all of my courses!
+# Readings
+
+See the [<i class="fas fa-book-reader"></i> Readings](/reading/3.6-reading) for today's class. A reminder, you are no longer required to read and email questions before class. You still need to do the readings for the discussion (see below), and if you choose to join the livestream, I recommend reading before class if you want me to answer any questions in real time.
+
+# Class Livestream/Lecture Videos
+
+- [<i class="fas fa-video"></i> Zoom Live Class Meetings (starts Monday at 2:00 PM)](https://zoom.us/j/929467864)
+
+Check back here before class time (Monday 2 PM) for more information and instructions about the livestream.
+
+Check back later that day for the lecture video(s) to be posted.
+
+# Slides
+
+[<i class="fas fa-chalkboard-teacher"></i> Slides](/slides/3.6-slides) will be posted soon.
+
+# Discussion Thread
+
+The weekly discussion thread **will be posted** on Blackboard^[Go to this course on Blackboard, and on the blue toolbar on the left, go to *Discussion Board.*] after Monday's lecture ends around 3PM. You will have until Sunday 11:59 PM to comment on this week's topics (based on lectures and readings), at which point I will evaluate your contribution for the weekly discussion grade. See my introductory post on the discussion board's thread for more information.
