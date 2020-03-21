@@ -68,10 +68,12 @@ lessons:
     class: "online-transition"
 
   - title: "3.6 Bureaucracy"
+    class: "3.6-class"
+    reading: "3.6-reading"
 
-  - title: "3.7 Politicians/Legislators I"
+  - title: "3.7 TBD"
   
-  - title: "3.8 Politicians/Legislators II"
+  - title: "3.8 TBD"
   
   - title: '<span class="fake-header-table">Applications</span>'
     header: True
