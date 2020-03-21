@@ -10,7 +10,7 @@ csl: ../../static/bib/chicago-fullnote-bibliography-no-bib.csl
 # Readings:
 
 - <i class="fas fas fa-book"></i> Holcombe (2016), *Advanced Introduction to Public Choice*, Ch. 9 "Bureaucracy"
-- <i class="fas fas fa-book"></i> Mises, Ludwig von (1949), *Human Action: A Treatise on Economics*, Ch. XV.10, "Promoters, Managers, Technicians, and Bureaucrats" (Skim)
+- <i class="fas fas fa-book"></i> Mises, Ludwig von (1949), *Human Action: A Treatise on Economics*, [Ch. XV.10, "Promoters, Managers, Technicians, and Bureaucrats"](/readings/Mises_1949_Bureaucrats.pdf) (Skim)
 
 We now look at those individuals and organizations that actually *implement* the laws, collectively known as "the bureaucracy," sometimes called "the fourth branch of government." These are both executive-branch departments (e.g. Department of Commerce, Department of Education, Department of Transportation, etc.) and independent agencies created by Congress (e.g. Federal Communications Commission, Federal Trade Commission, Securities and Exchange Commission, etc.) that are staffed with individuals that collectively create rules about what private individuals and entities may or may not do, or must do, as directed by Congress or the President, colloquially known as "regulation."
 
