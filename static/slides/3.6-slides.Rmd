@@ -1,0 +1,720 @@
+---
+title: "3.6: Bureaucracy"
+subtitle: "ECON 410 · Public Economics · Spring 2020"
+author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/publicS20"><i class="fa fa-github fa-fw"></i> ryansafner/publics20</a><br> <a href="https://publicS20.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> publicS20.classes.ryansafner.com</a><br>'
+#date:
+output:
+  xaringan::moon_reader:
+    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML" # rescales math with css changes https://github.com/yihui/xaringan/issues/143
+    lib_dir: libs
+    df_print: paged
+    #seal: false
+    css: [custom.css, custom-fonts.css, "hygge"] #, metropolis, metropolis-fonts
+    nature:
+      beforeInit: ["macros.js", "https://platform.twitter.com/widgets.js"] # first is for rescaling images , second is for embedding tweets, https://github.com/yihui/xaringan/issues/100
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    includes:
+      in_header: header.html # for font awesome, used in title  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = F,
+                      warning = F,
+                      message = F,
+                      fig.retina = 3,
+                      fig.align = "center")
+library("tidyverse")
+library("mosaic")
+
+theme_slides <- theme_classic() + 
+  theme(
+    text = element_text(family = "Fira Sans", size = 18)
+  )
+```
+
+class: inverse, center, middle
+
+## [Overview](#3)
+
+## [Modelling Bureaucrats](#14)
+
+## [Congress and the Bureaucracy](#25)
+
+---
+
+class: inverse, center, middle
+
+# Overview
+
+---
+
+# Major Actors in a Liberal Democracy
+
+.pull-left[
+
+- .hi[Voters] express preferences through elections
+
+- .hi[Special interest groups] provide additional information and advocacy for lawmaking
+
+- .hi[Politicians] create laws reflecting voter and interest gorup preferences
+
+- .hi[Bureaucrats] implement laws according to goals set by politicians
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/731fum488qxckyq/atheniandemocracy.jpg?raw=1)
+]
+]
+
+---
+
+# *Bureaucrats* in a Liberal Democracy
+
+.pull-left[
+
+- .hi[Bureaucrats] create regulations to implement laws written by legislators
+
+- The bureaucrat's problem:
+
+1. **Choose:** .hi-purple[ < rules >]
+
+2. **In order to maximize:** .hi-green[< ??? >]
+
+3. **Subject to:** .hi-red[< restrictions set by legislature >]
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/tjgr3viplyaygd3/cabinet_trump.jpg?raw=1)
+
+.smallest[
+The President's Cabinet
+]
+]
+]
+
+
+---
+
+# Bureaucracy and the Administrative State
+
+.pull-left[
+
+- Sometimes called the .hi-purple["4<sup>th</sup> branch of government"]
+
+- **Today**, an overview of bureaucracy
+  - comparisons between firms and bureaus
+  - how to model individual bureaucrats
+  - general relationship between bureaus and Congress
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/tjgr3viplyaygd3/cabinet_trump.jpg?raw=1)
+
+.smallest[
+The President's Cabinet
+]
+]
+]
+
+---
+
+# Bureaucracy and the Administrative State
+
+.pull-left[
+
+- Sometimes called the .hi-purple["4<sup>th</sup> branch of government"]
+
+- **Wednesday**, challenges of the rise of .hi-purple["the administrative State"]
+  - more on regulatory agencies
+  - process of making regulation
+  - separation of powers concerns between Executive, Legislative, and Judicial
+  - progressivism vs. conservatism on role of administration
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/tjgr3viplyaygd3/cabinet_trump.jpg?raw=1)
+
+.smallest[
+The President's Cabinet
+]
+]
+]
+
+---
+
+# Let's First Address: Connotation
+
+.pull-left[
+- **"Bureaucracy,"** **"Bureaucratic,"** and **"Bureaucrat"** all have a negative connotation
+
+- Let's be positive (analytical), not normative (judgmental) about this
+
+- Bureaucrats & bureaus are people and organizations too!
+
+- Understand their incentives, how they work, and compare to other institutions
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/webr2yx71g4hzbc/bureaucrat.jpeg?raw=1)
+]
+
+]
+
+---
+
+# What Is the Bureaucracy
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/rvz22t8hd0opyfv/usajobs.png?raw=1)
+]
+]
+
+.pull-right[
+
+- .hi-purple[Bureaucrats] are career government employees that work for various government agencies
+  - "Civil service"
+  - "Public administration"
+
+- Point is: **isolated from politics**
+  - Not elected, very hard to fire
+  - Focus on administration and rule-making, not public opinion
+
+]
+
+---
+
+# Evolution of Bureaucracy
+
+.pull-left[
+.center[
+![:scale 80%](https://www.dropbox.com/s/4xd6bku8ieba51l/bosstweed.jpg?raw=1)
+
+"Boss Tweed" of Tammany Hall
+]
+]
+
+.pull-right[
+
+- Weak or underdeveloped States suffer from .hi-purple[political patronage], .hi-purple[clientelism], or the .hi-purple["spoils system"]
+
+- Politicians appoint their friends, allies, and cronies to public offices regardless of qualification
+
+]
+
+---
+
+# Developed Bureaucracies
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/hu4xbni8f95uo6e/publicadmin.jpg?raw=1)
+]
+]
+
+.pull-right[
+- [1883 Pendleton Civil Service Reform Act](https://en.wikipedia.org/wiki/Pendleton_Civil_Service_Reform_Act)
+
+- Most modern democracies have very developed bureaucracies
+  - Meritocracy and expertise over political connections
+  - Rational rules over loyalty
+  - Very difficult to fire bureaucrat (insulated from politics)
+
+- Divorce .hi-purple[politics] from .hi-purple[administration]
+  - Conversely, anti-democratic
+]
+---
+
+# What Constitutes the U.S. Federal Bureaucracy
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/i01u5n8r0g6ju9a/cabinetseals.png?raw=1)
+]
+]
+
+.pull-right[
+
+- .hi-purple[Federal Departments]
+  - Part of **executive branch** under U.S. President
+  - Cabinet-level secretaries (leaders) are appointed by the President and confirmed by Senate
+  - serve "at the pleasure of the President" i.e., the President can fire them at any time, for any reason
+
+]
+
+---
+
+# What Constitutes the U.S. Federal Bureaucracy
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/sdcww44ng1bxp7c/independentagencies.png?raw=1)
+]
+]
+
+.pull-right[
+
+- .hi-purple[Independent (Regulatory) Agencies]
+  - Established by *Congress* via a statutory grant of authority
+  - Most have 5-7 Commissioners appointed by President and confirmed by Senate<sup>.red[1]</sup>, most required to be bipartisan
+  - "Independent" of President
+
+.footnote[
+.smallest[<sup>.red[1]</sup> Most have staggered terms that extend beyond a Presidential administration, so a President cannot appoint entire Commission.]
+]
+
+]
+
+---
+
+class: inverse, center, middle
+
+# Modeling Bureaucrats
+
+---
+
+# Firms vs. Bureaus as Organizations
+
+.left-column[
+.center[
+![](https://www.dropbox.com/s/zmt2ekm1ixb4p4c/mises2.png?raw=1)
+
+Ludwig von Mises
+
+1881-1973
+]
+]
+
+.right-column[
+
+- von Mises: "**profit management**" vs. "**bureaucratic management**"
+
+- Bureaucracy is not an evil, the only alternative to profit management
+
+- To the extent collective choice is necessary, so is bureaucracy
+  - Firms can be bureaucratic
+  - Market failures may require government, run bureaucratically
+]
+
+
+---
+
+# Profit Management
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/igyvlrzpb02f28n/profitloss2.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Uses **prices** and **profits**, managers can be left to do as they please to maximize organization profits
+
+- Capital allocated according to **profitability**, **comparisons to alternative uses** in the economy
+]
+
+
+---
+
+# Bureaucratic Management
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/48qhljsq6sdz82p/bureaucracy1.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Does not use prices or profits, cannot determine efficient use of capital
+
+- Managers cannot be autonomous--abuse funds and no way to verify efficient use
+
+- Thus, managers must comply with specific rules about use of money and activities, often determined by legislature
+]
+
+---
+
+# Modeling Bureaucrats
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/hvi6gcg5dftlztr/niskanen.jpeg?raw=1)
+
+.smallest[
+William Niskanen
+
+1933-2011
+]
+]
+]
+
+.right-column[
+
+- Niskanen's hypothesis: bureaus maximize (discretionary) budget
+
+- "Income" of bureau is almost entirely from Congressional grant, not sales to consumers
+
+]
+
+---
+
+# Modeling Bureaucrats
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/hvi6gcg5dftlztr/niskanen.jpeg?raw=1)
+
+.smallest[
+William Niskanen
+
+1933-2011
+]
+]
+]
+
+.right-column[
+
+- Responses to Niskanen:
+
+- Bureaus cannot maximize budget, in competition with other agencies for budget
+  - Implies we will get the efficient amount allocated bureau by bureau
+]
+
+---
+
+# Modeling Bureaucrats
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/55ixb8v55ief6rx/bureaucrat1.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+1. **Choose:** .hi-purple[ < rules >]
+
+2. **In order to maximize:** .hi-green[< utility >]
+
+3. **Subject to:** .hi-red[< restrictions set by legislature >]
+
+- Bureaucrat maximizes own utility
+
+$$u(z,c)$$
+
+- Two ideal types of bureaucrat (or hybrid):
+  - "Zealots"
+  - "Climbers"
+
+]
+
+---
+
+# Modeling Bureaucrats: Zealots
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/55ixb8v55ief6rx/bureaucrat1.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+$$u(z,c)$$
+
+- .hi-purple["Zealots"] want to maximize rules made to reshape the world in their ideal vision
+
+- Truly believe that existing market equilibria are wrong
+
+- Note: this $\neq$ socially optimal regulation (necessarily)
+  - Zealot may be mistaken, have unique preferences, etc.
+]
+
+---
+
+# Modeling Bureaucrats: Climbers
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/55ixb8v55ief6rx/bureaucrat1.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+$$u(z,c)$$
+
+- .hi-purple["Climbers"] want to maximize own career prospects or perks
+  - May involve passing more rules (to put on resume)
+
+- Want promotions, high salary, good work environment, more respect/clout, more subordinates to manage, directing more resources (bigger budget)
+
+- Again, also $\neq$ public interest
+]
+
+---
+
+# Recall: The Revolving Door
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/cphso5uvvyhh6px/revolvingdoor.jpg?raw=1)
+]
+]
+
+.pull-right[
+- Recall the .hi-purple["revolving door"] between the public and private sector
+
+- Legislators & regulators retire from politics to become highly paid consultants and lobbyists for the industry they had previously "regulated"
+
+- Again, source for .hi-purple[regulatory capture] of agency by industry
+
+]
+
+---
+
+# Mission Creep
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/lo8fk45idrjfazn/missioncreep.png?raw=1)
+]
+]
+
+.pull-right[
+
+- A bureau that accomplishes its mission or sees it as less important $\rightarrow$ budget cuts
+
+- Bureaus have an incentive to overplay the importance of their mission and the severity of the problem
+
+- .hi[Mission creep]: attaching new (and tangential) goals to the bureau's original mission
+
+]
+
+---
+
+class: inverse, center, middle
+
+# Congress and the Bureaucracy
+
+---
+
+# Congress and the Bureaucracy
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/cw6hwj5gz0ywv2t/committeehearing.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Exchange between a producer and a consumer is a price for a marginal unit
+  - Wide set of choices about how many units to purchase, how much of substitutes to purchase, purchase none at all, etc.
+
+
+- Exchange between an agency and Congress is a year of total output for a year of total budget
+
+]
+
+---
+
+# The Budget Appropriations Process
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/0evto1rvq0h2j2x/budgetappropriations.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+1. President submits a budget *request* to Congress for fiscal year (October 1)
+
+2. House and Senate pass their own budget resolutions ("appropriation bill")
+
+3. Appropriations Committees in each house mark up the bills
+
+4. Houses reconcile their differences, send to President
+
+5. President signs budget into law
+
+]
+
+---
+
+# The Budget Appropriations Process: Failures
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/lz4ulchap9u1msg/governmentshutdown.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Note: often Congress fails to (agree upon and) pass their appropriations bills in time
+  - .hi-purple["Continuing Resolutions" (CR)] to keep budget items from last year
+
+- .hi-purple[Government shutdowns]
+  - 13 since 1980
+  - Longest was Dec 2018-Jan 2019 (35 days)
+
+]
+
+---
+
+# Congress and the Bureaucracy
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/cw6hwj5gz0ywv2t/committeehearing.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Congress has "power of the purse"
+
+- All government agencies are funded by Congress' budget allocations process
+
+- Exchange between an agency and Congress is a year of total output for a year of funding
+  - e.g. an "all or nothing" transaction
+
+]
+
+---
+
+# Bureaucracy: Supplier or Demander of Gov't Spending?
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/ejtjwdeu1in8tfb/printingmoney.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Bureaucracies as .hi-red[suppliers of government spending/regulation]
+  - Bureaus produce regulation, spend government money, implement desires of Congress
+
+]
+
+---
+
+# Bureaucracy: Supplier or Demander of Gov't Spending?
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/ejtjwdeu1in8tfb/printingmoney.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Bureaucracies as .hi-blue[demanders of government spending/regulation]
+  - Bureaus get almost entire income from Congress
+  - Each bureau is its own special interest seeking to lobby Congress
+
+- Congressional budget is a tragedy of the commons
+  - Competition between each bureau over rivalrous, scarce budget
+]
+
+---
+
+# Congress and the Bureaucracy
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/cw6hwj5gz0ywv2t/committeehearing.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- .hi-purple[Asymmetric information] between Congress and agency
+  - Congress: generalists, agencies: specialists
+
+- Only the agency knows its true costs and social benefits
+
+- Congress must deal with many many agencies, each agency only has to deal with Congress
+
+]
+
+---
+
+# Congress and the Bureaucracy
+
+.pull-left[
+.center[
+![:scale 60%](https://www.dropbox.com/s/3zfjmd43fl99hwh/washingtonmonumentscaffold.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Bureaus can try to "oversell" Congress importance and need for budget
+
+- Holdout, ["Washington monument syndrome"](https://en.wikipedia.org/wiki/Washington_Monument_Syndrome), Pandacam
+
+- Niskanen's budget-maximizing hypothesis
+]
+
+---
+
+# Competition Between Agencies
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/lp2agvfpdwsiqf2/eisenhower.png?raw=1)
+
+Dwight Eisenhower
+
+1890-1969
+]
+]
+
+.right-column[
+
+> "Every gun that is made, every warship launched, every rocket fired signifies, in the final sense, a theft from those who hunger and are not fed, those who are cold and are not clothed...The cost of one modern heavy bomber is this: a modern brick school in more than 30 cities. It is two electric power plants, each serving a town of 60,000 population. It is two fine, fully equipped hospitals. It is some fifty miles of concrete pavement."
+
+]
+
+---
+
+# Towards Next Class: Rise of the Administrative State
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/dpjxe4eczi4jxoa/adminstate.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Over 20<sup>th</sup> Century, Congress offloaded most real law-making to the agencies
+  - Acts of Congress and hearings are more media spectacles for the politicians
+  - *Real* governing and law-writing is done in .hi-purple[the administrative state]
+    - unelected, unaccountable, bureaucrats
+  - Can Congress delegate *legislative* power to *executive* agencies?
+]
