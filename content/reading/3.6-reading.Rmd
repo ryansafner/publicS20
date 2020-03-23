@@ -7,6 +7,8 @@ csl: ../../static/bib/chicago-fullnote-bibliography-no-bib.csl
 
 *Monday, March 23, 2020*
 
+*Online Quarantine Lecture 1*
+
 # Readings:
 
 - <i class="fas fas fa-book"></i> Holcombe (2016), *Advanced Introduction to Public Choice*, Ch. 9 "Bureaucracy"
@@ -16,7 +18,7 @@ We now look at those individuals and organizations that actually *implement* the
 
 What do these organizations (we might call them "bureaus", "agencies," "departments", etc) and the individuals that comprise them ("bureaucrats," "government agents," etc) do? How do they interact with other players in collective choice (voters, politicians, interest groups, legislatures, courts, etc)?
 
-Your textbook (Holcombe) chapter gives a good overview of this area of research, and the section from Mises' textbook gives a good overview of understanding the differences and similarities between organizations that produce for-profit in the market, and organizations (like bureaus) that produce politically.
+Your textbook (Holcombe) chapter gives a good overview of this area of research, and the **optional** section from Mises' textbook gives a good overview of understanding the differences and similarities between organizations that produce for-profit in the market, and organizations (like bureaus) that produce politically.
 
 # Tips and Questions to Read For:
 

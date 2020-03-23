@@ -32,6 +32,12 @@ I will also be reachable on **Slack**^[Join with [this link](https://join.slack.
 
 If you had never noticed, there is a [<i class="fas fa-calculator"></i> `Grade Calculator`](https://ryansafner.shinyapps.io/410_grade_calculator/) at the top of the [Assignments page](/assignments). Use this tool to calculate your final course grade and predict what grades you would need on remaining assignments to obtain a desired course grade.
 
+## Using Zoom for Office Hours and Live Class Sessions
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gOgSF8QZDQM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+See the above video for a brief overview of Zoom. 
+
 # Changes to Course Structure & Assignments
 
 Part of the unique features of this 400-level class (as opposed to our other 300-level Econ electives) is that it is seminar-like, with a focus on reading and discussion. This is to get you to grapple with challenging concepts and familiarizing yourself with what people have said about them. A lot of things we discuss are not "textbook" models with clear answers, but timeless questions that have no easy answers, and any analyst, researcher, or responsible citizen needs to grapple with on their own. Students who have taken economics electives with me in the past, and this class in particular, usually cite our classroom discussions as among their favorite part of the course, and the part that they learn the most from.

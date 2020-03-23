@@ -11,21 +11,37 @@ editor_options:
   chunk_output_type: console
 ---
 
+*Monday, March 23, 2020*
+
+*Online Quarantine Lecture 1*
+
 # Readings
 
-See the [<i class="fas fa-book-reader"></i> Readings](/reading/3.6-reading) for today's class. A reminder, you are no longer required to read and email questions before class. You still need to do the readings for the discussion (see below), and if you choose to join the livestream, I recommend reading before class if you want me to answer any questions in real time.
+See the [<i class="fas fa-book-reader"></i> Readings](/reading/3.6-reading) for today's topics. A reminder, **you are no longer required to read and email questions before class.** You still need to do the readings for the weekly discussion (see below), and if you choose to join the livestream, I recommend reading before class if you want me to answer any questions in real time.
 
 # Class Livestream/Lecture Videos
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gOgSF8QZDQM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+See the above video for a brief overview of Zoom. 
 
 - [<i class="fas fa-video"></i> Zoom Live Class Meetings (starts Monday at 2:00 PM)](https://zoom.us/j/929467864)
 
 Check back here before class time (Monday 2 PM) for more information and instructions about the livestream.
 
-Check back later that day for the lecture video(s) to be posted.
+Check back later in the afternoon for the lecture video(s) to be posted.
 
 # Slides
 
 [<i class="fas fa-chalkboard-teacher"></i> Slides](/slides/3.6-slides) will be posted soon.
+
+# Choosing Future Topics
+
+Don't forget, you have until 2 PM this Wednesday to please [suggest topics](https://forms.gle/MEWWwweX7Vu8kEnm6) for the rest of the semester!^[Again, you might wonder if it is related to Public Economics, and I assure you no matter what it is, I can probably find a way to relate it to public policy, concepts we've learned, or economics in a relevant and interesting way. Suggestions and actual class lectures in the past have included Blockchain, Net Neutrality, immigration, antitrust, political polarization, the sharing economy, nonprofits, etc.]
+
+# Midterm
+
+Your [midterm](/assignment/midterm)^[You can also find  the link on the main schedule page.] weill be posted shortly. It is due by this Friday, March 26 at 8:00 PM by email. 
 
 # Discussion Thread
 
