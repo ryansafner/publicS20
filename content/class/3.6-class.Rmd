@@ -27,9 +27,11 @@ See the above video for a brief overview of Zoom.
 
 - [<i class="fas fa-video"></i> Zoom Live Class Meetings (starts Monday at 2:00 PM)](https://zoom.us/j/929467864)
 
-Check back here before class time (Monday 2 PM) for more information and instructions about the livestream.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SickLWUXGGA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Check back later in the afternoon for the lecture video(s) to be posted.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SXipIszrlcs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HfgZj0316cA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # Slides
 
@@ -37,12 +39,12 @@ Check back later in the afternoon for the lecture video(s) to be posted.
 
 # Choosing Future Topics
 
-Don't forget, you have until 2 PM this Wednesday to please [suggest topics](https://forms.gle/MEWWwweX7Vu8kEnm6) for the rest of the semester!^[Again, you might wonder if it is related to Public Economics, and I assure you no matter what it is, I can probably find a way to relate it to public policy, concepts we've learned, or economics in a relevant and interesting way. Suggestions and actual class lectures in the past have included Blockchain, Net Neutrality, immigration, antitrust, political polarization, the sharing economy, nonprofits, etc.]
+Don't forget, you have until **2 PM this Wednesday** to please [suggest topics](https://forms.gle/MEWWwweX7Vu8kEnm6) for the rest of the semester!^[Again, you might wonder if it is related to Public Economics, and I assure you no matter what it is, I can probably find a way to relate it to public policy, concepts we've learned, or economics in a relevant and interesting way. Suggestions and actual class lectures in the past have included Blockchain, Net Neutrality, immigration, antitrust, political polarization, the sharing economy, nonprofits, etc.]
 
 # Midterm
 
-Your [midterm](/assignment/midterm)^[You can also find  the link on the main schedule page.] is shortly. It is due by this Friday, March 27 at 8:00 PM by email.
+Your [midterm](/assignment/midterm)^[You can also find  the link on the main schedule page.] is shortly. It is **due by this Friday, March 27 at 8:00 PM by email**.
 
 # Discussion Thread
 
-The weekly discussion thread **will be posted** on Blackboard^[Go to this course on Blackboard, and on the blue toolbar on the left, go to *Discussion Board.*] after Monday's lecture ends around 3PM. You will have until Sunday 11:59 PM to comment on this week's topics (based on lectures and readings), at which point I will evaluate your contribution for the weekly discussion grade. See my introductory post on the discussion board's thread for more information.
+The weekly discussion thread **is posted** on Blackboard.^[Go to this course on Blackboard, and on the blue toolbar on the left, go to *Discussion Board.*] You will have until Sunday 11:59 PM to comment on this week's topics (based on lectures and readings), at which point I will evaluate your contribution for the weekly discussion grade. See my introductory post on the discussion board's thread for more information.
