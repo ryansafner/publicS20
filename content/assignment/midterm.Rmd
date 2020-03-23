@@ -1,0 +1,35 @@
+---
+title: "Midterm"
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+library(tidyverse)
+library(pander)
+source(file.path(here::here(), "lib", "graphics.R"))
+```
+
+- *Due 8:00 PM Friday, March 27 by email*
+
+# Instructions
+
+Choose four questions to answer. Questions draw from course lectures, discussions, and readings. Your answers, given the time and resources at your disposal, should be complete yet concise (e.g. 2-3 well-reasoned paragraphs).
+
+You may discuss the questions, but you must write your own responses and turn in your own work. Answers that are substantially similar will be interpretted cheating and punished accordingly. I will not answer any questions about course content during while the exam is outstanding.
+
+You will be graded both on your use of reasoning and economic analysis, and ability when relevant to accurately describe the arguments in the readings. Where asked for your opinion, you will not be graded on your *conclusion*, only your *reasoning.* You must be able to talk with some familiarity about arguments put forth in our readings, when relevant (informally, as in "According to Buchanan..."). You do not need formal citations, but it should be clear when you are referencing the readings vs. your own thinking.
+
+Each question is worth **25 points.** This assignment is due to me by email by 8:00 PM Friday, March 27 by email. Starting at 8:01, you will lose 2 points for every hour it is late.
+
+1. Why is the United States not a pure democracy? Answer using relevant insights from the readings and from class.
+
+2. What is the function of a constitution? Use relevant insights from the readings.
+
+3. How does vote cycling (Condorcet's paradox) undermine democracy? Under what conditions does it occur? Under what conditions can we avoid it? How do real world political institutions avoid cycling?
+
+4. Explain Buchanan and Tullock's optimal decision rule model. Give examples of cases where rules near unanimity are optimal, where rules far from unanimity are optimal, and when it is optimal to not decide collectively.
+
+5. Why can democracies tend to produce "bad" or inefficient public policies? Explain at least three different theories/explanations and describe an example of each.
+
+6. It is an extremely common argument that in order to fix the flaws in public policy or our politics, we just need to "elect the right people." Use what you have learned in this class to react to this argument.
