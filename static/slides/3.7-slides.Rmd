@@ -52,7 +52,7 @@ class: inverse, center, middle
 ---
 
 class: inverse, center, middle
-
+  
 # Separation of Powers
 
 ---

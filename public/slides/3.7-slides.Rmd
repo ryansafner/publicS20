@@ -47,12 +47,12 @@ class: inverse, center, middle
 
 ## [Progressivism and the Science of Administration](#14)
 
-## [The Rise and Rise of the Administrative State](#25)
+## [The Rise and Rise of the Administrative State](#28)
 
 ---
 
 class: inverse, center, middle
-
+  
 # Separation of Powers
 
 ---
@@ -303,7 +303,7 @@ class: inverse, center, middle
 
 .left-column[
 .center[
-![:scale 80%](https://www.dropbox.com/s/4559f5e3iph2h2g/fredericktaylor.jpg?raw=1)
+![:scale 75%](https://www.dropbox.com/s/4559f5e3iph2h2g/fredericktaylor.jpg?raw=1)
 
 Frederick Winslow Taylor
 
@@ -336,7 +336,7 @@ Frederick Winslow Taylor
 # The Progressive Era (c.1890-c.1920)
 
 .center[
-![:scale 60%](https://www.dropbox.com/s/jokpywlox6qvvzv/roosevelttrusts.png?raw=1)
+![:scale 50%](https://www.dropbox.com/s/jokpywlox6qvvzv/roosevelttrusts.png?raw=1)
 ]
 ---
 
@@ -566,7 +566,7 @@ Theodore Roosevelt
 - Political philosophy regarded only as "spirit of that time" (Hegel), not timeless first principles
   - Practicality and expediency trump constitutional principles
 
-- Centralized control & responsibility vs. separation of powers or democractic checks
+- Centralize control vs. separation of powers or democractic checks
   - Expertise supersedes democracy
 
 - Compare to Madison's paradox and necessity for "auxiliary precautions"
@@ -857,6 +857,8 @@ Modern Era
 
 - In 2016, Congress passed 2,966 pages of laws, federal agencies released 97,110 pages of new regulations (32x more)
 
+.source[Hamburger, Philip, 2015, *Is Administrative Law Unlawful?*]
+
 ]
 
 ---
@@ -870,34 +872,30 @@ class: inverse, center, middle
 # The Growth of Regulation
 
 .center[
-![:scale 80%](https://www.dropbox.com/s/y03c9k0l3uf976i/growthofCFR.png?raw=1)
-Source: [GWU Regulatory Studies](https://regulatorystudies.columbian.gwu.edu/reg-stats)
+[![:scale 75%](https://www.dropbox.com/s/y03c9k0l3uf976i/growthofCFR.png?raw=1)](https://regulatorystudies.columbian.gwu.edu/reg-stats)
 ]
-
----
-
-# The Growth of Regulation
-
-.pull-left[
-.center[
-![]()
-]
-]
-
-.pull-right[
-
-
-]
-
-.source[Hamburger, Philip, 2015, *Is Administrative Law Unlawful?*]
 
 ---
 
 # Broad Reach of Regulation
 
+.smaller[
+
 > Perhaps your day starts when your clock radio goes off in the morning. The Federal Communications Commission (FCC) regu-lates not only the airwaves used by your favorite radio station, but also the programming content. Electricity regulated by the Federal Energy Regulatory Commission (FERC) and by state regulatory agencies powers your radio. The U.S. Department of Energy (DOE) regulates the type of light bulb you can use in your lamp.The Consumer Product Safety Commission regulates the label on your mattress. The Food and Drug Administration (FDA) regulates the content of your toothpaste, soap, shampoo, and other grooming products. The Environmental Protection Agency (EPA) regulates the quality of the water coming out of your showerhead. On your way out of the bathroom, you may have to flush your low-flow toilet twice, a result of mandates imposed by the DOE’s appliance efficiency rules.
 
+]
+
+.source[Dudley, Susan E and Jerry Brito, 2012, [https://www.mercatus.org/system/files/RegulatoryPrimer_DudleyBrito_0.pdf](*Regulation: A Primer*), 2nd Ed., Mercatus Center and George Washington University Regulatory Studies Center, pp.2-3]
+
+---
+
+# Broad Reach of Regulation
+
+.smaller[
+
 > As you prepare your breakfast, you might check your cere-al’s FDA-regulated label for nutritional information. The FDA also regulates what companies may say about the health bene-fits of foods and what adjectives they may use to describe those health benefits. The FDA and U.S. Department of Agriculture (USDA) have a hand in regulating your coffee and sugar. Also joining you for your cup of java is the Commodity Futures Trading Commission, which regulates the hedging of invest-ments in coffee beans, sugar, and other commodities. The EPA, FDA, and USDA Animal and Plant Health Inspection Service regulate the fruit you serve for breakfast. The USDA’s Agricultural Marketing Service also plays a role in your breakfast. It sets grade standards and purchases fruits and vegetables “to correct supply and demand imbalances,” which keeps prices higher than they otherwise would be. The USDA even regulates the size of the holes in the Swiss cheese you grate into your omelet.
+
+]
 
 .source[Dudley, Susan E and Jerry Brito, 2012, [https://www.mercatus.org/system/files/RegulatoryPrimer_DudleyBrito_0.pdf](*Regulation: A Primer*), 2nd Ed., Mercatus Center and George Washington University Regulatory Studies Center, pp.2-3]
 
@@ -931,11 +929,12 @@ Source: [GWU Regulatory Studies](https://regulatorystudies.columbian.gwu.edu/reg
 ![:scale 100%](https://www.dropbox.com/s/7vs0jfoxfj43bf3/wsjcountingregulations.png?raw=1)
 
 ]
+]
 
-.pull-left[
+.pull-right[
 .center[
 ![:scale 100%](https://www.dropbox.com/s/7jy231kpp5a0ibs/wsj3feloniesaday.png?raw=1)
-
+]
 ]
 
 ---

@@ -23,32 +23,43 @@ See the [<i class="fas fa-book-reader"></i> Readings](/reading/3.7-reading) for 
 
 - [<i class="fas fa-video"></i> Zoom Live Class Meetings (starts Monday at 2:00 PM)](https://zoom.us/j/929467864)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yNrnZWLPvuc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/itIwvqwh2S4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CAdUhaLowXU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ln3GbkWTj1E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 # Slides
 
 [<i class="fas fa-chalkboard-teacher"></i> Slides](/slides/3.7-slides) will be posted soon.
 
-[U.S. Constitution](https://www.archives.gov/founding-docs/constitution-transcript)
+# Sources and Readings from Slides
 
-# Sources from Slides
-
-- Turnton, William, 2019, ["How Our Administrative State Undermines The Constitution,"](https://thefederalist.com/2019/02/08/administrative-state-undermines-constitution/) *The Federalist* (Feb 8, 2019)
-- Michaels, Jon D, 2019, ["A Constitutional Defense of the Administrative State,"](https://www.theregreview.org/2019/12/17/michaels-constitutional-defense-administrative-state/) *The Regulatory Review* (Dec 17, 2019)
-- Ford, Matt, 2020, ["The Plot to Level the Administrative State,"](https://newrepublic.com/article/156207/plot-level-administrative-state) *The New Republic* (Jan 14, 2020)
-- DeVore, Chuck, 2017, ["The Administrative State Is Under Assault And That's A Good Thing,"](https://www.forbes.com/sites/chuckdevore/2017/11/27/the-administrative-state-is-under-assault-and-thats-a-good-thing/#5a5260de393c) *Forbes* (Nov 27, 2017)
-- Pestritto, Ronald, 2007, ["The Birth of the Administrative State: Where It Came From and What It Means for Limited Government"](https://www.heritage.org/political-process/report/the-birth-the-administrative-state-where-it-came-and-what-it-means-limited), *Heritage Foundation* (Nov 20, 2007)
-- Lawson, Gary, 1994, ["The Rise and Rise of the Administrative State,"](/readings/Lawson-1994) Harvard Law Review 107(6): 1231-1254
 - Crovitz, L Gordon, 2009, ["You Commit Three Felonies A Day,"](https://www.wsj.com/articles/SB10001424052748704471504574438900830760842) *Wall Street Journal* (Sept 27, 2009)
+- DeVore, Chuck, 2017, ["The Administrative State Is Under Assault And That's A Good Thing,"](https://www.forbes.com/sites/chuckdevore/2017/11/27/the-administrative-state-is-under-assault-and-thats-a-good-thing/#5a5260de393c) *Forbes* (Nov 27, 2017)
 - Fields, Gary and John R Emshwiller, 2011, ["Many Failed Efforts to Count Nation's Federal Criminal Laws,"](https://www.wsj.com/articles/SB10001424052702304319804576389601079728920) *Wall Street Journal* (July 23, 2011)
+- Ford, Matt, 2020, ["The Plot to Level the Administrative State,"](https://newrepublic.com/article/156207/plot-level-administrative-state) *The New Republic* (Jan 14, 2020)
+- Lawson, Gary, 1994, ["The Rise and Rise of the Administrative State,"](/readings/Lawson-1994) Harvard Law Review 107(6): 1231-1254
+- Michaels, Jon D, 2019, ["A Constitutional Defense of the Administrative State,"](https://www.theregreview.org/2019/12/17/michaels-constitutional-defense-administrative-state/) *The Regulatory Review* (Dec 17, 2019)
+- Pestritto, Ronald, 2007, ["The Birth of the Administrative State: Where It Came From and What It Means for Limited Government"](https://www.heritage.org/political-process/report/the-birth-the-administrative-state-where-it-came-and-what-it-means-limited), *Heritage Foundation* (Nov 20, 2007)
 - Silvergate, Harvey A, 2011, [*Three Crimes a Day: How the Feds Target the Innocent*](https://www.amazon.com/Three-Felonies-Day-Target-Innocent-ebook/dp/B00505UZ4G), Encounter Books
-
+- Turnton, William, 2019, ["How Our Administrative State Undermines The Constitution,"](https://thefederalist.com/2019/02/08/administrative-state-undermines-constitution/) *The Federalist* (Feb 8, 2019)
+- [U.S. Constitution](https://www.archives.gov/founding-docs/constitution-transcript), see especially:
+  - Article I: Legislative
+  - Article II: Executive
+  - Article III: Judicial
+  - Amendments 5, 14
 
 # Choosing Future Topics
 
-Don't forget, you have until **2 PM this Wednesday** to please [suggest topics](https://forms.gle/MEWWwweX7Vu8kEnm6) for the rest of the semester!^[Again, you might wonder if it is related to Public Economics, and I assure you no matter what it is, I can probably find a way to relate it to public policy, concepts we've learned, or economics in a relevant and interesting way. Suggestions and actual class lectures in the past have included Blockchain, Net Neutrality, immigration, antitrust, political polarization, the sharing economy, nonprofits, etc.]
+Please [suggest topics](https://forms.gle/MEWWwweX7Vu8kEnm6) by the end of the day!^[Again, you might wonder if it is related to Public Economics, and I assure you no matter what it is, I can probably find a way to relate it to public policy, concepts we've learned, or economics in a relevant and interesting way. Suggestions and actual class lectures in the past have included Blockchain, Net Neutrality, immigration, antitrust, political polarization, the sharing economy, nonprofits, etc.]
 
 # Midterm
 
-Your [midterm](/assignment/midterm)^[You can also find  the link on the main schedule page.] is shortly. It is **due by this Friday, March 27 at 8:00 PM by email**.
+Your [midterm](/assignment/midterm)^[You can also find  the link on the main schedule page.] is **due by this Friday, March 27 at 8:00 PM by email**.
 
 # Discussion Thread
 
