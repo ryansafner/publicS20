@@ -1,0 +1,55 @@
+---
+title: "3.7: The Rise of the Administrative State"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-syllabus-no-bib.csl
+output:
+  blogdown::html_page:
+    template: ../../pandoc/toc-title_html.template
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+*Wednesday, March 25, 2020*
+
+*Online Quarantine Lecture 2*
+
+# Readings
+
+See the [<i class="fas fa-book-reader"></i> Readings](/reading/3.7-reading) for today's topics. A reminder, **you are no longer required to read and email questions before class.** You still need to do the readings for the weekly discussion (see below), and if you choose to join the livestream, I recommend reading before class if you want me to answer any questions in real time.
+
+# Class Livestream/Lecture Videos
+
+- [<i class="fas fa-video"></i> Zoom Live Class Meetings (starts Monday at 2:00 PM)](https://zoom.us/j/929467864)
+
+# Slides
+
+[<i class="fas fa-chalkboard-teacher"></i> Slides](/slides/3.7-slides) will be posted soon.
+
+[U.S. Constitution](https://www.archives.gov/founding-docs/constitution-transcript)
+
+# Sources from Slides
+
+- Turnton, William, 2019, ["How Our Administrative State Undermines The Constitution,"](https://thefederalist.com/2019/02/08/administrative-state-undermines-constitution/) *The Federalist* (Feb 8, 2019)
+- Michaels, Jon D, 2019, ["A Constitutional Defense of the Administrative State,"](https://www.theregreview.org/2019/12/17/michaels-constitutional-defense-administrative-state/) *The Regulatory Review* (Dec 17, 2019)
+- Ford, Matt, 2020, ["The Plot to Level the Administrative State,"](https://newrepublic.com/article/156207/plot-level-administrative-state) *The New Republic* (Jan 14, 2020)
+- DeVore, Chuck, 2017, ["The Administrative State Is Under Assault And That's A Good Thing,"](https://www.forbes.com/sites/chuckdevore/2017/11/27/the-administrative-state-is-under-assault-and-thats-a-good-thing/#5a5260de393c) *Forbes* (Nov 27, 2017)
+- Pestritto, Ronald, 2007, ["The Birth of the Administrative State: Where It Came From and What It Means for Limited Government"](https://www.heritage.org/political-process/report/the-birth-the-administrative-state-where-it-came-and-what-it-means-limited), *Heritage Foundation* (Nov 20, 2007)
+- Lawson, Gary, 1994, ["The Rise and Rise of the Administrative State,"](/readings/Lawson-1994) Harvard Law Review 107(6): 1231-1254
+- Crovitz, L Gordon, 2009, ["You Commit Three Felonies A Day,"](https://www.wsj.com/articles/SB10001424052748704471504574438900830760842) *Wall Street Journal* (Sept 27, 2009)
+- Fields, Gary and John R Emshwiller, 2011, ["Many Failed Efforts to Count Nation's Federal Criminal Laws,"](https://www.wsj.com/articles/SB10001424052702304319804576389601079728920) *Wall Street Journal* (July 23, 2011)
+- Silvergate, Harvey A, 2011, [*Three Crimes a Day: How the Feds Target the Innocent*](https://www.amazon.com/Three-Felonies-Day-Target-Innocent-ebook/dp/B00505UZ4G), Encounter Books
+
+
+# Choosing Future Topics
+
+Don't forget, you have until **2 PM this Wednesday** to please [suggest topics](https://forms.gle/MEWWwweX7Vu8kEnm6) for the rest of the semester!^[Again, you might wonder if it is related to Public Economics, and I assure you no matter what it is, I can probably find a way to relate it to public policy, concepts we've learned, or economics in a relevant and interesting way. Suggestions and actual class lectures in the past have included Blockchain, Net Neutrality, immigration, antitrust, political polarization, the sharing economy, nonprofits, etc.]
+
+# Midterm
+
+Your [midterm](/assignment/midterm)^[You can also find  the link on the main schedule page.] is shortly. It is **due by this Friday, March 27 at 8:00 PM by email**.
+
+# Discussion Thread
+
+The weekly discussion thread **is posted** on Blackboard.^[Go to this course on Blackboard, and on the blue toolbar on the left, go to *Discussion Board.*] You will have until Sunday 11:59 PM to comment on this week's topics (based on lectures and readings), at which point I will evaluate your contribution for the weekly discussion grade. See my introductory post on the discussion board's thread for more information.

@@ -1,0 +1,947 @@
+---
+title: "3.7: Rise of the Administrative State"
+subtitle: "ECON 410 · Public Economics · Spring 2020"
+author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/publicS20"><i class="fa fa-github fa-fw"></i> ryansafner/publics20</a><br> <a href="https://publicS20.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> publicS20.classes.ryansafner.com</a><br>'
+#date:
+output:
+  xaringan::moon_reader:
+    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML" # rescales math with css changes https://github.com/yihui/xaringan/issues/143
+    lib_dir: libs
+    df_print: paged
+    #seal: false
+    css: [custom.css, custom-fonts.css, "hygge"] #, metropolis, metropolis-fonts
+    nature:
+      beforeInit: ["macros.js", "https://platform.twitter.com/widgets.js"] # first is for rescaling images , second is for embedding tweets, https://github.com/yihui/xaringan/issues/100
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    includes:
+      in_header: header.html # for font awesome, used in title  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = F,
+                      warning = F,
+                      message = F,
+                      fig.retina = 3,
+                      fig.align = "center")
+library("tidyverse")
+library("mosaic")
+
+theme_slides <- theme_classic() + 
+  theme(
+    text = element_text(family = "Fira Sans", size = 18)
+  )
+```
+
+class: inverse, center, middle
+
+## [Separation of Powers](#3)
+
+## [Progressivism and the Science of Administration](#14)
+
+## [The Rise and Rise of the Administrative State](#25)
+
+---
+
+class: inverse, center, middle
+
+# Separation of Powers
+
+---
+
+# Constitution and Separation of Powers
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/8heru3tkngitadj/madison.png?raw=1)
+
+James Madison
+
+1751-1836
+]
+]
+
+.right-column[
+
+> ".hi[[T]he legislative, executive, and judiciary departments ought to be separate and distinct]...this [is an] .hi[essential precaution in favor of liberty]....hi[The accumulation of all powers, legislative, executive, and judiciary, in the same hands], whether of one, a few, or many, and whether hereditary, self-appointed, or elective, may justly be pronounced the .hi[very definition of tyranny]," (Federalist 47). 
+
+.source[1788, [*The Federalist Papers*](https://avalon.law.yale.edu/18th_century/fed47.asp)]
+
+]
+
+---
+
+# Constitution and Separation of Powers
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/8heru3tkngitadj/madison.png?raw=1)
+
+James Madison
+
+1751-1836
+]
+]
+
+.right-column[
+.smallest[
+
+> "[T]he great .hi[security against a gradual concentration of the several powers] in the same department, .hi[consists in giving to those who administer each department the necessary constitutional means and personal motives to resist encroachments of the others] ... .hi[Ambition must be made to counteract ambition.] The interest of the man must be connected with the constitutional rights of the [office]."
+
+> ".hi[[E]xperience has taught mankind the necessity of auxiliary precautions]. This policy [supplies], by opposite and rival interests, the defect of better motives," (Federalist 51).
+
+]
+]
+
+.source[1788, [*The Federalist Papers*](https://avalon.law.yale.edu/18th_century/fed51.asp)]
+
+---
+
+# Powers of Legislative Branch
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/lzhe9u3hkr8mwuy/congress.png?raw=1)
+]
+]
+
+.right-column[
+- "All legislative Powers herein granted shall be vested in a Congress" (Article I, $\S1)$
+
+- Checks against Executive:
+  - Impeachment of President and Officers
+  - Can overrule a veto (with $\frac{2}{3}$ majority)
+  - Senate's "advise and consent" required for foreign treaties, appointing ambassadors, federal judges, and "Officers of the United States"
+
+- Checks against Judiciary
+  - Creates and defines "inferior Courts"
+  - Can set number of Supreme Court justices
+
+]
+
+
+---
+
+# Powers of Executive Branch
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/x3elkcxqyh2w550/whitehouse.jpg?raw=1)
+]
+]
+
+.right-column[
+- "The executive Power shall be vested in a President of the United States of America" (Article II, $\S1)$
+
+- Checks against Legislative:
+  - Can veto laws
+
+- Checks against Judiciary
+  - Appoints federal judges (with Senate consent)
+
+]
+
+---
+
+# Powers of Judicial Branch
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/43n6pxpx5bup0tk/supremecourt.jpg?raw=1)
+]
+]
+
+.right-column[
+- "The judicial Power of the United States, shall be vested in one supreme Court, and in such inferior Courts as the Congress may from time to time ordain and establish." (Article III, $\S1)$
+]
+
+---
+
+# Judicial Review
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/wflae00wz65gbun/court1.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Marbury v. Madison (1803)
+
+- Chief Justice John Marshall establishes the precedent of .hi[judicial review]: Supreme Court can strike down laws of Congress that it determines violates the Constitution
+  - later implied to cover Executive actions too
+
+]
+
+---
+
+# Judicial Review
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/trwd8e5rvp9fmek/johnmarshall.jpg?raw=1)
+
+John Marshall
+
+1755-1835
+]
+]
+
+.right-column[
+.smallest[
+> ".hi[It is emphatically the province and duty of the Judicial Department to say what the law is.]"
+
+> "If then, the courts are to regard the constitution, and .hi[the constitution is superior to any ordinary act of the legislature], [then] the constitution, and not such ordinary act, must govern the case to which they both apply."
+
+> "Thus, .hi[the particular phraseology of the Constitution of the United States confirms] and strengthens the principle, supposed to be essential to all written Constitutions, .hi[that a law repugnant to the Constitution is void], and that .hi[courts, as well as other departments, are bound by [the Constitution]]"
+
+]
+
+.source[Marbury v. Madison]
+]
+
+---
+
+# Legislation vs. Regulation
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/jen8fwimj5yteat/statutorylaw.png?raw=1)
+
+![:scale 100%](https://www.dropbox.com/s/oji90t8b1k84bcm/adminlaw.jpg?raw=1)
+]
+]
+
+.right-column[
+
+- **Congress** passes .hi[legislation], or .hi[statutory law]
+  - arranged in United States Code (USC)
+
+- Then goes to **executive branch** to interpret & implement it
+
+- **Independent agencies** "promulgate .hi-purple[rules]" or .hi-purple[administrative law] (commonly known as .hi["regulation"])
+  - interpret and apply what Congress meant, fill in gaps
+  - arranged in Code of Federal Regulations (CFR)
+
+]
+
+---
+
+# Legislation vs. Regulation
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/jen8fwimj5yteat/statutorylaw.png?raw=1)
+
+![:scale 100%](https://www.dropbox.com/s/oji90t8b1k84bcm/adminlaw.jpg?raw=1)
+]
+]
+
+.right-column[
+
+- Think about comparing the .hi["Destination"] vs. the .hi-purple[actual "how we get there"]
+
+- Recall, Congress is full of generalists, balancing many duties
+  - Write laws creating a lot of **discretion** for agencies
+
+- Agencies are staffed with **specialists** with **expertise** in a subject matter
+
+
+]
+
+---
+
+# Legislation vs. Regulation
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/jen8fwimj5yteat/statutorylaw.png?raw=1)
+
+![:scale 100%](https://www.dropbox.com/s/oji90t8b1k84bcm/adminlaw.jpg?raw=1)
+]
+]
+
+.right-column[
+
+.smaller[
+- .hi-green[Example]: Congress passed the (849 page) [Dodd-Frank Wall Street Reform and Consumer Protection Act](https://www.govinfo.gov/content/pkg/PLAW-111publ203/pdf/PLAW-111publ203.pdf)
+
+]
+
+.smallest[
+> To promote the financial stability of the United States by improving accountability and transparency in the financial system, to end "too big to fail," to protect the American taxpayer by ending bailouts, to protect consumers from abusive financial services practices, and for other purposes.
+
+]
+
+.smaller[
+
+- establishes Consumer Financial Protection Bureau (CFPB), statute is full of *"the Bureau shall issue rules to ..."*
+
+- 2014: CFPB released [a 1,099 page notice of proposed rulemaking](https://www.consumerfinance.gov/about-us/blog/explainer-why-did-it-take-1099-pages-to-propose-a-three-page-mortgage-disclosure/) on just mortgage lending
+
+]
+]
+
+---
+
+class: inverse, center, middle
+
+# Progressivism and the Science of Administration
+
+---
+
+# The Progressive Era (c.1890-c.1920)
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/4559f5e3iph2h2g/fredericktaylor.jpg?raw=1)
+
+Frederick Winslow Taylor
+
+1856-1915
+]
+]
+
+.right-column[
+
+- **Progressive Era** (1890-1920), rise of Big Business
+  - railroads, steel, oil, etc. 
+  - regions joined as a *nation* by better transportation, communication, etc
+
+- .hi[Taylorism] and .hi[Efficiency Movement]: industrial efficiency by methods of *scientific* management
+    - Apply scientific tools to study optimal production techniques, standardization, eliminate waste
+
+- Workers as cogs in a well-oiled machine
+]
+
+---
+
+# The Progressive Era (c.1890-c.1920)
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/ild2a28u99mui7b/robberbarons.png?raw=1)
+]
+
+---
+
+# The Progressive Era (c.1890-c.1920)
+
+.center[
+![:scale 60%](https://www.dropbox.com/s/jokpywlox6qvvzv/roosevelttrusts.png?raw=1)
+]
+---
+
+# The Progressive Era (c.1890-c.1920)
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/lbcdr87v4oaqeot/planning.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Economic legislation to "rationalize" and regulate market economy
+  - Antitrust laws
+  - Labor laws: unions, child labor laws, minimum wages, health and safety
+  - Monetary changes: Federal Reserve, creation of income tax (13th Amendment)
+
+]
+
+---
+
+# The Progressive Era (c.1890-c.1920)
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/lbcdr87v4oaqeot/planning.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Social legislation to enhance democracy:
+  - Women's suffrage (19th Amendment)
+  - direct election of Senators (17th Amendment)
+  - Primaries in party politics (to end political machines)
+
+]
+
+---
+
+# The Progressive Era (c.1890-c.1920)
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/lbcdr87v4oaqeot/planning.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- But at same time, focus on **scientific expert control of society**
+  - Eugenics, scientific racism, forced sterilization of "imbeciles"
+  - Prohibition of alcohol (18th Amendment)
+
+]
+
+---
+
+# The Progressive Era (c.1890-c.1920)
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/lbcdr87v4oaqeot/planning.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- New independent agencies
+  - **Interstate Commerce Commission** (1887) to regulate railroads, trucking, telegraph & telephones
+  - **Federal Trade Commission** (1914) for antitrust, consumer protection
+
+- Science of .hi[public administration]: substitution of democracy and markets with rule by technocratic **experts** insulated from politics and public opinion
+
+]
+
+---
+
+# The Scientific Study of Public Administration
+
+.left-column[
+.center[
+![:scale 75%](https://www.dropbox.com/s/53sixu82nq8oef6/wilson.jpg?raw=1)
+
+Woodrow Wilson
+
+1856-1924
+
+
+]
+]
+
+.right-column[
+.smallest[
+
+> "Administration is the most obvious part of government; it is government in action; it is the executive, the operative, the most visible side of government," (p.198)
+
+> "The field of [public] administration is a field of business. It is removed from the hurry and strife of politics; it at most points stands apart even from the debatable ground of constitutional study," (p.209)
+
+> "[A]dministration lies outside the proper sphere of politics. Administrative questions are not political questions. Although politics sets the tasks for administration, it should not be suffered to manipulate its offices." (pp.210-211)
+
+]
+
+]
+.source[Wilson, Woodrow, 1887, "The Study of Administration," *Political Science Quarterly*]
+
+---
+
+# The Scientific Study of Public Administration
+
+.left-column[
+.center[
+![:scale 75%](https://www.dropbox.com/s/53sixu82nq8oef6/wilson.jpg?raw=1)
+
+Woodrow Wilson
+
+1856-1924
+
+
+]
+]
+
+.right-column[
+
+.smallest[
+
+> What, then, is there to prevent? Well, principally, popular sovereignty. It is harder for democracy to organize administration than for monarchy. (p.207)
+
+> "Nowadays the reason [our government has not made progress] that the many, the people, who are sovereign have no single ear which one can approach, and are selfish, ignorant, timid, stubborn, or foolish with the selfishnesses, the ignorances, the stubbornnesses, the timidities, or the follies of several thousand persons, - albeit there are hundreds who are wise," (p.208)
+
+]
+]
+
+.source[Wilson, Woodrow, 1887, "The Study of Administration," *Political Science Quarterly*]
+
+---
+
+# The Scientific Study of Public Administration
+
+.left-column[
+.center[
+![:scale 75%](https://www.dropbox.com/s/53sixu82nq8oef6/wilson.jpg?raw=1)
+
+Woodrow Wilson
+
+1856-1924
+
+
+]
+]
+
+.right-column[
+
+.smallest[
+
+> "No corporate, popular will could ever have effected arrangements such as those which Napoleon commanded. Arrangements so simple at the expense of local prejudice, so logical in their indifference to popular choice, might be decreed by a Constituent Assembly, but could be established only by the unlimited authority of a despot. The system of the year VIII was ruthlessly thorough and heartlessly perfect," (p.205)
+
+]
+]
+
+.source[Wilson, Woodrow, 1887, "The Study of Administration," *Political Science Quarterly*]
+
+
+---
+
+# The Scientific Study of Public Administration
+
+.left-column[
+.center[
+![:scale 75%](https://www.dropbox.com/s/53sixu82nq8oef6/wilson.jpg?raw=1)
+
+Woodrow Wilson
+
+1856-1924
+
+
+]
+]
+
+.right-column[
+
+.smallest[
+
+> "[P]ublic attention must be easily directed, in each case of good or bad administration, to just the man deserving of praise or blame. .hi[There is no danger in power, if only it be not irresponsible.] If it be divided, dealt out in share to many, it is obscured. But .hi[if it be centred in heads of the service and in heads of branches of the service, it is easily watched and brought to book.] If to keep his office a man must achieve open and honest success, and if at the same time he feels himself .hi[intrusted with large freedom of discretion, the greater his power the less likely is he to abuse it], the more is he nerved and sobered and elevated by it. The less his power, the more safely obscure and unnoticed does he feel his position to be, and the more readily does he relapse into remissness," (pp.213-214).
+
+]
+]
+
+.source[Wilson, Woodrow, 1887, "The Study of Administration," *Political Science Quarterly*]
+
+---
+
+# Progressivist Calls for Concentrated Executive Power
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/5cu2p8j4zz3kaka/theodoreroosevelt.jpg?raw=1)
+
+Theodore Roosevelt
+
+1858-1919
+
+]
+]
+
+.right-column[
+
+.smallest[
+> "My view was that every executive officer, and above all every executive officer in high position, was .hi[a steward of the people] bound actively and affirmatively to do all he could for the people, and not to content himself with the negative merit of keeping his talents undamaged in a napkin. .hi[I declined to adopt the view that what was imperatively necessary for the Nation could not be done by the President unless he could find some specific authorization to do it.] My belief was that .hi[it was not only his right but his duty to do anything that the needs of the Nation demanded unless such action was forbidden by the Constitution or by the laws]. I did not usurp power, but .hi[I did greatly broaden the use of executive power.]
+
+]
+]
+
+---
+
+# The Administrative State vs. the Constitution?
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/lbcdr87v4oaqeot/planning.jpg?raw=1)
+]
+]
+
+.pull-right[
+.smaller[
+- Political philosophy regarded only as "spirit of that time" (Hegel), not timeless first principles
+  - Practicality and expediency trump constitutional principles
+
+- Centralized control & responsibility vs. separation of powers or democractic checks
+  - Expertise supersedes democracy
+
+- Compare to Madison's paradox and necessity for "auxiliary precautions"
+]
+]
+
+---
+
+class: inverse, center, middle
+
+# The Rise and Rise of the Administrative State
+
+---
+
+# The Dawn of the Independent Agency
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/sdcww44ng1bxp7c/independentagencies.png?raw=1)
+]
+]
+
+.pull-right[
+.smallest[
+
+.smallest[
+Progressive Era
+
+- 1886: Interstate Commerce Commission (Railroads, Trucking, Telephones)
+
+- 1914: Federal Trade Commission (Antitrust, consumer protection)
+
+- 1924: Federal Radio Commission (Radio)
+
+]
+]
+]
+
+---
+
+# Initial Resistance
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/43n6pxpx5bup0tk/supremecourt.jpg?raw=1)
+]
+
+.source[
+<sup>.red[1]</sup> "No State shall...pass any..Law impairing the Obligation of Contracts, (Article I, $\S 10)$
+
+<sup>.red[2]</sup> "No person shall...be deprived of life, liberty, or property, without due process of law, (Amendment V)
+]
+
+]
+
+.right-column[
+.smaller[
+- Until early 20<sup>th</sup> Century, courts maintained separation of powers as defined in Articles I, II, and III of Constitution 
+
+- Supreme Court struck down a lot of Progressive social and economic legislation as unconstitutional, including parts of the New Deal
+  - ["Lochner Era"](https://en.wikipedia.org/wiki/Lochner_era) of "freedom of contract"<sup>.red[1]</sup> and "substantive due process"<sup>.red[2]</sup>
+  - ["Non-delegation doctrine"](https://en.wikipedia.org/wiki/Nondelegation_doctrine#United_States): Congress cannot delegate its legislative power to any other institution
+]
+
+]
+
+
+---
+
+# The New Deal Era (1930s)
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/vsxrfzbxnb8le2n/rooseveltsign.jpeg?raw=1)
+]
+
+Franklin D. Roosevelt
+]
+
+.right-column[
+
+- FDR frustrated that Court kept striking down New Deal legislation as unconstitutional
+
+- ["Court-packing plan"](https://en.wikipedia.org/wiki/Judicial_Procedures_Reform_Bill_of_1937) in 1937 to add more Supreme Court justices
+
+- ["The switch in time that saved nine"](https://en.wikipedia.org/wiki/The_switch_in_time_that_saved_nine): Supreme Court starts upholding New Deal laws and overturns Lochner Era precedent 
+  - West Coast Hotel Co. v. Parrish, 300 U.S. 379 (1937)
+
+]
+
+---
+
+# The Dawn of the Independent Agency
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/sdcww44ng1bxp7c/independentagencies.png?raw=1)
+]
+]
+
+.pull-right[
+.smallest[
+
+.smallest[
+New Deal Era
+
+- 1933: Securities and Exchange Commission (Financial markets)
+
+- 1934: Federal Communications Commission (Radio, TV, Cable, later internet)
+
+- 1935: National Labor Relations Board (Employment, Labor)
+
+Modern Era
+
+- 1970: Environmental Protection Agency (Pollution, Environmental issues)
+
+- 2010: Consumer Financial Protection Bureau (banking, consumer protection)
+]
+]
+]
+
+---
+
+# Administrative Procedure Act
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/oji90t8b1k84bcm/adminlaw.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+.smaller[
+- 1946 .hi[Administrative Procedure Act (APA)] establishes procedures for agencies' rulemaking
+
+1. Agency can only act within the limits set by its authorizing statute
+2. Agency actions must be:
+    - "reasonable" (have sufficient factual support)
+    - not "arbitrary or capricious"
+    - not an "abuse of discretion"
+3. Agency must follow specified procedures - primarily, "notice and comment" before issuing a final rule
+
+]
+]
+
+---
+
+# The Regulatory Process
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/oji90t8b1k84bcm/adminlaw.jpg?raw=1)
+]
+
+]
+
+.pull-right[
+
+1) Congress passes a law that creates an administrative agency
+  - Outlines general principles and mission of the agency
+  - Grants statutory authority for agency to operate
+
+2) Agency proposes a rule
+  - Optionally may give "advanced notice of proposed rulemaking" to public
+]
+
+---
+
+# The Regulatory Process
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/oji90t8b1k84bcm/adminlaw.jpg?raw=1)
+]
+
+]
+
+.pull-right[
+
+3) Agency publishes proposed rule in *Federal Register*
+
+4) Period for public comment
+  - Between 30-180 days, anyone and everyone can comment on the proposed rule
+
+5) Agency publishes the rule in the *Code of Federal Regulations (CFR)*
+  - Often make some minor modifications
+  - Must respond to comments 
+
+]
+
+---
+
+# The Regulatory Process
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/oji90t8b1k84bcm/adminlaw.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+6 - Rule goes in place after 30 days
+
+7 - Adjudication/Judicial Review
+  - If private parties file a lawsuit against the agency, or if agency enforces rule against a private party and they appeal, go before administrative law judge
+  - Might be appealed to higher courts
+]
+
+---
+
+# Courts' Interpretation of Agency Authority
+
+> "What emerged from this period was an implicit bargain: The Court would permit Congress to delegate — and the administrative state to exercise — legislative, executive, and judicial power, but it would review administrative exercises of such power to prevent lawlessness and abuse. Judicial review, then, was substituted for the Constitution's checks and balances as the principal safeguard against the administrative state's becoming despotic."
+
+.source[Cooper, Charles J, 2015, "Confronting the Administrative State," *National Affairs*]
+
+---
+
+# Courts' Altering of the Deal
+
+.pull-left[
+.center[
+![:scale 80%](https://www.dropbox.com/s/j2rbenwa8s6nypv/chevron.png?raw=1)
+]
+]
+
+.pull-right[
+
+- .hi["Chevron deference"]: courts will defer to agencies interpretation of its own statutory authority if:
+  1. The intent of Congress is ambiguous,
+  2. Agency's interpretation is a "permissible construction" of the statute
+
+- Judges are not experts, will defer to regulators in most cases
+]
+
+.source[Chevron U.S.A., Inc. v. Natural Resources Defense Council, Inc., 467 U.S. 837 (1984)]
+
+---
+
+# Independent Agencies
+
+.smaller[
+> "The Commission promulgates substantive rules of conduct. The Commission then considers whether to authorize investigations into whether the Commission’s rules have been violated. If the Commission authorizes an investigation, the investigation is conducted by the Commission, which reports its findings to the Commission. If the Commission thinks that the Commission’s findings warrant an enforcement action, the Commission issues a complaint. The Commission’s complaint that a Commission rule has been violated is then prosecuted by the Commission and adjudicated by the Commission. The Commission adjudication can either take place before the full Commission or before a semi-autonomous Commission administrative law judge. If the Commission chooses to adjudicate before an administrative law judge rather than before the Commission and the decision is adverse to the Commission, the Commission can appeal to the Commission."
+
+]
+
+.source[Lawson, Gary, 1994, "The Rise and Rise of the Administrative State," Harvard Law Review 107(6): 1231-1254]
+
+---
+
+# Has Congress Abdicated its Lawmaking Duty?
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/yj536pfa503axp7/congressassembled.png?raw=1)
+]
+]
+
+.pull-right[
+
+- The problem is that modern Congresses are very vague and uncontroversial
+
+- "Congressional delegations to agencies are often ambiguous - expressing 'a mood rather than a message"<sup>.red[1]</sup>
+
+- Congress writes legislation that says "clean the air," or "make financial products fair and accessible"
+  - Leaves it to agencies to interpret what this mean
+
+]
+
+.source[<sup>.red[1]</sup> *City of Arlington v. FCC*, 2013, Dissent of Chief Justice Roberts]
+
+---
+
+# Has Congress Abdicated its Lawmaking Duty?
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/yj536pfa503axp7/congressassembled.png?raw=1)
+]
+]
+
+.pull-right[
+
+- Most of the *real* lawmaking is not done in Congress anymore!
+  - All in the agencies (by unaccountable bureaucrats)
+
+- In 2016, Congress passed 2,966 pages of laws, federal agencies released 97,110 pages of new regulations (32x more)
+
+]
+
+---
+
+class: inverse, center, middle
+
+# The Broad Impact of Regulation
+
+---
+
+# The Growth of Regulation
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/y03c9k0l3uf976i/growthofCFR.png?raw=1)
+Source: [GWU Regulatory Studies](https://regulatorystudies.columbian.gwu.edu/reg-stats)
+]
+
+---
+
+# The Growth of Regulation
+
+.pull-left[
+.center[
+![]()
+]
+]
+
+.pull-right[
+
+
+]
+
+.source[Hamburger, Philip, 2015, *Is Administrative Law Unlawful?*]
+
+---
+
+# Broad Reach of Regulation
+
+> Perhaps your day starts when your clock radio goes off in the morning. The Federal Communications Commission (FCC) regu-lates not only the airwaves used by your favorite radio station, but also the programming content. Electricity regulated by the Federal Energy Regulatory Commission (FERC) and by state regulatory agencies powers your radio. The U.S. Department of Energy (DOE) regulates the type of light bulb you can use in your lamp.The Consumer Product Safety Commission regulates the label on your mattress. The Food and Drug Administration (FDA) regulates the content of your toothpaste, soap, shampoo, and other grooming products. The Environmental Protection Agency (EPA) regulates the quality of the water coming out of your showerhead. On your way out of the bathroom, you may have to flush your low-flow toilet twice, a result of mandates imposed by the DOE’s appliance efficiency rules.
+
+> As you prepare your breakfast, you might check your cere-al’s FDA-regulated label for nutritional information. The FDA also regulates what companies may say about the health bene-fits of foods and what adjectives they may use to describe those health benefits. The FDA and U.S. Department of Agriculture (USDA) have a hand in regulating your coffee and sugar. Also joining you for your cup of java is the Commodity Futures Trading Commission, which regulates the hedging of invest-ments in coffee beans, sugar, and other commodities. The EPA, FDA, and USDA Animal and Plant Health Inspection Service regulate the fruit you serve for breakfast. The USDA’s Agricultural Marketing Service also plays a role in your breakfast. It sets grade standards and purchases fruits and vegetables “to correct supply and demand imbalances,” which keeps prices higher than they otherwise would be. The USDA even regulates the size of the holes in the Swiss cheese you grate into your omelet.
+
+.source[Dudley, Susan E and Jerry Brito, 2012, [https://www.mercatus.org/system/files/RegulatoryPrimer_DudleyBrito_0.pdf](*Regulation: A Primer*), 2nd Ed., Mercatus Center and George Washington University Regulatory Studies Center, pp.2-3]
+
+---
+
+
+# Impact of Regulation
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/oji90t8b1k84bcm/adminlaw.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Rules and regulations passed by agencies has the force of federal law
+
+- An increasing number of regulations in recent decades have *criminal* penalties for violations
+
+- Somewhere between 10,000-300,000 criminally-enforceable regulations exist (nobody has ever been able to count them all!)
+
+]
+
+---
+
+# Criminalization of Regulation
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/7vs0jfoxfj43bf3/wsjcountingregulations.png?raw=1)
+
+]
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/7jy231kpp5a0ibs/wsj3feloniesaday.png?raw=1)
+
+]
+
+---
+
+# Hence, Controversy Over the Administrative State
+
+.center[
+![](https://www.dropbox.com/s/brn6u6syaaoepk2/adminstatearticles.png?raw=1)
+]
