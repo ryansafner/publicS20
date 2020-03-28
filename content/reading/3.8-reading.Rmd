@@ -1,0 +1,29 @@
+---
+title: "3.8. Federalism - Readings"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-fullnote-bibliography-no-bib.csl
+---
+
+*Monday, March 29, 2020*
+
+We will wrap up our "structural" look at the major political groups and institutions in American-style democracy with a look at *federalism* - the multiplicity of governments (federal, state, and local) each with authority over different domains of American life.
+
+Weingast (1995) is a pretty famous paper in political economy; he uses a fairly straightforward application of the game theory of credible commitment problems to explain how a federalist system such as the United States can successfully constrain government from abusing its power. We did not cover much game theory in this course, so don't get too hung up on his model(s), the paper is otherwise pretty clear verbally, and he has some good historical examples to apply his framework.
+
+# Reading:
+
+- [<i class="fas fa-file-pdf"></i> Weingast (1995), "The Economic Role of Political Institutions: Market-Preserving Federalism and Economic Development"](/readings/Weingast-1995.pdf)
+
+# Optional, But Helpful
+
+- [<i class="fas fas fa-book"></i> Holcombe (2016), *Advanced Introduction to Public Choice*, pp. 102-104 on Federalism
+- [<i class="fab fa-wikipedia-w"></i> Wikpedia: Tiebout Competition](https://en.wikipedia.org/wiki/Tiebout_model)
+
+# Tips and Questions to Read For:
+
+- What is "federalism" and how does it 
+    What is the role of the constitution in coordinating social groups and in restraining abuse? (frame it as a credible commitment problem!) 
+    How do political institutions affect economic prosperity? 
+    What specifically about England/the United States' political institutions allowed for economic prosperity? How does this apply to China? 
+    What is the difference between federalism (plain) and market-preserving federalism? 

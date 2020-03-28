@@ -77,30 +77,34 @@ lessons:
     reading: "3.7-reading"
     slides: "3.7-slides"
 
-  - title: "3.8 TBD"
-  
+  - title: "3.8 Federalism"
+    reading: "3.8-reading"
+
+  - title: "3.9 Exit, Voice, and Loyalty"
+    reading: "3.9-reading"
+    
   - title: '<span class="fake-header-table">Applications</span>'
     header: True
 
-  - title: "4.1 Federalism I: Foot-Voting"
+  - title: "4.1 Is Our Politics Not 'Corrupt' Enough?"
 
-  - title: "4.2 Federalism II: Exit, Voice, and Loyalty"
+  - title: "4.2 The Revolt of the Public"
 
-  - title: "4.3 Taxation I: Economic Incidence"
+  - title: "4.3 TBD"
 
-  - title: '4.4 Taxation II: Inequality'
+  - title: '4.4 TBD'
 
-  - title: '4.5 Taxation III: Taxation as Regulation'
+  - title: '4.5 TBD'
 
-  - title: '4.6 Transfer Payments: Overview'
+  - title: '4.6 TBD'
 
-  - title: '4.7 Transfer Payments: A Basic Income Guarantee?'
+  - title: '4.7 TBD'
 
-  - title: '4.8 Public Debt'
+  - title: '4.8 TBD'
 
-  - title: '4.9 Is Property Only Another Name for Monopoly?'
+  - title: '4.9 TBD'
 
-  - title: '4.10 Inequality: Some Causes and Cures'
+  - title: '4.10 TBD'
 
   - title: '<i class="fas fa-laptop-code"></i> **Policy Paper**'
     assignment: "policy-paper"
