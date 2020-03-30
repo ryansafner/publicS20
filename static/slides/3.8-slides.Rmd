@@ -1,0 +1,893 @@
+---
+title: "3.8: Federalism"
+subtitle: "ECON 410 · Public Economics · Spring 2020"
+author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/publicS20"><i class="fa fa-github fa-fw"></i> ryansafner/publics20</a><br> <a href="https://publicS20.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> publicS20.classes.ryansafner.com</a><br>'
+#date:
+output:
+  xaringan::moon_reader:
+    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML" # rescales math with css changes https://github.com/yihui/xaringan/issues/143
+    lib_dir: libs
+    df_print: paged
+    #seal: false
+    css: [custom.css, custom-fonts.css, "hygge"] #, metropolis, metropolis-fonts
+    nature:
+      beforeInit: ["macros.js", "https://platform.twitter.com/widgets.js"] # first is for rescaling images , second is for embedding tweets, https://github.com/yihui/xaringan/issues/100
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    includes:
+      in_header: header.html # for font awesome, used in title  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = F,
+                      warning = F,
+                      message = F,
+                      fig.retina = 3,
+                      fig.align = "center")
+library("tidyverse")
+library("mosaic")
+
+theme_slides <- theme_classic() + 
+  theme(
+    text = element_text(family = "Fira Sans", size = 18)
+  )
+```
+
+class: inverse, center, middle
+
+## [Federalism](#3)
+
+## [Brief History of Federalism in the United States](#8)
+
+## [Economic Benefits of Political Federalism: Tiebout Competition](#24)
+
+## [Market-Preserving Federalism](#29)
+
+---
+
+class: inverse, center, middle
+  
+# Federalism
+
+---
+
+# Constitution and Separation of Powers
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/8heru3tkngitadj/madison.png?raw=1)
+
+James Madison
+
+1751-1836
+]
+]
+
+.right-column[
+
+> "The powers delegated by the proposed Constitution to the Federal Government are few and defined. Those which are to remain in the State Governments are numerous and indefinite. The former will be exercised principally on external objects, as war, peace, negotiation and foreign commerce;... the powers reserved to the several States will extend to all the objects, which, in the ordinary course of affairs, concern the lives, liberties and prosperities of the people," (Federalist 45). 
+
+.source[1788, [*The Federalist Papers*](https://avalon.law.yale.edu/18th_century/fed45.asp)]
+
+]
+
+---
+
+# Federal vs. Unitary States
+
+.pull-left[
+.center[
+![:scale 60%](https://www.dropbox.com/s/4lsl1ln5g0ha7gd/westminster.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- .hi[Unitary state]: country with a supreme single central authority
+
+- All administrative divisions (e.g. provinces, counties, shires) exercise limited powers delegated to them by the central government
+
+- e.g. United Kingdom, France, Japan, South Africa, China; most countries
+
+]
+
+---
+
+# Federal vs. Unitary States
+
+.pull-left[
+.center[
+![:scale 60%](https://www.dropbox.com/s/lkq4hhndexxbzsw/marylandcapitol.jpg?raw=1)
+]
+]
+
+.pull-right[
+.smallest[
+- .hi[Federalism]: multiple overlapping authorities that each have their own domain of exclusive powers
+
+- .hi-purple[Confederation]: sovereign States create a limited, general government for common problems; most power left to the States
+  - Switzerland; German Confederation (1815-1871); European Union (?)
+
+- .hi-purple[Federation]: national and sub-national governments often have constitutionally-proscribed co-equal status
+  - United States, Soviet Union, Russia, India, Brazil
+]
+]
+
+---
+
+# Federal vs. Unitary States
+
+.center[
+![:scale 70%](https://www.dropbox.com/s/b0u8fcf7tgutae8/federalismworld.png?raw=1)
+
+Source: [Wikipedia](http://en.wikipedia.org/wiki/Federalism); .blue[Blue: Unitary states], .green[Green: Federal states] 
+]
+
+---
+
+class: inverse, center, middle
+  
+# Brief History of Federalism in the United States
+
+---
+
+# Brief History of Federalism in the United States
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/ihxfl51y6iuwp9h/signing_declaration.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+.smallest[
+> "We, therefore, the Representatives of the united States of America, in General Congress, Assembled ... solemnly publish and declare, That these United Colonies are, and of Right ought to be Free and Independent States"
+
+- U.S. Declaration of Independence, July 4, 1776
+
+]
+
+.center[
+![:scale 75%](https://www.dropbox.com/s/5k30f3d2wx3fc1b/unite_or_die.jpg?raw=1)
+]
+
+]
+
+---
+
+# Brief History of Federalism in the United States
+
+.pull-left[
+.center[
+![:scale 70%](https://www.dropbox.com/s/770pbxc3976lgh4/articlesofconfederation.png?raw=1)
+]
+]
+
+.pull-right[
+
+.smallest[
+
+- American War for Independence ends in 1783
+
+- Second Continental Congress approves .hi-purple[Articles of Confederation] for the new country in 1777, ratified by States in 1781
+
+- Article II: "Each State retains its sovereignty, freedom, and independence, and every power, jurisdiction, and right, which is not by this Confederation expressly delegated"
+
+- Sets up a Congress of the Confederation
+  - Each State gets 1 vote
+  - Very limited powers, could not tax, only "request" money & resources from States
+]
+
+]
+
+---
+
+# Brief History of Federalism in the United States
+
+.pull-left[
+.center[
+![:scale 80%](https://www.dropbox.com/s/zjqe0c1xcbhf7s6/constitution.png?raw=1)
+]
+]
+
+.pull-right[
+- *Constitution of the United States* emerges out of 1787 Philadelphia Convention
+  - met to suggest changes to the Articles!
+
+]
+
+
+---
+
+# Brief History of Federalism in the United States
+
+.pull-left[
+.center[
+![:scale 80%](https://www.dropbox.com/s/zjqe0c1xcbhf7s6/constitution.png?raw=1)
+]
+]
+
+.pull-right[
+
+.smallest[
+- **Article IV:** This Constitution, and the Laws of the United States which shall be made in Pursuance thereof...shall be the supreme Law of the Land; and the Judges in every States shall be bound thereby, any Thing in the Constitution or Laws of any State to the Contrary notwithstanding
+
+- **Amendment 9**: "The enumeration in the Constitution, of certain rights, shall not be construed to deny or disparage others retained by the people"
+
+- **Amendment 10**: "The powers not delegated to the United States by the Constitution, nor prohibited by it to the States, are reserved to the States respectively, or to the people."
+
+]
+]
+
+---
+
+# Brief History of Federalism in the United States
+
+.pull-left[
+.center[
+![:scale 80%](https://www.dropbox.com/s/zjqe0c1xcbhf7s6/constitution.png?raw=1)
+]
+]
+
+.pull-right[
+- Major constitutional debates until 1861:
+
+1) Is the U.S. a *confederation* or a *federation*? Are the States still sovereign? Can the States .hi-purple[nullify] federal law they don't like?<sup>.magenta[1]</sup>
+
+
+.footnote[<sup>.magenta[1]</sup> See the [Kentucky and Virginia Resolutions 1788, 1789](https://en.wikipedia.org/wiki/Kentucky_and_Virginia_Resolutions) and the [Nullification Crisis of 1832-1833](https://en.wikipedia.org/wiki/Nullification_crisis)
+]
+
+]
+---
+
+# Brief History of Federalism in the United States
+
+.pull-left[
+.center[
+![:scale 80%](https://www.dropbox.com/s/zjqe0c1xcbhf7s6/constitution.png?raw=1)
+]
+]
+
+.pull-right[
+.smaller[
+
+2) Does the federal government *only* have .hi-purple[enumerated powers] (specifically mentioned in Constitution)? Or does it have other *implied* powers?
+
+3) Is the Union *perpetual*? Can States .hi-purple[seceed]?<sup>.magenta[1]</sup>
+
+]
+
+.footnote[<sup>.magenta[1]</sup> See the [1814-1815 Hartford Convention](https://en.wikipedia.org/wiki/Hartford_Convention)
+]
+
+]
+
+
+---
+
+# Brief History of Federalism in the United States
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/3dktpj73y0ubhdy/uscivilwarstates.png?raw=1)
+]
+]
+
+.pull-right[
+
+- Settled those questions (among others) in the U.S. Civil War (1861-1865)
+  - "The War Between the States," "The War of Northern Aggression," etc.
+
+- Several Southern states .hi-purple[seceeded] from the Union, formed the **Confederate States of America**
+
+- "The Union" defeated the Confederacy by April 1865
+
+]
+
+---
+
+# Brief History of Federalism in the United States
+
+.pull-left[
+.center[
+![:scale 80%](https://www.dropbox.com/s/zjqe0c1xcbhf7s6/constitution.png?raw=1)
+]
+]
+
+.pull-right[
+
+.smaller[
+- **Amendment 14**: "..No State shall make or enforce any law which shall abridge the privileges or immunities of citizens of the United States; nor shall any State deprive any person of life, liberty, or property, without due process of law; nor deny to any person within its jurisdiction the equal protection of the laws" $(\S 1)$
+
+]
+]
+
+---
+
+# Three General Eras of Interpretations of Federalism
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/8fy3oz1hkth60hq/federalismcake.jpg?raw=1)
+]
+]
+
+.pull-right[
+.smallest[
+- .hi-purple[Dual ("layer-cake") Federalism (1790s-1930s)]: power is divided between Federal and State governments into clear, exclusive, unencumbered domains
+
+- .hi-purple[Cooperative ("marble-cake") Federalism (1930s-)]: Federal, State, and local governments actively cooperate to solve common goals (often with Federal dominating)
+
+- .hi-purple[New ("States rights") Federalism (1980s-)]: gradual return of exclusive authority to State governments and away from the Federal Government (associated with 1980s+ conservatism)
+]
+]
+
+---
+
+# Cooperative Federalism?
+
+.center[
+[![:scale 70%](https://www.dropbox.com/s/0fsjymj8a2wwv3f/transfersassourceofstaterevenue.png?raw=1)](https://www.urban.org/policy-centers/cross-center-initiatives/state-and-local-finance-initiative/state-and-local-backgrounders/state-and-local-revenues)
+]
+
+---
+
+# Cooperative Federalism?
+
+.center[
+[![:scale 60%](https://www.dropbox.com/s/apovtdtncfll9cu/federalgrantstostates.png?raw=1)](https://www.pewtrusts.org/-/media/assets/2016/08/fundingfromfederalgrantsvariesasashareofstatebudgets.pdf)
+]
+
+---
+
+# Cooperative Federalism?
+
+.center[
+[![:scale 80%](https://www.dropbox.com/s/vsh1v4b8ex7ikgx/federalgrantstostates2.png?raw=1)](https://www.pewtrusts.org/-/media/assets/2016/08/fundingfromfederalgrantsvariesasashareofstatebudgets.pdf)
+]
+
+---
+
+# Current Issues in Federalism
+
+.center[
+![:scale 65%](https://www.dropbox.com/s/uvcz66zitsbc4t9/marijuanastatesmap.png?raw=1)
+]
+
+---
+
+# Current Issues in Federalism
+
+.center[
+[![:scale 65%](https://www.dropbox.com/s/y5yuks1st5lltni/statesvsfed.png?raw=1)](https://ballotpedia.org/Multistate_lawsuits_against_the_federal_government,_2017-2020)
+]
+
+---
+
+# New Federalism?
+
+.center[
+![](https://www.dropbox.com/s/wber7d8r0nxh896/sessionsstatesrights.jpg?raw=1)
+]
+
+---
+
+class: inverse, center, middle
+
+# Economic Benefits of Political Federalism: Tiebout Competition
+
+---
+
+# The States as "Laboratories of Democracy"
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/p946pig66yzgkuh/brandeis.jpeg?raw=1)
+
+.smallest[
+Louis Brandeis
+
+1856-1941
+
+]
+]
+]
+
+.right-column[
+
+> "It is one of the happy incidents of the federal system that a single courageous State may, if its citizens choose, serve as a laboratory; and try novel social and economic experiments without risk to the rest of the country." 
+
+New State Ice Co. v. Liebmann, 285 U.S. 262 (1932)
+]
+
+---
+
+# Tiebout Competition & Foot-Voting
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/umlm3ujvqqd54tz/moving.jpeg?raw=1)
+]
+]
+
+.pull-right[
+.smallest[
+Consider a model with the following assumptions:
+
+1. There are many communities, each with their own level of taxes and public goods.
+2. Consumers are mobile, and can choose which community matches their preferences.
+3. There is no cost of relocating
+4. Consumers have complete information
+5. There are no spillovers across communities
+6. There are optimal sizes of communities (e.g. congestion vs. economies of scale)
+7. Differences in community attractiveness (taxes, benefits) will be capitalized into housing prices
+]
+]
+
+.source[Tiebout, Charles M, (1956), "A Pure Theory of Local Expenditures," *Journal of Political Economy* 64(5): 416-424]
+
+---
+
+# Tiebout Competition & Foot-Voting
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/umlm3ujvqqd54tz/moving.jpeg?raw=1)
+]
+]
+
+.pull-right[
+.smaller[
+- Public goods and location decisions are **bundled**
+
+- People will .hi-purple[vote with their feet] and **self-sort** into communities of similar preferences for taxes and public goods
+
+- .hi["Tiebout competition"] between communities, each provides sufficient public goods and agreeable taxes to attract mobile individuals
+
+- Credible threat of people emigrating to other communities constrains each community's government from excess and abuse
+
+- Communities will provide efficient levels of public goods
+]
+]
+
+.source[Tiebout, Charles M, (1956), "A Pure Theory of Local Expenditures," *Journal of Political Economy* 64(5): 416-424]
+
+---
+
+# Tiebout Competition
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/ndxtkyu4n4xdjtz/eveonline.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Much more likely to work at the state and local level, not the national level
+
+- Ideal is approximated in virtual worlds
+  - World of Warcraft, Minecraft, EVE Online
+  
+- Where "if you don't like it, leave" is feasible and constantly occuring
+
+]
+
+---
+
+class: inverse, center, middle
+
+# Market-Preserving Federalism 
+
+---
+
+# Federalism
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/jhthsdr0bvauz4n/riker.jpg?raw=1)
+.smallest[
+William H. Riker
+
+1920-1993
+]
+]
+]
+
+.right-column[
+
+> A political system is .hi[federal] if is has *both*
+
+> 1. A *hierarchy* of governments, each is autonomous in its own well-defined sphere of authority
+
+> 2. The *autonomy* of each government is institutionalized in a manner that respect is *self-enforcing*
+
+Quoted in Weingast (1995) p.4
+
+]
+
+---
+
+# Federalism: Necessary, but not Sufficient
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/8p93duz0sa7qxnf/argentina.png?raw=1)
+]
+]
+
+.right-column[
+
+- Argentina is a great example of what *not* to do, on paper, very decentralized
+
+- Provinces have primary responsibility for education, health, poverty, housing, infrastructure, primary tax collection, etc
+
+- But all provinces' tax revenues go to national government to be redistributed *back* to provinces
+  - Most provinces finance less than 20% of their own spending
+
+- What incentives does this create?
+]
+
+.source[Sanguinetti, Pablo and Mariano Tommasi, 2001, "Fiscal Federalism in Argentina: Policies, Politics, and Institutional Reform," *Journal of the Latin American and Caribbean Economic Association*]
+
+---
+
+# Federalism: Necessary, but not Sufficient
+
+.left-column[
+.center[
+![:scale 70%](https://www.dropbox.com/s/8p93duz0sa7qxnf/argentina.png?raw=1)
+]
+]
+
+.right-column[
+
+- Provincial governments spend *other people's money* but tax *their citizens* to fund *other* provinces!
+
+- Thus, each province sets their spending high but taxes low
+
+- Argentine federal government has repeatedly had to bail out provinces
+  - Local governments face a "soft budget constraint"
+
+]
+
+.source[Sanguinetti, Pablo and Mariano Tommasi, 2001, "Fiscal Federalism in Argentina: Policies, Politics, and Institutional Reform," *Journal of the Latin American and Caribbean Economic Association*]
+
+---
+
+# Federalism: Necessary, but not Sufficient
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/16wfblrws419v3d/backstab.jpg?raw=1)
+]
+]
+
+.pull-right[
+.smaller[
+- Federalism alone does not guarantee prosperity
+
+- Tiebout competition unleashed only under certain circumstances
+
+- Recall Madison's paradox and problem of credible commitment
+
+- How do you get (subnational) governments to respect limitations put upon them?
+
+- How can federalism be **self-enforcing** and **market-preserving**?
+]
+]
+
+---
+
+# *Market-Preserving* Federalism
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/ocpqnqxhli6nqyi/weingast.png?raw=1)
+.smallest[
+Barry R. Weingast
+
+1952-
+]
+]
+]
+
+.right-column[
+
+In addition to Riker's definition, for federalism to be .hi-purple["market-preserving"], must also:
+
+3) subnational governments have **primary regulatory responsibility** over the economy
+
+4) a **common market** is ensured
+
+5) lower governments face a **hard budget constraint**
+]
+
+.source[Weingast, Barry R, 1995, "The Economic Role of Political Institutions: Market-Preserving Federalism and Economic Development," *Journal of Law, Economics, & Organization* 11(1): 1-31]
+
+---
+
+# *Market-Preserving* Federalism
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/rtwxwc5af11h943/stateflags.png?raw=1)
+]
+]
+
+.pull-right[
+
+- National government's authority to intervene in economy must be limited (left primarily to States)
+
+- States more subject to Tiebout competition than federal government
+  - Credible threat of exit as constraint on State governments' fiscal and regulatory abuse, rent-seeking
+
+- Congress passed 352 bills in 2013-2014, States passed over 45,000 ([Source](https://info.cq.com/resources/states-six-times-more-productive-than-congress/))
+
+
+]
+
+---
+
+# *Market-Preserving* Federalism
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/rtwxwc5af11h943/stateflags.png?raw=1)
+]
+]
+
+.pull-right[
+.smallest[
+- Constitution guarantees a common market, States cannot put up internal barriers or taxes against other States
+  - Again, ensures Tiebout competition, freedom to relocate, limits rent-seeking
+
+- Local governments must not be (even tacitly!) bailed out by federal government
+  - Many U.S. States have **balanced budget requirements**
+  - Federal bailouts would loosen fiscal discipline
+]
+]
+
+---
+
+# *Market-Preserving* Federalism: Game Theory
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/ocpqnqxhli6nqyi/weingast.png?raw=1)
+.smallest[
+Barry R. Weingast
+
+1952-
+]
+]
+]
+
+.right-column[
+
+> "The fundamental political dilemma of an economic system is this: A government strong enough to protect property rights and enforce contracts is also strong enough to confis- cate the wealth of its citizens. Thriving markets require not only the appropriate system of property rights and a law of contracts, but .hi[a secure political foundation that limits the ability of the state to confiscate wealth]," (p.1)
+
+]
+
+.source[Weingast, Barry R, 1995, "The Economic Role of Political Institutions: Market-Preserving Federalism and Economic Development," *Journal of Law, Economics, & Organization* 11(1): 1-31]
+
+
+---
+
+# *Market-Preserving* Federalism: Game Theory
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/ocpqnqxhli6nqyi/weingast.png?raw=1)
+.smallest[
+Barry R. Weingast
+
+1952-
+]
+]
+]
+
+.right-column[
+
+> "The answer concerns the design of political institutions that .hi[credibly commit] the state to preserving markets, that is, to limits on the future political discretion with respect to the economy that are in the interests of political officials to ob- serve...these limits must be .hi[self-enforcing]...political officials must have an incentive to abide by them," (p.2, emphasis in original).
+
+]
+
+.source[Weingast, Barry R, 1995, "The Economic Role of Political Institutions: Market-Preserving Federalism and Economic Development," *Journal of Law, Economics, & Organization* 11(1): 1-31]
+
+
+---
+
+# Weingast's Model: Legitimacy
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/ocpqnqxhli6nqyi/weingast.png?raw=1)
+.smallest[
+Barry R. Weingast
+
+1952-
+]
+]
+]
+
+.right-column[
+.smallest[
+- Citizens hold beliefs about appropriate bounds on government action
+  - But heterogeneous: a *coordination problem* between citizens agreeing on what is legitimate
+    - Even if citizens agree, what *actually happens* when government oversteps those bounds?
+
+- Constraints only work if citizens react in concert against government's violations of those constraints!
+  - Must hold sufficiently similar views
+  - Citizens must punish government when it oversteps
+
+]
+
+.source[Weingast, Barry R, 1995, "The Economic Role of Political Institutions: Market-Preserving Federalism and Economic Development," *Journal of Law, Economics, & Organization* 11(1): 1-31]
+
+---
+
+
+# Weingast's Model: Legitimacy
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/ocpqnqxhli6nqyi/weingast.png?raw=1)
+.smallest[
+Barry R. Weingast
+
+1952-
+]
+]
+]
+
+.right-column[
+
+> "In the language of game theory, we are searching for an equilibrium to a game in which the government has the opportunity to violate constraints but chooses not to" (p. 10)
+
+]
+
+.source[Weingast, Barry R, 1995, "The Economic Role of Political Institutions: Market-Preserving Federalism and Economic Development," *Journal of Law, Economics, & Organization* 11(1): 1-31]
+
+---
+
+# Weingast's Model: Game Setup
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/ocpqnqxhli6nqyi/weingast.png?raw=1)
+.smallest[
+Barry R. Weingast
+
+1952-
+]
+]
+]
+
+.right-column[
+.smallest[
+- Single sovereign, **S** and two groups of citizens, **A** and **B**
+- **A** and **B** hold different views about the legitimate boundaries of **S**
+
+- Sovereign needs the support of *at least* one group to maintain power
+
+- Game moves as follows:
+    1. **S** may decide to transgress against the rights of **A**, **B**, both, or neither
+    2. **A** and **B** move simultaneously, may challenge or acquiesce to the sovereign
+      - If both challenge, **S** is deposed
+      - If only one challenges, (or neither), **S**'s transgression succeeds
+]
+]
+
+.source[Weingast, Barry R, 1995, "The Economic Role of Political Institutions: Market-Preserving Federalism and Economic Development," *Journal of Law, Economics, & Organization* 11(1): 1-31]
+
+---
+
+# Weingast's Model: Game
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/ocpqnqxhli6nqyi/weingast.png?raw=1)
+.smallest[
+Barry R. Weingast
+
+1952-
+]
+]
+]
+
+.right-column[
+
+.center[
+![](https://www.dropbox.com/s/8mp3v6k4w6deohe/weingastmpf1.png?raw=1)
+
+]
+]
+
+.source[Weingast, Barry R, 1995, "The Economic Role of Political Institutions: Market-Preserving Federalism and Economic Development," *Journal of Law, Economics, & Organization* 11(1): 1-31]
+
+---
+
+# Weingast's Model: Game
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/ocpqnqxhli6nqyi/weingast.png?raw=1)
+.smallest[
+Barry R. Weingast
+
+1952-
+]
+]
+]
+
+.right-column[
+
+.center[
+![:scale 90%](https://www.dropbox.com/s/ber7cka3zhjfowu/weingastmpf2.png?raw=1)
+
+]
+
+]
+
+.source[Weingast, Barry R, 1995, "The Economic Role of Political Institutions: Market-Preserving Federalism and Economic Development," *Journal of Law, Economics, & Organization* 11(1): 1-31]
+
+---
+
+# Weingast's Model: Results
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/zjqe0c1xcbhf7s6/constitution.png?raw=1)
+]
+]
+
+.right-column[
+
+- Need institutions to **coordinate** agreement on beliefs about what constitutes an infringement of rights
+
+- Very long story short: **constitutions** (written, like the U.S. Constitution, or unwritten, like the U.K.) allow citizens to coordinate their beliefs to allow a sovereign to credibly commit to not overstepping bounds
+
+]
+
+.source[Weingast, Barry R, 1995, "The Economic Role of Political Institutions: Market-Preserving Federalism and Economic Development," *Journal of Law, Economics, & Organization* 11(1): 1-31]
+
+---
+
+# Weingast's Model: Results
+
+.left-column[
+.center[
+![:scale 75%](https://www.dropbox.com/s/0onncp64w82rvu6/goodgovernance.png?raw=1)
+
+![:scale 75%](https://www.dropbox.com/s/i1c37p6ue7pvtl2/economicgrowth.jpeg?raw=1)
+]
+]
+
+.right-column[
+
+- Local governments generate economic growth
+
+- Leads to more local tax revenue, rents for officials
+
+- Local governments have strong interest in preserving markets, preserves their own interests (tax revenue)
+
+]
+
+.source[Weingast, Barry R, 1995, "The Economic Role of Political Institutions: Market-Preserving Federalism and Economic Development," *Journal of Law, Economics, & Organization* 11(1): 1-31]
+
+---
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/k8ngddbnrj26lnh/netstatemigration.png?raw=1)
+]

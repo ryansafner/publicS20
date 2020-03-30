@@ -79,6 +79,8 @@ lessons:
 
   - title: "3.8 Federalism"
     reading: "3.8-reading"
+    class: "3.8-class"
+    slides: "3.8-slides"
 
   - title: "3.9 Exit, Voice, and Loyalty"
     reading: "3.9-reading"
