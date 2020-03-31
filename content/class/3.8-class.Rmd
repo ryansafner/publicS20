@@ -21,8 +21,15 @@ See the [<i class="fas fa-book-reader"></i> Readings](/reading/3.8-reading) for 
 
 # Class Livestream/Lecture Videos
 
-- [<i class="fas fa-video"></i> Zoom Live Class Meetings (starts Monday at 2:00 PM)](https://zoom.us/j/929467864)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bN-i9VzmtjQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lfrdxE1L8bo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_jC98s4j5Jg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w2ntprL5tjY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qTwt5SYWzhk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # Slides
 
