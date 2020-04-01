@@ -21,6 +21,7 @@ His book is interesting throughout, and has a lot of interesting implications fo
 # Optional, But Interesting
 
 - [<i class="fas fas fa-book"></i> Hirschmann (1970), *Exit, Voice, and Loyalty*, Chs. 4-5](/readings/Hirschmann-1970-Chs4-5)
+- [<i class="fas fa-file-pdf"></i> Clark et. al (2012), "Power and Politics: Insights from an Exit, Voice, and Loyalty Game"](/readings/Clark-Golder-Golder.pdf)
 
 
 # Tips and Questions to Read For:

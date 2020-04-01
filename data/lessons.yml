@@ -84,6 +84,8 @@ lessons:
 
   - title: "3.9 Exit, Voice, and Loyalty"
     reading: "3.9-reading"
+    class: "3.9-class"
+    slides: "3.9-slides"
     
   - title: '<span class="fake-header-table">Applications</span>'
     header: True
