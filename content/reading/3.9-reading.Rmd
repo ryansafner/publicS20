@@ -16,11 +16,11 @@ His book is interesting throughout, and has a lot of interesting implications fo
 
 # Readings:
 
-- [<i class="fas fas fa-book"></i> Hirschmann (1970), *Exit, Voice, and Loyalty*, Chs. 1 (skim, but especially see pp.15-20), 2, 3](/readings/Hirschmann-1970-Chs1-3)
+- [<i class="fas fas fa-book"></i> Hirschmann (1970), *Exit, Voice, and Loyalty*, Chs. 1 (skim, but especially see pp.15-20), 2, 3](/readings/Hirschmann-1970-Chs1-3.pdf)
 
 # Optional, But Interesting
 
-- [<i class="fas fas fa-book"></i> Hirschmann (1970), *Exit, Voice, and Loyalty*, Chs. 4-5](/readings/Hirschmann-1970-Chs4-5)
+- [<i class="fas fas fa-book"></i> Hirschmann (1970), *Exit, Voice, and Loyalty*, Chs. 4-5](/readings/Hirschmann-1970-Chs4-5.pdf)
 - [<i class="fas fa-file-pdf"></i> Clark et. al (2012), "Power and Politics: Insights from an Exit, Voice, and Loyalty Game"](/readings/Clark-Golder-Golder.pdf)
 
 
