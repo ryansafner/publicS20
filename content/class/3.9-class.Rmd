@@ -21,7 +21,15 @@ See the [<i class="fas fa-book-reader"></i> Readings](/reading/3.8-reading) for 
 
 # Class Livestream/Lecture Videos
 
-Check back later for videos.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5ti6jwdsDQI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PDJ4lLz0A7c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/icKrkQEzaYY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YVPMjN8M7qM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Z0_GDHCTEng" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # Slides
 
@@ -29,4 +37,4 @@ Check back later for videos.
 
 # Discussion Thread
 
-The weekly discussion thread **will be posted** on Blackboard.^[Go to this course on Blackboard, and on the blue toolbar on the left, go to *Discussion Board.*] You will have until Sunday 11:59 PM to comment on this week's topics (based on lectures and readings), at which point I will evaluate your contribution for the weekly discussion grade. See my introductory post on the discussion board's thread for more information.
+The weekly discussion thread **is posted** on Blackboard.^[Go to this course on Blackboard, and on the blue toolbar on the left, go to *Discussion Board.*] You will have until Sunday 11:59 PM to comment on this week's topics (based on lectures and readings), at which point I will evaluate your contribution for the weekly discussion grade. See my introductory post on the discussion board's thread for more information.
