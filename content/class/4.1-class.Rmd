@@ -1,0 +1,31 @@
+---
+title: "4.1: Is Our Politics Not 'Corrupt' Enough?"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-syllabus-no-bib.csl
+output:
+  blogdown::html_page:
+    template: ../../pandoc/toc-title_html.template
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+*Monday, April 6, 2020*
+
+*Online Quarantine Lecture 5*
+
+# Readings
+
+See the [<i class="fas fa-book-reader"></i> Readings](/reading/4.1-reading) for today's topics. A reminder, **you are no longer required to read and email questions before class.** You still need to do the readings for the weekly discussion (see below), and if you choose to join the livestream, I recommend reading before class if you want me to answer any questions in real time.
+
+# Class Livestream/Lecture Videos
+
+
+# Slides
+
+[<i class="fas fa-chalkboard-teacher"></i> Slides](/slides/4.1-slides)
+
+# Discussion Thread
+
+The weekly discussion thread **is posted** on Blackboard.^[Go to this course on Blackboard, and on the blue toolbar on the left, go to *Discussion Board.*] You will have until Sunday 11:59 PM to comment on this week's topics (based on lectures and readings), at which point I will evaluate your contribution for the weekly discussion grade. See my introductory post on the discussion board's thread for more information.

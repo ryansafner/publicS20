@@ -37,7 +37,7 @@ lessons:
     reading: "2.3-reading"
     slides: "2.3-slides"
     
-  - title: '<span class="fake-header-table">Representative Democracy</span>'
+  - title: '<span class="fake-header-table">The Institutions of Representative Democracy</span>'
     header: True
     
   - title: "3.1 Voting I: Preference Aggregation & Cycling"
@@ -49,7 +49,7 @@ lessons:
     reading: "3.2-reading"
     slides: "3.2-slides"
     
-  - title: "3.3 Voting III: Democracy Squared?"
+  - title: "3.3 Voting III: Democracy$^2$?"
     reading: "3.3-reading"
     slides: "3.3-slides"
     
@@ -87,10 +87,12 @@ lessons:
     class: "3.9-class"
     slides: "3.9-slides"
     
-  - title: '<span class="fake-header-table">Applications</span>'
+  - title: '<span class="fake-header-table">Applications, Proposals, and Insights</span>'
     header: True
 
   - title: "4.1 Is Our Politics Not 'Corrupt' Enough?"
+    reading: "4.1-reading"
+    class: "4.1-class"
 
   - title: "4.2 The Revolt of the Public"
 
