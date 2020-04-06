@@ -1,0 +1,26 @@
+---
+title: "4.2 Preference Falsification - Readings"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-fullnote-bibliography-no-bib.csl
+---
+
+*Wednesday, April 8, 2020*
+
+# Readings:
+
+- [<i class="fas fas fa-book"></i> Kuran (1997), *Private Truths, Public Lies: The Social Consequences of Preference Falsification*, Ch. 1](/readings/Kuran-1997-Ch1.pdf)
+
+Today we read about a very useful idea to explain politics, revolutions, surprises, and public opinion: preference falsification.
+
+# Tips and Questions to Read For:
+
+- What is "preference falsification?" How is it different from lying or from self-censorship?
+
+- What are the differences between "intrinsic utility," "reputational utility," and "expressive utility"?
+
+- In what ways do *you* falsify your preferences in public?
+
+- What are some examples of preference falsification in politics?
+
+- How do private/personal preferences affect public opinion? How does public opinion affect private/personal preferences?

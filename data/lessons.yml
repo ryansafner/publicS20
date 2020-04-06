@@ -49,7 +49,7 @@ lessons:
     reading: "3.2-reading"
     slides: "3.2-slides"
     
-  - title: "3.3 Voting III: Democracy$^2$?"
+  - title: "3.3 Voting III: Democracy Squared?"
     reading: "3.3-reading"
     slides: "3.3-slides"
     
@@ -93,10 +93,12 @@ lessons:
   - title: "4.1 Is Our Politics Not 'Corrupt' Enough?"
     reading: "4.1-reading"
     class: "4.1-class"
+    slides: "4.1-slides"
 
-  - title: "4.2 The Revolt of the Public"
-
-  - title: "4.3 TBD"
+  - title: "4.2 Preference Falsification"
+    reading: "4.2-reading"
+    
+  - title: "4.3 The Revolt of the Public"
 
   - title: '4.4 TBD'
 
