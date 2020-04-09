@@ -1,5 +1,5 @@
 ---
-title: "4.2 Preference Falsification"
+title: "4.2. Preference Falsification"
 citeproc: false
 bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-syllabus-no-bib.csl
