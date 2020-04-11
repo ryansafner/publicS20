@@ -1,0 +1,37 @@
+---
+title: "4.3 The Revolt of the Public - Readings"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-fullnote-bibliography-no-bib.csl
+---
+
+*Wednesday, April 8, 2020*
+
+# Readings:
+
+- [<i class="fas fas fa-book"></i> Gurri (2020), "Revolt, Populism, and Reaction", *Mercatus Center* ](/reading/Gurri-2018-Chs1,3.pdf) OR
+- [<i class="fas fa-podcast"></i> *Economics Detective Radio*: "The Revolt of the Public with Martin Gurri"](https://economicsdetective.com/2019/01/the-revolt-of-the-public-with-martin-gurri/)
+
+Martin Gurri was a media analyst for the CIA that wrote this book in 2014 that explained (and predicted) a lot of the chaos of our era (economic, political, and social). This is one of my favorite books of the 2010s, and one of the most insightful explanations of the chaos of our era. I am not alone in thinking that^[Just google "Revolt of the Public" and witness the results.] It has been hard to try to find a good summary article of the book other than a zillion interviews and podcasts Gurri has done about the book. The optional Mercatus link is a reasonably good summary, but he doesn't cover everything.
+
+I decided to give you two chapters of the (updated 2018 version) book itself^[which is very readable, and I must say one of the most physically beautiful books I own, and [affordable](https://www.amazon.com/Revolt-Public-Crisis-Authority-Millennium/dp/1732265143) too!] or alternatively the Economics Detective podcast is a good relatively short summary.
+
+Read Chapter 1 for sure, and if you want to get a little more into Gurri's hypothesis, read Chapter 3.
+
+# Optional Helpful Readings:
+
+- [<i class="fas fas fa-book"></i> Gurri (2020), "Revolt, Populism, and Reaction", *Mercatus Center* ](https://www.mercatus.org/bridge/commentary/revolt-populism-and-reaction)
+
+# Tips and Questions to Read For:
+
+- How does Gurri (and Walter Lippmann) define "the public?"
+
+- How does Gurri define "authority?" Or "legitimacy?"
+
+- What is "the fifth wave?"
+
+- How does the public's access to information affect elites and "industrial" institutions?
+
+- What unites the public today? What does the public "want"?
+
+- How does Gurri's thesis help explain...the Arab Spring? Brexit (and the bumbling response to Brexit)? the election of Donald Trump? the rise of progressive figures like Elizabeth Warren, Alexandria Ocasio-Cortez, Bernie Sanders? the rise of populist leaders around the world?^[Trump in the U.S., Johnson in Britain, Orbán in Hungary, Duterte in the Philippines, Salvini in Italy, Modi in India, Obrador in Mexico, Bolsonaro in Brazil] the Yellow Vest movement in France? [anti-government protests around the world in 2019](https://www.wsj.com/articles/global-wave-of-protests-rattles-governments-11574438994?mod=hp_lead_pos5)^[In Hong Kong, France, Spain, Chile, Colombia, Lebanon, Bolivia]?
