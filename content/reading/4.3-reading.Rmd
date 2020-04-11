@@ -9,18 +9,17 @@ csl: ../../static/bib/chicago-fullnote-bibliography-no-bib.csl
 
 # Readings:
 
-- [<i class="fas fas fa-book"></i> Gurri (2018 [2014]), *The Revolt of the Public: And the Crisis of Authority in the New Milennium* ](/readings/Gurri-2018-Chs1,3.pdf) **OR**
+- [<i class="fas fas fa-book"></i> Gurri (2018 [2014]), *The Revolt of the Public: And the Crisis of Authority in the New Milennium*, Chs. 1,3](/readings/Gurri-2018-Chs1,3.pdf)
+- **OR**
 - [<i class="fas fa-podcast"></i> *Economics Detective Radio*: "The Revolt of the Public with Martin Gurri"](https://economicsdetective.com/2019/01/the-revolt-of-the-public-with-martin-gurri/)
 
 Martin Gurri was a media analyst for the CIA that wrote this book in 2014 that explained (and predicted) a lot of the chaos of our era (economic, political, and social). This is one of my favorite books of the 2010s, and one of the most insightful explanations of the chaos of our era. I am not alone in thinking that^[Just google "Revolt of the Public" and witness the results.] It has been hard to try to find a good summary article of the book other than a zillion interviews and podcasts Gurri has done about the book.
 
-I decided to give you two chapters of the (updated 2018 version) book itself^[which is very readable, and I must say one of the most physically beautiful books I own, and [affordable](https://www.amazon.com/Revolt-Public-Crisis-Authority-Millennium/dp/1732265143) too!] or alternatively the Economics Detective podcast is a good relatively short summary.
-
-Read Chapter 1 for sure, and if you want to get a little more into Gurri's hypothesis, read Chapter 3.
+I decided to give you two chapters of the (updated 2018 version) book itself^[which is very readable, and I must say one of the most physically beautiful books I own, and [affordable](https://www.amazon.com/Revolt-Public-Crisis-Authority-Millennium/dp/1732265143) too!] or alternatively the Economics Detective podcast is a good relatively short summary.^[But really, I think you'd find the book interesting.] If you opt for the reading, read Chapter 1 for sure, and if you want to get a little more into Gurri's hypothesis, read Chapter 3.
 
 # Optional Helpful Readings:
 
-- [i class="fas fa-external-link-square-alt"></i> Gurri (2020), "Revolt, Populism, and Reaction", *Mercatus Center*](https://www.mercatus.org/bridge/commentary/revolt-populism-and-reaction)
+- [<i class="fas fa-external-link-square-alt"></i> Gurri (2020), "Revolt, Populism, and Reaction", *Mercatus Center*](https://www.mercatus.org/bridge/commentary/revolt-populism-and-reaction)
 
 The optional Mercatus link is a reasonably good summary applied to political upheaval, but he doesn't cover everything.
 
