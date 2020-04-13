@@ -102,20 +102,18 @@ lessons:
 
   - title: "4.3 The Revolt of the Public"
     reading: "4.3-reading"
+    class: "4.3-class"
+    slides: "4.3-slides"
 
-  - title: '4.4 TBD'
+  - title: '4.4 Taxation'
 
-  - title: '4.5 TBD'
+  - title: '4.5 Basic Income Guarantee'
 
-  - title: '4.6 TBD'
+  - title: '4.6 Economics of Covid-19'
 
-  - title: '4.7 TBD'
+  - title: '4.7 The National Debt'
 
-  - title: '4.8 TBD'
-
-  - title: '4.9 TBD'
-
-  - title: '4.10 TBD'
+  - title: '4.8 Wrap-Up'
 
   - title: '<i class="fas fa-laptop-code"></i> **Policy Paper**'
     assignment: "policy-paper"

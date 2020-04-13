@@ -1,0 +1,874 @@
+---
+title: "4.3: The Revolt of the Public"
+subtitle: "ECON 410 · Public Economics · Spring 2020"
+author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/publicS20"><i class="fa fa-github fa-fw"></i> ryansafner/publics20</a><br> <a href="https://publicS20.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> publicS20.classes.ryansafner.com</a><br>'
+#date:
+output:
+  xaringan::moon_reader:
+    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML" # rescales math with css changes https://github.com/yihui/xaringan/issues/143
+    lib_dir: libs
+    df_print: paged
+    #seal: false
+    css: [custom.css, custom-fonts.css, "hygge"] #, metropolis, metropolis-fonts
+    nature:
+      beforeInit: ["macros.js", "https://platform.twitter.com/widgets.js"] # first is for rescaling images , second is for embedding tweets, https://github.com/yihui/xaringan/issues/100
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    includes:
+      in_header: header.html # for font awesome, used in title  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = F,
+                      warning = F,
+                      message = F,
+                      fig.retina = 3,
+                      fig.align = "center")
+library("tidyverse")
+library("mosaic")
+
+theme_slides <- theme_classic() + 
+  theme(
+    text = element_text(family = "Fira Sans", size = 18)
+  )
+```
+
+class: inverse, center, middle
+
+## [Overview](#3)
+
+## [The Public vs. Authority](#13)
+
+## [Authority and Legitimacy: A Model in Pictures](#23)
+
+## [Example Conflicts: Arab Spring & Occupy Wall Street](#35)
+
+## [What Then?](#39)
+
+---
+
+class: inverse, center, middle
+
+# Overview
+
+---
+
+# Overview and Influence
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/6bjkypwcwa339nc/martingurri.jpg?raw=1)
+.smaller[
+Martin Gurri
+
+1954-
+]
+]
+]
+.right-column[
+.smallest[
+- Worked as a media analyst for the CIA
+
+- Wrote *The Revolt of the Public* in 2014 (we're reading 2018 updated book)
+
+- Focused primarily on events of 2011
+  - Arab Spring (Tunisia, Egypt, Libya, Syria, etc.), Occupy Wall Street, protests in Israel, Spain, riots in London, etc.
+
+- Widely credited with "predicting" events of 2016-today
+  - rise of populist or outsider leaders (Trump, Boris Johnson, Jair Bosolnaro, Viktor Orban, Narendra Modi)
+  - 2019 anti-government riots around the world 
+]
+]
+
+---
+
+# Gurri's Thesis
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/m9u2x3k5wp4yjj3/revoltofthepublic.jpg?raw=1)
+]
+]
+
+.right-column[
+
+> "My thesis is a simple one. We are caught between between an old world which is decreasingly able to sustain us intellectually and spiritually, maybe even materially, and a new world that has not yet been born," (p.66).
+
+]
+
+.source[Gurri, Martin, 2018, *The Revolt of the Public and the Crisis of Authority in the New Millennium*]
+
+---
+
+# The Crisis of Authority
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/haf3j843ajrosa2/hierarchy_org.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- .hi[Authority] (.hi-purple[elites] that run the institutions) is in crisis because .hi["the public"] no longer trusts it
+
+- *All* forms of authority: government, business, academia, science, media, journalism
+]
+
+---
+
+# The Crisis of Authority
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/haf3j843ajrosa2/hierarchy_org.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Rise of the "information tsunami" has given the public unprecedented access to information that authority used to monopolize
+
+- Elites have lost control, and now look *illegitimate* to the public
+  - self-serving, corrupt, & incompetent
+
+]
+
+---
+
+# "The Fifth Wave"
+
+.pull-left[
+
+.center[
+![:scale 100%](https://www.dropbox.com/s/m7rg0glj1rt4e84/mass_media.jpg?raw=1)
+]
+
+]
+
+.pull-right[
+
+5 major "waves" in history information, each causing *enormous* social, economic, and political consequences
+
+1. Writing
+
+2. Alphabet
+
+3. Printing Press
+
+4. Mass Media
+
+5. Digital Wave
+
+]
+
+---
+
+# The Information Tsunami
+
+.center[
+![:scale 75%](https://www.dropbox.com/s/v80t29t53kjpw08/gurri_info_tsunami.png?raw=1)
+]
+
+---
+
+# The Information Tsunami
+
+.pull-left[
+
+.center[
+![:scale 100%](https://www.dropbox.com/s/v80t29t53kjpw08/gurri_info_tsunami.png?raw=1)
+]
+
+]
+
+.pull-right[
+
+- 2002 doubled the amount of information created by all of human history
+
+- 2003 doubled the information of 2002
+
+- 99% of information exists digitally
+
+]
+
+---
+
+# Our Industrial Institutions
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/haf3j843ajrosa2/hierarchy_org.jpg?raw=1)
+]
+]
+
+.pull-right[
+.smallest[
+- Our institutions are **inherited from the industrial world**
+
+- Top-down hierarchy run by elites
+
+- Monopoly on information & access in area
+  - Politics, academia, scientific research, journalism
+  - Information is handed *down* to all from the *top*
+
+- Authority comes from monopoly & exclusivity
+  - Need the right credentials or connections to be "worth listening to"
+  - Those without access or accreditation are ignored
+]
+]
+
+---
+
+# "The Most Trusted Man in America"
+
+.pull-left[
+.center[
+![:scale 80%](https://www.dropbox.com/s/ae3jnarbdfoglrn/cronkite.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- CBS Anchor Walter Cronkite widely reported to be "the most trusted man in America"
+
+- Ended all of his broadcasts with "and that's the way it is"
+
+- Enormous discretion in controlling what people know
+
+]
+
+---
+
+# The Decline of Trust in Government
+
+.center[
+![:scale 35%](https://www.dropbox.com/s/6vcwuskxyd2jlc5/trustingovt.png?raw=1)
+]
+
+.source[Source: [Pew Research Center (2015)](https://www.people-press.org/2015/11/23/1-trust-in-government-1958-2015/)
+]
+
+---
+
+class: inverse, center, middle
+
+# The Public vs. Authority
+
+---
+
+# The Public vs. Authority
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/m9u2x3k5wp4yjj3/revoltofthepublic.jpg?raw=1)
+]
+]
+
+.right-column[
+.smallest[
+> "Each side in the struggle has a standard-bearer: authority for the old industrial scheme that has dominated globally for a century and a half, the public for the uncertain dispensation striving to become manifest. The two protagonists share little in common, other than humanity—and each probably doubts the humanity of the other. They have arrayed themselves in contrary modes of organization which require mutually hostile ideals of right behavior. The conflict is so asymmetrical that it seems impossible for the two sides actually to engage. But they do engage, and the battlefield is everywhere. The perturbing agent between authority and the public is information," (p.66-67).
+
+]
+]
+.source[Gurri, Martin, 2018, *The Revolt of the Public and the Crisis of Authority in the New Millennium*]
+
+
+---
+
+# The Public vs. Authority
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/m9u2x3k5wp4yjj3/revoltofthepublic.jpg?raw=1)
+]
+]
+
+.right-column[
+.smallest[
+
+> "The incumbent structure is hierarchy, and it represents established and accredited authority—government first and foremost, but also corporations, universities, the whole roster of institutions from the industrial age. Hierarchy has ruled the world since the human race attained meaningful numbers. The industrial mind just made it bigger, steeper, and more efficient. From the era of Rameses to that of Hosni Mubarak, it has exhibited predictable patterns of behavior: top-down, centralizing, painfully deliberate in action, process-obsessed, mesmerized by grand strategies and five-year plans, respectful of rank and order but contemptuous of the outsider, the amateur, (p. 68).
+
+]
+]
+.source[Gurri, Martin, 2018, *The Revolt of the Public and the Crisis of Authority in the New Millennium*]
+
+---
+
+# The Public vs. Authority
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/m9u2x3k5wp4yjj3/revoltofthepublic.jpg?raw=1)
+]
+]
+
+.right-column[
+.smallest[
+
+"Against this citadel of the status quo, the Fifth Wave has raised the network: that is, the public in revolt, those despised amateurs now connected to one another by means of digital devices. Nothing within the bounds of human nature could be less like a hierarchy. Where the latter is slow and plodding, networked action is lightning quick but unsteady in purpose. Where hierarchy has evolved a hard exoskeleton to keep every part in place, the network is loose and pliable—it can swell into millions or dissipate in an instant. Digital networks are egalitarian to the brink of dysfunction. Most would rather fail in an enterprise than acknowledge rank or leaders of any sort...Networks succeed when held together by a single powerful point of reference—an issue, person, or event—which acts as center of gravity and organizing principle for action. Typically, this has meant being against. If hierarchy worships the established order, the network nurtures a streak of nihilism, (pp. 68-69)
+
+]
+]
+.source[Gurri, Martin, 2018, *The Revolt of the Public and the Crisis of Authority in the New Millennium*]
+
+---
+
+# Lippmann's "Public"
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/cwdklqantm3f0fl/lippmann.jpg?raw=1)
+.smallest[
+Walter Lippmann
+
+1889-1974
+]]
+]
+
+.right-column[
+
+> "The public, as I see it, is not a fixed body of individuals. It is merely the persons who are interested in an affair and can affect it only by supporting or opposing the actors."
+
+.source[Lipmmann, Walter, 1928, *The Phantom Public*, quoted in Gurri 2018]
+]
+
+---
+
+# Center vs. Border
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/haf3j843ajrosa2/hierarchy_org.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- A contest between the .hi-purple["Center"] and the .hi-purple["Border"]
+
+- Center is dominated by large, hierarchical institutions
+
+- Border is a series of networks that emerge to oppose the Center
+
+.source[Douglas, Mary and Aaron Wildavsky, 1985, *Risk and Culture: An Essay on the Selection of Technological and Environmental Dangers*]
+]
+
+---
+
+# The Center
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/m9u2x3k5wp4yjj3/revoltofthepublic.jpg?raw=1)
+]
+]
+
+.right-column[
+
+> "[The Center] frankly believes in sacrificing the few for the good of the whole. It is smug about its rigid procedures. It is too slow, too blind to new information. It will not believe in new dangers and will often be taken by surprise," (p.66).<sup>.red[1]</sup>
+
+> "The Center envisions the future to be a continuation of the status quo, and churns out program after program to protect this vision," (p.66).
+
+.footnote[<sup>.red[1]</sup> Quote from Douglas and Wildavsky, 1985]
+]
+
+.source[Gurri, Martin, 2018, *The Revolt of the Public and the Crisis of Authority in the New Millennium*]
+
+---
+
+# The Border
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/m9u2x3k5wp4yjj3/revoltofthepublic.jpg?raw=1)
+]
+]
+
+.right-column[
+
+.smallest[
+> "The Border, in contrast, is composed of 'sects' - we would say 'networks' - which are voluntary associations of equals. Sects exist to oppose the Center: they stand firmly against. They have, however, 'no intention of governing' and develop 'no capacity for exercising power.' Rank means inequality, hierarchy means conspiracy to the Border. Rather than articulate programs as alternatives to those of the Center, sects aim to *model* the behaviors demanded from the 'godly or good society,'" (p.70).
+
+]
+]
+
+.source[Gurri, Martin, 2018, *The Revolt of the Public and the Crisis of Authority in the New Millennium*]
+
+---
+
+# The Border
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/m9u2x3k5wp4yjj3/revoltofthepublic.jpg?raw=1)
+]
+]
+
+.right-column[
+
+.smallest[
+> "Making a program is a center strategy; attacking the center programs on behalf of nature, God, or the world is a border strategy"<sup>.red[1]</sup>
+
+]
+.footnote[<sup>.red[1]</sup> Quote from Douglas and Wildavsky, 1985]
+]
+
+.source[Gurri, Martin, 2018, *The Revolt of the Public and the Crisis of Authority in the New Millennium*]
+
+---
+
+# The Center vs. the Border
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/m9u2x3k5wp4yjj3/revoltofthepublic.jpg?raw=1)
+]
+]
+
+.right-column[
+
+.smallest[
+> "The confrontation has followed a predictable pattern. Whenever a Center organization thought it owned a document or file or domain of information, the networks of the Border swarmed in and took over, leaving the landscape littered with casualties from such guerrilla raids. Thus the music business collapsed, newspapers shed subscribers and advertisers, political parties shrank in numbers. The US Government lost control of its own classified documents. Book publishers and the TV and movie industries, still very profitable today, depend on technical and copyright regimes which could be breached at any moment,"  (p.71).
+
+]
+]
+
+.source[Gurri, Martin, 2018, *The Revolt of the Public and the Crisis of Authority in the New Millennium*]
+
+---
+
+# The Center vs. the Border
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/m9u2x3k5wp4yjj3/revoltofthepublic.jpg?raw=1)
+]
+]
+
+.right-column[
+
+.smallest[
+> "[T]his is the deeper pattern of the conflict. The programs of the Center have failed, and have been *seen* to fail, beyond the possibility of invoking secrecy or propaganda. Let the disastrous performance of the rating and oversight agencies before the 2008 financial crisis, and of the Intelligence Community in Iraq, stand for many more examples of Center failure. At the same time, the fracturing of the public along niche interests has unleashed swarms of networks against every sacred precinct of authority. Failure has been criticized, mocked, magnified."
+
+> "The result is paralysis by distrust. The Border, it is already clear, can neutralize but not replace the Center. Networks can protest and overthrow, but never govern. Bureaucratic inertia confronts digital nihilism. The sum is zero,"  (pp.71-72).
+
+]
+]
+
+.source[Gurri, Martin, 2018, *The Revolt of the Public and the Crisis of Authority in the New Millennium*]
+
+---
+
+# The Center vs. the Border
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/m9u2x3k5wp4yjj3/revoltofthepublic.jpg?raw=1)
+]
+]
+
+.right-column[
+
+.smallest[
+> "The world I want to depict isn’t stalemated. The contending forces are too unlike, too asymmetrical to achieve any kind of balance. My thesis describes a world trapped in a sociopolitical combat zone, in which every principle of living, every institution, I want to say every event—the choice of what is meaningful in time—has been fought over and scorched in the crossfire,"  (pp.71-72).
+
+]
+]
+
+.source[Gurri, Martin, 2018, *The Revolt of the Public and the Crisis of Authority in the New Millennium*]
+
+---
+
+class: inverse, center, middle
+
+# Authority and Legitimacy: A Model in Pictures
+
+---
+
+# The Public's Access to Information Threatens Authority
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/m9u2x3k5wp4yjj3/revoltofthepublic.jpg?raw=1)
+]
+]
+
+.right-column[
+
+.smallest[
+> "1. Information influences politics because it is indigestible by a government's justifying story,
+
+> "2. The greater the diffusion of information to the public, the more illegitimate any political status quo will appear.
+
+> "3. *Homo informaticus*, networked builder and weilder of the information sphere, poses an existential challenge to the legitimacy of every government he encounters," (p. 92).
+
+]
+]
+
+.source[Gurri, Martin, 2018, *The Revolt of the Public and the Crisis of Authority in the New Millennium*]
+
+---
+
+# Authority and Legitimacy: A Model in Pictures
+
+.center[
+![:scale 70%](https://www.dropbox.com/s/ud8fpsya34dznq8/gurri_model_1.png?raw=1)
+]
+
+---
+
+# Authority and Legitimacy: A Model in Pictures
+
+.center[
+![:scale 65%](https://www.dropbox.com/s/t5qx4m8neghibu9/gurri_model_2.png?raw=1)
+]
+
+---
+
+# Authority and Legitimacy: A Model in Pictures
+
+.center[
+![:scale 70%](https://www.dropbox.com/s/31stl47nbna5tya/gurri_model_3.png?raw=1)
+]
+
+---
+
+# Authority and Legitimacy: A Model in Pictures
+
+.center[
+![:scale 70%](https://www.dropbox.com/s/ppin5tylvytufzc/gurri_model_4.png?raw=1)
+]
+
+---
+
+# Authority and Legitimacy: A Model in Pictures
+
+.center[
+![:scale 65%](https://www.dropbox.com/s/mi6rb0kax6g3qf0/gurri_model_5.png?raw=1)
+]
+
+---
+
+# Authority and Legitimacy: A Model in Pictures
+
+.center[
+![:scale 70%](https://www.dropbox.com/s/t0j76oxlwzny8rc/gurri_model_6.png?raw=1)
+]
+
+---
+
+# Authority and Legitimacy: A Model in Pictures
+
+.center[
+![:scale 70%](https://www.dropbox.com/s/5q42e1ufj04til9/gurri_model_7.png?raw=1)
+]
+
+---
+
+# The Role of Social Media
+
+.pull-left[
+.center[
+![:scale 70%](https://www.dropbox.com/s/3oyfijlyqzy1wr2/spark.png?raw=1)
+
+![:scale 70%](https://www.dropbox.com/s/m7rg0glj1rt4e84/mass_media.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Public's use of social media in covering lies, inconsistencies, incompetencies, corruption, and bias of government
+  - Threatens regime's legitimacy
+  - Redundant coverage
+
+- A massively-witnessed spark can lead to prairie fires inciting public to revolt in the streets
+
+]
+
+---
+
+# The Role of Social Media
+
+.left-column[
+.center[
+![:scale 80%](https://www.dropbox.com/s/m9u2x3k5wp4yjj3/revoltofthepublic.jpg?raw=1)
+]
+]
+
+.right-column[
+Bloggers, and in general all dabblers in digital communication, are often accused of insulting sacred things: presidents, religion, property rights, even the prerogatives of a democratic majority. They speak when there should be silence, and utter what should never be said. They trample on the sanctities, in the judgment of the great hierarchical institutions which for a century and half have controlled, from the top down, authoritatively, the content of every public conversation. The idea is not that some forbidden opinion or other has been spoken. It is the speaking that is taboo. It’s the alien voice of the amateur, of the ordinary person, of the public, that is an abomination to the ears of established authority," (p.42).
+
+]
+
+---
+
+# The Revolt of the Public
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/m9u2x3k5wp4yjj3/revoltofthepublic.jpg?raw=1)
+]
+]
+
+.right-column[
+
+.smallest[
+
+> "The industrial age depended on chunky blocks of text to influence government and opinion. The new digital world has preferred the power of the visual. What is usually referred to as new media really means the triumph of the image over the printed word," (p.48).
+
+> "The reality of the new environment is that the global information sphere, rather than any one medium or platform, erupts into nearly every political conflict, and not infrequently helps determine the outcome. Unlike, say, TV or Facebook, the information sphere can’t be blocked by government. It’s too redundant. Information leaks into the conflict anyhow, (pp. 57-58).
+
+]
+]
+
+.source[Gurri, Martin, 2018, *The Revolt of the Public and the Crisis of Authority in the New Millennium*]
+
+
+---
+
+class: inverse, center, middle
+
+# Example Conflicts: Arab Spring & Occupy Wall Street
+
+---
+
+# Example Conflict: The Arab Spring
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/m9u2x3k5wp4yjj3/revoltofthepublic.jpg?raw=1)
+]
+]
+
+.right-column[
+
+.smallest[
+> "The catalyst for the Tunisian uprising came in the form of a truly insignificant man: Mohamed Bouazizi, a street vendor in the provincial town of Sidi Bouzid, who set himself on fire in despair over humiliations he had endured at the hands of regime officials, and later died of his burns. You will note that I wrote 'catalyst' rather than “cause”: even the simplest human events constitute complex systems ruled by nonlinearities...Nine months before his fatal moment, another street vendor called Abdesslem Trimech, from the provincial town of Monastir, set himself on fire over his mistreatment by the government, and later died. No protests ensued...why these two similar deaths had such dissimilar effects. Bouazizi burned to death in front of a camera," (p.48).
+
+]
+]
+
+.source[Gurri, Martin, 2018, *The Revolt of the Public and the Crisis of Authority in the New Millennium*]
+
+---
+
+# Example Conflict: The Arab Spring
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/m9u2x3k5wp4yjj3/revoltofthepublic.jpg?raw=1)
+]
+]
+
+.right-column[
+
+.smallest[
+
+> "[M]ost of Al Jazeera’s Tunisia footage came from cell phone videos, taken by the public on the spot and communicated via Facebook. They were then re-posted online—on Al Jazeera’s website, on YouTube, and on thousands of niche sites. So this was also a case of new media driving news coverage.
+
+> "The point I want to drive home is that there is now massive redundancy in the transmission of information. That’s another change from the old ways. You can jam Al Jazeera’s signal, but you can’t jam YouTube. You can shut down the internet—as Egyptian authorities did when they faced their own uprising—but you can’t shut down the information sphere," (pp. 48-49).
+
+]
+]
+
+.source[Gurri, Martin, 2018, *The Revolt of the Public and the Crisis of Authority in the New Millennium*]
+
+---
+
+# Example Conflict: The Arab Spring
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/m9u2x3k5wp4yjj3/revoltofthepublic.jpg?raw=1)
+]
+]
+
+.right-column[
+
+.smallest[
+> "It's simply false to say that the public can’t make the leap between virtual and real politics. The problem has been posed in terms of online 'weak bonds' as against real-life 'strong bonds'—a proposition I will explore later in greater depth. All we need to know about the 'strong bonds' objection, in connection with the Egyptian uprising, is that it applies only to the old mode of forming a mass movement. If the protesters had sought to replace the regime with a specific set of people, programs, and principles, the weak bonds of the digital world would have been insufficient. But that's not what brought out the variegated Egyptian public to the streets. They just wanted to get rid of Hosni Mubarak," (p. 54).
+
+]
+]
+
+.source[Gurri, Martin, 2018, *The Revolt of the Public and the Crisis of Authority in the New Millennium*]
+
+---
+# Example Conflict: The Arab Spring
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/m9u2x3k5wp4yjj3/revoltofthepublic.jpg?raw=1)
+]
+]
+
+.right-column[
+
+.smallest[
+> "[The regime's heavy-handed response of s]hutting down the web made history in the worst way. In Egypt and abroad, the move communicated a feeling of crisis and panic in the regime. In exchange for a political placebo, the government incurred real economic costs and alienated powerful business interests. But the most important effect of the shutdown was to create a silence—filled at once by Al Jazeera, which among its many agendas had pursued a long-running campaign to de-legitimize Egypt's ruling clique. Here was redundancy with a vengeance, (p. 58).
+," (p. 54).
+
+]
+]
+
+.source[Gurri, Martin, 2018, *The Revolt of the Public and the Crisis of Authority in the New Millennium*]
+
+---
+
+# Example Conflict: The Arab Spring
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/m9u2x3k5wp4yjj3/revoltofthepublic.jpg?raw=1)
+]
+]
+
+.right-column[
+
+.smallest[
+"History, I was assured, advances in a stately procession, not in leaps and bounds. When it comes to the behavior of complex systems, I now believe this is flat wrong. Let me explain why. Social and political arrangements tend to accumulate noise. The internal and external forces holding them together inevitably shift in ways that drive the system ever farther out from equilibrium. Such pressures work silently and invisibly, beneath the surface. They are cumulative, slow to take effect. But when change comes, it is sudden and dramatic. Pushed beyond disequilibrium to turbulence, the system disintegrates and must be reconstituted on a different basis. Thus water is just water interacting with falling temperatures, until abruptly it becomes ice. The Soviet Union was an evil empire and a superpower until suddenly it was neither. Hosni Mubarak was an immovable pharaonic figure, then in two weeks he was gone," (pp. 120-121)"
+
+]
+]
+
+.source[Gurri, Martin, 2018, *The Revolt of the Public and the Crisis of Authority in the New Millennium*]
+
+---
+
+# Example Conflict: Occupy Wall Street
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/m9u2x3k5wp4yjj3/revoltofthepublic.jpg?raw=1)
+]
+]
+
+.right-column[
+
+.smallest[
+> "The Occupiers refused to make demands as a matter of principle. They felt it was beneath them to petition an illegitimate government," (pp. 147-148).
+
+> "What the Occupiers desired to achieve was what all the rebels and street insurgents of 2011 desired: to negate a host of historical conditions, institutions, and relations whose persistence had driven them to revolt. They wanted history to abolish history, hierarchy to eliminate hierarchy, government to bring down the temple of authority," (p. 148).
+
+> "Revolution, in 2011, meant denunciation. Actual change was left for someone else," (p. 149).
+]
+]
+
+.source[Gurri, Martin, 2018, *The Revolt of the Public and the Crisis of Authority in the New Millennium*]
+
+---
+
+class: inverse, center, middle
+
+# What Then?
+
+---
+
+# So You've Won...What Then?
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/m9u2x3k5wp4yjj3/revoltofthepublic.jpg?raw=1)
+]
+]
+
+.right-column[
+
+> But such a victory would be self-defeating. If the [protestors] somehow managed to destroy the system they so deeply despised, they will have extinguished themselves and their movement by eliminating the conditions that made both possible. This is not a riddle or a paradox, but a political pathology frequently encountered in the wake of the Fifth Wave, (pp. 135-136)
+
+]
+
+.source[Gurri, Martin, 2018, *The Revolt of the Public and the Crisis of Authority in the New Millennium*]
+
+---
+
+# The Danger of Nihilism
+
+.left-column[
+.center[
+![:scale 100%](https://www.dropbox.com/s/m9u2x3k5wp4yjj3/revoltofthepublic.jpg?raw=1)
+]
+]
+
+.right-column[
+
+.smallest[
+> "[These movements must face] the question of nihilism: By this word I mean the will to destruction, including self-destruction, for its own sake. I mean, specifically, the negation of democracy and capitalism, with a frivolous disregard for the consequences. [Authority often sees these movements], in certain moods at least, as a preternatural hybrid of revolutionary aspirations and a societal suicide pact. They were a privileged generation, which, when confronted with an existential challenge, chose to cut and tear at their own roots. And they were not powerless or marginal. They commanded the great persuasive power of the global information sphere, and, according to the polls, they enjoyed considerable support from the general public. Even if they failed to overthrow the system, they could and did undermine its legitimacy—possibly, as I said, to a fatal extent," (pp. 135-136)
+
+]
+]
+
+.source[Gurri, Martin, 2018, *The Revolt of the Public and the Crisis of Authority in the New Millennium*]
+
+---
+
+# What Then?
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/tevj3xvzb9hjs40/protest_clip.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Public can only unite *against* something
+
+- Public is incapable of providing an alternative replacement to the elites and institutions of authority it seeks to tear down
+  - Just wants it fixed by somebody
+
+]
+
+---
+
+# What Then?
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/haf3j843ajrosa2/hierarchy_org.jpg?raw=1)
+]
+]
+
+.pull-right[
+.smallest[
+- Elites are too set in their ways, may protect their status out of self-interest 
+
+- Elites think too scientifically, linearly, mathematically
+  - social problems have a clear, simple, solution
+  - run for office on that solution $\implies$ doesn't solve the problem $\implies$ public gets frustrated at incompetence, corruption of elites
+
+- All elites are proclaiming that the world is ending
+]
+]
+
+---
+
+# What Then?
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/m7rg0glj1rt4e84/mass_media.jpg?raw=1)
+]
+]
+
+.pull-right[
+.smallest[
+- Hence, we are stuck in this intractable battle through the 21st Century
+
+- Public access to information about *everything* $implies$ *everything* a site for contestation between elites and public!
+
+- But remember, we choose our elites!
+
+- Gurri suggests we need a new 21st Century elite that "gets" the digital dispensation
+  - online figures earn public trust every day, not by resting on credential or a hierarchy
+]
+]
