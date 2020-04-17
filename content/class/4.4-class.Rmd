@@ -1,0 +1,53 @@
+---
+title: "4.4. Taxation"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-syllabus-no-bib.csl
+output:
+  blogdown::html_page:
+    template: ../../pandoc/toc-title_html.template
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+*Wednesday, April 15, 2020*
+
+*Online Quarantine Lecture 8*
+
+# Readings
+
+There is no reading for today. However, you may be interested in some of the articles mentioned in the slides/videos, linked below.
+
+- [Bellafiore, 2018, "Summary of the Latest Federal Income Tax Data, 2018 Update," *Tax Foundation*](https://taxfoundation.org/summary-latest-federal-income-tax-data-2018-update/)
+- [Huseman, 2017, "Filing Taxes Could Be Free and Simple. But H&R Block and Intuit Are Still Lobbying Against It," *Pro Publica*](https://www.propublica.org/article/filing-taxes-could-be-free-simple-hr-block-intuit-lobbying-against-it)
+- [Michell, 2018, "Government Privilege: Using and Abusing the Tax Code," *Mercatus Center: The Bridge*](https://www.mercatus.org/bridge/commentary/government-privilege-using-and-abusing-tax-code)
+- [Myers, 2019, "Amazon will pay $0 in taxes on $11,200,000,000 in profit for 2018," *Yahoo Finance*](https://finance.yahoo.com/news/amazon-taxes-zero-180337770.html?soc_src=newsroom&soc_trk=com.apple.UIKit.activity.CopyToPasteboard&.tsrc=newsroom)
+- [Nocera, 2019, "The Golden Age of Hollywood Tax Avoidance," *Bloomberg Opinion*](https://www.bloomberg.com/opinion/articles/2019-01-29/hollywood-stars-didn-t-pay-90-percent-tax-they-created-loopholes)
+- [Rubin, 2019, "Democrats' Emerging Tax Idea: Look Beyond Income, Target Wealth," *Wall Street Journal*](https://www.wsj.com/articles/democrats-emerging-tax-idea-look-beyond-income-target-wealth-11566916571?mod=hp_lead_pos5)
+
+# Class Livestream/Lecture Videos
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pFIpGDLR9GI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jXd8K_pBdXI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9tBQ1NGH6no" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CzqV6G32YZc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AYy_u3ZVUzk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+# Slides
+
+[<i class="fas fa-chalkboard-teacher"></i> Slides](/slides/4.3-slides)
+
+- [Visualizing the Economic Incidence of Taxation](https://ryansafner.shinyapps.io/tax-incidence/)
+
+# Interactive Visualization
+
+This is a visual example of how taxes alter market surpluses. Based on the elasticity of the curve in equilibrium, a tax will both shift some of that surplus to the government (as tax revenue), and some of it is thrown away as **deadweight loss**. The curve with a *lower elasticity* bears more of the tax burden and loses more surplus. Think of elasticity as the ability to evade the tax - a more elastic curve has more options and will change their buying/selling behavior *a lot* to a price change (from a tax), and thus will bear less of the tax burden!
+
+# Discussion Thread
+
+The weekly discussion thread **is posted** on Blackboard.^[Go to this course on Blackboard, and on the blue toolbar on the left, go to *Discussion Board.*] You will have until Sunday 11:59 PM to comment on this week's topics (based on lectures and readings), at which point I will evaluate your contribution for the weekly discussion grade. See my introductory post on the discussion board's thread for more information.
