@@ -1,0 +1,46 @@
+---
+title: "4.5 Common-Ownership Self-Assessed Tax - Readings"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-fullnote-bibliography-no-bib.csl
+---
+
+*Wednesday, April 8, 2020*
+
+# Readings:
+
+- [<i class="fas fas fa-book"></i> Posner and Weyl (2017), *Radical Markets*, Ch.2](/readings/Posner-Weyl-2017-Ch2.pdf)
+
+Following our overview of taxation, and building on a lot of concepts we've discussed this semester^[Property rights, externalities, the Coase Theorem, tragedy of the commons, etc.], we can discuss another radical proposal by Posner and Weyl's *Radical Markets* book.^[Recall the first proposal we discussed was "quadratic voting" in class 2.3]
+
+They propose a **"Common Ownership Self-assessed Tax(COST)"**, the essence of which is: citizens self-assess the value of their property, pay a flat tax on their self-assessed value, and the owner *must* sell their property at their self-assessed price if someone else is willing to pay that price. There are lots of considerations, extensions, etc, but that is the basic setup. They argue that this tax would not only solve what they call "the problem of monopoly" inherent in private property, and boost efficiency, but also potentially *replace all other taxes*, and also fund a "social divident" (basic income guarantee).
+
+This idea builds off of a very famous "land value tax" proposed by the popular 19th century economist Henry George, and applies modern auction theory, discussed at length in the chapter. You may wish to consult the Wikipedia pages below:
+
+# Optional Helpful Readings:
+
+- [<i class="fab fa-wikipedia-w"></i> Wikpedia: Henry George](https://en.wikipedia.org/wiki/Henry_George)
+- [<i class="fab fa-wikipedia-w"></i> Wikpedia: Georgism](https://en.wikipedia.org/wiki/Georgism)
+- [<i class="fab fa-wikipedia-w"></i> Wikpedia: William Vickrey ](https://en.wikipedia.org/wiki/William_Vickrey)
+
+# Tips and Questions to Read For:
+
+- Is "private property only another name for monopoly"?
+
+- What is the "monopoly problem?" How do property-owners "hold out?"
+
+- What was Henry George's proposal for a "land value tax"? What is the difference between "land" and "artifical capital" in the Georgist view?
+
+- What is the difference between allocative efficiency and investment efficiency? How does private property vs. common property affect each? How does a tax affect each?
+
+- According to Coase, how do firms solve some of the bargaining problems?
+
+- How would a COST change the way we use and view property?
+
+- How would a COST be realistically put in place?
+
+- Is the "sharing economy" of apps like Uber, Lyft and Airbnb causing a cultural shift in the way we view "ownership" vs. "leasing" assets?
+
+- How do Posner and Weyl respond to the obvious objections to placing your house, computer, private photos, etc. up for auction?
+
+- What sorts of assets would we most benefit from implementing a COST? Or on what sorts of assets would a COST *not* lead to unacceptable disruption?

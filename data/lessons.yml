@@ -1,5 +1,5 @@
 lessons:
-  - title: '<span class="fake-header-table">Challenges Requiring Collective Action</span>'
+  - title: '<span class="fake-header-table">I. Challenges Requiring Collective Action</span>'
     header: True
 
   - title: "1.1 Introduction and Overview"
@@ -22,7 +22,7 @@ lessons:
     reading: "1.5-reading"
     slides: "1.5-slides"
 
-  - title: '<span class="fake-header-table">Constitutional Political Economy</span>'
+  - title: '<span class="fake-header-table">II. Constitutional Political Economy</span>'
     header: True
 
   - title: "2.1 Politics as Constraints"
@@ -37,7 +37,7 @@ lessons:
     reading: "2.3-reading"
     slides: "2.3-slides"
     
-  - title: '<span class="fake-header-table">The Institutions of Representative Democracy</span>'
+  - title: '<span class="fake-header-table">III. The Institutions of Representative Democracy</span>'
     header: True
     
   - title: "3.1 Voting I: Preference Aggregation & Cycling"
@@ -87,7 +87,7 @@ lessons:
     class: "3.9-class"
     slides: "3.9-slides"
     
-  - title: '<span class="fake-header-table">Applications, Proposals, and Insights</span>'
+  - title: '<span class="fake-header-table">IV. Applications, Proposals, and Insights</span>'
     header: True
 
   - title: "4.1 Is Our Politics Not 'Corrupt' Enough?"
@@ -109,13 +109,14 @@ lessons:
     slides: "4.4-slides"
     class: "4.4-class"
 
-  - title: '4.5 Basic Income Guarantee'
-
-  - title: '4.6 Economics of Covid-19'
+  - title: '4.5 Common-Ownership Self-Assessed Tax'
+    class: "4.5-reading"
+    
+  - title: '4.6 Basic Income Guarantee'
 
   - title: '4.7 The National Debt'
 
-  - title: '4.8 Wrap-Up'
+  - title: '4.8 Economics of Covid-19'
 
   - title: '<i class="fas fa-laptop-code"></i> **Policy Paper**'
     assignment: "policy-paper"

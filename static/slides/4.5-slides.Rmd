@@ -1,0 +1,108 @@
+---
+title: "4.5: A Harberger Tax?"
+subtitle: "ECON 410 · Public Economics · Spring 2020"
+author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/publicS20"><i class="fa fa-github fa-fw"></i> ryansafner/publics20</a><br> <a href="https://publicS20.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> publicS20.classes.ryansafner.com</a><br>'
+#date:
+output:
+  xaringan::moon_reader:
+    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML" # rescales math with css changes https://github.com/yihui/xaringan/issues/143
+    lib_dir: libs
+    df_print: paged
+    #seal: false
+    css: [custom.css, custom-fonts.css, "hygge"] #, metropolis, metropolis-fonts
+    nature:
+      beforeInit: ["macros.js", "https://platform.twitter.com/widgets.js"] # first is for rescaling images , second is for embedding tweets, https://github.com/yihui/xaringan/issues/100
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    includes:
+      in_header: header.html # for font awesome, used in title  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = F,
+                      warning = F,
+                      message = F,
+                      fig.retina = 3,
+                      fig.align = "center")
+library("tidyverse")
+library("mosaic")
+
+theme_slides <- theme_classic() + 
+  theme(
+    text = element_text(family = "Fira Sans", size = 18)
+  )
+```
+
+class: inverse, center, middle
+
+## [Motivation and Types of Taxation](#3)
+
+## [Incidence of Taxation](#13)
+
+## [Some Principles of Tax Fairness](#23)
+
+## [Taxes Distort Incentives](#39)
+
+---
+
+class: inverse, center, middle
+
+# Motivation and Types of Taxation
+
+---
+
+# Radical Markets
+
+.pull-left[
+.pull-left[
+.center[
+![:scale 83%](https://www.dropbox.com/s/d68i97sg3gnnp5a/ericposner.jpg?raw=1)
+
+Eric Posner
+]
+]
+
+.pull-right[
+.center[
+![:scale 83%](https://www.dropbox.com/s/o8mc3vlk32934wh/glenweyl.jpg?raw=1)
+
+Glen Weyl
+]
+]
+
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/txihggxo1imaz3m/radicalmarkets.jpg?raw=1)
+]
+]
+
+---
+
+# What's Wrong With 1P1V?
+
+.pull-left[
+
+- The bedrock of democracy is the idea of .hi[One person, one vote (1p1v)]
+  - Everyone has equal voice in the outcome
+
+- Used to argue for extending the franchise to women, African Americans, etc
+
+- Constitution requires representation in Congress apportioned to population
+
+]
+
+.pull-right[
+.center[
+![:scale 100%](https://www.dropbox.com/s/zp5lihe6fij743a/onepersononevote.png?raw=1)
+]
+]
