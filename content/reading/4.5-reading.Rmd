@@ -9,7 +9,7 @@ csl: ../../static/bib/chicago-fullnote-bibliography-no-bib.csl
 
 # Readings:
 
-- [<i class="fas fas fa-book"></i> Posner and Weyl (2017), *Radical Markets*, Ch.2](/readings/Posner-Weyl-2017-Ch2.pdf)
+- [<i class="fas fas fa-book"></i> Posner and Weyl (2017), *Radical Markets*, Ch.1](/readings/Posner-Weyl-2017-Ch1.pdf)
 
 Following our overview of taxation, and building on a lot of concepts we've discussed this semester^[Property rights, externalities, the Coase Theorem, tragedy of the commons, etc.], we can discuss another radical proposal by Posner and Weyl's *Radical Markets* book.^[Recall the first proposal we discussed was "quadratic voting" in class 2.3]
 
