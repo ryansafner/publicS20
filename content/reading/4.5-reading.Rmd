@@ -5,7 +5,7 @@ bibliography: ../../static/bib/references.bib
 csl: ../../static/bib/chicago-fullnote-bibliography-no-bib.csl
 ---
 
-*Wednesday, April 8, 2020*
+*Monday, April 20, 2020*
 
 # Readings:
 

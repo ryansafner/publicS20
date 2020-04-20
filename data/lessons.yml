@@ -109,9 +109,10 @@ lessons:
     slides: "4.4-slides"
     class: "4.4-class"
 
-  - title: '4.5 Common-Ownership Self-Assessed Tax'
+  - title: '4.5 Common Ownership Self-Assessed Tax'
     reading: "4.5-reading"
-    
+    slides: "4.5-slides"
+
   - title: '4.6 Basic Income Guarantee'
 
   - title: '4.7 The National Debt'
