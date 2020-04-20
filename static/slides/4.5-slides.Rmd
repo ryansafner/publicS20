@@ -1011,7 +1011,7 @@ class: inverse, center, middle
 ![](https://www.dropbox.com/s/ifojsoua8zg9pz1/US_Frequency-Allocations_870x420_2015a.jpg?raw=1)
 ]
 
-.footnote[<sup>.magenta[1]<sup> Coase famously suggested this in 1959 in a famous article that contained the \n seeds of the "Coase Theorem" before his famous 1960 paper.]
+.footnote[<sup>.magenta[1]<sup> Coase famously suggested this in 1959 in a famous article that contained the <br> seeds of the "Coase Theorem" before his famous 1960 paper.]
 
 ]
 
