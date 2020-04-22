@@ -1,0 +1,398 @@
+---
+title: "4.6: Universal Basic Income"
+subtitle: "ECON 410 · Public Economics · Spring 2020"
+author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/publicS20"><i class="fa fa-github fa-fw"></i> ryansafner/publics20</a><br> <a href="https://publicS20.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> publicS20.classes.ryansafner.com</a><br>'
+#date:
+output:
+  xaringan::moon_reader:
+    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML" # rescales math with css changes https://github.com/yihui/xaringan/issues/143
+    lib_dir: libs
+    df_print: paged
+    #seal: false
+    css: [custom.css, custom-fonts.css, "hygge"] #, metropolis, metropolis-fonts
+    nature:
+      beforeInit: ["macros.js", "https://platform.twitter.com/widgets.js"] # first is for rescaling images , second is for embedding tweets, https://github.com/yihui/xaringan/issues/100
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    includes:
+      in_header: header.html # for font awesome, used in title  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = F,
+                      warning = F,
+                      message = F,
+                      fig.retina = 3,
+                      fig.align = "center")
+library("tidyverse")
+library("mosaic")
+
+theme_slides <- theme_classic() + 
+  theme(
+    text = element_text(family = "Fira Sans", size = 18)
+  )
+```
+
+# Motivations: Automation
+
+.center[
+![](https://www.dropbox.com/s/khzx5c5pqhm6khg/US-real-manufacturing-output-versus-employment-1947-2014.png?raw=1)
+]
+
+---
+
+# Motivations: Software Replacing Labor
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/u11g3suvuwtaofn/softwareeatingtheworld.png?raw=1)
+]
+]
+
+--
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/38uytjucjnxsjwu/minwagerobot.jpg?raw=1)
+]
+]
+
+---
+
+# Motivations: The Gig Economy Changing the Nature of Work
+
+.center[
+![](https://www.dropbox.com/s/c7pop5ldma23b9y/uberlyft.jpg?raw=1)
+]
+
+---
+
+# Motivations: Employee vs. Independent Contractor
+
+.center[
+![:scale 90%](https://www.dropbox.com/s/aovtp296wj7pwdq/freelancer.png?raw=1)
+]
+
+---
+
+# Solution: A Basic Income Guarantee?
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/m6ajij72dps6957/big1.png?raw=1)
+]
+
+---
+
+# What's Wrong With Our Current Welfare Programs?
+
+.pull-left[
+![](https://www.dropbox.com/s/5d65nnfb8az5zjc/Welfare_in_America.png?raw=1)
+]
+
+.pull-right[
+
+.smaller[
+> [In 2012] the federal government [spent] more than $668 billion on at least 126 different programs to fight poverty. And that does not even begin to count welfare spending by state and local governments, which adds $284 billion to that figure. In total, the United States spends nearly $1 trillion every year to fight poverty. That amounts to $20,610 for every poor person in America, or $61,830 per poor family of three,"
+
+]
+.source[Tanner, Michael, 2012, ["The American Welfare State: How We Spend Nearly $1 Trillion a Year Fighting Poverty - and Fail"](http://www.cato.org/sites/cato.org/files/pubs/pdf/PA694.pdf), *Cato Policy Report* 694]
+]
+
+---
+
+# What's Wrong With Our Current Welfare Programs?
+
+.pull-left[
+![](https://www.dropbox.com/s/5d65nnfb8az5zjc/Welfare_in_America.png?raw=1)
+]
+
+.pull-right[
+
+- We are spending plenty of money, but it is not sufficiently reaching poor people
+
+- Some is lost to administration and costs of administering the programs
+
+- Much of it removes choice from poor people, and gives them in-kind resources (food and housing vouchers, medicaid, etc)
+
+- Hurts incentives to work to get out of poverty
+]
+
+---
+
+# The Benefits Cliff
+
+.center[
+![:scale 60%](https://www.dropbox.com/s/61hy10e6ihqm4n4/welfare_cliff_1.png?raw=1)
+]
+
+.source[Source: [John Cochrane](https://johnhcochrane.blogspot.com/2012/11/taxes-and-cliffs.html)]
+
+---
+
+# The Benefits Cliff
+
+.center[
+![:scale 60%](https://www.dropbox.com/s/p8snt64je494hpu/welfare_cliff_2.png?raw=1)
+]
+
+.source[Source: [John Cochrane](https://johnhcochrane.blogspot.com/2012/11/taxes-and-cliffs.html)]
+
+---
+
+# The Benefits Cliff
+
+.center[
+![:scale 60%](https://www.dropbox.com/s/s78h4gdh6lkrll5/welfare_cliff_Urban_1.png?raw=1)
+]
+
+.source[Source: [Urban Instute](https://www.urban.org/sites/default/files/alfresco/publication-pdfs/412722-How-Marginal-Tax-Rates-Affect-Families-at-Various-Levels-of-Poverty.PDF)]
+
+---
+
+# The Benefits Cliff
+
+.center[
+![:scale 60%](https://www.dropbox.com/s/y4mj0osbfhpjiy7/welfare_cliff_Urban_2.png?raw=1)
+]
+
+.source[Source: [Urban Instute](https://www.urban.org/sites/default/files/alfresco/publication-pdfs/412722-How-Marginal-Tax-Rates-Affect-Families-at-Various-Levels-of-Poverty.PDF)]
+
+---
+
+# The Benefits Cliff
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/84k0dviwx3x41mh/welfare_cliff_Urban_3.png?raw=1)
+]
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/wi3eeq1qsvn3kd8/welfare_cliff_Urban_4.png?raw=1)
+]
+]
+
+.source[Source: [Urban Instute](https://www.urban.org/sites/default/files/alfresco/publication-pdfs/412722-How-Marginal-Tax-Rates-Affect-Families-at-Various-Levels-of-Poverty.PDF)]
+
+---
+
+# Proposal: Negative Income Tax
+
+.pull-left[
+.center[
+![:scale 100%](https://www.dropbox.com/s/g0kwzksej9wfomz/negative_income_tax.png?raw=1)
+]
+]
+
+.pull-right[
+
+- A .hi-purple[Negative Income Tax]: a progressive individual income tax with a built-in subsidy for taxpayers below the poverty line
+
+- Individuals below poverty line would be paid by government enough to reach the poverty line
+
+- Endorsed by some famous classical liberals and libertarian economists: F.A. Hayek, Milton Friedman, among others
+]
+
+---
+
+# Proposal: UBI
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/v7qpdcnj4681mpw/ubi.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- .hi[Universal Basic Income] or .hi[Basic Income Guarantee] (or other names): each citizen gets a monthly check from the government
+
+- No means testing or work requirement
+
+- Essentially a *negative* head tax
+  - Head tax is least distortive tax (does not change prices)
+
+]
+
+---
+
+# UBI as *Complement* vs. *Substitute* for Poverty Programs
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/v7qpdcnj4681mpw/ubi.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Advocates on the left argue UBI should *complement* existing programs
+
+- Centrist/conservative/libertarian advocates argue UBI should *replace* existing programs
+  - Minimum wage, food and housing subsidies, social security, medicare and medicaid, unemployment insurance, etc
+]
+
+---
+
+# An Example
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/x3yjxyp5sdghijh/munger_BIG_1.png?raw=1)
+]
+]
+
+.pull-right[
+.smallest[
+"To see how this might work, consider a five-person society with widely different incomes. Assume that at the outset the (moderately progressive) tax system works as follows:
+- First $16,000 exempt
+- Income $16,001 to $100,000 taxed at 20 percent rate
+- Income greater than $100,000 taxed at 30 percent rate
+- Anyone with income less than $16,000 receives welfare payments to raise him or her to $16,000, the individual 'poverty line'
+
+]
+]
+
+---
+
+# An Example
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/x3yjxyp5sdghijh/munger_BIG_1.png?raw=1)
+]
+]
+
+.pull-right[
+.smallest[
+> Since Persons 1, 2, and 3 make more than receive no welfare payments. Person 2 works and earns $10,000 and so receives $6,000 in welfare payments. Person 5 does not work at all and receives $16,000 in welfare payments. Net government revenue, after paying for welfare payments, is $178,400.
+
+]
+]
+
+---
+
+# An Example
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/9oqje0w97qbkcvb/munger_BIG_2.png?raw=1)
+]
+]
+
+.pull-right[
+.smallest[
+> Of course, Person 4 starts wondering whether it is worth it to work because he will earn exactly the same $16,000 if he quits his job. He doesn’t wonder long; he quits. And the government ponies up the difference, as in table 2...This means that government revenues collected for the provision of public goods have now shrunk to $168,400, and the size of private output is also reduced by $10,000. This loss in revenue and productivity lead this little country to consider replacing its current welfare system with a BIG.
+
+]
+]
+
+---
+
+# An Example
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/902gu5ajtc1kexq/munger_BIG_3.png?raw=1)
+]
+]
+
+.pull-right[
+.smallest[
+> The little country’s government decides to try to make the change approximately revenue neutral, still collecting about as much tax revenue for provision of public goods as
+before. Here is what it comes up with.
+- No exemption; first-dollar taxation at 20 percent rate
+- Income greater than $100,000 taxed at 32 percent rate
+- Universal $16,000 BIG, paid out as a NIT
+
+]
+]
+
+---
+
+# An Example
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/902gu5ajtc1kexq/munger_BIG_3.png?raw=1)
+]
+]
+
+.pull-right[
+.smallest[
+> Of course, the fact that there is a 20 percent tax on the first dollar of income means that the BIG is actually only $12,800 rather than $16,000. But the citizens agree that it is useful for everyone to have a sense of contributing and “skin in the game.” It is absurd to try to run a national fiscal system where at least 40 percent or more of the citizens pay no federal income taxes. People voting on spending pay no part of the cost of that spending.
+
+]
+]
+
+---
+
+# An Example
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/nmefogcke7ybzrd/munger_BIG_4.png?raw=1)
+]
+]
+
+.pull-right[
+.smallest[
+> The resulting new system would look like what is shown in table 4. One thing to notice is that Person 4 goes back to work. Because there is no penalty for working, he is now fully able to earn money (and pay taxes) like other citizens without being punished for it. Second, the overall incomes of the three larger income earners is changed a little, but not substantially, compared to the figures shown in table 1.
+
+]
+]
+
+---
+
+# Benefits
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/v7qpdcnj4681mpw/ubi.jpg?raw=1)
+]
+]
+
+.pull-right[
+.smallest[
+- Money goes directly the the poor
+  - Not paternalistic
+  - No administrative overhead
+  - Gives poor freedom of choice in how to spend
+
+- Automatic, rules-based, less room for political discretion
+
+- Maintains incentive to work
+  - removes precarity and anxiety over economic conditions
+  - funds work for creativity, passion (less 9-5 careers)
+]
+]
+
+---
+
+# Objections
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/v7qpdcnj4681mpw/ubi.jpg?raw=1)
+]
+]
+
+.pull-right[
+
+- Cost: trillions of dollars?
+
+- Political feasibility
+  - If *added* to existing programs (instead of *replacement*) another discretionary tool for politicians
+
+- *Some* disincentive to work
+
+- Giving money many not help people find meaning
+]
