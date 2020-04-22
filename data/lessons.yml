@@ -114,8 +114,9 @@ lessons:
     slides: "4.5-slides"
     class: "4.5-class"
 
-  - title: '4.6 Basic Income Guarantee'
-
+  - title: '4.6 Universal Basic Income'
+    reading: "4.6-reading"
+    
   - title: '4.7 The National Debt'
 
   - title: '4.8 Economics of Covid-19'

@@ -1,0 +1,16 @@
+---
+title: "4.6 Universal Basic Income - Readings"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-fullnote-bibliography-no-bib.csl
+---
+
+*Wednesday, April 21, 2020*
+
+# Readings:
+
+- [<i class="fas fa-file-pdf"></i> Munger (2015), "One and One-Half Cheers for a Basic Income Guarantee"](/readings/Munger-2015.pdf)
+- **OR**
+- [<i class="fas fa-podcast"></i> *EconTalk*: "Michael Munger on the Basic Income Guarantee"](https://www.econtalk.org/michael-munger-on-the-basic-income-guarantee/)
+
+# Tips and Questions to Read For:
