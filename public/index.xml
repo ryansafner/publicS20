@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Public Economics</title>
-    <link>https://publicS20.classes.ryansafner.com/</link>
+    <link>https://publicS20.classes.ryansafner.com/index.html</link>
     <description>Recent content on Public Economics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -10,8 +10,8 @@
 	<atom:link href="https://publicS20.classes.ryansafner.com/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>1.1: Introduction to Public Economics</title>
+  </channel>
+</rss>Introduction to Public Economics</title>
       <link>https://publicS20.classes.ryansafner.com/class/1.1-class/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -355,6 +355,17 @@ See the  Readings for today’s topics. A reminder, you are no longer required t
       <guid>https://publicS20.classes.ryansafner.com/reading/4.6-reading/</guid>
       <description> Wednesday, April 21, 2020
 Readings:   Munger (2015), “One and One-Half Cheers for a Basic Income Guarantee” OR  EconTalk: “Michael Munger on the Basic Income Guarantee”  Tips and Questions to Read For: </description>
+    </item>
+    
+    <item>
+      <title>4.6: Universal Basic Income</title>
+      <link>https://publicS20.classes.ryansafner.com/class/4.6-class/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://publicS20.classes.ryansafner.com/class/4.6-class/</guid>
+      <description>Contents  Class Livestream/Lecture Videos Slides Discussion Thread   Wednesday, April 22, 2020
+Online Quarantine Lecture 10
+See the  Readings for today’s topics. A reminder, you are no longer required to read and email questions before class. You still need to do the readings for the weekly discussion (see below), and if you choose to join the livestream, I recommend reading before class if you want me to answer any questions in real time.</description>
     </item>
     
     <item>
