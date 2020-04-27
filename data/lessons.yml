@@ -119,11 +119,12 @@ lessons:
     slides: "4.6-slides"
     class: "4.6-class"
     
-  - title: '4.7 The National Debt'
+  - title: '4.7 Government Deficits & Debt'
+    slides: "4.7-slides"
 
-  - title: '4.8 Economics of Covid-19'
+  - title: '4.8 Some Economics of Covid-19'
 
-  - title: '<i class="fas fa-laptop-code"></i> **Policy Paper**'
+  - title: '<i class="fas fa-laptop-code"></i> **Policy Paper** due Fri May 1'
     assignment: "policy-paper"
 
-  - title: '<i class="fas fa-laptop-code"></i> **Final Exam**'
+  - title: '<i class="fas fa-laptop-code"></i> **Final Exam** week of May 4'

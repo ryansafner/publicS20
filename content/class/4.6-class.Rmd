@@ -21,6 +21,10 @@ See the [<i class="fas fa-book-reader"></i> Readings](/reading/4.6-reading) for 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hAIhfZrWEhE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+![](https://www.dropbox.com/s/g0ysam1wlckgw67/IGM_UBI.png?raw=1)
+
+[Source](http://www.igmchicago.org/surveys/universal-basic-income/)
+
 # Slides
 
 [<i class="fas fa-chalkboard-teacher"></i> Slides](/slides/4.6-slides)

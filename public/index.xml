@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Public Economics</title>
-    <link>https://publicS20.classes.ryansafner.com/index.html</link>
+    <link>https://publicS20.classes.ryansafner.com/</link>
     <description>Recent content on Public Economics</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -10,8 +10,8 @@
 	<atom:link href="https://publicS20.classes.ryansafner.com/index.xml" rel="self" type="application/rss+xml" />
     
     
-  </channel>
-</rss>Introduction to Public Economics</title>
+    <item>
+      <title>1.1: Introduction to Public Economics</title>
       <link>https://publicS20.classes.ryansafner.com/class/1.1-class/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
