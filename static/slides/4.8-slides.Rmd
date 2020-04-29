@@ -758,9 +758,9 @@ class: inverse, center, middle
 
 .pull-left[
 .center[
-[![]()](https://www.nbcnews.com/health/health-care/many-private-labs-want-do-coronavirus-tests-they-re-facing-n1156006)
+[![](https://www.dropbox.com/s/94a46rx4k4npqbd/Screen%20Shot%202020-04-29%20at%201.49.06%20PM.png?raw=1)](https://www.nbcnews.com/health/health-care/many-private-labs-want-do-coronavirus-tests-they-re-facing-n1156006)
 ]
-
+]
 
 .pull-right[
 .center[
