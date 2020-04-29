@@ -47,229 +47,483 @@ class: inverse, center, middle
 
 ---
 
-# The Economics of a Shortage Society I
+# Price Gouging
 
 .pull-left[
-
-- Consider a market with a market-clearing price of $P_q$ where $Q_1$ will be exchanged
+.center[
+![](https://www.dropbox.com/s/iabmjq6mfyrkpgx/corona_empty_shelves_1.png?raw=1)
+]
 ]
 
 .pull-right[
-```{r, fig.retina=3, fig.height=5}
-library(mosaic)
 
-demand=function(x){10-x}
-supply=function(x){0.5*x+4}
+- Where did all of the ... go?
+  - Toilet paper
+  - Hand sanitizer
+  - Masks
+  - PPE
+  - Ventilators
+
+- Two issues:
+  - price gouging laws
+  - supply-side restrictions
+]
+
+---
+
+# Increase in Demand
+
+.pull-left[
+- Consider a market for a good in equilibrium, $P_1$
+
+]
+
+.pull-right[
+
+```{r, fig.retina=3}
+demand_1=function(x){10-x}
+supply_1=function(x){x}
 
 ggplot(data.frame(x=c(0,10)), aes(x=x))+
-  stat_function(fun=demand, geom="line", size=2, color = "blue")+
-  geom_label(aes(x=9,y=demand(9)), color = "blue", label="Demand = Max WTP", size = 5)+
-  stat_function(fun=supply, geom="line", size=2, color = "red")+
-  geom_label(aes(x=9,y=supply(9)), color = "red", label="Supply = Min WTA", size = 5)+
-  geom_segment(x=0, xend=4, y=6, yend=6, size=1, linetype="dotted")+
-  geom_segment(x=4, xend=4, y=0, yend=6, size=1, linetype="dotted")+    scale_x_continuous(breaks=c(0,4),
-                       labels=c(0, expression(Q[1])),
-                     limits=c(0,10),
-                     expand=expand_scale(mult=c(0,0.1)))+
-  scale_y_continuous(breaks=c(0,6),
-                     labels=c(0, expression(P[1])),
-                     limits=c(0,10),
+  stat_function(fun=demand_1, geom="line", size=2, color = "blue")+
+    geom_label(aes(x=9,y=demand_1(9)), color = "blue", label="Demand = Max WTP", size = 3)+
+  stat_function(fun=supply_1, geom="line", size=2, color = "red")+
+    geom_label(aes(x=9,y=supply_1(9)), color = "red", label="Supply = Min WTA", size = 3)+
+  geom_segment(x=0, xend=5, y=5, yend=5, size=1, linetype="dotted")+
+  geom_segment(x=5, xend=5, y=0, yend=5, size=1, linetype="dotted")+
+    scale_x_continuous(breaks=c(0,5),
+                       labels=c(0,expression(Q[1])),
+                       limits=c(0,10),
+                       expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,5),
+                     limits=c(0,20),
+                     labels=c(0,expression(P[1])),
                      expand=expand_scale(mult=c(0,0.1)))+
   labs(x = "Quantity",
-       y = "Price")+
+       y = "Price ($)")+
   theme_classic(base_family = "Fira Sans Condensed", base_size=20)
 
 ```
+
 ]
 
 ---
 
-# The Economics of a Shortage (Society) I
+# Increase in Demand
 
 .pull-left[
+.smallest[
+- More individuals want to buy more of the good at *every* price
 
-- Consider a market with a market-clearing price of $P_1$ where $Q_1$ will be exchanged
-
-- Government sets a **price ceiling** at $\bar{P}$, legal maximum price allowed
-
-- $Q_d>Q_s$: .shout[excess demand], a .shout[shortage]!
-
-- Sellers will not supply more than $Q_s$
-
+- Entire demand curve shifts to the *right*, becomes *less elastic*
+]
 ]
 
 .pull-right[
-```{r, fig.retina=3, fig.height=5}
-graph<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
-  stat_function(fun=demand, geom="line", size=2, color = "blue")+
-    geom_label(aes(x=9,y=demand(9)), color = "blue", label="Demand = Max WTP", size = 5)+
-  stat_function(fun=supply, geom="line", size=2, color = "red")+
-    geom_label(aes(x=9,y=supply(9)), color = "red", label="Supply = Min WTA", size = 5)+
-  geom_hline(yintercept=5, size=2)+
-    scale_x_continuous(breaks=c(0,2,4,5),
-                       labels=c(0, expression(Q[s]), expression(Q[1]), expression(Q[d])),
-                     limits=c(0,10),
-                     expand=expand_scale(mult=c(0,0.1)))+
-  scale_y_continuous(breaks=c(0,5,6),
-                     labels=c(0, expression(bar(P)), expression(P[1])),
-                     limits=c(0,10),
+
+```{r, fig.retina=3}
+demand_up=function(x){20-1.75*x}
+
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun=demand_1, geom="line", size=2, color = "blue")+
+    geom_label(aes(x=9,y=demand_1(9)), color = "blue", label="Demand = Max WTP", size = 3)+
+  stat_function(fun=demand_up, geom="line", size=2, color = "darkblue")+
+    geom_label(aes(x=9,y=demand_up(9)), color = "darkblue", label="Demand 2", size = 3)+
+  stat_function(fun=supply_1, geom="line", size=2, color = "red")+
+    geom_label(aes(x=9,y=supply_1(9)), color = "red", label="Supply = Min WTA", size = 3)+
+  geom_segment(x=0, xend=5, y=5, yend=5, size=1, linetype="dotted")+
+  geom_segment(x=5, xend=5, y=0, yend=5, size=1, linetype="dotted")+
+    scale_x_continuous(breaks=c(0,5),
+                       labels=c(0,expression(Q[1])),
+                       limits=c(0,10),
+                       expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,5),
+                     limits=c(0,20),
+                     labels=c(0,expression(P[1])),
                      expand=expand_scale(mult=c(0,0.1)))+
   labs(x = "Quantity",
-       y = "Price")+
+       y = "Price ($)")+
   theme_classic(base_family = "Fira Sans Condensed", base_size=20)
 
-graph+
-  geom_segment(x=0, xend=5, y=5, yend=5, size=1, linetype="dotted")+
-  geom_segment(x=2, xend=2, y=0, yend=5, size=1, linetype="dotted")+
-  geom_segment(x=0, xend=4, y=5, yend=5, size=1, linetype="dotted")+
-  geom_segment(x=5, xend=5, y=0, yend=5, size=1, linetype="dotted")+
-  annotate("segment", x = 2, xend = 5, y = 3, yend = 3, colour = "black", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="both", type="closed"))+
-  geom_label(x=3.5, y=3, label="Shortage")
 ```
+
 ]
 
 ---
 
-# The Economics of a Shortage (Society) I
+# Increase in Demand
+
+.pull-left[
+.smallest[
+- More individuals want to buy more of the good at *every* price
+
+- Entire demand curve shifts to the *right*, becomes *less elastic*
+
+- At the original market price, a .hi-purple[shortage!] $(\color{blue}{q_D} > \color{red}{q_S})$
+]
+]
+
+.pull-right[
+
+```{r, fig.retina=3}
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun=demand_1, geom="line", size=2, color = "blue")+
+    geom_label(aes(x=9,y=demand_1(9)), color = "blue", label="Demand = Max WTP", size = 3)+
+  stat_function(fun=demand_up, geom="line", size=2, color = "darkblue")+
+    geom_label(aes(x=9,y=demand_up(9)), color = "darkblue", label="Demand 2", size = 3)+
+  stat_function(fun=supply_1, geom="line", size=2, color = "red")+
+    geom_label(aes(x=9,y=supply_1(9)), color = "red", label="Supply = Min WTA", size = 3)+
+  geom_segment(x=0, xend=8.57, y=5, yend=5, size=1, linetype="dotted")+
+  geom_segment(x=5, xend=5, y=0, yend=5, size=1, linetype="dotted")+
+  
+  geom_segment(x=8.57, xend=8.57, y=0, yend=5, size=1, linetype="dotted")+
+
+  annotate("segment", x = 5, xend = 8.57, y = 5, yend = 5, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="both", type="closed"))+
+  geom_label(x=7, y=5, label="Shortage", color="purple")+
+
+    scale_x_continuous(breaks=c(0,5,8.57),
+                       labels=c(0,expression(Q[1]),expression(Q[D])),
+                       limits=c(0,10),
+                       expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,5),
+                     limits=c(0,20),
+                     labels=c(0,expression(P[1])),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  labs(x = "Quantity",
+       y = "Price ($)")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+```
+
+]
+
+---
+
+# Increase in Demand
+
+.pull-left[
+.smallest[
+- More individuals want to buy more of the good at *every* price
+
+- Entire demand curve shifts to the *right*, becomes *less elastic*
+
+- At the original market price, a .hi-purple[shortage!] $(\color{blue}{q_D} > \color{red}{q_S})$
+
+- .red[Sellers] are supplying $Q_1$, but some .blue[buyers] willing to pay more for $Q_1$
+]
+]
+.pull-right[
+
+```{r, fig.retina=3}
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun=demand_1, geom="line", size=2, color = "blue")+
+    geom_label(aes(x=9,y=demand_1(9)), color = "blue", label="Demand = Max WTP", size = 3)+
+  stat_function(fun=demand_up, geom="line", size=2, color = "darkblue")+
+    geom_label(aes(x=9,y=demand_up(9)), color = "darkblue", label="Demand 2", size = 3)+
+  stat_function(fun=supply_1, geom="line", size=2, color = "red")+
+    geom_label(aes(x=9,y=supply_1(9)), color = "red", label="Supply = Min WTA", size = 3)+
+  geom_segment(x=0, xend=8.57, y=5, yend=5, size=1, linetype="dotted")+
+  geom_segment(x=5, xend=5, y=0, yend=5, size=1, linetype="dotted")+
+  
+  geom_segment(x=8.57, xend=8.57, y=0, yend=5, size=1, linetype="dotted")+
+
+    # higher wtp
+  geom_segment(x=0, xend=5, y=demand_up(5), yend=demand_up(5), size=1, linetype="dotted")+
+  geom_segment(x=5, xend=5, y=5, yend=demand_up(5), size=1, linetype="dotted")+
+
+  
+  annotate("segment", x = 5, xend = 8.57, y = 5, yend = 5, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="both", type="closed"))+
+  geom_label(x=7, y=5, label="Shortage", color="purple")+
+
+    scale_x_continuous(breaks=c(0,5,8.57),
+                       labels=c(0,expression(Q[1]),expression(Q[D])),
+                       limits=c(0,10),
+                       expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,5, demand_up(5)),
+                     limits=c(0,20),
+                     labels=c(0,expression(P[1]), expression(P[D])),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  labs(x = "Quantity",
+       y = "Price ($)")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+
+```
+
+]
+
+---
+
+# Increase in Demand
+
+
+.pull-left[
+.smallest[
+- More individuals want to buy more of the good at *every* price
+
+- Entire demand curve shifts to the *right*, becomes *less elastic*
+
+- At the original market price, a .hi-purple[shortage!] $(\color{blue}{q_D} > \color{red}{q_S})$
+
+- .red[Sellers] are supplying $Q_1$, but some .blue[buyers] willing to pay more for $Q_1$
+
+- .blue[Buyers] raise bids, inducing .red[sellers] to sell more
+
+- Reach new equilibrium with:
+  - **higher market-clearing price** $(P_2)$
+  - **larger market-clearing quantity exchanged** $(Q_2)$
+]
+]
+.pull-right[
+
+```{r, fig.retina=3}
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun=demand_1, geom="line", size=2, color = "blue")+
+    geom_label(aes(x=9,y=demand_1(9)), color = "blue", label="Demand = Max WTP", size = 3)+
+  stat_function(fun=demand_up, geom="line", size=2, color = "darkblue")+
+    geom_label(aes(x=9,y=demand_up(9)), color = "darkblue", label="Demand 2", size = 3)+
+  stat_function(fun=supply_1, geom="line", size=2, color = "red")+
+    geom_label(aes(x=9,y=supply_1(9)), color = "red", label="Supply = Min WTA", size = 3)+
+  geom_segment(x=0, xend=8.57, y=5, yend=5, size=1, linetype="dotted")+
+  geom_segment(x=5, xend=5, y=0, yend=5, size=1, linetype="dotted")+
+  
+  geom_segment(x=8.57, xend=8.57, y=0, yend=5, size=1, linetype="dotted")+
+
+    # higher wtp
+  geom_segment(x=0, xend=5, y=demand_up(5), yend=demand_up(5), size=1, linetype="dotted")+
+  geom_segment(x=5, xend=5, y=5, yend=demand_up(5), size=1, linetype="dotted")+
+
+    # new eq
+  geom_segment(x=0, xend=7.27, y=7.27, yend=7.27, size=1, linetype="dotted")+
+  geom_segment(x=7.27, xend=7.27, y=0, yend=7.27, size=1, linetype="dotted")+
+
+  
+  annotate("segment", x = 5, xend = 7.27, y = 5, yend = 7.27, colour = "black", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+
+    scale_x_continuous(breaks=c(0,5,7.27,8.57),
+                       labels=c(0,expression(Q[1]),expression(Q[2]),expression(Q[D])),
+                       limits=c(0,10),
+                       expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,5, 7.27, demand_up(5)),
+                     limits=c(0,20),
+                     labels=c(0,expression(P[1]), expression(P[2]),expression(P[D])),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  labs(x = "Quantity",
+       y = "Price ($)")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+```
+
+]
+
+---
+
+# Price Gouging Laws
 
 .pull-left[
 
-- Consider a market with a market-clearing price of $P_1$ where $Q_1$ will be exchanged
+- Suppose instead, government has .hi-purple[price gouging laws], a .hi-purple[price ceiling] at the original price, $P_1$
 
-- Government sets a **price ceiling** at $\bar{P}$, legal maximum price allowed
+- $\color{blue}{Q_d}>\color{red}{Q_s}$: .hi-purple[excess demand], a .hi-purple[shortage]!
 
-- $Q_d>Q_s$: .shout[excess demand], a .shout[shortage]!
-
-- Sellers will not supply more than $Q_s$
-
-- For $Q_s$ units, buyers are willing to pay $P^b$!
+- Sellers will not supply more than $Q_1$ at price $\bar{P_1}$
 
 ]
 
 .pull-right[
-```{r, fig.retina=3, fig.height=5}
+
+```{r, fig.retina=3}
 ggplot(data.frame(x=c(0,10)), aes(x=x))+
-  stat_function(fun=demand, geom="line", size=2, color = "blue")+
-    geom_label(aes(x=9,y=demand(9)), color = "blue", label="Demand = Max WTP", size = 5)+
-  stat_function(fun=supply, geom="line", size=2, color = "red")+
-    geom_label(aes(x=9,y=supply(9)), color = "red", label="Supply = Min WTA", size = 5)+
-  geom_hline(yintercept=5, size=2)+
-    scale_x_continuous(breaks=c(0,2,4,5),
-                       labels=c(0, expression(Q[s]), expression(Q[1]), expression(Q[d])),
-                     limits=c(0,10),
-                     expand=expand_scale(mult=c(0,0.1)))+
-  scale_y_continuous(breaks=c(0,5,6,8),
-                     labels=c(0, expression(bar(P)), expression(P[1]), expression(P^{b})),
-                     limits=c(0,10),
+  geom_hline(yintercept=5, size=2.5)+
+  geom_label(x=2,y=5, label="Price Ceiling", size =3)+
+  stat_function(fun=demand_1, geom="line", size=2, color = "blue")+
+    geom_label(aes(x=9,y=demand_1(9)), color = "blue", label="Demand = Max WTP", size = 3)+
+  stat_function(fun=demand_up, geom="line", size=2, color = "darkblue")+
+    geom_label(aes(x=9,y=demand_up(9)), color = "darkblue", label="Demand 2", size = 3)+
+  stat_function(fun=supply_1, geom="line", size=2, color = "red")+
+    geom_label(aes(x=9,y=supply_1(9)), color = "red", label="Supply = Min WTA", size = 3)+
+  geom_segment(x=5, xend=5, y=0, yend=5, size=1, linetype="dotted")+
+  
+  geom_segment(x=8.57, xend=8.57, y=0, yend=5, size=1, linetype="dotted")+
+
+  annotate("segment", x = 5, xend = 8.57, y = 5, yend = 5, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="both", type="closed"))+
+  geom_label(x=7, y=5, label="Shortage", color="purple")+
+
+    scale_x_continuous(breaks=c(0,5,8.57),
+                       labels=c(0,expression(Q[1]),expression(Q[D])),
+                       limits=c(0,10),
+                       expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,5),
+                     limits=c(0,20),
+                     labels=c(0,expression(bar(P[1]))),
                      expand=expand_scale(mult=c(0,0.1)))+
   labs(x = "Quantity",
-       y = "Price")+
-  theme_classic(base_family = "Fira Sans Condensed", base_size=20)+
-  geom_segment(x=0, xend=5, y=5, yend=5, size=1, linetype="dotted")+
-  geom_segment(x=2, xend=2, y=0, yend=8, size=1, linetype="dotted")+ # wtp
-  geom_segment(x=0, xend=2, y=8, yend=8, size=1, linetype="dotted")+ # wtp
-  geom_segment(x=0, xend=4, y=5, yend=5, size=1, linetype="dotted")+
+       y = "Price ($)")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+```
+
+]
+
+---
+
+# Price Gouging Laws
+
+.pull-left[
+
+- Suppose instead, government has .hi-purple[price gouging laws], a .hi-purple[price ceiling] at the original price, $P_1$
+
+- $\color{blue}{Q_d}>\color{red}{Q_s}$: .hi-purple[excess demand], a .hi-purple[shortage]!
+
+- Sellers will not supply more than $Q_1$ at price $\bar{P_1}$
+
+- For $Q_1$ units, buyers are willing to pay $P^D$!
+
+]
+
+.pull-right[
+```{r, fig.retina=3}
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+    geom_hline(yintercept=5, size=2.5)+
+  geom_label(x=2,y=5, label="Price Ceiling", size =3)+
+
+  stat_function(fun=demand_1, geom="line", size=2, color = "blue")+
+    geom_label(aes(x=9,y=demand_1(9)), color = "blue", label="Demand = Max WTP", size = 3)+
+  stat_function(fun=demand_up, geom="line", size=2, color = "darkblue")+
+    geom_label(aes(x=9,y=demand_up(9)), color = "darkblue", label="Demand 2", size = 3)+
+  stat_function(fun=supply_1, geom="line", size=2, color = "red")+
+    geom_label(aes(x=9,y=supply_1(9)), color = "red", label="Supply = Min WTA", size = 3)+
   geom_segment(x=5, xend=5, y=0, yend=5, size=1, linetype="dotted")+
-  annotate("segment", x = 2, xend = 5, y = 3, yend = 3, colour = "black", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="both", type="closed"))+
-  geom_label(x=3.5, y=3, label="Shortage")
+  
+  geom_segment(x=8.57, xend=8.57, y=0, yend=5, size=1, linetype="dotted")+
+
+    # higher wtp
+  geom_segment(x=0, xend=5, y=demand_up(5), yend=demand_up(5), size=1, linetype="dotted")+
+  geom_segment(x=5, xend=5, y=5, yend=demand_up(5), size=1, linetype="dotted")+
+
+  
+  annotate("segment", x = 5, xend = 8.57, y = 5, yend = 5, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="both", type="closed"))+
+  geom_label(x=7, y=5, label="Shortage", color="purple")+
+
+    scale_x_continuous(breaks=c(0,5,8.57),
+                       labels=c(0,expression(Q[1]),expression(Q[D])),
+                       limits=c(0,10),
+                       expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,5, demand_up(5)),
+                     limits=c(0,20),
+                     labels=c(0,expression(P[1]), expression(P[D])),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  labs(x = "Quantity",
+       y = "Price ($)")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
 ```
 ]
 
 ---
 
-# The Economics of a Shortage (Society) II
+# Price Gouging Laws
 
 .pull-left[
 
-- .onfire[If prices were allowed to adjust]: buyers would bid higher prices to get the scarce $Q_s$ goods
+- .hi-purple[If prices were allowed to adjust]: buyers would bid higher prices to get the scarce $Q_s$ goods
 
 - Sellers would respond to rising willingness to pay, and produce and sell more
 
-- Until we return to $P_1$ where $Q_d=Q_s$ in equilibrium
-
-- .onfire[But the price is not allowed to rise above `\\(\bar{P}\\)`]!
+- .hi-purple[But the price is not allowed to rise above `\\(\bar{P_1}\\)`]!
 
 ]
 
 .pull-right[
-```{r, fig.retina=3, fig.height=5}
+```{r, fig.retina=3}
 ggplot(data.frame(x=c(0,10)), aes(x=x))+
-  stat_function(fun=demand, geom="line", size=2, color = "blue")+
-    geom_label(aes(x=9,y=demand(9)), color = "blue", label="Demand = Max WTP", size = 5)+
-  stat_function(fun=supply, geom="line", size=2, color = "red")+
-    geom_label(aes(x=9,y=supply(9)), color = "red", label="Supply = Min WTA", size = 5)+
-  #geom_hline(yintercept=5, size=2)+
-    scale_x_continuous(breaks=c(0,2,4,5),
-                       labels=c(0, expression(Q[s]), expression(Q[1]), expression(Q[d])),
-                     limits=c(0,10),
-                     expand=expand_scale(mult=c(0,0.1)))+
-  scale_y_continuous(breaks=c(0,5,6,8),
-                     labels=c(0, expression(bar(P)), expression(P[1]), expression(P^{b})),
-                     limits=c(0,10),
+    geom_hline(yintercept=5, size=2.5)+
+  geom_label(x=2,y=5, label="Price Ceiling", size =3)+
+
+  stat_function(fun=demand_1, geom="line", size=2, color = "blue")+
+    geom_label(aes(x=9,y=demand_1(9)), color = "blue", label="Demand = Max WTP", size = 3)+
+  stat_function(fun=demand_up, geom="line", size=2, color = "darkblue")+
+    geom_label(aes(x=9,y=demand_up(9)), color = "darkblue", label="Demand 2", size = 3)+
+  stat_function(fun=supply_1, geom="line", size=2, color = "red")+
+    geom_label(aes(x=9,y=supply_1(9)), color = "red", label="Supply = Min WTA", size = 3)+
+  geom_segment(x=5, xend=5, y=0, yend=5, size=1, linetype="dotted")+
+  
+  geom_segment(x=8.57, xend=8.57, y=0, yend=5, size=1, linetype="dotted")+
+
+    # higher wtp
+  geom_segment(x=0, xend=5, y=demand_up(5), yend=demand_up(5), size=1, linetype="dotted")+
+  geom_segment(x=5, xend=5, y=5, yend=demand_up(5), size=1, linetype="dotted")+
+
+  
+  annotate("segment", x = 5, xend = 8.57, y = 5, yend = 5, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="both", type="closed"))+
+  geom_label(x=7, y=5, label="Shortage", color="purple")+
+
+    scale_x_continuous(breaks=c(0,5,8.57),
+                       labels=c(0,expression(Q[1]),expression(Q[D])),
+                       limits=c(0,10),
+                       expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,5, demand_up(5)),
+                     limits=c(0,20),
+                     labels=c(0,expression(P[1]), expression(P[D])),
                      expand=expand_scale(mult=c(0,0.1)))+
   labs(x = "Quantity",
-       y = "Price")+
-  theme_classic(base_family = "Fira Sans Condensed", base_size=20)+
-  geom_segment(x=0, xend=2, y=8, yend=8, size=1, linetype="dotted")+
-  geom_segment(x=2, xend=2, y=0, yend=8, size=1, linetype="dotted")+ # wtp
-  geom_segment(x=0, xend=2, y=5, yend=5, size=1, linetype="dotted")+
-  geom_segment(x=2, xend=2, y=0, yend=5, size=1, linetype="dotted")+
-  geom_segment(x=0, xend=4, y=6, yend=6, size=1, linetype="dotted")+
-  geom_segment(x=4, xend=4, y=0, yend=6, size=1, linetype="dotted")+
-  geom_segment(x=0, xend=5, y=5, yend=5, size=1, linetype="dotted")+
-  geom_segment(x=5, xend=5, y=0, yend=5, size=1, linetype="dotted")+
-  annotate("segment", x = 2, xend = 4, y = 5, yend = 6, colour = "black", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))
+       y = "Price ($)")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
 ```
 ]
 
 ---
 
-# The Economics of a Shortage (Society) III
+# Price Gouging Laws
 
 .pull-left[
+.smallest[
+- Official price is $\bar{P_1}$, sellers gain .green[monetary revenues]
 
-- Official price is $\bar{P}$, sellers gain .green[monetary revenues]
-
-
+]
 ]
 
 .pull-right[
-```{r, fig.retina=3, fig.height=5}
+```{r, fig.retina=3}
 ggplot(data.frame(x=c(0,10)), aes(x=x))+
-  geom_rect(xmin=0, xmax=2, ymin=0, ymax=5, fill="green", alpha=0.5)+
-  geom_label(x=1, y=3, label="Official Cost", color="green", size =5)+
-  stat_function(fun=demand, geom="line", size=2, color = "blue")+
-    geom_label(aes(x=9,y=demand(9)), color = "blue", label="Demand = Max WTP", size = 5)+
-  stat_function(fun=supply, geom="line", size=2, color = "red")+
-    geom_label(aes(x=9,y=supply(9)), color = "red", label="Supply = Min WTA", size = 5)+
-  geom_hline(yintercept=5, size=2)+
-    scale_x_continuous(breaks=c(0,2,4,5),
-                       labels=c(0, expression(Q[s]), expression(Q[1]), expression(Q[d])),
-                     limits=c(0,10),
-                     expand=expand_scale(mult=c(0,0.1)))+
-  scale_y_continuous(breaks=c(0,5,6,8),
-                     labels=c(0, expression(bar(P)), expression(P[1]), expression(P^{b})),
-                     limits=c(0,10),
+  geom_rect(xmin=0, xmax=5, ymin=0, ymax=5, fill="green", alpha=0.5)+
+    geom_hline(yintercept=5, size=2.5)+
+  geom_label(x=2,y=5, label="Price Ceiling", size =3)+
+
+  stat_function(fun=demand_1, geom="line", size=2, color = "blue")+
+    geom_label(aes(x=9,y=demand_1(9)), color = "blue", label="Demand = Max WTP", size = 3)+
+  stat_function(fun=demand_up, geom="line", size=2, color = "darkblue")+
+    geom_label(aes(x=9,y=demand_up(9)), color = "darkblue", label="Demand 2", size = 3)+
+  stat_function(fun=supply_1, geom="line", size=2, color = "red")+
+    geom_label(aes(x=9,y=supply_1(9)), color = "red", label="Supply = Min WTA", size = 3)+
+  geom_segment(x=5, xend=5, y=0, yend=5, size=1, linetype="dotted")+
+  
+  geom_segment(x=8.57, xend=8.57, y=0, yend=5, size=1, linetype="dotted")+
+
+    # higher wtp
+  geom_segment(x=0, xend=5, y=demand_up(5), yend=demand_up(5), size=1, linetype="dotted")+
+  geom_segment(x=5, xend=5, y=5, yend=demand_up(5), size=1, linetype="dotted")+
+
+  geom_label(x=2.5, y=3, label="Official Cost", color="green", size =5)+
+
+  annotate("segment", x = 5, xend = 8.57, y = 5, yend = 5, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="both", type="closed"))+
+  geom_label(x=7, y=5, label="Shortage", color="purple")+
+
+    scale_x_continuous(breaks=c(0,5,8.57),
+                       labels=c(0,expression(Q[1]),expression(Q[D])),
+                       limits=c(0,10),
+                       expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,5, demand_up(5)),
+                     limits=c(0,20),
+                     labels=c(0,expression(P[1]), expression(P[D])),
                      expand=expand_scale(mult=c(0,0.1)))+
   labs(x = "Quantity",
-       y = "Price")+
-  theme_classic(base_family = "Fira Sans Condensed", base_size=20)+
-  geom_segment(x=0, xend=5, y=5, yend=5, size=1, linetype="dotted")+
-  geom_segment(x=2, xend=2, y=0, yend=8, size=1, linetype="dotted")+ # wtp
-  geom_segment(x=0, xend=2, y=8, yend=8, size=1, linetype="dotted")+ # wtp
-  geom_segment(x=0, xend=4, y=5, yend=5, size=1, linetype="dotted")+
-  geom_segment(x=5, xend=5, y=0, yend=5, size=1, linetype="dotted")+
-  annotate("segment", x = 2, xend = 5, y = 3, yend = 3, colour = "black", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="both", type="closed"))+
-  geom_label(x=3.5, y=3, label="Shortage")
+       y = "Price ($)")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
 ```
 ]
 
 ---
 
-# The Economics of a Shortage (Society) III
+# Price Gouging Laws
 
 .pull-left[
-
+.smallest[
 - Official price is $\bar{P}$, sellers gain .green[monetary revenues]
 
 - Competition exists between buyers to obtain scarce $Q_s$ goods
@@ -282,77 +536,336 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 
 - **Rents** to those who can distribute the scarce goods
 ]
+]
 
 .pull-right[
-```{r, fig.retina=3, fig.height=5}
+```{r, fig.retina=3}
 ggplot(data.frame(x=c(0,10)), aes(x=x))+
-  geom_rect(xmin=0, xmax=2, ymin=0, ymax=5, fill="green", alpha=0.5)+
-  geom_label(x=1, y=3, label="Official Cost", color="green", size =5)+
-  geom_rect(xmin=0, xmax=2, ymin=5, ymax=8, fill="black", alpha=0.5)+
-  geom_label(x=1, y=6.5, label="Rents", color="black", size =5)+
-  stat_function(fun=demand, geom="line", size=2, color = "blue")+
-    geom_label(aes(x=9,y=demand(9)), color = "blue", label="Demand = Max WTP", size = 5)+
-  stat_function(fun=supply, geom="line", size=2, color = "red")+
-    geom_label(aes(x=9,y=supply(9)), color = "red", label="Supply = Min WTA", size = 5)+
-  geom_hline(yintercept=5, size=2)+
-    scale_x_continuous(breaks=c(0,2,4,5),
-                       labels=c(0, expression(Q[s]), expression(Q[1]), expression(Q[d])),
-                     limits=c(0,10),
-                     expand=expand_scale(mult=c(0,0.1)))+
-  scale_y_continuous(breaks=c(0,5,6,8),
-                     labels=c(0, expression(bar(P)), expression(P[1]), expression(P^{b})),
-                     limits=c(0,10),
+  geom_rect(xmin=0, xmax=5, ymin=0, ymax=5, fill="green", alpha=0.5)+
+  geom_rect(xmin=0, xmax=5, ymin=5, ymax=demand_up(5), fill="black", alpha=0.5)+
+    geom_hline(yintercept=5, size=2.5)+
+  geom_label(x=2,y=5, label="Price Ceiling", size =3)+
+
+  stat_function(fun=demand_1, geom="line", size=2, color = "blue")+
+    geom_label(aes(x=9,y=demand_1(9)), color = "blue", label="Demand = Max WTP", size = 3)+
+  stat_function(fun=demand_up, geom="line", size=2, color = "darkblue")+
+    geom_label(aes(x=9,y=demand_up(9)), color = "darkblue", label="Demand 2", size = 3)+
+  stat_function(fun=supply_1, geom="line", size=2, color = "red")+
+    geom_label(aes(x=9,y=supply_1(9)), color = "red", label="Supply = Min WTA", size = 3)+
+  geom_segment(x=5, xend=5, y=0, yend=5, size=1, linetype="dotted")+
+  
+  geom_segment(x=8.57, xend=8.57, y=0, yend=5, size=1, linetype="dotted")+
+
+    # higher wtp
+  geom_segment(x=0, xend=5, y=demand_up(5), yend=demand_up(5), size=1, linetype="dotted")+
+  geom_segment(x=5, xend=5, y=5, yend=demand_up(5), size=1, linetype="dotted")+
+
+  geom_label(x=2.5, y=3, label="Official Cost", color="green", size =5)+
+  geom_label(x=2.5, y=8, label="Rents", color="black", size =5)+
+
+  annotate("segment", x = 5, xend = 8.57, y = 5, yend = 5, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="both", type="closed"))+
+  geom_label(x=7, y=5, label="Shortage", color="purple")+
+
+    scale_x_continuous(breaks=c(0,5,8.57),
+                       labels=c(0,expression(Q[1]),expression(Q[D])),
+                       limits=c(0,10),
+                       expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,5, demand_up(5)),
+                     limits=c(0,20),
+                     labels=c(0,expression(P[1]), expression(P[D])),
                      expand=expand_scale(mult=c(0,0.1)))+
   labs(x = "Quantity",
-       y = "Price")+
-  theme_classic(base_family = "Fira Sans Condensed", base_size=20)+
-  geom_segment(x=0, xend=5, y=5, yend=5, size=1, linetype="dotted")+
-  geom_segment(x=2, xend=2, y=0, yend=8, size=1, linetype="dotted")+ # wtp
-  geom_segment(x=0, xend=2, y=8, yend=8, size=1, linetype="dotted")+ # wtp
-  geom_segment(x=0, xend=4, y=5, yend=5, size=1, linetype="dotted")+
-  geom_segment(x=5, xend=5, y=0, yend=5, size=1, linetype="dotted")+
-  annotate("segment", x = 2, xend = 5, y = 3, yend = 3, colour = "black", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="both", type="closed"))+
-  geom_label(x=3.5, y=3, label="Shortage")
+       y = "Price ($)")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
 ```
 ]
 
 ---
 
-class: inverse, center, middle
-
-# Regulatory Burden
-
-* Flatten the curve
-* Lag of policy variables (SMBC comic)
-* Government responses
-* Fiscal, monetary policy
-* uniqueness of challenge
-* AS-AD -> stagflation?
-* Recession
-* Government failure: CDC, FDA approvals, Occupational Licensing
-* Price gouging, hoarding; danish pic
-* Three cheers for grocery stores, sharing economy, (and obviously health workers)
-* Supply chain management, restocking, just in time inventories, globalization 3.0 alternative supply linkages 
-
-
----
-
-class: inverse, center, middle
-
-# Response
-
----
-
-# Flattening the Curve
+# Forms of Rents
 
 .pull-left[
 .center[
-![]()
+[![](https://www.dropbox.com/s/9x5joizms3onvig/hoarding_hand_sanitizer.png?raw=1)](https://www.nytimes.com/2020/03/14/technology/coronavirus-purell-wipes-amazon-sellers.html)
+]
+]
+
+.pull-right[
+.center[
+[![](https://www.dropbox.com/s/djttw0gez55ct2r/corona_lines.png?raw=1)](https://www.washingtonpost.com/nation/2020/04/26/long-lines-coronavirus/?arc404=true)
+]
+]
+
+---
+
+# (Temporarily) Raising Prices Can Solve the Shortage
+
+.pull-left[
+
+.center[
+![:scale 100%](https://www.dropbox.com/s/p15gl37djswxi18/platinum.jpg?raw=1)
+]
+]
+
+.pull-right[
+.smaller[
+A relatively high price:
+
+- .hi-purple[Conveys information]: good is relatively scarce
+
+- .hi-purple[Creates incentives for]:
+  - **Buyers**: conserve use of this good, seek substitites
+  - **Sellers**: produce more of this good
+  - **Entrepreneurs**: find substitutes and innovations to satisfy this unmet need
+]
+]
+
+---
+
+# (Temporarily) Raising Prices Can Solve the Shortage
+
+.pull-left[
+.center[
+[![](https://www.dropbox.com/s/2hcbs03asm1au3w/corona_canada_no_shortages.png?raw=1)](https://www.aier.org/article/why-no-shortages-in-canada-as-compared-with-the-u-s/)
+]
+]
+
+.pull-right[
+.smallest[
+"The *Canadian National Post*, citing the Canadian Food Inspection Agency, says that 'There are no shortages or disruptions to [food] production, importation or export,' and that 'the shelves remain stocked.' ... 'A price surge as a result of natural market forces is not something that is regulated by Canadian competition laws or otherwise. Canada’s competition laws generally don’t interfere with the free market.' ... Canadians will have enough food to eat. But it will be more expensive.
+
+]
+]
+
+---
+
+# (Temporarily) Raising Prices Can Solve the Shortage
+
+.center[
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">A supermarket in Denmark got tired of people hoarding hand sanitizer, so came up with their own way of stopping it.<br><br>1 bottle kr40 (€5.50)<br>2 bottles kr1000 (€134.00) each bottle.<br><br>Hoarding stopped!<a href="https://twitter.com/hashtag/COVID19?src=hash&amp;ref_src=twsrc%5Etfw">#COVID19</a> <a href="https://twitter.com/hashtag/Hoarding?src=hash&amp;ref_src=twsrc%5Etfw">#Hoarding</a> <a href="https://t.co/eKTabEjScc">pic.twitter.com/eKTabEjScc</a> (via <a href="https://twitter.com/_schuermann?ref_src=twsrc%5Etfw">@_schuermann</a>) cc <a href="https://twitter.com/svenseele?ref_src=twsrc%5Etfw">@svenseele</a></p>&mdash; Birger (@Birger_s) <a href="https://twitter.com/Birger_s/status/1240163073928953856?ref_src=twsrc%5Etfw">March 18, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+]
+
+---
+
+# Forcing Low Prices Doesn't Solve the Shortage
+
+.center[
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Shopper: Your chicken is too expensive. The butcher across the street is only $1/lb. <br>Butcher: So buy from the butcher across the street.<br>Shopper: But he&#39;s out of chicken.<br>Butcher: Yeah, when I&#39;m out I charge $1/lb, too.</p>&mdash; Russell Roberts (@EconTalker) <a href="https://twitter.com/EconTalker/status/1249702822997876736?ref_src=twsrc%5Etfw">April 13, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+]
+
+---
+
+class: inverse, center, middle
+
+# Supply-Side Restrictions: Regulatory Burden
+
+---
+
+# Supply-Side Restrictions
+
+.pull-left[
+.center[
+[![](https://www.dropbox.com/s/8f6uomi87qqqtsu/corona_licensing.png?raw=1)](https://www.theatlantic.com/ideas/archive/2020/04/coronavirus-strikes-blow-economic-liberty/610015/?utm_source=feed)
+]
+]
+
+.pull-right[
+.smallest[
+"As the nation’s economy and health-care system struggle to adjust to the pandemic, more and more states are reexamining some of their oldest occupational and business regulations—rules that, although couched as protecting consumers, do far more to limit competition...While some states have ordered their occupational-licensing boards to speed up the licensure of new health-care practitioners, others—such as Indiana—are granting immediate licensing reciprocity to any practitioner licensed in any state...Even Florida, which has long jealously guarded its occupational-licensing regime to prevent semiretired snowbirds from poaching on the locals’ turf, has gotten in on the act, allowing out-of-state health-care providers to practice telemedicine in the state without a license."
+]
+]
+---
+
+# Supply-Side Restrictions
+
+.pull-left[
+.center[
+[![](https://www.dropbox.com/s/8f6uomi87qqqtsu/corona_licensing.png?raw=1)](https://www.theatlantic.com/ideas/archive/2020/04/coronavirus-strikes-blow-economic-liberty/610015/?utm_source=feed)
+]
+]
+
+.pull-right[
+.smallest[
+"Illinois has waived licensure fees for retired medical practitioners who wish to resume practice. Oklahoma and Massachusetts have eliminated restrictions that required doctors to have a preexisting doctor-patient relationship before they could offer telemedicine services."
+]
+]
+---
+
+# Supply-Side Restrictions
+
+.pull-left[
+.center[
+[![](https://www.dropbox.com/s/8f6uomi87qqqtsu/corona_licensing.png?raw=1)](https://www.theatlantic.com/ideas/archive/2020/04/coronavirus-strikes-blow-economic-liberty/610015/?utm_source=feed)
+]
+]
+
+.pull-right[
+.smallest[
+"Also being reexamined are state certificate-of-need, or CON, laws. A product of 1970s-era economic regulation, CON laws require health-care providers to prove that new services are “needed” before they may purchase certain large equipment, open new or expanded facilities, or—as is crucial now—offer home health-care services. Often, these laws give an effective veto power to existing medical providers, allowing them to torpedo new competition for their own benefit...Basic economics predicts that competition reduces prices for consumers, and occupational licensing works directly to stifle competition. The University of Minnesota economist Morris Kleiner, a leading researcher on occupational licensing, estimates that licensing costs consumers nearly $200 billion annually. This might be justifiable if licensing produced substantial improvements in quality, yet most research has failed to find a connection between licensure and service quality or safety."
+]
+]
+
+---
+
+# Supply-Side Restrictions
+
+.pull-left[
+.center[
+[![](https://www.dropbox.com/s/wh4iiioivjti8ma/corona_masks_import_restrictions.png?raw=1)](https://reason.com/2020/04/03/fda-will-lift-restrictions-on-face-mask-imports-toppling-another-pointless-regulation/)
+]
+]
+
+.pull-right[
+.center[
+[![](https://www.dropbox.com/s/uwnlxcb9ebfxn38/corona_grocery_permit.png?raw=1)](https://reason.com/2020/03/31/los-angeles-bureaucrats-barbara-ferrer-shut-down-restaurants-for-selling-groceries-without-a-permit/)
+]
+]
+
+---
+
+# Supply-Side Restrictions
+
+.pull-left[
+.center[
+[![]()](https://reason.com/2020/03/31/america-could-import-countless-more-face-masks-if-federal-regulators-would-get-out-of-the-way/)
+]
+]
+
+.pull-right[
+.center[
+[![](https://www.dropbox.com/s/4cbhcb0jrjgdz69/corona_mask_restrictions.png?raw=1)](https://fee.org/articles/a-look-at-the-fdas-process-for-approving-surgical-masks/)
+]
+]
+
+---
+
+# Supply-Side Restrictions
+
+.pull-left[
+.center[
+[![]()](https://www.nbcnews.com/health/health-care/many-private-labs-want-do-coronavirus-tests-they-re-facing-n1156006)
+]
+
+
+.pull-right[
+.center[
+[![](https://www.dropbox.com/s/dv5o27pkwpdlfe9/corona_mask_approvals.png?raw=1)](https://reason.com/2020/03/24/america-needs-billions-of-new-masks-to-combat-coronavirus-federal-regulators-say-itll-take-months-to-approve-new-mask-making-facilities/)
+]
+]
+
+---
+
+# Supply-Side Restrictions
+
+.pull-left[
+.center[
+[![](https://www.dropbox.com/s/vypm2hjbmb5bufy/corona_regulators.png?raw=1)](https://thedispatch.com/p/timeline-the-regulationsand-regulatorsthat)
+]
+]
+
+.pull-right[
+.smallest[
+How did the U.S. government only manage to produce a fraction as many testing kits as its peer countries? There have been three major regulatory barriers so far to scaling up testing by public labs and private companies: 1) obtaining an Emergency Use Authorization (EUA); 2) being certified to perform high-complexity testing consistent with requirements under Clinical Laboratory Improvement Amendments (CLIA);...
+]
+]
+
+---
+
+# Supply-Side Restrictions
+
+.pull-left[
+.center[
+[![](https://www.dropbox.com/s/vypm2hjbmb5bufy/corona_regulators.png?raw=1)](https://thedispatch.com/p/timeline-the-regulationsand-regulatorsthat)
+]
+]
+
+.pull-right[
+.smallest[
+...and 3) complying with the Health Insurance Portability and Accountability Act (HIPAA) Privacy Rule and the Common Rule related to the protection of human research subjects. On the demand side, narrow restrictions on who qualified for testing prevented the U.S. from adequately using what capacity it did have.
+]
+]
+
+---
+
+class: inverse, center, middle
+
+# Solving an Economic Crisis
+
+---
+
+# An Economic Crisis
+
+.pull-left[
+[![](https://www.dropbox.com/s/zcsi79ehln085dv/corona_gdp_fall.png?raw=1)](https://www.wsj.com/articles/first-quarter-gdp-us-growth-coronavirus-11588123665?mod=hp_lead_pos1)
+]
+
+.pull-right[
+> "The U.S. economy shrank at a 4.8% annual pace in the first quarter as the coronavirus pandemic pushed the U.S. toward a near-certain recession...[It], was the steepest quarterly contraction since the last recession and signaled the end of the longest expansion on record.
+
+]
+
+---
+
+# An Economic Crisis
+
+.center[
+![](https://www.dropbox.com/s/9x9kabk8g7osn3h/corona_gdp.png?raw=1)
+]
+
+---
+
+# How Does a Government Respond?
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/3hxrphqdr7y6dcf/Screen%20Shot%202020-04-29%20at%201.58.56%20PM.png?raw=1)
 ]
 ]
 
 .pull-right[
 
+- To fight normal recessions (a collapse in aggregate demand)
+  - Fiscal policy: lower taxes, have government spend more
+    - Stimulus package, bailouts, loans to businesses or individuals
+  - Monetary policy: lower interest rates, supply liquidity to financial markets
+    - Keep making it easier for businesses and individuals to borrow money
+
+]
+
+---
+
+# How Does a Government Respond?
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/3hxrphqdr7y6dcf/Screen%20Shot%202020-04-29%20at%201.58.56%20PM.png?raw=1)
+]
+]
+
+.pull-right[
+
+- To fight negative supply shocks
+  - Not much one can do except ease restrictions on supply, hope for innovation
+]
+
+---
+
+# This Is Not a Normal Recession
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/3hxrphqdr7y6dcf/Screen%20Shot%202020-04-29%20at%201.58.56%20PM.png?raw=1)
+]
+]
+
+.pull-right[
+
+- Giving money to people does not mean they will *spend it* (except perhaps on necessities to survive)
+  - This solution assumes a normal economy with a mobile and interacting population!
+
+- Our number 1 goal should be *minimize harm* to individuals
+  - Expanded social safety nets
+  - Extend loans or credit to businesses
 ]
 
 ---
@@ -377,6 +890,8 @@ Source: [Committee for a Responsible Federal Budget](http://www.crfb.org/blogs/v
 
 ---
 
+# CARES Act
+
 .pull-left[
 .center[
 [![](https://www.dropbox.com/s/41cjjrmook1ck17/covid_cares_lobbying.png?raw=1)](https://www.wsj.com/articles/lobbyists-pile-on-to-get-wins-for-clients-into-coronavirus-stimulus-package-11584792000?mod=hp_lead_pos2
@@ -394,7 +909,7 @@ Source: [Committee for a Responsible Federal Budget](http://www.crfb.org/blogs/v
 
 ---
 
-# Big Businesses Get Bailed Out
+# CARES Act
 
 .pull-left[
 .center[
@@ -404,11 +919,13 @@ Source: [Committee for a Responsible Federal Budget](http://www.crfb.org/blogs/v
 
 .pull-right[
 .center[
-![](https://www.dropbox.com/s/mgu06astdummztm/corona_bailout_cnbc_companies.png?raw=1)](https://www.npr.org/sections/coronavirus-live-updates/2020/04/23/842454705/harvard-and-other-universities-turn-down-relief-funds-amid-swell-of-criticism)
+![](https://www.dropbox.com/s/mgu06astdummztm/corona_bailout_cnbc_companies.png?raw=1)
 ]
 ]
 
 ---
+
+# CARES Act
 
 .pull-left[
 .center[
@@ -423,6 +940,9 @@ Source: [Committee for a Responsible Federal Budget](http://www.crfb.org/blogs/v
 ]
 
 ---
+
+# CARES Act
+
 
 .pull-left[
 .center[
@@ -454,6 +974,10 @@ Source: [Committee for a Responsible Federal Budget](http://www.crfb.org/blogs/v
 ]
 ]
 
+---
+
+# Unemployment Benefits vs. Keeping Workers
+
 .pull-left[
 .center[
 [![](https://www.dropbox.com/s/9sm6j7gqs2ca0jf/corona_benefits_fee.png?raw=1)](https://fee.org/articles/workers-are-asking-to-be-laid-off-because-covid-19-unemployment-benefits-pay-better-than-work/)
@@ -462,3 +986,18 @@ Source: [Committee for a Responsible Federal Budget](http://www.crfb.org/blogs/v
 
 ---
 
+# Remember: It's Always Worse for Others
+
+.pull-left[
+.center[
+![:scale 60%](https://www.dropbox.com/s/igzi6r7vfi33auo/corona_inequality.PNG?raw=1)
+]
+]
+
+--
+
+.pull-right[
+.center[
+[![](https://www.dropbox.com/s/md1wd8e7rwczza2/corona_famine.png?raw=1)](https://www.cnn.com/2020/04/22/africa/coronavirus-famine-un-warning-intl/index.html)
+]
+]
