@@ -1,0 +1,464 @@
+---
+title: "4.8: Some Economics of Covid-19"
+subtitle: "ECON 410 · Public Economics · Spring 2020"
+author: 'Ryan Safner<br> Assistant Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i> safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/publicS20"><i class="fa fa-github fa-fw"></i> ryansafner/publics20</a><br> <a href="https://publicS20.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i> publicS20.classes.ryansafner.com</a><br>'
+#date:
+output:
+  xaringan::moon_reader:
+    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML" # rescales math with css changes https://github.com/yihui/xaringan/issues/143
+    lib_dir: libs
+    df_print: paged
+    #seal: false
+    css: [custom.css, custom-fonts.css, "hygge"] #, metropolis, metropolis-fonts
+    nature:
+      beforeInit: ["macros.js", "https://platform.twitter.com/widgets.js"] # first is for rescaling images , second is for embedding tweets, https://github.com/yihui/xaringan/issues/100
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    includes:
+      in_header: header.html # for font awesome, used in title  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = F,
+                      warning = F,
+                      message = F,
+                      fig.retina = 3,
+                      fig.align = "center")
+library("tidyverse")
+library("mosaic")
+
+theme_slides <- theme_classic() + 
+  theme(
+    text = element_text(family = "Fira Sans", size = 18)
+  )
+```
+
+class: inverse, center, middle
+
+# Price Gouging
+
+---
+
+# The Economics of a Shortage Society I
+
+.pull-left[
+
+- Consider a market with a market-clearing price of $P_q$ where $Q_1$ will be exchanged
+]
+
+.pull-right[
+```{r, fig.retina=3, fig.height=5}
+library(mosaic)
+
+demand=function(x){10-x}
+supply=function(x){0.5*x+4}
+
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun=demand, geom="line", size=2, color = "blue")+
+  geom_label(aes(x=9,y=demand(9)), color = "blue", label="Demand = Max WTP", size = 5)+
+  stat_function(fun=supply, geom="line", size=2, color = "red")+
+  geom_label(aes(x=9,y=supply(9)), color = "red", label="Supply = Min WTA", size = 5)+
+  geom_segment(x=0, xend=4, y=6, yend=6, size=1, linetype="dotted")+
+  geom_segment(x=4, xend=4, y=0, yend=6, size=1, linetype="dotted")+    scale_x_continuous(breaks=c(0,4),
+                       labels=c(0, expression(Q[1])),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,6),
+                     labels=c(0, expression(P[1])),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  labs(x = "Quantity",
+       y = "Price")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+
+```
+]
+
+---
+
+# The Economics of a Shortage (Society) I
+
+.pull-left[
+
+- Consider a market with a market-clearing price of $P_1$ where $Q_1$ will be exchanged
+
+- Government sets a **price ceiling** at $\bar{P}$, legal maximum price allowed
+
+- $Q_d>Q_s$: .shout[excess demand], a .shout[shortage]!
+
+- Sellers will not supply more than $Q_s$
+
+]
+
+.pull-right[
+```{r, fig.retina=3, fig.height=5}
+graph<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun=demand, geom="line", size=2, color = "blue")+
+    geom_label(aes(x=9,y=demand(9)), color = "blue", label="Demand = Max WTP", size = 5)+
+  stat_function(fun=supply, geom="line", size=2, color = "red")+
+    geom_label(aes(x=9,y=supply(9)), color = "red", label="Supply = Min WTA", size = 5)+
+  geom_hline(yintercept=5, size=2)+
+    scale_x_continuous(breaks=c(0,2,4,5),
+                       labels=c(0, expression(Q[s]), expression(Q[1]), expression(Q[d])),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,5,6),
+                     labels=c(0, expression(bar(P)), expression(P[1])),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  labs(x = "Quantity",
+       y = "Price")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+
+graph+
+  geom_segment(x=0, xend=5, y=5, yend=5, size=1, linetype="dotted")+
+  geom_segment(x=2, xend=2, y=0, yend=5, size=1, linetype="dotted")+
+  geom_segment(x=0, xend=4, y=5, yend=5, size=1, linetype="dotted")+
+  geom_segment(x=5, xend=5, y=0, yend=5, size=1, linetype="dotted")+
+  annotate("segment", x = 2, xend = 5, y = 3, yend = 3, colour = "black", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="both", type="closed"))+
+  geom_label(x=3.5, y=3, label="Shortage")
+```
+]
+
+---
+
+# The Economics of a Shortage (Society) I
+
+.pull-left[
+
+- Consider a market with a market-clearing price of $P_1$ where $Q_1$ will be exchanged
+
+- Government sets a **price ceiling** at $\bar{P}$, legal maximum price allowed
+
+- $Q_d>Q_s$: .shout[excess demand], a .shout[shortage]!
+
+- Sellers will not supply more than $Q_s$
+
+- For $Q_s$ units, buyers are willing to pay $P^b$!
+
+]
+
+.pull-right[
+```{r, fig.retina=3, fig.height=5}
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun=demand, geom="line", size=2, color = "blue")+
+    geom_label(aes(x=9,y=demand(9)), color = "blue", label="Demand = Max WTP", size = 5)+
+  stat_function(fun=supply, geom="line", size=2, color = "red")+
+    geom_label(aes(x=9,y=supply(9)), color = "red", label="Supply = Min WTA", size = 5)+
+  geom_hline(yintercept=5, size=2)+
+    scale_x_continuous(breaks=c(0,2,4,5),
+                       labels=c(0, expression(Q[s]), expression(Q[1]), expression(Q[d])),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,5,6,8),
+                     labels=c(0, expression(bar(P)), expression(P[1]), expression(P^{b})),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  labs(x = "Quantity",
+       y = "Price")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)+
+  geom_segment(x=0, xend=5, y=5, yend=5, size=1, linetype="dotted")+
+  geom_segment(x=2, xend=2, y=0, yend=8, size=1, linetype="dotted")+ # wtp
+  geom_segment(x=0, xend=2, y=8, yend=8, size=1, linetype="dotted")+ # wtp
+  geom_segment(x=0, xend=4, y=5, yend=5, size=1, linetype="dotted")+
+  geom_segment(x=5, xend=5, y=0, yend=5, size=1, linetype="dotted")+
+  annotate("segment", x = 2, xend = 5, y = 3, yend = 3, colour = "black", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="both", type="closed"))+
+  geom_label(x=3.5, y=3, label="Shortage")
+```
+]
+
+---
+
+# The Economics of a Shortage (Society) II
+
+.pull-left[
+
+- .onfire[If prices were allowed to adjust]: buyers would bid higher prices to get the scarce $Q_s$ goods
+
+- Sellers would respond to rising willingness to pay, and produce and sell more
+
+- Until we return to $P_1$ where $Q_d=Q_s$ in equilibrium
+
+- .onfire[But the price is not allowed to rise above `\\(\bar{P}\\)`]!
+
+]
+
+.pull-right[
+```{r, fig.retina=3, fig.height=5}
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun=demand, geom="line", size=2, color = "blue")+
+    geom_label(aes(x=9,y=demand(9)), color = "blue", label="Demand = Max WTP", size = 5)+
+  stat_function(fun=supply, geom="line", size=2, color = "red")+
+    geom_label(aes(x=9,y=supply(9)), color = "red", label="Supply = Min WTA", size = 5)+
+  #geom_hline(yintercept=5, size=2)+
+    scale_x_continuous(breaks=c(0,2,4,5),
+                       labels=c(0, expression(Q[s]), expression(Q[1]), expression(Q[d])),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,5,6,8),
+                     labels=c(0, expression(bar(P)), expression(P[1]), expression(P^{b})),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  labs(x = "Quantity",
+       y = "Price")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)+
+  geom_segment(x=0, xend=2, y=8, yend=8, size=1, linetype="dotted")+
+  geom_segment(x=2, xend=2, y=0, yend=8, size=1, linetype="dotted")+ # wtp
+  geom_segment(x=0, xend=2, y=5, yend=5, size=1, linetype="dotted")+
+  geom_segment(x=2, xend=2, y=0, yend=5, size=1, linetype="dotted")+
+  geom_segment(x=0, xend=4, y=6, yend=6, size=1, linetype="dotted")+
+  geom_segment(x=4, xend=4, y=0, yend=6, size=1, linetype="dotted")+
+  geom_segment(x=0, xend=5, y=5, yend=5, size=1, linetype="dotted")+
+  geom_segment(x=5, xend=5, y=0, yend=5, size=1, linetype="dotted")+
+  annotate("segment", x = 2, xend = 4, y = 5, yend = 6, colour = "black", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))
+```
+]
+
+---
+
+# The Economics of a Shortage (Society) III
+
+.pull-left[
+
+- Official price is $\bar{P}$, sellers gain .green[monetary revenues]
+
+
+]
+
+.pull-right[
+```{r, fig.retina=3, fig.height=5}
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  geom_rect(xmin=0, xmax=2, ymin=0, ymax=5, fill="green", alpha=0.5)+
+  geom_label(x=1, y=3, label="Official Cost", color="green", size =5)+
+  stat_function(fun=demand, geom="line", size=2, color = "blue")+
+    geom_label(aes(x=9,y=demand(9)), color = "blue", label="Demand = Max WTP", size = 5)+
+  stat_function(fun=supply, geom="line", size=2, color = "red")+
+    geom_label(aes(x=9,y=supply(9)), color = "red", label="Supply = Min WTA", size = 5)+
+  geom_hline(yintercept=5, size=2)+
+    scale_x_continuous(breaks=c(0,2,4,5),
+                       labels=c(0, expression(Q[s]), expression(Q[1]), expression(Q[d])),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,5,6,8),
+                     labels=c(0, expression(bar(P)), expression(P[1]), expression(P^{b})),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  labs(x = "Quantity",
+       y = "Price")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)+
+  geom_segment(x=0, xend=5, y=5, yend=5, size=1, linetype="dotted")+
+  geom_segment(x=2, xend=2, y=0, yend=8, size=1, linetype="dotted")+ # wtp
+  geom_segment(x=0, xend=2, y=8, yend=8, size=1, linetype="dotted")+ # wtp
+  geom_segment(x=0, xend=4, y=5, yend=5, size=1, linetype="dotted")+
+  geom_segment(x=5, xend=5, y=0, yend=5, size=1, linetype="dotted")+
+  annotate("segment", x = 2, xend = 5, y = 3, yend = 3, colour = "black", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="both", type="closed"))+
+  geom_label(x=3.5, y=3, label="Shortage")
+```
+]
+
+---
+
+# The Economics of a Shortage (Society) III
+
+.pull-left[
+
+- Official price is $\bar{P}$, sellers gain .green[monetary revenues]
+
+- Competition exists between buyers to obtain scarce $Q_s$ goods
+  - Buyers willing to pay $P^b$ *unofficially*
+
+- Goods are distributed by non-market means:
+  - Queuing
+  - Black markets
+  - Political connections, favors, corruption
+
+- **Rents** to those who can distribute the scarce goods
+]
+
+.pull-right[
+```{r, fig.retina=3, fig.height=5}
+ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  geom_rect(xmin=0, xmax=2, ymin=0, ymax=5, fill="green", alpha=0.5)+
+  geom_label(x=1, y=3, label="Official Cost", color="green", size =5)+
+  geom_rect(xmin=0, xmax=2, ymin=5, ymax=8, fill="black", alpha=0.5)+
+  geom_label(x=1, y=6.5, label="Rents", color="black", size =5)+
+  stat_function(fun=demand, geom="line", size=2, color = "blue")+
+    geom_label(aes(x=9,y=demand(9)), color = "blue", label="Demand = Max WTP", size = 5)+
+  stat_function(fun=supply, geom="line", size=2, color = "red")+
+    geom_label(aes(x=9,y=supply(9)), color = "red", label="Supply = Min WTA", size = 5)+
+  geom_hline(yintercept=5, size=2)+
+    scale_x_continuous(breaks=c(0,2,4,5),
+                       labels=c(0, expression(Q[s]), expression(Q[1]), expression(Q[d])),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,5,6,8),
+                     labels=c(0, expression(bar(P)), expression(P[1]), expression(P^{b})),
+                     limits=c(0,10),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  labs(x = "Quantity",
+       y = "Price")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)+
+  geom_segment(x=0, xend=5, y=5, yend=5, size=1, linetype="dotted")+
+  geom_segment(x=2, xend=2, y=0, yend=8, size=1, linetype="dotted")+ # wtp
+  geom_segment(x=0, xend=2, y=8, yend=8, size=1, linetype="dotted")+ # wtp
+  geom_segment(x=0, xend=4, y=5, yend=5, size=1, linetype="dotted")+
+  geom_segment(x=5, xend=5, y=0, yend=5, size=1, linetype="dotted")+
+  annotate("segment", x = 2, xend = 5, y = 3, yend = 3, colour = "black", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="both", type="closed"))+
+  geom_label(x=3.5, y=3, label="Shortage")
+```
+]
+
+---
+
+class: inverse, center, middle
+
+# Regulatory Burden
+
+* Flatten the curve
+* Lag of policy variables (SMBC comic)
+* Government responses
+* Fiscal, monetary policy
+* uniqueness of challenge
+* AS-AD -> stagflation?
+* Recession
+* Government failure: CDC, FDA approvals, Occupational Licensing
+* Price gouging, hoarding; danish pic
+* Three cheers for grocery stores, sharing economy, (and obviously health workers)
+* Supply chain management, restocking, just in time inventories, globalization 3.0 alternative supply linkages 
+
+
+---
+
+class: inverse, center, middle
+
+# Response
+
+---
+
+# Flattening the Curve
+
+.pull-left[
+.center[
+![]()
+]
+]
+
+.pull-right[
+
+]
+
+---
+
+# CARES Act
+
+.pull-left[
+.center[
+![](https://www.dropbox.com/s/0veo5vrpyc6p3k9/covid_cares_act_sankey.png?raw=1)
+]
+
+Source: [Committee for a Responsible Federal Budget](http://www.crfb.org/blogs/visualization-cares-act)
+]
+
+--
+
+.pull-right[
+.center[
+[![](https://www.dropbox.com/s/e0kygt6xc8jd0qt/covic_cares_oversight_fired_Wapo.png?raw=1)](https://www.washingtonpost.com/national-security/trump-removes-inspector-general-who-was-to-oversee-2-trillion-stimulus-spending/2020/04/07/2f0c6cb8-78ea-11ea-9bee-c5bf9d2e3288_story.html)
+]
+]
+
+---
+
+.pull-left[
+.center[
+[![](https://www.dropbox.com/s/41cjjrmook1ck17/covid_cares_lobbying.png?raw=1)](https://www.wsj.com/articles/lobbyists-pile-on-to-get-wins-for-clients-into-coronavirus-stimulus-package-11584792000?mod=hp_lead_pos2
+)
+]
+]
+
+
+
+.pull-left[
+.center[
+[![](https://www.dropbox.com/s/25ktoc3ydm7b5bd/covid_fed_lending.png?raw=1)](https://www.washingtonpost.com/business/2020/04/28/federal-reserve-bond-corporations/)
+]
+]
+
+---
+
+# Big Businesses Get Bailed Out
+
+.pull-left[
+.center[
+[![](https://www.dropbox.com/s/vo4rv6nwwxckiko/corona_bailout_cnbc.png?raw=1)](https://www.cnbc.com/2020/04/21/large-public-companies-are-taking-small-businesses-payroll-loans.html)
+]
+]
+
+.pull-right[
+.center[
+![](https://www.dropbox.com/s/mgu06astdummztm/corona_bailout_cnbc_companies.png?raw=1)](https://www.npr.org/sections/coronavirus-live-updates/2020/04/23/842454705/harvard-and-other-universities-turn-down-relief-funds-amid-swell-of-criticism)
+]
+]
+
+---
+
+.pull-left[
+.center[
+[![](https://www.dropbox.com/s/ygmx5puk7eryutn/corona_bailout_giveback_nbc.png?raw=1)](https://www.nbcnews.com/business/business-news/facing-furor-ruth-s-chris-high-end-steak-chain-returns-n1190606)
+]
+]
+
+.pull-right[
+.center[
+[![](https://www.dropbox.com/s/xtqd9kxdnux5755/corona_bailout_harvard_npr.png?raw=1)](https://www.npr.org/sections/coronavirus-live-updates/2020/04/23/842454705/harvard-and-other-universities-turn-down-relief-funds-amid-swell-of-criticism)
+]
+]
+
+---
+
+.pull-left[
+.center[
+[![](https://www.dropbox.com/s/4ym12xte54nz2kd/corona_bailout_cbs.png?raw=1)](https://www.cbsnews.com/news/paycheck-protection-program-out-of-money-small-businesses-shut-out/)
+]
+]
+
+
+.pull-right[
+.center[
+[![](https://www.dropbox.com/s/jx24x1a0als2kyf/covid_tax_benefits_millionaires_wapo.png?raw=1)](https://www.washingtonpost.com/business/2020/04/14/coronavirus-law-congress-tax-change/)
+]
+]
+
+---
+
+# Unemployment Benefits vs. Keeping Workers
+
+.pull-left[
+.center[
+[![](https://www.dropbox.com/s/4kncgvm9mz5p7t1/corona_benefits_wsj.png?raw=1)](https://www.wsj.com/articles/companies-cite-new-government-benefits-in-cutting-workers-11586264075)
+]
+]
+
+
+.pull-left[
+.center[
+[![](https://www.dropbox.com/s/vnkadlj78h1tcfc/corona_benefits_2_wsj.png?raw=1)](https://www.wsj.com/articles/coronavirus-relief-often-pays-workers-more-than-work-11588066200?mod=hp_lead_pos5)
+]
+]
+
+.pull-left[
+.center[
+[![](https://www.dropbox.com/s/9sm6j7gqs2ca0jf/corona_benefits_fee.png?raw=1)](https://fee.org/articles/workers-are-asking-to-be-laid-off-because-covid-19-unemployment-benefits-pay-better-than-work/)
+]
+]
+
+---
+

@@ -1,0 +1,39 @@
+---
+title: "4.7: Government Deficits & Debt"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-syllabus-no-bib.csl
+output:
+  blogdown::html_page:
+    template: ../../pandoc/toc-title_html.template
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+*Monday, April 27, 2020*
+
+*Online Quarantine Lecture 11*
+
+# Readings
+There are no readings for today's topic.
+
+# Class Livestream/Lecture Videos
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DD6E_U7RvAE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vgiT0f0Buh0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/g5uBIa9drpU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LP9fyEIS0CE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/36A4NELx4gw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+# Slides
+
+[<i class="fas fa-chalkboard-teacher"></i> Slides](/slides/4.7-slides)
+
+# Discussion Thread
+
+I have stopped grading your discussion board posts, but I will still open one for this week if you wish to share your comments, ask me or others questions, or see what everyone thinks. I'm still interested!
