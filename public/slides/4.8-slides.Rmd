@@ -51,7 +51,7 @@ class: inverse, center, middle
 
 .pull-left[
 .center[
-![](https://www.dropbox.com/s/iabmjq6mfyrkpgx/corona_empty_shelves_1.png?raw=1)
+![](https://www.dropbox.com/s/vd1v40faubhbq81/Screen%20Shot%202020-04-29%20at%202.20.01%20PM.png?raw=1)
 ]
 ]
 
@@ -671,7 +671,7 @@ class: inverse, center, middle
 
 .pull-right[
 .smallest[
-"As the nation’s economy and health-care system struggle to adjust to the pandemic, more and more states are reexamining some of their oldest occupational and business regulations—rules that, although couched as protecting consumers, do far more to limit competition...While some states have ordered their occupational-licensing boards to speed up the licensure of new health-care practitioners, others—such as Indiana—are granting immediate licensing reciprocity to any practitioner licensed in any state...Even Florida, which has long jealously guarded its occupational-licensing regime to prevent semiretired snowbirds from poaching on the locals’ turf, has gotten in on the act, allowing out-of-state health-care providers to practice telemedicine in the state without a license."
+"As the nation’s economy and health-care system struggle to adjust to the pandemic, more and more states are reexamining some of their oldest occupational and business regulations—rules that, although couched as protecting consumers, do far more to limit competition...While some states have ordered their occupational-licensing boards to speed up the licensure of new health-care practitioners, others...are granting immediate licensing reciprocity to any practitioner licensed in any state...Even Florida, which has long jealously guarded its occupational-licensing regime to prevent semiretired snowbirds from poaching on the locals’ turf, [is] allowing out-of-state health-care providers to practice telemedicine in the state without a license."
 ]
 ]
 ---
@@ -701,12 +701,27 @@ class: inverse, center, middle
 
 .pull-right[
 .smallest[
-"Also being reexamined are state certificate-of-need, or CON, laws. A product of 1970s-era economic regulation, CON laws require health-care providers to prove that new services are “needed” before they may purchase certain large equipment, open new or expanded facilities, or—as is crucial now—offer home health-care services. Often, these laws give an effective veto power to existing medical providers, allowing them to torpedo new competition for their own benefit...Basic economics predicts that competition reduces prices for consumers, and occupational licensing works directly to stifle competition. The University of Minnesota economist Morris Kleiner, a leading researcher on occupational licensing, estimates that licensing costs consumers nearly $200 billion annually. This might be justifiable if licensing produced substantial improvements in quality, yet most research has failed to find a connection between licensure and service quality or safety."
+"Also being reexamined are state certificate-of-need, or CON, laws. A product of 1970s-era economic regulation, CON laws require health-care providers to prove that new services are “needed” before they may purchase certain large equipment, open new or expanded facilities, or—as is crucial now—offer home health-care services. Often, these laws give an effective veto power to existing medical providers, allowing them to torpedo new competition for their own benefit...Basic economics predicts that competition reduces prices for consumers, and occupational licensing works directly to stifle competition."
 ]
 ]
 
 ---
 
+# Supply-Side Restrictions
+
+.pull-left[
+.center[
+[![](https://www.dropbox.com/s/8f6uomi87qqqtsu/corona_licensing.png?raw=1)](https://www.theatlantic.com/ideas/archive/2020/04/coronavirus-strikes-blow-economic-liberty/610015/?utm_source=feed)
+]
+]
+
+.pull-right[
+.smallest[
+"The University of Minnesota economist Morris Kleiner, a leading researcher on occupational licensing, estimates that licensing costs consumers nearly $200 billion annually. This might be justifiable if licensing produced substantial improvements in quality, yet most research has failed to find a connection between licensure and service quality or safety."
+]
+]
+
+---
 # Supply-Side Restrictions
 
 .pull-left[
@@ -727,7 +742,7 @@ class: inverse, center, middle
 
 .pull-left[
 .center[
-[![]()](https://reason.com/2020/03/31/america-could-import-countless-more-face-masks-if-federal-regulators-would-get-out-of-the-way/)
+[![](https://www.dropbox.com/s/97hh5tah2vl9rsd/corona_mask_import.png?raw=1)](https://reason.com/2020/03/31/america-could-import-countless-more-face-masks-if-federal-regulators-would-get-out-of-the-way/)
 ]
 ]
 
@@ -743,9 +758,9 @@ class: inverse, center, middle
 
 .pull-left[
 .center[
-[![]()](https://www.nbcnews.com/health/health-care/many-private-labs-want-do-coronavirus-tests-they-re-facing-n1156006)
+[![](https://www.dropbox.com/s/94a46rx4k4npqbd/Screen%20Shot%202020-04-29%20at%201.49.06%20PM.png?raw=1)](https://www.nbcnews.com/health/health-care/many-private-labs-want-do-coronavirus-tests-they-re-facing-n1156006)
 ]
-
+]
 
 .pull-right[
 .center[

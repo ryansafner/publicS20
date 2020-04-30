@@ -1,0 +1,40 @@
+---
+title: "4.7: Government Deficits & Debt"
+citeproc: false
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-syllabus-no-bib.csl
+output:
+  blogdown::html_page:
+    template: ../../pandoc/toc-title_html.template
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+*Wednesday, April 29, 2020*
+
+*Online Quarantine Lecture 12*
+
+# Readings
+
+There are no readings for today's topic. All sources are linked in the slides.
+
+# Class Livestream/Lecture Videos
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QtCEz4v6PAY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qJkWgyK8BUQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/L0zfVMmkC20" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+# Slides
+
+[<i class="fas fa-chalkboard-teacher"></i> Slides](/slides/4.8-slides)
+
+# Discussion Thread
+
+I have stopped grading your discussion board posts, but I will still open one for this week if you wish to share your comments, ask me or others questions, or see what everyone thinks. I'm still interested!
+
+# Assignments
+
+Don't forget to turn in your [/assignment/policy-paper](policy paper) by the end of this week! Your final exam will be a take-home exam, much like the midterm, posted on Monday and due by 8 PM Friday May 8.

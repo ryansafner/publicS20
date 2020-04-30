@@ -125,6 +125,7 @@ lessons:
 
   - title: '4.8 Some Economics of Covid-19'
     slides: "4.8-slides"
+    class: "4.8-class"
 
 
   - title: '<i class="fas fa-laptop-code"></i> **Policy Paper** due Fri May 1'
