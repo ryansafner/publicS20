@@ -1,0 +1,39 @@
+---
+title: "Final Exam"
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+library(tidyverse)
+library(pander)
+source(file.path(here::here(), "lib", "graphics.R"))
+```
+
+- *Due 8:00 PM Friday, May 8 by email*
+
+# Instructions
+
+**Choose four (4) questions to answer**. Questions draw from course lectures, discussions, and readings. Your answers, given the time and resources at your disposal, should be complete yet concise (e.g. 2-3 well-reasoned paragraphs).
+
+You may discuss the questions, but you must write your own responses and turn in your own work. Answers that are substantially similar will be interpretted cheating and punished accordingly. I will not answer any questions about course content during while the exam is outstanding.
+
+You will be graded both on your use of reasoning and economic analysis, and ability when relevant to accurately describe the arguments in the readings. Where asked for your opinion, you will not be graded on your *conclusion*, only your *reasoning.* You must be able to talk with some familiarity about arguments put forth in our readings, when relevant (informally, as in "According to Buchanan..."). You do not need formal citations, but it should be clear when you are referencing the readings vs. your own thinking.
+
+Each question is worth **25 points.** This assignment is due to me by email by 8:00 PM Friday, May 8 by email. Starting at 8:01, you will lose 2 points for every hour it is late.
+
+1. Explain the concept of Tiebout competition. How does the federalism of American government promote Tiebout competition?
+
+2. Explain the arguments for and against of replacing all existing federal welfare programs with a Basic Income Guarantee (of however many dollars/year). Which do you find more convincing?
+
+3. Explain the arguments for and against a Common Ownership Self-Assessed Tax. Which do you find more convincing?
+
+4. Are our politics in the United States broken because we do not have enough "corruption?" Summarize the argument that politics needs to be more transactional, as made by Jonathan Rauch. Do you agree or disagree?
+
+5. According to Albert Hirschman, is it better to have a monopolist with "slack" (e.g. laziness or incompetence) where all citizens are "locked-in" with no alternatives to the monopoly, or a slacking monopolist where consumers *do* have alternatives? Explain. Do you agree or disagree?
+
+6. According to Timur Kuran, why does it appear that authoritarian regimes enjoy widespread support and little resistance, and then all of a sudden there is a massive wave of public protest pressuring the leader to resign? Explain the dynamics at work.
+
+7. According to Martin Gurri, what is the fundamental challenge for the 21st century? How did this come about? Do you find his argument compelling?
+
+8. Which topic/concept/proposal this semester was your favorite, or you found most surprising or interesting, and why?
