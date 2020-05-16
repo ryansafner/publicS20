@@ -7,8 +7,7 @@ csl: ../static/bib/chicago-syllabus-no-bib.csl
 ---
 
 ```{r load-libraries, message=FALSE, warning=FALSE, include=FALSE}
-library(dplyr)
-library(tibble)
+library(tidyverse)
 library(pander)
 ```
 
@@ -83,7 +82,7 @@ Throughout the course, I will post both required and supplemental (non-required)
 ```{r assignments-grades, include=FALSE}
 assignments <- tribble(
   ~"",  ~Assignment, ~Percent,
-  "n"     , "Participation (Average)", "30%",
+  NA     , "Participation (Average)", "30%",
   1, "Policy Paper", "30%",
   2      , "Midterm", "20%",
   1     , "Final", "20%"
